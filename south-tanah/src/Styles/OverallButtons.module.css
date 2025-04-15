@@ -1,0 +1,13 @@
+.backButton{
+    width: 10vw;
+    height: 5vw;
+    display: block;
+    background: blue;
+}
+
+.homeButton{
+    width: 10vw;
+    height: 5vw;
+    display: block;
+    background: greenyellow;
+}

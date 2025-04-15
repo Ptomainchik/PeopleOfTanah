@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { StartPage } from './Components/StartPage/StartPage';
+import { ConfederationPage } from './Components/СonfederationOfTribes/ConfederationPage';
+import { KingdomInmarPage } from './Components/KingdomInmar/KingdomInmarPage';
+import { StructureConfederation } from './Components/СonfederationOfTribes/StructureConfederation/StructureConfederation';
+import { StructureKingdomInmar } from './Components/KingdomInmar/SrtuctureKingdomInmar/StructureKingdomInmar';
+import { HistoryConfederation } from './Components/СonfederationOfTribes/HistoryConfederation/HistoryConfederation';
+import { HistoryKingdomInmar } from './Components/KingdomInmar/HistoryKingdomInmar/HistoryKingdomInmar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StartPage/>}/>
+        <Route path="inmar" element={<KingdomInmarPage/>}/>
+        <Route path="confederation" element={<ConfederationPage/>}/>
+        <Route path="strconfederation" element={<StructureConfederation/>}/>
+        <Route path="strinmar" element={<StructureKingdomInmar/>}/>
+        <Route path="hisconfederation" element={<HistoryConfederation/>}/>
+        <Route path="hisinmar" element={<HistoryKingdomInmar/>}/>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

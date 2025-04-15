@@ -1,0 +1,8 @@
+.structureKindomInmarPage{
+    background: red;
+}
+
+.topbar{
+    justify-content: space-between;
+    display: flex;
+}

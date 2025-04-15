@@ -1,0 +1,9 @@
+.structureConfederationPage{
+    background: orange;
+
+}
+
+.topbar{
+    justify-content: space-between;
+    display: flex;
+}
