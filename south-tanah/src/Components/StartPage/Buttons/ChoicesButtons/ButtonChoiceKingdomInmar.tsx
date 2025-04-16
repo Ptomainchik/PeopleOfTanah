@@ -7,6 +7,6 @@ export function ButtonChoiceKingdomInmar() {
             navigate("/inmar");
         }
         return (
-            <button className={classes.choiceKingdomInmar} type="button" title="Kingdom Inmar" onClick={handleClick}>Kingdom Inmar</button>
+            <button className={classes.choiceKingdomInmar} type="button" title="Kingdom Inmar" onClick={handleClick}></button>
         )
 }

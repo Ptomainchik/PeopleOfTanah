@@ -6,32 +6,78 @@
 }
 
 .infoBlockStartPage{
-    width: 20vw;
-    height: 40vw;
-    background: white;
-    border: solid black 0.5vw;
+    width: 100%;
+    height: 100%;
+    background: rgb(75, 75, 75);
+    z-index: 200;
     position: absolute;
     left: 50%;
-    top: 10%;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 100% 0, 73% 25%, 73% 40%, 100% 100%, 0 100%, 27% 40%, 27% 25%);
+}
+
+.infoBlockStartPage h1{
+    text-align: center;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5vw;
+}
+
+.infoBlockStartPage p{ 
+    width: 40%;
+    color: burlywood;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2vw;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
     transform: translateX(-50%);
 }
 
-.choiceKingdomInmar{
-    width: 15vw;
-    height: 20vw;
-    background: red;
+.backgroundChoiceInmar{
+    background: url(../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 5%;
-    top: 15%;
+}
+
+.backgroundChoiceConfederation{
+    background: url(../Images/DesertConfederationBackgroundChoice.jpg) no-repeat right;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.choiceKingdomInmar{
+    background: url(../Images/Human.webp) no-repeat;
+    width: 25vw;
+    height: 35vw;
+    border: none;
+    z-index: 199;
+    background-size: contain;
+    position: absolute;
+    left: 9%;
+    top: 20%;
+}
+
+.choiceKingdomInmar:hover{
+    filter: drop-shadow(1vw 1vw 1vw rgb(120, 15, 15));
 }
 
 .choiceConfederationOfTribes{
-    width: 15vw;
-    height: 20vw;
-    background: orange;
+    background: url(../Images/Registan.webp) no-repeat;
+    width: 25vw;
+    height: 35vw;
+    border: none;
+    z-index: 199;
+    background-size: contain;
     position: absolute;
-    right: 5%;
-    top: 15%;
-
+    right: 3%;
+    top: 20%;
 }
 
+.choiceConfederationOfTribes:hover{
+    filter: drop-shadow(1vw 1vw 1vw rgb(230, 230, 80));
+}

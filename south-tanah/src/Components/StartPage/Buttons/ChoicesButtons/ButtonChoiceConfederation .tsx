@@ -7,6 +7,6 @@ export function ButtonChoiceConfederation() {
             navigate("/confederation");
         }
         return (
-            <button className={classes.choiceConfederationOfTribes} type="button" title="Confederation of tribes" onClick={handleClick}>Confederation of tribes</button>
+            <button className={classes.choiceConfederationOfTribes} type="button" title="Confederation of tribes" onClick={handleClick}></button>
         )
 }
