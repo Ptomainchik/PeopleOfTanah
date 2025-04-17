@@ -1,4 +1,4 @@
-import classes from "../../../Styles/StylesConfederationOfTribes/ConfederationOfTribesPage.module.css"
+import classes from "../../../Styles/OverallButtons.module.css"
 import { useNavigate } from "react-router-dom";
 
 export function ButtonHistoryConfederation() {
@@ -7,6 +7,6 @@ export function ButtonHistoryConfederation() {
         navigate("/hisconfederation");
     };
     return (
-    <button className={classes.buttonConfederation} type="button" title="History Confederation" onClick={handleClick}>History Confederation</button>
+    <button className={classes.buttonHistory} type="button" title="History Confederation" onClick={handleClick}></button>
     )
 }

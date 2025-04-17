@@ -1,4 +1,4 @@
-import classes from "../../../Styles/StylesKingdomInmar/KingdomInmarPage.module.css"
+import classes from "../../../Styles/OverallButtons.module.css"
 import { useNavigate } from "react-router-dom";
 
 export function ButtonHistoryKingdomInmar() {
@@ -7,6 +7,6 @@ export function ButtonHistoryKingdomInmar() {
         navigate("/hisinmar")
     }
     return (
-    <button className={classes.buttonKingdomInmar} type="button" title="History Kingdom Inmar" onClick={handleClick}>History Kingdom Inmar</button>
+    <button className={classes.buttonHistory} type="button" title="History Kingdom Inmar" onClick={handleClick}></button>
     )
 }

@@ -9,9 +9,9 @@ export function HomeButton() {
 
   return (
     <div className={classes.button}>
-    <button className={classes.homeButton} type="button" title="Home" onClick={handleClick}>
+    <p className={classes.homeButton} title="Home" onClick={handleClick}>
       Home
-    </button>
+    </p>
     </div>
   );
 }
