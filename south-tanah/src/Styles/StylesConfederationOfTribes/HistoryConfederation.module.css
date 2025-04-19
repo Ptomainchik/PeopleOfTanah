@@ -10,7 +10,8 @@
 .historyPage{
     width: 100%;
     height: 100%;
-    background: wheat;
+    background: url(../../Images/DesertConfederation.jpg) no-repeat;
+    background-size: cover;
     position: fixed;
 }
 
@@ -28,8 +29,8 @@
 
 @keyframes  shiftLeft{
 0%, 100% {
-    transform: translateX(0);
-    transform: translateX(0);
+    transform: translateX(-65%);
+    transform: translateX(-65%);
 }
         
 100% {
@@ -52,8 +53,8 @@
 
 @keyframes  shiftRight {
     0%, 100% {
-        transform: translateX(0);
-        transform: translateX(0);
+        transform: translateX(65%);
+        transform: translateX(65%);
     }
     
     100% {

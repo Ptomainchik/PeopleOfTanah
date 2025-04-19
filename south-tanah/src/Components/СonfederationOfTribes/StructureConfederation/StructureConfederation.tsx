@@ -19,9 +19,9 @@ export const StructureConfederation = () => {
             <div className={classes.topbar}><HomeButton/>Structure Confederation of tribes<BackButton/></div>
             
             <div>
-                <button className={classes.buttonModalHuman} onClick={() => {handleOpenModal("1")}} id={"1"}><span>Human</span></button>
-                <button className={classes.buttonModalDesertHuman} onClick={() => {handleOpenModal("2")}} id={"2"}><span>Desert Human</span></button>
-                <button className={classes.buttonModalRegistan} onClick={() => {handleOpenModal("3")}} id={"3"}><span>Registan</span></button>
+                <button className={classes.buttonModalHuman} onClick={() => {handleOpenModal("1")}} id={"1"}><span></span></button>
+                <button className={classes.buttonModalDesertHuman} onClick={() => {handleOpenModal("2")}} id={"2"}><span></span></button>
+                <button className={classes.buttonModalRegistan} onClick={() => {handleOpenModal("3")}} id={"3"}><span></span></button>
             </div>
 
             <div>
