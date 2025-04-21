@@ -10,93 +10,156 @@
 .structureKindomInmarPage{
     width: 100%;
     height: 100%;
-    background: url(../../Images/InmarForest.jpg) no-repeat;
-    background-size: cover;
+    background: rgb(129, 103, 55);
     position: fixed;
 }
 
 .buttonModalNorth{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    background: blue;
+    -webkit-text-stroke: 0.1vw blue;
+}
+
+.buttonModalNorth:hover{
+    filter: drop-shadow( 0 0 0.5vw blue);
 }
 
 .buttonModalNorthwest{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 25%;
-    left: 0;
-    background: blueviolet; 
+    top: 15%;
+    left: 5%;
+    -webkit-text-stroke: 0.1vw blueviolet;
+}
+
+.buttonModalNorthwest:hover{
+    filter: drop-shadow( 0 0 0.5vw blueviolet);
 }
 
 .buttonModalNortheast{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 25%;
-    right: 0;
-    background: yellow; 
+    top: 15%;
+    right: 5%;
+    -webkit-text-stroke: 0.1vw yellow;
 }
 
+.buttonModalNortheast:hover{
+    filter: drop-shadow( 0 0 0.5vw yellow);
+}
+
+
 .buttonModalCenter{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 45%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
-    background:green;
+    -webkit-text-stroke: 0.1vw green;
+}
+
+.buttonModalCenter:hover{
+    filter: drop-shadow( 0 0 0.5vw green);
 }
 
 .buttonModalSouthwest{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 65%;
-    left: 0;
-    background: orange; 
+    top: 35%;
+    left: 5%;
+    -webkit-text-stroke: 0.1vw orange;
+}
+
+.buttonModalSouthwest:hover{
+    filter: drop-shadow( 0 0 0.5vw orange);
 }
 
 .buttonModalSoutheast{
-    width: 10vw;
-    height: 6vw;
+    font-size: 3vw;
     position: absolute;
-    top: 65%;
-    right: 0;
-    background: red; 
+    top: 35%;
+    right: 5%;
+    -webkit-text-stroke: 0.1vw red;
+}
+
+.buttonModalSoutheast:hover{
+    filter: drop-shadow( 0 0 0.5vw red);
 }
 
 .buttonModalRighteous{
-    width: 10vw;
-    height: 4vw;
+    width: 20vw;
+    height: 10vw;
     position: absolute;
     bottom: 0;
     left: 0;
-    background: aqua;
+    background: url(../../Images/Rigtheous.webp) no-repeat;
+    background-size: contain;
+    border: none;
 }
 
+.buttonModalRighteous:hover{
+    filter: drop-shadow( 0 0 0.5vw rgb(221, 221, 128));
+}
+
+.buttonModalRighteous span{
+    position: absolute;
+    left: 80%;
+    bottom: 20%;
+    font-size: 3vw;
+    font-family: "Rakkas";
+    -webkit-text-stroke: 0.1vw rgb(221, 221, 128);
+}
 .buttonModalCouncil{
-    width: 10vw;
-    height: 4vw;
+    width: 20vw;
+    height: 10vw;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: chartreuse ;
+    background: url(../../Images/Council.webp) no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+.buttonModalCouncil:hover{
+    filter: drop-shadow( 0 0 0.5vw chartreuse );
+}
+
+.buttonModalCouncil span{
+    position: absolute;
+    left: 0;
+    bottom: 60%;
+    font-size: 3vw;
+    font-family: "Rakkas";
+    -webkit-text-stroke: 0.1vw chartreuse;
 }
 
 .buttonModalOrder{
-    width: 10vw;
-    height: 4vw;
+    width: 20vw;
+    height: 10vw;
     position: absolute;
     bottom: 0;
     right: 0;
-    background: darkblue;
+    background: url(../../Images/Order.webp) no-repeat;
+    background-size: contain;
+    border: none;
+}
+
+.buttonModalOrder:hover{
+    filter: drop-shadow( 0 0 0.5vw darkblue);
+}
+
+.buttonModalOrder span{
+    width: 20vw;
+    position: absolute;
+    right: 80%;
+    bottom: 20%;
+    font-size: 3vw;
+    font-family: "Rakkas";
+    -webkit-text-stroke: 0.1vw darkblue;
 }
 
 .modalDistrict{
