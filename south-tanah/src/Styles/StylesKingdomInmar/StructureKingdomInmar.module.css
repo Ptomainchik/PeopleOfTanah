@@ -162,7 +162,7 @@
     -webkit-text-stroke: 0.1vw darkblue;
 }
 
-.modalDistrict{
+.modalStructure{
     width: 80%;
     height: 80%;
     position: absolute;
@@ -173,42 +173,97 @@
     background: wheat;
 }
 
-.modalRighteous{
-    width: 80%;
-    height: 85%;
+.modalStructure img{
+    width: 37vw;
+    height: 23vw;
     position: absolute;
-    top: 10%;
-    left: 2%;
-    border: solid 0.3vw black;
-    background: wheat;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+    border-right: solid 1vw red;
+    border-bottom: solid 1vw red;
 }
 
-.modalCouncil{
-    width: 80%;
-    height: 85%;
+.modalStructure h4{
+    font-size: 3vw;
     position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: solid 0.3vw black;
-    background: wheat;
+    top: 2%;
+    right: 25%;
+    margin: 0;
 }
 
-.modalOrder{
-    width: 80%;
-    height: 85%;
+.modalStructure p{
+    width: 50%;
+    height: 100%;
+    font-size: 2vw;
+    padding-left: 5%;
+    position: absolute;
+    top: 15%;
+    right: 2%;
+}
+
+.modalClassStructureInmar{
+    width: 100%;
+    height: 90%;
     position: absolute;
     top: 10%;
+    left: 0;
+    border: solid 0.3vw black;
+    background: wheat;
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalClassStructureInmar h4{
+    position: absolute;
+    right: 25%;
+    top: 2%;
+    margin: 0;
+    font-size: 3vw;
+}
+
+.modalClassStructureInmar p{
+    width: 50%;
+    height: 100%;
+    position: absolute;
     right: 5%;
-    border: solid 0.3vw black;
-    background: wheat;
+    top: 10%;
+    font-size: 2vw;
 }
+
+.modalClassStructureInmar img{
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+    @keyframes  shift {
+        0%, 100% {
+            transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        
+        100% {
+            transform: translateY(0%);
+            transform: translateY(0%);
+        }
+    }
+
 
 .buttonCloseModal{
-    width: 5vw;
+    width: 15vw;
     height: 3vw;
+    font-size: 2vw;
+    font-family: "Rakkas";
     position: absolute;
     bottom: 5%;
     right: 5%;
     background: red;
+}
+
+.buttonCloseModal:hover{
+    opacity: 0.7;
 }

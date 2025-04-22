@@ -1,19 +1,29 @@
-import { useState } from "react"
-import classes from "../../../Styles/StylesKingdomInmar/StructureKingdomInmar.module.css"
-import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton"
-import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton"
+import { useState } from "react";
+import classes from "../../../Styles/StylesKingdomInmar/StructureKingdomInmar.module.css";
+import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
+import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
+import Image from "../../../Images/InmarForest.jpg";
 
 export const StructureKingdomInmar = () => {
     const [showModalId, setShowModalId] = useState(null);
-
+    const [activeOpenButton, setActiveOpenButton] = useState(false);
+    
     function handleOpenModal(id: any){
         setShowModalId(id);
+        setActiveOpenButton(true);
     }
 
     function handleCloseModal(id: any){
         setShowModalId(null);
+        setActiveOpenButton(false);
     }
    
+    let structureInmar
+
+    if(activeOpenButton === true){
+        structureInmar = classes.modalClassStructureInmar
+    }
+    
     return (
         <div className={classes.structureKindomInmarPage}>
             <div className={classes.topbar}><HomeButton/>Structure Kingdom Inmar<BackButton/></div>
@@ -30,15 +40,79 @@ export const StructureKingdomInmar = () => {
                 </div>
 
                 <div>
-                    {showModalId === "1" && (<div className={classes.modalDistrict} id={"1"}>North <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "2" && (<div className={classes.modalDistrict} id={"2"}>Northwest <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "3" && (<div className={classes.modalDistrict} id={"3"}>Northeast <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "4" && (<div className={classes.modalDistrict} id={"4"}>Center <button className={classes.buttonCloseModal} id={"4"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "5" && (<div className={classes.modalDistrict} id={"5"}>Southwest <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "6" && (<div className={classes.modalDistrict} id={"6"}>Southeast <button className={classes.buttonCloseModal} id={"6"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "7" && (<div className={classes.modalRighteous} id={"7"}>Righteous <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "8" && (<div className={classes.modalCouncil} id={"8"}>Council <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Close</button></div>)}
-                    {showModalId === "9" && (<div className={classes.modalOrder} id={"9"}>Order <button className={classes.buttonCloseModal} id={"9"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "1" && (<div className={classes.modalStructure} id={"1"}> 
+                            <h4>North</h4> 
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                            Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.
+                            </p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw blue", borderBottom: "solid 1vw blue"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "2" && (<div className={classes.modalStructure} id={"2"}>
+                        <h4>Northwest</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw blueviolet", borderBottom: "solid 1vw blueviolet"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "3" && (<div className={classes.modalStructure} id={"3"}>
+                        <h4>Northeast</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw yellow", borderBottom: "solid 1vw yellow"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "4" && (<div className={classes.modalStructure} id={"4"}>
+                        <h4>Center</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw green", borderBottom: "solid 1vw green"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"4"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "5" && (<div className={classes.modalStructure} id={"5"}>
+                        <h4>Southwest</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw orange", borderBottom: "solid 1vw orange"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "6" && (<div className={classes.modalStructure} id={"6"}>
+                        <h4>Southest</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw red", borderBottom: "solid 1vw red"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"6"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "7" && (<div className={structureInmar} id={"7"}>
+                        <h4>Righteous</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "8" && (<div className={structureInmar} id={"8"}>
+                        <h4>Council</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw chartreuse", borderBottom: "solid 1vw chartreuse"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Close</button></div>)}
+                    {showModalId === "9" && (<div className={structureInmar} id={"9"}>
+                        <h4>Order</h4> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
+                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                        <div>
+                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={Image} alt="Image1" />
+                        </div>
+                        <button className={classes.buttonCloseModal} id={"9"} onClick={handleCloseModal}>Close</button></div>)}
                 </div>
         </div>
     )

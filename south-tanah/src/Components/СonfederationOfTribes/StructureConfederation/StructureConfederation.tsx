@@ -1,17 +1,27 @@
 import { useState } from "react";
-import classes from "../../../Styles/StylesConfederationOfTribes/StructureConfederation.module.css"
-import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton"
-import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton"
+import classes from "../../../Styles/StylesConfederationOfTribes/StructureConfederation.module.css";
+import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
+import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
+import Image from "../../../Images/DesertConfederation.jpg";
 
 export const StructureConfederation = () => {
     const [showModalId, setShowModalId] = useState(null);
+    const [activeOpenButton, setActiveOpenButton] = useState(false);
     
         function handleOpenModal(id: any){
-            setShowModalId(id)
+            setShowModalId(id);
+            setActiveOpenButton(true);
         }
     
         function handleCloseModal(id: any){
-            setShowModalId(null)
+            setShowModalId(null);
+            setActiveOpenButton(false);
+        }
+
+        let structureConfederation;
+
+        if(activeOpenButton === true){
+            structureConfederation = classes.modalStructureConfederation
         }
 
     return (
@@ -25,9 +35,27 @@ export const StructureConfederation = () => {
             </div>
 
             <div>
-                {showModalId === "1" && (<div className={classes.modalRace}>Human <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
-                {showModalId === "2" && (<div className={classes.modalRace}>Desert Human <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Close</button></div>)}
-                {showModalId === "3" && (<div className={classes.modalRace}>Registan <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Close</button></div>)}
+                {showModalId === "1" && (<div className={structureConfederation}>
+                    <h4>Human</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
+                    quod, perspiciatis sequi obcaecati dolores neque debitis quidem exercitationem optio assumenda?
+                    </p>
+                    <img style={{borderRight: "solid 1vw rgb(243, 234, 215)", borderBottom: "solid 1vw rgb(243, 234, 215)"}} src={Image} alt="Image1" />
+                    <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
+                {showModalId === "2" && (<div className={structureConfederation}>
+                    <h4>Desert Human</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
+                    quod, perspiciatis sequi obcaecati dolores neque debitis quidem exercitationem optio assumenda?
+                    </p>
+                    <img style={{borderRight: "solid 1vw rgb(146, 112, 38)", borderBottom: "solid 1vw rgb(146, 112, 38)"}} src={Image} alt="Image1" />
+                    <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Close</button></div>)}
+                {showModalId === "3" && (<div className={structureConfederation}>
+                    <h4>Registan</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
+                    quod, perspiciatis sequi obcaecati dolores neque debitis quidem exercitationem optio assumenda?
+                    </p>
+                    <img style={{borderRight: "solid 1vw rgb(20, 107, 122)", borderBottom: "solid 1vw rgb(20, 107, 122)"}} src={Image} alt="Image1" />
+                    <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Close</button></div>)}
             </div>
 
         </div>
