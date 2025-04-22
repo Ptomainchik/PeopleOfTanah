@@ -1,4 +1,4 @@
-import classes from "../../../Styles/StylesKingdomInmar/HistoryKingdomInmar.module.css"
+import classes from "../../../Styles/History.module.css"
 import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton"
 import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton"
 
