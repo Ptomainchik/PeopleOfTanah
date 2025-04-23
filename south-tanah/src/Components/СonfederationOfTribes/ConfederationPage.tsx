@@ -22,7 +22,7 @@ export const ConfederationPage = () => {
                 </div>
             </div>
 
-                <img className={classes.imageConfederationPage} src={Registan} alt="Registan"/>
+                <img className={classes.imageConfederationPage} src={Registan} alt="Registan" draggable={"false"}/>
             
             <div className={classes.buttonConfederation}>
                 

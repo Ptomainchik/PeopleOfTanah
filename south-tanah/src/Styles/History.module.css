@@ -1,6 +1,5 @@
 .topbar{
     height: 4.5vw;
-    background: yellow;
     color: black;
     font-size: 3vw;
     text-align: center;
@@ -22,7 +21,7 @@
     position: absolute;
     left: -65%;
     top: 10%;
-    background: grey;
+    background: rgb(25, 25, 25);
     animation: shiftLeft 3s ;
     animation-fill-mode: forwards; 
 }
@@ -39,13 +38,20 @@
     }
 }
 
+.leftModal h4{
+    position: absolute;
+    top: 5%;
+    right: 30%;
+    font-size: 3vw;
+    margin: 0;
+}
+
 .leftModal p{
     width: 50vw;
     height: 30vw;
     position: absolute;
     right: 5%;
-    top: 5%;
-    background: wheat;
+    top: 10%;
     font-size: 2vw;
     padding: 2%;
 }
@@ -57,7 +63,7 @@
     position: absolute;
     right: -65%;
     top: 10%;
-    background: grey;
+    background: rgb(25, 25, 25);
     animation: shiftRight 3s ;
     animation-fill-mode: forwards; 
 }
@@ -74,13 +80,22 @@
     }
 }
 
+.rightModal h4{
+    position: absolute;
+    top: 5%;
+    right: 30%;
+    font-size: 3vw;
+    margin: 0;
+    color: yellow;
+}
+
 .rightModal p{
     width: 50vw;
     height: 30vw;
     position: absolute;
     right: 5%;
-    top: 5%;
-    background: wheat;
+    top: 10%;
+    color: yellow;
     font-size: 2vw;
     padding: 2%;
 }
@@ -145,7 +160,7 @@
     -webkit-text-stroke: 1px black;
 }
 
-.overflowImageModalHistory{
+.overlayImageModalHistory{
     width: 31.5vw;
     height: 31.5vw;
     position: absolute;

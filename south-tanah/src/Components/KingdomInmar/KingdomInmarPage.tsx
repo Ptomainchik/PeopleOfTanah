@@ -21,7 +21,7 @@ export const KingdomInmarPage = () => {
                 </div>
             </div>
                 
-                <img className={classes.imageKingdomInmarPage} src={Human} alt="Human"/>
+                <img className={classes.imageKingdomInmarPage} src={Human} alt="Human" draggable={"false"}/>
 
             <div className={classes.buttonKingdomInmar}>
 
