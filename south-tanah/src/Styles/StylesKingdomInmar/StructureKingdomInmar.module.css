@@ -1,7 +1,6 @@
 .topbar{
     height: 4.5vw;
-    background: red;
-    color: black;
+    background: darkred;
     font-size: 3vw;
     text-align: center;
     border: solid 0.3vw grey;
@@ -10,7 +9,7 @@
 .structureKindomInmarPage{
     width: 100%;
     height: 100%;
-    background: rgb(129, 103, 55);
+    background: rgb(25, 25, 25);
     position: fixed;
 }
 

@@ -2,7 +2,7 @@
     font-size: 3vw;
     width: 8vw;
     height: 4.5vw;
-    background: green;
+    background: limegreen;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@
 .backButton{
     font-family: "Rakkas" ;
     font-size: 3vw;
-    background: orange;
+    background: cornflowerblue;
     width: 8vw;
     height: 4.5vw;
     position: absolute;

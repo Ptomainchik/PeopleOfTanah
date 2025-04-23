@@ -35,12 +35,12 @@ export const StructureConfederation = () => {
             </div>
 
             <div>
-                {showModalId === "1" && (<div className={structureConfederation} style={{border: "solid 0.3vw rgb(243, 234, 215)"}}>
-                    <h4 style={{color: "rgb(243, 234, 215)"}}>Human</h4>
-                    <p style={{color: "rgb(243, 234, 215)"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
+                {showModalId === "1" && (<div className={structureConfederation} style={{border: "solid 0.3vw bisque"}}>
+                    <h4 style={{color: "bisque"}}>Human</h4>
+                    <p style={{color: "bisque"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
                     quod, perspiciatis sequi obcaecati dolores neque debitis quidem exercitationem optio assumenda?
                     </p>
-                    <img style={{borderRight: "solid 1vw rgb(243, 234, 215)", borderBottom: "solid 1vw rgb(243, 234, 215)"}} src={Image} alt="Image1" draggable={"false"}/>
+                    <img style={{borderRight: "solid 1vw bisque", borderBottom: "solid 1vw bisque"}} src={Image} alt="Image1" draggable={"false"}/>
                     <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
                 {showModalId === "2" && (<div className={structureConfederation} style={{border: "solid 0.3vw rgb(146, 112, 38)"}}>
                     <h4 style={{color: "rgb(146, 112, 38)"}}>Desert Human</h4>

@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Rakkas";
   user-select: none;
+  color: rgb(25, 25, 25);
 }
 
 code {

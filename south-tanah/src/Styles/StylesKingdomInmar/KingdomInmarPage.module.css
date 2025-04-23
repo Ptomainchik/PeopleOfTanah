@@ -8,8 +8,7 @@
 
 .topbar{
     height: 4.5vw;
-    background: red;
-    color: black;
+    background: darkred;
     font-size: 3vw;
     text-align: center;
     border: solid 0.3vw grey;
@@ -26,7 +25,7 @@
 
 .infoKingdomInmar{
     clip-path: polygon(0 0, 95% 0, 72% 65%, 0 65%);
-    background: wheat;
+    background: rgb(25, 25, 25);
     width: 70vw;
     height: 40vw;
     position: absolute;
@@ -40,6 +39,7 @@
     margin-left: 1vw;
     position: absolute;
     top: 0%;
+    color: darkred;
 }
 
 .imageKingdomInmarPage{
@@ -58,8 +58,8 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    color: red;
-    -webkit-text-stroke: 0.1vw black;
+    color: rgb(25, 25, 25);
+    -webkit-text-stroke: 0.1vw darkred;
 }
 
 .blockButtonHistory{

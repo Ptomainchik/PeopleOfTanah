@@ -1,6 +1,5 @@
 .topbar{
     height: 4.5vw;
-    color: black;
     font-size: 3vw;
     text-align: center;
     border: solid 0.3vw grey;
@@ -110,6 +109,10 @@
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
 }
 
+.buttonOpenModal1:hover{
+    background: rgb(80, 80, 80);
+}
+
 .buttonOpenModal2{
     width: 20vw;
     height: 10vw;
@@ -118,6 +121,10 @@
     right: 0;
     background: grey;
     clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+}
+
+.buttonOpenModal2:hover{
+    background: rgb(80, 80, 80);
 }
 
 .buttonOpenModal3{
@@ -130,6 +137,10 @@
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
 }
 
+.buttonOpenModal3:hover{
+    background: rgb(80, 80, 80);
+}
+
 .buttonOpenModal4{
     width: 20vw;
     height: 10vw;
@@ -140,6 +151,10 @@
     clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
 }
 
+.buttonOpenModal4:hover{
+    background: rgb(80, 80, 80);
+}
+
 .buttonOpenModal5{
     width: 20vw;
     height: 10vw;
@@ -148,6 +163,10 @@
     left: 0;
     background: grey;
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+}
+
+.buttonOpenModal5:hover{
+    background: rgb(80, 80, 80);
 }
 
 .titleChapterHistory{
