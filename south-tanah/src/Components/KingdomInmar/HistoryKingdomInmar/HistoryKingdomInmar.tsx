@@ -34,51 +34,51 @@ export const HistoryKingdomInmar = () => {
             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>History Kingdom Inmar<BackButton/></div>
             <button className={classes.buttonOpenModal1} id={"1"} onClick={() => {handleOpenModal("1")}}><span className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Chapter 1</span></button>
             {showModalId === "1" && (<div className={buttonClassLeft} id={"1"}>
-                <h4 style={{color: "red"}}>Chapter 1</h4>
-                <p style={{color: "red"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
+                <h4 style={{color: "darkred"}}>Chapter 1</h4>
+                <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <div className={classes.overlayImageModalHistory} style={{background:"red"}}>
+                <div className={classes.overlayImageModalHistory} style={{background:"darkred"}}>
                     <img className={classes.imageModalHistory} src={Image} alt="Image1" draggable={"false"}/> 
                 </div>
                 <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Close</button></div>)}
             <button className={classes.buttonOpenModal2} id={"2"} onClick={() => {handleOpenModal("2")}}><span className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Chapter 2</span></button>
             {showModalId === "2" && (<div className={buttonClassRight} id={"2"}>
-                <h4 style={{color: "red"}}>Chapter 2</h4>
-                <p style={{color: "red"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
+                <h4 style={{color: "darkred"}}>Chapter 2</h4>
+                <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <div className={classes.overlayImageModalHistory} style={{background:"red"}}>
+                <div className={classes.overlayImageModalHistory} style={{background:"darkred"}}>
                     <img className={classes.imageModalHistory} src={Image} alt="Image2" draggable={"false"}/> 
                 </div>
                 <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Close</button></div>)}
             <button className={classes.buttonOpenModal3} id={"3"} onClick={() => {handleOpenModal("3")}}><span className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Chapter 3</span></button>
             {showModalId === "3" && (<div className={buttonClassLeft} id={"3"}>
-                <h4 style={{color: "red"}}>Chapter 3</h4>
-                <p style={{color: "red"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
+                <h4 style={{color: "darkred"}}>Chapter 3</h4>
+                <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <div className={classes.overlayImageModalHistory} style={{background:"red"}}>
+                <div className={classes.overlayImageModalHistory} style={{background:"darkred"}}>
                     <img className={classes.imageModalHistory} src={Image} alt="Image3" draggable={"false"}/> 
                 </div>
                 <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Close</button></div>)}
             <button className={classes.buttonOpenModal4} id={"4"} onClick={() => {handleOpenModal("4")}}><span className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Chapter 4</span></button>
             {showModalId === "4" && (<div className={buttonClassRight} id={"4"}>
-                <h4 style={{color: "red"}}>Chapter 4</h4>
-                <p style={{color: "red"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
+                <h4 style={{color: "darkred"}}>Chapter 4</h4>
+                <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <div className={classes.overlayImageModalHistory} style={{background:"red"}}>
+                <div className={classes.overlayImageModalHistory} style={{background:"darkred"}}>
                     <img className={classes.imageModalHistory} src={Image} alt="Image4" draggable={"false"}/> 
                 </div>
                 <button className={classes.buttonCloseModal} id={"4"} onClick={handleCloseModal}>Close</button></div>)}
             <button className={classes.buttonOpenModal5} id={"5"} onClick={() => {handleOpenModal("5")}}><span className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Chapter 5</span></button>
             {showModalId === "5" && (<div className={buttonClassLeft} id={"5"}>
-                <h4 style={{color: "red"}}>Chapter 5</h4>
-                <p style={{color: "red"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
+                <h4 style={{color: "darkred"}}>Chapter 5</h4>
+                <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <div className={classes.overlayImageModalHistory} style={{background:"red"}}>
+                <div className={classes.overlayImageModalHistory} style={{background:"darkred"}}>
                     <img className={classes.imageModalHistory} src={Image} alt="Image5" draggable={"false"}/> 
                 </div>
                 <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Close</button></div>)}

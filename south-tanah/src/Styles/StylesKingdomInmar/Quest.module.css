@@ -1,0 +1,131 @@
+.miniGamePage{
+    width: 100%;
+    height: 90%;
+    background: grey;
+    position: absolute;
+    top: 10%;
+}
+
+.king{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+.kingdom1{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 2%;
+    left: 15%;
+}
+
+.kingdom2{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 2%;
+    left: 15%;
+}
+
+.playerCard1{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 14%;
+    left: 40%;
+}
+
+.playerCard2{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 14%;
+    left: 40%;
+}
+
+.vassal1{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 2%;
+    right: 15%;
+}
+
+.vassal2{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 2%;
+    right: 15%;
+}
+
+.assassin1{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 2%;
+    right: 25%;  
+}
+
+.assassin2{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 2%;
+    right: 25%;  
+}
+
+.bastard1{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 2%;
+    right: 35%;  
+}
+
+.bastard2{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 2%;
+    right: 35%;  
+}
+
+
+.deck{
+    width: 8vw;
+    height: 13vw;
+    background: wheat;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
