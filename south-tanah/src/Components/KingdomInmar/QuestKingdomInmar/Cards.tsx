@@ -5,7 +5,6 @@ export const Cards = () => {
     const [cardOpponent, setCardOpponent] = useState<number>(0);
     const [card, setCard] = useState<number>(0);
     const [deck, setDeck] = useState<number[]>([1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5]);
-    const [choiceCard, setChioceCard] = useState(false);
     const [showCard, setShowCard] = useState(false);
     const [showCardOpponent, setShowCardOpponent] = useState(false);
     const [showVassal, setShowVassal] = useState(true);
@@ -24,9 +23,6 @@ export const Cards = () => {
     const [opponentCounterAssasin, setOpponentCounterAssasin] = useState(0);
     const [randomNumberBastard, setRandomNumberBastard] = useState(0);
     const [opponentCounterBastard, setOpponentCounterBastard] = useState(0);
-    
-    
-    
 
     function drawRandomCard(): number | null {
         if (deck.length === 0) return null;
@@ -62,17 +58,9 @@ export const Cards = () => {
         }
     }
 
-    function handleClickChoiceCard(){
-        if(choiceCard === false){
-            setChioceCard(true);
-        }else{
-            setChioceCard(false)
-        }
-    }
-
     function handleClickAtackCard() {
         if(card > cardOpponent){
-            setKingdom(kingdom + card + cardOpponent)
+            setKingdom(kingdom + card + cardOpponent);
             setShowCardOpponent(false);
             setShowCard(false);
             setCardOpponent(0);
@@ -80,7 +68,7 @@ export const Cards = () => {
             setCounterAttack(counterAttack + 1);
         }
         if(cardOpponent > card){
-            setKingdomOpponent(kingdomOpponent + cardOpponent + card)
+            setKingdomOpponent(kingdomOpponent + cardOpponent + card);
             setShowCardOpponent(false);
             setShowCard(false);
             setCardOpponent(0);
@@ -88,7 +76,7 @@ export const Cards = () => {
             setCounterAttack(counterAttack + 1);
         }
         if(cardOpponent === card){
-            setKing(king + cardOpponent + card)
+            setKing(king + cardOpponent + card);
             setShowCardOpponent(false);
             setShowCard(false);
             setCardOpponent(0);
@@ -165,35 +153,76 @@ export const Cards = () => {
         }
     }
 
+    let cardO;
+    let cardP;
+
+    if(cardOpponent === 0){
+        cardO = classes.cards
+    }
+    else if(cardOpponent === 5){
+        cardO = classes.orderCardOpponent
+    }
+    else if(cardOpponent === 4){
+        cardO = classes.monkCardOpponent
+    }
+    else if(cardOpponent === 3){
+        cardO = classes.tradesmanCardOpponent
+    }
+    else if(cardOpponent === 2){
+        cardO = classes.fishermanCardOpponent
+    }
+    else if(cardOpponent === 1){
+        cardO = classes.squireCardOpponent
+    }
+
+    if(card === 0){
+        cardP = classes.cards
+    }
+    else if(card === 5){
+        cardP = classes.orderCard
+    }
+    else if(card === 4){
+        cardP = classes.monkCard
+    }
+    else if(card === 3){
+        cardP = classes.tradesmanCard
+    }
+    else if(card === 2){
+        cardP = classes.fishermanCard
+    }
+    else if(card === 1){
+        cardP = classes.squireCard
+    }
+
     return (
         <div className={classes.miniGamePage}>
             <div>
-                <div className={classes.kingdom1}>{kingdomOpponent}kingdom</div>
-                <div className={classes.kingdom2}>{kingdom}kingdom</div>
+                <div className={classes.kingdomCardOpponent}><h1>Kingdom points - {kingdomOpponent}</h1></div>
+                <div className={classes.kingdomCard}><h1>Kingdom points - {kingdom}</h1></div>
             </div>
             <div className={classes.king}>
-                {king}King attack{counterAttack}
+                <h1>King points - {king}</h1>
+            </div>
+
+            <div>
+                {showCardOpponent && <button className={cardO} onClick={handleClickAtackCard}><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></button>}
+                {showCard && <button className={cardP} onClick={handleClickAtackCard}><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></button>}
             </div>
             <div>
-                {showCardOpponent && <button className={classes.playerCard1} onClick={handleClickAtackCard}>{cardOpponent}card</button>}
-                {showCard && <button className={classes.playerCard2} onClick={handleClickChoiceCard}>{card}card</button>}
-                
+                {showBastardOpponent && <button className={classes.bastardCardOpponent}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
             </div>
             <div>
-                {showBastardOpponent && <button className={classes.bastard1}>Bastard</button>}
-                {showBastard && <button className={classes.bastard2} onClick={handleClickBastard}>Bastard</button>}
+                {showAssassinOpponent && <button className={classes.assassinCardOpponent}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
             </div>
             <div>
-                {showAssassinOpponent && <button className={classes.assassin1}>Assassin</button>}
-                {showAssassin && <button className={classes.assassin2} onClick={handleClickAssassin}>Assassin</button>}
-            </div>
-            <div>
-                {showVassalOpponent && <button className={classes.vassal1}>Vassal</button>}
-                {showVassal && <button className={classes.vassal2} onClick={handleClickVassal}>Vassal</button>}
+                {showVassalOpponent && <button className={classes.vassalCardOpponent}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
             </div>
             <div>
                 <button className={classes.deck} onClick={handleClickDeck}>
-                    Deck{deck.length}
+                    <h1>Cards - {deck.length}</h1>
                 </button>
             </div>
 
