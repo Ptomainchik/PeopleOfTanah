@@ -73,19 +73,7 @@
     font-size: 1.5vw;
 }
 
-.deckCardOpponent{
-    width: 10vw;
-    height: 15vw;
-    border-radius: 5%;
-    position: absolute;
-    top: 15%;
-    left: 33%;
-    font-size: 1.5vw;
-    font-family: "Rakkas";
-    background:  url(../../Images/CardBack.webp) no-repeat center;
-    background-color: darkcyan;
-    background-size: contain;
-}
+
 
 .deckCard{
     width: 10vw;
@@ -99,6 +87,7 @@
     background:  url(../../Images/CardBack.webp) no-repeat center;
     background-color: darkcyan;
     background-size: contain;
+    
 }
 
 .cards{
@@ -120,13 +109,16 @@
     border-radius: 5%;
     position: absolute;
     top: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Adept.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: darkblue;
+    animation: shiftOpponent 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .orderCard{
@@ -135,13 +127,16 @@
     border-radius: 5%;
     position: absolute;
     bottom: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Adept.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: red;
+    animation: shiftPlayer 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .monkCardOpponent{
@@ -150,13 +145,16 @@
     border-radius: 5%;
     position: absolute;
     top: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Monk.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: darkblue;
+    animation: shiftOpponent 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .monkCard{
@@ -165,13 +163,16 @@
     border-radius: 5%;
     position: absolute;
     bottom: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Monk.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: red;
+    animation: shiftPlayer 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .tradesmanCardOpponent{
@@ -180,13 +181,16 @@
     border-radius: 5%;
     position: absolute;
     top: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Tradesman.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: darkblue;
+    animation: shiftOpponent 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .tradesmanCard{
@@ -195,13 +199,16 @@
     border-radius: 5%;
     position: absolute;
     bottom: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Tradesman.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: red;
+    animation: shiftPlayer 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .fishermanCardOpponent{
@@ -210,13 +217,16 @@
     border-radius: 5%;
     position: absolute;
     top: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/FisherMan.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: darkblue;
+    animation: shiftOpponent 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .fishermanCard{
@@ -225,13 +235,16 @@
     border-radius: 5%;
     position: absolute;
     bottom: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/FisherMan.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: red;
+    animation: shiftPlayer 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .squireCardOpponent{
@@ -240,13 +253,16 @@
     border-radius: 5%;
     position: absolute;
     top: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Squire.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: darkblue;
+    animation: shiftOpponent 1s ;
+    animation-fill-mode: forwards; 
 }
 
 .squireCard{
@@ -255,13 +271,52 @@
     border-radius: 5%;
     position: absolute;
     bottom: 15%;
-    left: 33%;
+    right: 0%;
     font-size: 1.5vw;
     font-family: "Rakkas";
+    z-index: 199;
     background:  url(../../Images/Squire.webp) no-repeat center;
     background-color: wheat;
     background-size: contain;
     color: red;
+    animation: shiftPlayer 1s ;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes  shiftOpponent {
+    0%,50%, 100% {
+        transform: translateX(0);
+        transform: translateX(0);
+    }
+    
+    50% {
+        transform: translateY(-40%);
+        transform: translateY(-40%);
+    }
+    
+    100% {
+        transform: translateX(-565%);
+        transform: translateX(-565%);
+        
+    }
+}
+
+@keyframes  shiftPlayer {
+    0%,50%, 100% {
+        transform: translateX(0);
+        transform: translateX(0);
+    }
+    
+    50% {
+        transform: translateY(40%);
+        transform: translateY(40%);
+    }
+    
+    100% {
+        transform: translateX(-565%);
+        transform: translateX(-565%);
+        
+    }
 }
 
 .vassalCardOpponent{

@@ -2,9 +2,10 @@ import { useState } from "react";
 import classes from "../../../Styles/StylesKingdomInmar/Quest.module.css";
 
 export const Cards = () => {
-    const [cardOpponent, setCardOpponent] = useState<number>(0);
-    const [card, setCard] = useState<number>(0);
-    const [deck, setDeck] = useState<number[]>([1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5]);
+    const [cardOpponent, setCardOpponent] = useState(0);
+    const [card, setCard] = useState(0);
+    const [deck, setDeck] = useState([1,1,1,2,2,2,3,3,3,4,4,4,5,5,5]);
+    const [deckOpponent, setDeckOpponent] = useState([1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,]);
     const [showCard, setShowCard] = useState(false);
     const [showCardOpponent, setShowCardOpponent] = useState(false);
     const [showVassal, setShowVassal] = useState(true);
@@ -40,14 +41,6 @@ export const Cards = () => {
     }
 
     function handleClickDeck() {
-        if (cardOpponent === 0) {
-            const drawnCard = drawRandomCard();
-            if (drawnCard) {
-                setCardOpponent(drawnCard);
-                setShowCardOpponent(true);
-            }
-            else return;
-        }
         if (card === 0) {
             const drawnCard = drawRandomCard();
             if (drawnCard) {
@@ -58,6 +51,37 @@ export const Cards = () => {
         }
     }
 
+    function handleClickDeckOpponent() {
+        if (cardOpponent === 0) {
+            const drawnCardOpponent = drawRandomCardOpponent();
+            if (drawnCardOpponent) {
+                setCardOpponent(drawnCardOpponent);
+                setShowCardOpponent(true);
+            }
+            else return;
+        }
+    }
+    
+    function drawRandomCardOpponent(): number | null {
+        if (deckOpponent.length === 0) return null;
+        
+        const randomIndexOpponent = Math.floor(Math.random() * deckOpponent.length);
+        const drawnCardOpponent = deckOpponent[randomIndexOpponent];
+        
+        setDeckOpponent(prevDeck => {
+            const newDeckOpponent = [...prevDeck];
+            newDeckOpponent.splice(randomIndexOpponent, 1);
+            return newDeckOpponent;
+        });
+        
+        return drawnCardOpponent;
+    }
+
+    function handleClickDecks(){
+        handleClickDeck()
+        handleClickDeckOpponent()
+    }
+
     function handleClickAtackCard() {
         if(card > cardOpponent){
             setKingdom(kingdom + card + cardOpponent);
@@ -65,27 +89,23 @@ export const Cards = () => {
             setShowCard(false);
             setCardOpponent(0);
             setCard(0);
-            setCounterAttack(counterAttack + 1);
+            setCounterAttack(prev => prev + 1)
         }
-        if(cardOpponent > card){
+        else if(cardOpponent > card){
             setKingdomOpponent(kingdomOpponent + cardOpponent + card);
             setShowCardOpponent(false);
             setShowCard(false);
             setCardOpponent(0);
             setCard(0);
-            setCounterAttack(counterAttack + 1);
+            setCounterAttack(prev => prev + 1)
         }
-        if(cardOpponent === card){
+        else if(cardOpponent === card){
             setKing(king + cardOpponent + card);
             setShowCardOpponent(false);
             setShowCard(false);
             setCardOpponent(0);
             setCard(0);
-            setCounterAttack(counterAttack + 1);
-        }
-        if(counterAttack >= 10 && counterAttack <= 16){
-                    const newRandom = Math.random();
-                    setRandomNumberVassal(newRandom); 
+            setCounterAttack(prev => prev + 1)
         }
         if(randomNumberVassal > 0){
             setOpponentCounterVassal(opponentCounterVassal + 1);
@@ -109,7 +129,7 @@ export const Cards = () => {
                 setShowAssassinOpponent(false);
                 setKingdom(kingdom - 7);
         }
-        if(counterAttack >= 8 && counterAttack <= 16){
+        if(counterAttack >= 8 && counterAttack <= 15){
             const newRandom = Math.random();
             setRandomNumberBastard(newRandom); 
         }
@@ -120,6 +140,10 @@ export const Cards = () => {
             setShowBastardOpponent(false);
             setKing(king - 10);
             setKingdomOpponent(kingdomOpponent + 10);
+        }
+        if(counterAttack >= 10 && counterAttack <= 15){
+            const newRandom = Math.random();
+            setRandomNumberVassal(newRandom); 
         }
     }
 
@@ -202,6 +226,7 @@ export const Cards = () => {
             </div>
             <div className={classes.king}>
                 <h1>King points - {king}</h1>
+                {counterAttack}
             </div>
 
             <div>
@@ -220,10 +245,9 @@ export const Cards = () => {
                 {showVassalOpponent && <button className={classes.vassalCardOpponent}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
                 {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
             </div>
+            
             <div>
-                <button className={classes.deck} onClick={handleClickDeck}>
-                    <h1>Cards - {deck.length}</h1>
-                </button>
+               <button className={classes.deck} onClick={handleClickDecks}><h1>Cards - {deck.length + deckOpponent.length}</h1></button>
             </div>
 
         </div>
