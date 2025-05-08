@@ -1,0 +1,90 @@
+.miniGamePage{
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    background: wheat;
+}
+
+.dicePlaying{
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%) ;
+    background: azure;
+}
+
+.dice{
+    width: 4vw;
+    height: 4vw;
+    background: azure;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.chipPlayer{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: solid 0.1vw black;
+    background: gold;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.chipOpponent{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: solid 0.1vw black;
+    background: gold;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.betPlayer{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: solid 0.1vw black;
+    background: gold;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+}
+
+.betOpponent{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: solid 0.1vw black;
+    background: gold;
+    position: absolute;
+    top: 45%;
+    right: 30%;
+}
+
+.pointChipPlayer h1{
+    width: 7vw;
+    height: 4vw;
+    border: solid 0.1vw black;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 2.5vw;
+    margin: 0;
+}
+
+.pointChipOpponent h1{
+    width: 7vw;
+    height: 4vw;
+    border: solid 0.1vw black;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 2.5vw;
+    margin: 0;
+}

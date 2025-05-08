@@ -117,6 +117,7 @@ export const Cards = () => {
             setShowCardOpponent(false);
             setCard(0);
             setCardOpponent(0);
+            setCounterAttack(prev => prev + 1);
         }
         if(counterAttack >= 8 && counterAttack <= 16){
             const newRandom = Math.random();
@@ -126,8 +127,8 @@ export const Cards = () => {
             setOpponentCounterAssasin(opponentCounterAssasin + 1);
         }
         if(opponentCounterAssasin === 1 && kingdom >= 7){
-                setShowAssassinOpponent(false);
-                setKingdom(kingdom - 7);
+            setShowAssassinOpponent(false);
+            setKingdom(kingdom - 7);
         }
         if(counterAttack >= 8 && counterAttack <= 15){
             const newRandom = Math.random();
@@ -174,6 +175,7 @@ export const Cards = () => {
             setShowCardOpponent(false);
             setCard(0);
             setCardOpponent(0);
+            setCounterAttack(prev => prev +1);
         }
     }
 
@@ -220,27 +222,31 @@ export const Cards = () => {
 
     return (
         <div className={classes.miniGamePage}>
+            
             <div>
                 <div className={classes.kingdomCardOpponent}><h1>Kingdom points - {kingdomOpponent}</h1></div>
                 <div className={classes.kingdomCard}><h1>Kingdom points - {kingdom}</h1></div>
             </div>
+
             <div className={classes.king}>
                 <h1>King points - {king}</h1>
-                {counterAttack}
             </div>
 
             <div>
                 {showCardOpponent && <button className={cardO} onClick={handleClickAtackCard}><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></button>}
                 {showCard && <button className={cardP} onClick={handleClickAtackCard}><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></button>}
             </div>
+
             <div>
                 {showBastardOpponent && <button className={classes.bastardCardOpponent}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
                 {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
             </div>
+            
             <div>
                 {showAssassinOpponent && <button className={classes.assassinCardOpponent}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
                 {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
             </div>
+            
             <div>
                 {showVassalOpponent && <button className={classes.vassalCardOpponent}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
                 {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
