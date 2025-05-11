@@ -15,76 +15,246 @@
     background: azure;
 }
 
-.dice{
+.dice1{
     width: 4vw;
     height: 4vw;
-    background: azure;
+    background: url(../../Images/WhiteDice1.jpg) no-repeat;
+    background-size: contain;
     border-radius: 20%;
     border: solid 0.1vw black;
 }
 
-.chipPlayer{
-    width: 5vw;
-    height: 5vw;
-    border-radius: 50%;
+.dice2{
+    width: 4vw;
+    height: 4vw;
+    background: url(../../Images/WhiteDice2.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
     border: solid 0.1vw black;
-    background: gold;
+}
+
+.dice3{
+    width: 4vw;
+    height: 4vw;
+    background: url(../../Images/WhiteDice3.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice4{
+    width: 4vw;
+    height: 4vw;
+    background: url(../../Images/WhiteDice4.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice5{
+    width: 4vw;
+    height: 4vw;
+    background: url(../../Images/WhiteDice5.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice6{
+    width: 4vw;
+    height: 4vw;
+    background: url(../../Images/WhiteDice6.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+
+.chipPlayer{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
     position: absolute;
     top: 5%;
     left: 5%;
 }
 
+.chipPlayer h1{
+    width: 14vw;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Rakkas";
+    font-size: 2vw;
+}
+
 .chipOpponent{
-    width: 5vw;
-    height: 5vw;
+    width: 7vw;
+    height: 7vw;
     border-radius: 50%;
-    border: solid 0.1vw black;
-    background: gold;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
     position: absolute;
     bottom: 5%;
     right: 5%;
 }
 
+.chipOpponent h1{
+    width: 16vw;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Rakkas";
+    font-size: 2vw;
+}
+
 .betPlayer{
-    width: 5vw;
-    height: 5vw;
+    width: 7vw;
+    height: 7vw;
     border-radius: 50%;
-    border: solid 0.1vw black;
-    background: gold;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    animation: shiftPlayer 1s forwards;
+}
+
+@keyframes  shiftPlayer {
+    0%, 100% {
+        top: 5%;
+        left: 5%;
+    }
+
+    100% {
+        top: 45%;
+        left: 30%;
+    }
+}
+
+.betPlayer1{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 199;
     position: absolute;
     top: 45%;
     left: 30%;
 }
 
-.betOpponent{
-    width: 5vw;
-    height: 5vw;
+.betPlayer2{
+    width: 7vw;
+    height: 7vw;
     border-radius: 50%;
-    border: solid 0.1vw black;
-    background: gold;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 198;
+    position: absolute;
+    top: 45%;
+    left: 33%;
+}
+
+.betPlayer3{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 197;
+    position: absolute;
+    top: 45%;
+    left: 36%;
+}
+
+.betOpponent{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 45%;
+    right: 30%;
+    animation: shiftOpponent 1s forwards;
+}
+
+@keyframes  shiftOpponent {
+    0%, 100% {
+        top: 80%;
+        right: 5%;
+    }
+
+    100% {
+        top: 45%;
+        right: 30%;
+    }
+}
+
+.betOpponent1{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 199;
     position: absolute;
     top: 45%;
     right: 30%;
 }
 
-.pointChipPlayer h1{
+.betOpponent2{
     width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 198;
+    position: absolute;
+    top: 45%;
+    right: 33%;
+}
+
+.betOpponent3{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 197;
+    position: absolute;
+    top: 45%;
+    right: 36%;
+}
+
+.pointChipPlayer h1{
+    width: 13vw;
     height: 4vw;
-    border: solid 0.1vw black;
+    border: none;
     position: absolute;
     top: 5%;
-    right: 5%;
-    font-size: 2.5vw;
+    right: 0%;
+    font-size: 2vw;
     margin: 0;
 }
 
 .pointChipOpponent h1{
-    width: 7vw;
+    width: 13vw;
     height: 4vw;
-    border: solid 0.1vw black;
+    border: none;
     position: absolute;
     bottom: 5%;
     left: 5%;
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin: 0;
 }

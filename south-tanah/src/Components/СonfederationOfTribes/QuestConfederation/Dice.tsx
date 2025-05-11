@@ -3,6 +3,11 @@ import classes from "../../../Styles/StylesConfederationOfTribes/Quest.module.cs
 
 export const Dice = () => {
     const [showChip, setShowChip] = useState(false);
+    const [showBet, setShowBet] = useState(false);  
+    const [showBet1, setShowBet1] = useState(false);   
+    const [showBet2, setShowBet2] = useState(false);    
+    const [showBet3, setShowBet3] = useState(false);
+    const [counterBet, setCounterBet] = useState(1);    
     const [chipPlayer, setChipPlayer] = useState(20);
     const [chipOpponent, setChipOpponent] = useState(20);
     const [betPlayer, setBetPlayer] = useState(0);
@@ -11,24 +16,58 @@ export const Dice = () => {
     const [pointChipOpponent, setPointChipOpponent] = useState(0);
     const [randomDice, setRandomDice] = useState([0, 0, 0, 0, 0]);
     const [randomDiceOpponent, setRandomDiceOpponent] = useState([0, 0, 0, 0, 0]);
+    const [animationKey, setAnimationKey] = useState(0);
 
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
     function handleBetPlayer() {
         if (betPlayer >= 3 || chipPlayer <= 0) return;
+
+        setShowBet(true);
         setChipPlayer(chipPlayer - 1);
         setBetPlayer(betPlayer + 1);
         handleBetOpponent()
+        setAnimationKey(prevKey => prevKey + 1);
+        setCounterBet(counterBet + 1);
+        if (counterBet === 1) {
+            setTimeout(() => {
+                setShowBet1(true);
+            },1000);
+        }
+        else if (counterBet === 2) {
+            setTimeout(() => {
+                setShowBet2(true);
+            },1000);
+        }
+        else if (counterBet === 3) {
+            setTimeout(() => {
+                setShowBet3(true);
+            },1000);
+        }
+        else {
+            setShowBet1(false);
+            setShowBet2(false);
+            setShowBet3(false);
+        }
     };
 
     function handleBetOpponent() {
         if (betOpponent >= 3 || chipOpponent <= 0) return;
+
         setChipOpponent(chipOpponent - 1);
         setBetOpponent(betOpponent + 1);
     };
 
     async function handleDice() {
         if (betPlayer === 0 && betOpponent === 0) return;
+
+        setTimeout(() => {
+                setShowBet1(false);
+                setShowBet2(false);
+                setShowBet3(false);
+        },1000);
+
+        setCounterBet(1);
 
         const playerDice = Array.from({length: 5}, () => rollDice());
         setRandomDice(playerDice);
@@ -53,45 +92,78 @@ export const Dice = () => {
             setChipOpponent(chipOpponent + betOpponent);
         }
 
+        setShowBet(false);
         setBetPlayer(0);
         setBetOpponent(0);
     }
-
+  
     return (
         <div className={classes.miniGamePage}>
             {showChip && (
                 <div>
-                    {randomDice.map((dice, index) => (
-                        <div key={`player-${index}`} className={classes.dice} 
-                             style={{position: "absolute", top: "5%", left: `${20 + 15 * index}%`}}>
-                            <h1>{dice}</h1>
-                        </div>
-                    ))}
+                    {randomDice.map((dice, index) => {
+                        let diceClass = classes.dice;
+                        switch(dice) {
+                            case 1: diceClass = classes.dice1; break;
+                            case 2: diceClass = classes.dice2; break;
+                            case 3: diceClass = classes.dice3; break;
+                            case 4: diceClass = classes.dice4; break;
+                            case 5: diceClass = classes.dice5; break;
+                            case 6: diceClass = classes.dice6; break;
+                            default: diceClass = classes.dice;
+                        }
+                        
+                        return (
+                            <div key={`player-${index}`} className={diceClass} 
+                                 style={{position: "absolute", top: "5%", left: `${20 + 15 * index}%`}}>
+                            </div>
+                        );
+                    })}
                 </div>
             )}
 
-            <div className={classes.pointChipPlayer}><h1>{pointChipPlayer}</h1></div>
+            <div className={classes.pointChipPlayer}><h1>Points: {pointChipPlayer}</h1></div>
 
-            <div className={classes.betPlayer}><h1>{betPlayer}</h1></div>
+            {showBet && <div className={classes.betPlayer} key={`bet-player-${animationKey}`}></div>}
 
-            <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0}><h1>{chipPlayer}</h1></button>
+            {showBet1 && <div className={classes.betPlayer1}></div> }
+            {showBet2 && <div className={classes.betPlayer2}></div> }
+            {showBet3 && <div className={classes.betPlayer3}></div> }
 
-            <button className={classes.dicePlaying} onClick={handleDice} disabled={betPlayer === 0 && betOpponent === 0}></button>
+            <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0}><h1>Player coins: {chipPlayer}</h1></button>
 
-            <button className={classes.chipOpponent} onClick={handleBetOpponent} disabled={betOpponent === 3 || chipOpponent <= 0}><h1>{chipOpponent}</h1></button>
+            <button className={classes.dicePlaying} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0}></button>
 
-            <div className={classes.betOpponent}><h1>{betOpponent}</h1></div>
+            <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0}><h1>Opponent coins: {chipOpponent}</h1></button>
 
-            <div className={classes.pointChipOpponent}><h1>{pointChipOpponent}</h1></div>
+            {showBet && <div className={classes.betOpponent} key={`bet-opponent-${animationKey}`}></div>}
+
+            {showBet1 && <div className={classes.betOpponent1}></div> }
+            {showBet2 && <div className={classes.betOpponent2}></div> }
+            {showBet3 && <div className={classes.betOpponent3}></div> }
+
+            <div className={classes.pointChipOpponent}><h1>Points: {pointChipOpponent}</h1></div>
 
             {showChip && (
                 <div>
-                    {randomDiceOpponent.map((dice, index) => (
-                        <div key={`opponent-${index}`} className={classes.dice} 
-                             style={{position: "absolute", bottom: "5%", left: `${20 + 15 * index}%`}}>
-                            <h1>{dice}</h1>
-                        </div>
-                    ))}
+                    {randomDiceOpponent.map((dice, index) => {
+                        let diceClass = classes.dice;
+                        switch(dice) {
+                            case 1: diceClass = classes.dice1; break;
+                            case 2: diceClass = classes.dice2; break;
+                            case 3: diceClass = classes.dice3; break;
+                            case 4: diceClass = classes.dice4; break;
+                            case 5: diceClass = classes.dice5; break;
+                            case 6: diceClass = classes.dice6; break;
+                            default: diceClass = classes.dice;
+                        }
+                        
+                        return (
+                            <div key={`opponent-${index}`} className={diceClass} 
+                                 style={{position: "absolute", bottom: "5%", left: `${20 + 15 * index}%`}}>
+                            </div>
+                        );
+                    })}
                 </div>
             )}
         </div>
