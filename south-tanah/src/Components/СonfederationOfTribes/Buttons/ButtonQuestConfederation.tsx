@@ -7,6 +7,6 @@ export function ButtonQuestConfederation() {
         navigate("/queconfederation")
     }
     return (
-    <button className={classes.buttonQuest} type="button" title="Quest Confederation of tribes" onClick={handleClick}></button>
+    <button className={classes.buttonQuest} type="button" title="Квест Конфедерации племён" onClick={handleClick}></button>
     )
 }

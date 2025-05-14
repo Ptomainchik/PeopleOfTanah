@@ -10,7 +10,7 @@ import Registan from "../../Images/RegistanImg.jpg"
 export const ConfederationPage = () => {
     return (
         <div className={classes.confederationPage}>
-            <div className={classes.topbar}><HomeButton/>Confederation of tribes<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Конфедерация племён<BackButton/></div>
             <div className={classes.overflowInfoConfederation}>
                 <div className={classes.infoConfederation}>
                     <p>
@@ -27,17 +27,17 @@ export const ConfederationPage = () => {
             <div className={classes.buttonConfederation}>
                 
                 <div className={classes.blockButtonHistory}>
-                    <p>History</p>
+                    <p>История</p>
                     <ButtonHistoryConfederation/>
                 </div>
                 
                 <div className={classes.blockButtonStructure}>
-                    <p>Structure</p>
+                    <p>Структура</p>
                     <ButtonStructureConfederation/>
                 </div>
                 
                 <div className={classes.blockButtonQuest}>
-                    <p>Quest</p>
+                    <p>Квест</p>
                     <ButtonQuestConfederation/>
                 </div>
                 

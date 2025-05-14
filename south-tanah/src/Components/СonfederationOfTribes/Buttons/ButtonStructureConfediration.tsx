@@ -7,6 +7,6 @@ export function ButtonStructureConfederation() {
         navigate("/strconfederation");
     };
     return (
-    <button className={classes.buttonStructure} type="button" title="Structure Confederation" onClick={handleClick}></button>
+    <button className={classes.buttonStructure} type="button" title="Структура Конфедерации племён" onClick={handleClick}></button>
     )
 }

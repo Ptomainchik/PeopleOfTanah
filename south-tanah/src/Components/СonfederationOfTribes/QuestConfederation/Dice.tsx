@@ -80,8 +80,9 @@ export const Dice = () => {
         setPointChipOpponent(opponentPoints);
 
         setShowChip(true);
-      
-        if (playerPoints > opponentPoints){
+
+        setTimeout(() => {
+            if (playerPoints > opponentPoints){
             setChipPlayer(chipPlayer + betPlayer + betOpponent);
         } 
         else if (playerPoints < opponentPoints){
@@ -91,7 +92,8 @@ export const Dice = () => {
             setChipPlayer(chipPlayer + betPlayer);
             setChipOpponent(chipOpponent + betOpponent);
         }
-
+        },2000)
+      
         setShowBet(false);
         setBetPlayer(0);
         setBetOpponent(0);
@@ -100,7 +102,7 @@ export const Dice = () => {
     return (
         <div className={classes.miniGamePage}>
             {showChip && (
-                <div>
+                <div className={classes.dicePlayerField}>
                     {randomDice.map((dice, index) => {
                         let diceClass = classes.dice;
                         switch(dice) {
@@ -115,14 +117,14 @@ export const Dice = () => {
                         
                         return (
                             <div key={`player-${index}`} className={diceClass} 
-                                 style={{position: "absolute", top: "5%", left: `${20 + 15 * index}%`}}>
+                                 style={{position: "absolute", top: "50%", left: `${7 + 20 * index}%`, transform: "translateY(-50%)"}}>
                             </div>
                         );
                     })}
                 </div>
             )}
 
-            <div className={classes.pointChipPlayer}><h1>Points: {pointChipPlayer}</h1></div>
+            <div className={classes.pointChipPlayerField}><h1>Очки игрока: {pointChipPlayer}</h1></div>
 
             {showBet && <div className={classes.betPlayer} key={`bet-player-${animationKey}`}></div>}
 
@@ -130,11 +132,18 @@ export const Dice = () => {
             {showBet2 && <div className={classes.betPlayer2}></div> }
             {showBet3 && <div className={classes.betPlayer3}></div> }
 
-            <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0}><h1>Player coins: {chipPlayer}</h1></button>
+            <div className={classes.chipPlayerField}>
+                <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0} title="Монеты игрока"></button>
+                <h1>Монеты игрока: {chipPlayer}</h1>
+            </div>
+            
+            <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0}>Бросить кубики</button>
 
-            <button className={classes.dicePlaying} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0}></button>
-
-            <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0}><h1>Opponent coins: {chipOpponent}</h1></button>
+            <div className={classes.chipOpponentField}>
+                <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0} title="Монеты оппонента"></button>
+                <h1>Монеты оппонента: {chipOpponent}</h1>
+            </div>
+            
 
             {showBet && <div className={classes.betOpponent} key={`bet-opponent-${animationKey}`}></div>}
 
@@ -142,10 +151,10 @@ export const Dice = () => {
             {showBet2 && <div className={classes.betOpponent2}></div> }
             {showBet3 && <div className={classes.betOpponent3}></div> }
 
-            <div className={classes.pointChipOpponent}><h1>Points: {pointChipOpponent}</h1></div>
+            <div className={classes.pointChipOpponentField}><h1>Очки оппонента: {pointChipOpponent}</h1></div>
 
             {showChip && (
-                <div>
+                <div className={classes.diceOpponentField}>
                     {randomDiceOpponent.map((dice, index) => {
                         let diceClass = classes.dice;
                         switch(dice) {
@@ -160,7 +169,7 @@ export const Dice = () => {
                         
                         return (
                             <div key={`opponent-${index}`} className={diceClass} 
-                                 style={{position: "absolute", bottom: "5%", left: `${20 + 15 * index}%`}}>
+                                 style={{position: "absolute", top: "50%", left: `${7 + 20 * index}%`, transform: "translateY(-50%)"}}>
                             </div>
                         );
                     })}

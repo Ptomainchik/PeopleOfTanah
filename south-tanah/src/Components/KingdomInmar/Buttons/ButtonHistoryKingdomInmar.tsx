@@ -7,6 +7,6 @@ export function ButtonHistoryKingdomInmar() {
         navigate("/hisinmar")
     }
     return (
-    <button className={classes.buttonHistory} type="button" title="History Kingdom Inmar" onClick={handleClick}></button>
+    <button className={classes.buttonHistory} type="button" title="История Королевства Инмар" onClick={handleClick}></button>
     )
 }

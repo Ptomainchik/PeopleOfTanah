@@ -7,6 +7,6 @@ export function ButtonQuestKingdomInmar() {
         navigate("/queinmar")
     }
     return (
-    <button className={classes.buttonQuest} type="button" title="Quest Kingdom Inmar" onClick={handleClick}></button>
+    <button className={classes.buttonQuest} type="button" title="Квест Королевства Инмар" onClick={handleClick}></button>
     )
 }

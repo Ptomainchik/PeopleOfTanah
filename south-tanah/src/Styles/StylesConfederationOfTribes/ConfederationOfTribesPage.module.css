@@ -10,7 +10,11 @@
     height: 4.5vw;
     background: goldenrod;
     font-size: 3vw;
-    text-align: center;
+    font-family: "El Messiri";
+    font-weight: 700;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
     border: solid 0.3vw grey;
  }
 
@@ -34,6 +38,8 @@
 
 .infoConfederation p{
     font-size: 2vw;
+    font-family: "Pangolin";
+    font-weight: 700;
     width: 50vw;
     margin-left: 1vw;
     position: absolute;
@@ -53,6 +59,8 @@
 
 .buttonConfederation p{
     font-size: 3vw;
+     font-family: "El Messiri";
+    font-weight: 700;
     width: 18vw;
     margin: 0;
     padding: 0;

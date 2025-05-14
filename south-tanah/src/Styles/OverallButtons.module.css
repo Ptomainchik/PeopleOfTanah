@@ -1,15 +1,17 @@
 .homeButton{
-    font-size: 3vw;
-    width: 8vw;
-    height: 4.5vw;
-    background: limegreen;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    text-align: center;
-    border: solid 0.3vw grey;
-    cursor: pointer;
+   font-size: 3vw;
+   width: 15vw;
+   height: 4.5vw;
+   background: limegreen;
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin: 0;
+   display: flex; 
+   align-items: center;
+   justify-content: center; 
+   border: solid 0.3vw grey;
+   cursor: pointer;
 }
 
 .homeButton:hover{
@@ -17,18 +19,20 @@
 }
 
 .backButton{
-    font-family: "Rakkas" ;
-    font-size: 3vw;
-    background: cornflowerblue;
-    width: 8vw;
-    height: 4.5vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    text-align: center;
-    border: solid 0.3vw grey;
-    cursor: pointer;
+   font-family: "Rakkas";
+   font-size: 3vw;
+   background: cornflowerblue;
+   width: 15vw;
+   height: 4.5vw;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 0;
+   display: flex; 
+   align-items: center;
+   justify-content: center; 
+   border: solid 0.3vw grey;
+   cursor: pointer;
 }
 
 .backButton:hover{
@@ -36,40 +40,40 @@
 }
 
 .buttonHistory{
-    background: url(../Images/ButtonHistory.webp) no-repeat;
-    background-size: contain;
-    border: none;
-    width: 20vw;
-    height: 10vw;
-    cursor: pointer;
+   background: url(../Images/ButtonHistory.webp) no-repeat;
+   background-size: contain;
+   border: none;
+   width: 20vw;
+   height: 10vw;
+   cursor: pointer;
  }
 
  .buttonHistory:hover{
-    filter: drop-shadow( 0vw 0vw 1vw brown);
+   filter: drop-shadow( 0vw 0vw 1vw brown);
  }
 
  .buttonStructure{
-    background: url(../Images/ButtonStructure.webp) no-repeat;
-    background-size: contain;
-    border: none;
-    width: 20vw;
-    height: 10vw;
-    cursor: pointer;
+   background: url(../Images/ButtonStructure.webp) no-repeat;
+   background-size: contain;
+   border: none;
+   width: 20vw;
+   height: 10vw;
+   cursor: pointer;
  }
 
  .buttonStructure:hover{
-    filter: drop-shadow( 0vw 0vw 1vw gold);
+   filter: drop-shadow( 0vw 0vw 1vw gold);
  }
 
  .buttonQuest{
-    background: url(../Images/ButtonQuest.webp) no-repeat;
-    background-size: contain;
-    border: none;
-    width: 20vw;
-    height: 10vw;
-    cursor: pointer;
+   background: url(../Images/ButtonQuest.webp) no-repeat;
+   background-size: contain;
+   border: none;
+   width: 20vw;
+   height: 10vw;
+   cursor: pointer;
  }
 
  .buttonQuest:hover{
-    filter: drop-shadow( 0vw 0vw 1vw rgb(14, 168, 179));
+   filter: drop-shadow( 0vw 0vw 1vw rgb(14, 168, 179));
  }

@@ -5,14 +5,46 @@
     background: wheat;
 }
 
-.dicePlaying{
-    width: 4vw;
+.diceButton{
+    width: 10vw;
     height: 4vw;
     position: absolute;
     left: 50%;
-    top: 45%;
-    transform: translateX(-50%) ;
-    background: azure;
+    top: 48%;
+    transform: translateX(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 1vw;
+    font-weight: 700;
+    color: black;
+    border: solid 0.3vw goldenrod;
+    cursor: pointer;
+}
+
+.diceButton:hover{
+    opacity: 0.9;
+}
+
+.dicePlayerField{
+    width: 60%;
+    height: 15%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid goldenrod 0.3vw;
+    background: grey;
+}
+
+.diceOpponentField{
+    width: 60%;
+    height: 15%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid goldenrod 0.3vw;
+    background: grey;
 }
 
 .dice1{
@@ -69,6 +101,15 @@
     border: solid 0.1vw black;
 }
 
+.chipPlayerField{
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+}
 
 .chipPlayer{
     width: 7vw;
@@ -79,17 +120,36 @@
     background-size: contain;
     position: absolute;
     top: 5%;
-    left: 5%;
-}
-
-.chipPlayer h1{
-    width: 14vw;
-    position: absolute;
-    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Rakkas";
-    font-size: 2vw;
+    cursor: pointer;
+}
+
+.chipPlayer:hover{
+    opacity: 0.9;
+    filter: drop-shadow( 0 0 5px goldenrod);
+}
+
+.chipPlayerField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 1.5vw;
+    font-weight: 700
+}
+
+.chipOpponentField{
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+    background: grey;
+    border: solid 0.3vw goldenrod;
 }
 
 .chipOpponent{
@@ -101,17 +161,20 @@
     background-size: contain;
     position: absolute;
     bottom: 5%;
-    right: 5%;
-}
-
-.chipOpponent h1{
-    width: 16vw;
-    position: absolute;
-    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: "Rakkas";
-    font-size: 2vw;
+}
+
+.chipOpponentField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 1.5vw;
+    font-weight: 700
 }
 
 .betPlayer{
@@ -237,24 +300,44 @@
     right: 36%;
 }
 
-.pointChipPlayer h1{
-    width: 13vw;
-    height: 4vw;
-    border: none;
+.pointChipPlayerField{
+    width: 15vw;
+    height: 15vw;
     position: absolute;
+    right: 1%;
     top: 5%;
-    right: 0%;
-    font-size: 2vw;
-    margin: 0;
+    background: grey;
+    border: solid 0.3vw goldenrod;
 }
 
-.pointChipOpponent h1{
-    width: 13vw;
-    height: 4vw;
-    border: none;
+.pointChipPlayerField h1{
+    width: 100%;
+    text-align: center;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-size: 1.5vw;
+    font-weight: 700
+}
+
+.pointChipOpponentField{
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    left: 1%;
     bottom: 5%;
-    left: 5%;
-    font-size: 2vw;
-    margin: 0;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+}
+
+.pointChipOpponentField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-size: 1.5vw;
+    font-weight: 700
 }

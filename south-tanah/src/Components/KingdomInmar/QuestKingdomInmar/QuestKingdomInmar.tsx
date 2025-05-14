@@ -6,7 +6,7 @@ import { Cards } from "./Cards"
 export const QuestKingdomInmar = () => {
     return (
         <div>
-             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>Kingdom Inmar<BackButton/></div>
+             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>Квест Королевства Инмар<BackButton/></div>
              <Cards/>
         </div>
         

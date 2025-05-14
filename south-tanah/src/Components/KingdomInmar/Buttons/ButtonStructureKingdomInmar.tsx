@@ -7,6 +7,6 @@ export function ButtonStructureKingdomInmar() {
         navigate("/strinmar")
     }
     return (
-    <button className={classes.buttonStructure} type="button" title="Structure Kingdom Inmar" onClick={handleClick}></button>
+    <button className={classes.buttonStructure} type="button" title="Структура Королевства Инмар" onClick={handleClick}></button>
     )
 }

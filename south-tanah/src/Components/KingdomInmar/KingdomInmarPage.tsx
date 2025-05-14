@@ -9,7 +9,7 @@ import Human from "../../Images/HumanImg.jpg"
 export const KingdomInmarPage = () => {
     return (
         <div className={classes.kingdomInmarPage}>
-            <div className={classes.topbar}><HomeButton/>Kingdom Inmar<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Королевство Инмар<BackButton/></div>
             <div className={classes.overflowInfoKingdomInmar}>
                 <div className={classes.infoKingdomInmar}>
                     <p>
@@ -26,17 +26,17 @@ export const KingdomInmarPage = () => {
             <div className={classes.buttonKingdomInmar}>
 
                 <div className={classes.blockButtonHistory}>
-                    <p>History</p>
+                    <p>История</p>
                     <ButtonHistoryKingdomInmar/>
                 </div>
 
                 <div className={classes.blockButtonStructure}>
-                    <p>Structure</p>
+                    <p>Структура</p>
                     <ButtonStructureKingdomInmar/>
                 </div>
 
                 <div className={classes.blockButtonQuest}>
-                    <p>Quest</p>
+                    <p>Квест</p>
                     <ButtonQuestKingdomInmar/>
                 </div>
             </div>

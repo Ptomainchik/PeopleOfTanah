@@ -224,36 +224,36 @@ export const Cards = () => {
         <div className={classes.miniGamePage}>
             
             <div>
-                <div className={classes.kingdomCardOpponent}><h1>Kingdom points - {kingdomOpponent}</h1></div>
-                <div className={classes.kingdomCard}><h1>Kingdom points - {kingdom}</h1></div>
+                <div className={classes.kingdomCardOpponent} title="Очки оппонента"><h1>Очки королевства: {kingdomOpponent}</h1></div>
+                <div className={classes.kingdomCard} title="Очки игрока"><h1>Очки королевства: {kingdom}</h1></div>
             </div>
 
-            <div className={classes.king}>
-                <h1>King points - {king}</h1>
-            </div>
-
-            <div>
-                {showCardOpponent && <button className={cardO} onClick={handleClickAtackCard}><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></button>}
-                {showCard && <button className={cardP} onClick={handleClickAtackCard}><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></button>}
+            <div className={classes.king} title="Очки короля">
+                <h1>Очки короля: {king}</h1>
             </div>
 
             <div>
-                {showBastardOpponent && <button className={classes.bastardCardOpponent}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
-                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showCardOpponent && <button className={cardO} onClick={handleClickAtackCard} title="Карта оппонента"><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></button>}
+                {showCard && <button className={cardP} onClick={handleClickAtackCard} title="Карта игрока"><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></button>}
+            </div>
+
+            <div>
+                {showBastardOpponent && <button className={classes.bastardCardOpponent} title="Бастард"><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard} title="Бастард"><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
             </div>
             
             <div>
-                {showAssassinOpponent && <button className={classes.assassinCardOpponent}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
-                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassinOpponent && <button className={classes.assassinCardOpponent} title="Ассасин"><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin} title="Ассасин"><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
             </div>
             
             <div>
-                {showVassalOpponent && <button className={classes.vassalCardOpponent}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
-                {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassalOpponent && <button className={classes.vassalCardOpponent} title="Вассал"><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal} title="Вассал"><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
             </div>
             
             <div>
-               <button className={classes.deck} onClick={handleClickDecks}><h1>Cards - {deck.length + deckOpponent.length}</h1></button>
+               <button className={classes.deck} onClick={handleClickDecks} title="Колода"><h1>Колода: {deck.length + deckOpponent.length}</h1></button>
             </div>
 
         </div>

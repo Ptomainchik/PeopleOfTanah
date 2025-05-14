@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Pangolin&family=Rakkas&display=swap');
+
 .startPage{
     width: 100%;
     height: 100%;
@@ -29,14 +31,15 @@
 .infoBlockStartPage h1{
     text-align: center;
     color: red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "El Messiri";
     font-size: 5vw;
+    font-weight: 700;
 }
 
 .infoBlockStartPage p{ 
     width: 40%;
     color: burlywood;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Pangolin";
     font-size: 2vw;
     position: absolute;
     left: 50%;

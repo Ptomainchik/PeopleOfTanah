@@ -7,6 +7,6 @@ export function ButtonHistoryConfederation() {
         navigate("/hisconfederation");
     };
     return (
-    <button className={classes.buttonHistory} type="button" title="History Confederation" onClick={handleClick}></button>
+    <button className={classes.buttonHistory} type="button" title="История Конфедерации племён" onClick={handleClick}></button>
     )
 }

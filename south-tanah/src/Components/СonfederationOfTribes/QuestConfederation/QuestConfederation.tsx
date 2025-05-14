@@ -6,7 +6,7 @@ import { Dice } from "./Dice";
 export const QuestConfederation = () => {
     return (
         <div>
-            <div className={classes.topbar}><HomeButton/>Confederation of tribes<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Квест Конфедирации племён<BackButton/></div>
            <Dice/>
         </div>
         

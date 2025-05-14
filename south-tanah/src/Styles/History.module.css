@@ -1,6 +1,8 @@
 .topbar{
     height: 4.5vw;
     font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
     text-align: center;
     border: solid 0.3vw grey;
 }
@@ -42,6 +44,8 @@
     top: 5%;
     right: 30%;
     font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
     margin: 0;
 }
 
@@ -52,6 +56,7 @@
     right: 5%;
     top: 10%;
     font-size: 2vw;
+    font-family: "Pangolin";
     padding: 2%;
 }
 
@@ -84,8 +89,10 @@
     top: 5%;
     right: 30%;
     font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
     margin: 0;
-    color: yellow;
+    color: goldenrod;
 }
 
 .rightModal p{
@@ -94,8 +101,9 @@
     position: absolute;
     right: 5%;
     top: 10%;
-    color: yellow;
+    color: goldenrod;
     font-size: 2vw;
+    font-family: "Pangolin";
     padding: 2%;
 }
 
@@ -171,7 +179,8 @@
 
 .titleChapterHistory{
     font-size: 2.5vw;
-    font-family: "Rakkas";
+    font-family: "El Messeri";
+    font-weight: 700;
     -webkit-text-stroke: 1px white;
 }
 
@@ -185,7 +194,7 @@
     position: absolute;
     top: 5%;
     left: 5%;
-    background: yellow;
+    background: goldenrod;
     clip-path: polygon(50% 0%, 95% 5%, 100% 35%, 100% 70%, 95% 95%, 50% 100%, 5% 95%, 0% 70%, 0% 35%, 5% 5%);
 }
 
@@ -202,7 +211,8 @@
     width: 15vw;
     height: 3vw;
     font-size: 2vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     position: absolute;
     bottom: 15%;
     right: 5%;

@@ -11,7 +11,7 @@ export const StartPage = () => {
             </div>
             <div className={classes.overlayInfoBlockStartPage}>
                 <div className={classes.infoBlockStartPage}>
-                    <h1>South Tanah</h1>
+                    <h1>Юг Танаха</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Corrupti autem repellendus neque veniam, sed beatae rem numquam, rerum voluptatem adipisci, provident consequatur iste? 
                     Facilis beatae dolor ea? Cumque, sint quia.</p>

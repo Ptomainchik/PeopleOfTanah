@@ -10,7 +10,10 @@
     height: 4.5vw;
     background: darkred;
     font-size: 3vw;
-    text-align: center;
+    font-weight: 700;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
     border: solid 0.3vw grey;
 }
 
@@ -32,9 +35,9 @@
     top: 0%;
 }
 
-
 .infoKingdomInmar p{
     font-size: 2vw;
+    font-family: "Pangolin";
     width: 50vw;
     margin-left: 1vw;
     position: absolute;
@@ -54,6 +57,7 @@
 
 .buttonKingdomInmar p{
     font-size: 3vw;
+    font-weight: 700;
     width: 18vw;
     margin: 0;
     padding: 0;

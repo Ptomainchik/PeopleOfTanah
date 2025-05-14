@@ -9,8 +9,8 @@ export function BackButton() {
 
   return (
     <div className={classes.button}>
-    <p className={classes.backButton} title="Back" onClick={handleClick}>
-      Back
+    <p className={classes.backButton} title="Назад" onClick={handleClick}>
+      Назад
     </p>
     </div>
   );

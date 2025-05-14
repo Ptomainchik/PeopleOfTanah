@@ -2,7 +2,10 @@
     height: 4.5vw;
     background: darkred;
     font-size: 3vw;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
     border: solid 0.3vw grey;
 }
 
@@ -11,6 +14,11 @@
     height: 100%;
     background: rgb(25, 25, 25);
     position: fixed;
+}
+
+.structureKindomInmarPage span{
+    font-family: "El Messiri";
+    font-weight: 700;
 }
 
 .buttonModalNorth{
@@ -49,7 +57,6 @@
 .buttonModalNortheast:hover{
     filter: drop-shadow( 0 0 0.5vw yellow);
 }
-
 
 .buttonModalCenter{
     font-size: 3vw;
@@ -108,7 +115,8 @@
     left: 80%;
     bottom: 20%;
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw rgb(221, 221, 128);
 }
 .buttonModalCouncil{
@@ -129,10 +137,12 @@
 
 .buttonModalCouncil span{
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 60%;
+    transform: translateX(-50%);
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw chartreuse;
 }
 
@@ -157,7 +167,8 @@
     right: 80%;
     bottom: 20%;
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw darkblue;
 }
 
@@ -182,6 +193,8 @@
 
 .modalStructure h4{
     font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
     position: absolute;
     top: 2%;
     right: 25%;
@@ -192,6 +205,7 @@
     width: 50%;
     height: 100%;
     font-size: 2vw;
+    font-family: "Pangolin";
     padding-left: 5%;
     position: absolute;
     top: 15%;
@@ -252,7 +266,8 @@
     width: 15vw;
     height: 3vw;
     font-size: 2vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     position: absolute;
     bottom: 5%;
     right: 5%;

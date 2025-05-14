@@ -2,7 +2,11 @@
     height: 4.5vw;
     background: goldenrod;
     font-size: 3vw;
-    text-align: center;
+    font-family: "El Messiri";
+    font-weight: 700;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
     border: solid 0.3vw grey;
 }
 
@@ -31,7 +35,8 @@
 
 .buttonModalHuman span{
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw rgb(243, 234, 215);
     position: absolute;
     bottom: -5%;
@@ -56,7 +61,8 @@
 
 .buttonModalDesertHuman span{
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw rgb(146, 112, 38);
     position: absolute;
     bottom: -5%;
@@ -80,7 +86,8 @@
 
 .buttonModalRegistan span{
     font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     -webkit-text-stroke: 0.1vw rgb(20, 107, 122);
     position: absolute;
     bottom: -5%;
@@ -114,6 +121,8 @@
     top: 2%;
     margin: 0;
     font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
 }
 
 .modalStructureConfederation p{
@@ -123,6 +132,7 @@
     right: 5%;
     top: 10%;
     font-size: 2vw;
+    font-family: "Pangolin";
 }
 
 @keyframes  shift {
@@ -141,7 +151,8 @@
     width: 15vw;
     height: 3vw;
     font-size: 2vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
+    font-weight: 700;
     position: absolute;
     bottom: 5%;
     right: 5%;

@@ -4,6 +4,8 @@
     background: rgb(102, 80, 68);
     position: absolute;
     top: 10%;
+    font-family: "El Messiri";
+    font-weight: 700;
 }
 
 .king{
@@ -44,7 +46,7 @@
 }
 
 .kingdomCardOpponent h1{
-    width: 13vw;
+    width: 17vw;
     position: absolute;
     top: 0%;
     left: 110%;
@@ -66,14 +68,12 @@
 }
 
 .kingdomCard h1{
-    width: 13vw;
+    width: 17vw;
     position: absolute;
     bottom: 0%;
     left: 110%;
     font-size: 1.5vw;
 }
-
-
 
 .deckCard{
     width: 10vw;
@@ -87,7 +87,6 @@
     background:  url(../../Images/CardBack.webp) no-repeat center;
     background-color: darkcyan;
     background-size: contain;
-    
 }
 
 .cards{
@@ -119,6 +118,7 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .orderCard{
@@ -137,6 +137,7 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .monkCardOpponent{
@@ -155,6 +156,7 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .monkCard{
@@ -173,6 +175,7 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .tradesmanCardOpponent{
@@ -191,6 +194,7 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .tradesmanCard{
@@ -209,6 +213,7 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .fishermanCardOpponent{
@@ -227,6 +232,7 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 .fishermanCard{
@@ -244,7 +250,8 @@
     background-size: contain;
     color: red;
     animation: shiftPlayer 1s ;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+    cursor: pointer; 
 }
 
 .squireCardOpponent{
@@ -262,7 +269,8 @@
     background-size: contain;
     color: darkblue;
     animation: shiftOpponent 1s ;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+    cursor: pointer; 
 }
 
 .squireCard{
@@ -281,6 +289,7 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
+    cursor: pointer;
 }
 
 @keyframes  shiftOpponent {
@@ -347,6 +356,7 @@
     background-color: wheat;
     background-size: contain;
     color: red;
+    cursor: pointer;
 }
 
 .assassinCardOpponent{
@@ -377,6 +387,7 @@
     font-size: 1.5vw;
     font-family: "Rakkas";
     color: red;
+    cursor: pointer;
 }
 
 .bastardCardOpponent{
@@ -407,6 +418,7 @@
     font-size: 1.5vw;
     font-family: "Rakkas";
     color: red;
+    cursor: pointer;
 }
 
 .top{
@@ -434,9 +446,9 @@
     top: 50%;
     right: 2%;
     transform: translateY(-50%);
-    font-size: 3vw;
-    font-family: "Rakkas";
+    font-family: "El Messiri";
     color: black;
+    cursor: pointer;
 }
 
 .deck h1{
