@@ -28,15 +28,15 @@ export const StructureKingdomInmar = () => {
         <div className={classes.structureKindomInmarPage}>
             <div className={classes.topbar}><HomeButton/>Структура Королевства Инмар<BackButton/></div>
                 <div>
-                    <p className={classes.buttonModalNorth} id={"1"} onClick={() => {handleOpenModal("1")}}><span>Север</span></p>
-                    <p className={classes.buttonModalNorthwest} id={"2"} onClick={() => {handleOpenModal("2")}}><span>Северо-Запад</span></p>
-                    <p className={classes.buttonModalNortheast} id={"3"} onClick={() => {handleOpenModal("3")}}><span>Северо-Восток</span></p>
-                    <p className={classes.buttonModalCenter} id={"4"} onClick={() => {handleOpenModal("4")}}><span>Центр</span></p>
-                    <p className={classes.buttonModalSouthwest} id={"5"} onClick={() => {handleOpenModal("5")}}><span>Юго-Запад</span></p>
-                    <p className={classes.buttonModalSoutheast} id={"6"} onClick={() => {handleOpenModal("6")}}><span>Юго-Восток</span></p>
-                    <button className={classes.buttonModalRighteous} id={"7"} onClick={() => {handleOpenModal("7")}}><span>Праведники</span></button>
-                    <button className={classes.buttonModalCouncil} id={"8"} onClick={() => {handleOpenModal("8")}}><span>Совет</span></button>
-                    <button className={classes.buttonModalOrder} id={"9"} onClick={() => {handleOpenModal("9")}}><span>Орден</span></button>
+                    <p className={classes.buttonModalNorth} id={"1"} onClick={() => {handleOpenModal("1")}}><p>Север</p></p>
+                    <p className={classes.buttonModalNorthwest} id={"2"} onClick={() => {handleOpenModal("2")}}><p>Северо-Запад</p></p>
+                    <p className={classes.buttonModalNortheast} id={"3"} onClick={() => {handleOpenModal("3")}}><p>Северо-Восток</p></p>
+                    <p className={classes.buttonModalCenter} id={"4"} onClick={() => {handleOpenModal("4")}}><p>Центр</p></p>
+                    <p className={classes.buttonModalSouthwest} id={"5"} onClick={() => {handleOpenModal("5")}}><p>Юго-Запад</p></p>
+                    <p className={classes.buttonModalSoutheast} id={"6"} onClick={() => {handleOpenModal("6")}}><p>Юго-Восток</p></p>
+                    <button className={classes.buttonModalRighteous} id={"7"} onClick={() => {handleOpenModal("7")}}><p>Праведники</p></button>
+                    <button className={classes.buttonModalCouncil} id={"8"} onClick={() => {handleOpenModal("8")}}><p>Совет</p></button>
+                    <button className={classes.buttonModalOrder} id={"9"} onClick={() => {handleOpenModal("9")}}><p>Орден</p></button>
                 </div>
 
                 <div>
