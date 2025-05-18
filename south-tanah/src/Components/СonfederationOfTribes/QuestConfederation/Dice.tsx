@@ -7,6 +7,11 @@ export const Dice = () => {
     const [showBet1, setShowBet1] = useState(false);   
     const [showBet2, setShowBet2] = useState(false);    
     const [showBet3, setShowBet3] = useState(false);
+    const [showCheating, setShowCheating] = useState(true);
+    const [showTrickery, setShowTrickery] = useState(true);
+    const [showModalRules, setShowModalRules] = useState(false);
+    const [buttonCheatingState, setButtonCheatingState] = useState(false);
+    const [buttonBetState, setButtonBetState] = useState(false);
     const [counterBet, setCounterBet] = useState(1);    
     const [chipPlayer, setChipPlayer] = useState(20);
     const [chipOpponent, setChipOpponent] = useState(20);
@@ -23,6 +28,7 @@ export const Dice = () => {
     function handleBetPlayer() {
         if (betPlayer >= 3 || chipPlayer <= 0) return;
 
+        setButtonBetState(true);
         setShowBet(true);
         setChipPlayer(chipPlayer - 1);
         setBetPlayer(betPlayer + 1);
@@ -58,8 +64,31 @@ export const Dice = () => {
         setBetOpponent(betOpponent + 1);
     };
 
+    function handleCheating() {
+        setShowCheating(false);
+        setButtonCheatingState(true);
+    }
+
+    function handleTrickery() {
+        setShowTrickery(false);
+
+        if (chipOpponent >= 5) {
+            setChipOpponent(prevChip => prevChip -3);
+            setChipPlayer(prevChip => prevChip +3);
+        }
+        else if (chipOpponent === 1) {
+            return;
+        }
+        else {
+            setChipOpponent(prevChip => prevChip -1);
+            setChipPlayer(prevChip => prevChip +1);
+        }
+    }
+
     async function handleDice() {
         if (betPlayer === 0 && betOpponent === 0) return;
+
+        setButtonBetState(false);
 
         setTimeout(() => {
                 setShowBet1(false);
@@ -82,21 +111,33 @@ export const Dice = () => {
         setShowChip(true);
 
         setTimeout(() => {
-            if (playerPoints > opponentPoints){
+            if (playerPoints > opponentPoints && buttonCheatingState === false){
             setChipPlayer(chipPlayer + betPlayer + betOpponent);
         } 
-        else if (playerPoints < opponentPoints){
+        else if (playerPoints < opponentPoints && buttonCheatingState === false){
             setChipOpponent(chipOpponent + betPlayer + betOpponent);
         } 
-        else if (playerPoints === opponentPoints){
+        else if (playerPoints === opponentPoints && buttonCheatingState === false){
             setChipPlayer(chipPlayer + betPlayer);
             setChipOpponent(chipOpponent + betOpponent);
+        }
+        else if (buttonCheatingState === true) {
+            setChipPlayer(chipPlayer + betPlayer + betOpponent);
+            setButtonCheatingState(false);
         }
         },2000)
       
         setShowBet(false);
         setBetPlayer(0);
         setBetOpponent(0);
+    }
+
+    function handleOpenModalRules() {
+        setShowModalRules(true);
+    }
+
+    function handleCloseModalRules() {
+        setShowModalRules(false);
     }
   
     return (
@@ -124,9 +165,20 @@ export const Dice = () => {
                 </div>
             )}
 
-            <div className={classes.pointChipPlayerField}><h1>Очки игрока: {pointChipPlayer}</h1></div>
+            <div className={classes.pointDicePlayerField}><h1>Очки игрока: {pointChipPlayer}</h1></div>
 
             {showBet && <div className={classes.betPlayer} key={`bet-player-${animationKey}`}></div>}
+
+            {showCheating &&  <button className={classes.buttonCheating} onClick={handleCheating} disabled={buttonBetState === false}>Шулерство</button>}
+            {showTrickery && <button className={classes.buttonTrickery} onClick={handleTrickery} disabled={buttonBetState === true}>Хитрость</button> }
+
+            <button className={classes.buttonRules} onClick={handleOpenModalRules}>Правила</button>
+            {showModalRules && <div className={classes.modalRules}> 
+                <p className={classes.rules1}>Шулерство - победа в следующем розигрыше кубиков.</p>
+                <p className={classes.rules2}>Хитрость - хитростью выманить монеты у оппонента.</p>
+                <p className={classes.rules3}>Общие правила игры - кидай кубы а дальше будет видно.</p>
+                <button className={classes.closeButton} onClick={handleCloseModalRules}>Закрыть</button>
+            </div>}
 
             {showBet1 && <div className={classes.betPlayer1}></div> }
             {showBet2 && <div className={classes.betPlayer2}></div> }
@@ -151,7 +203,7 @@ export const Dice = () => {
             {showBet2 && <div className={classes.betOpponent2}></div> }
             {showBet3 && <div className={classes.betOpponent3}></div> }
 
-            <div className={classes.pointChipOpponentField}><h1>Очки оппонента: {pointChipOpponent}</h1></div>
+            <div className={classes.pointDiceOpponentField}><h1>Очки оппонента: {pointChipOpponent}</h1></div>
 
             {showChip && (
                 <div className={classes.diceOpponentField}>

@@ -14,6 +14,7 @@ export const Cards = () => {
     const [showAssassinOpponent, setShowAssassinOpponent] = useState(true);
     const [showBastard, setShowBastard] = useState(true);
     const [showBastardOpponent, setShowBastardOpponent] = useState(true);
+    const [showRules, setShowRules] = useState(false);
     const [kingdomOpponent, setKingdomOpponent] = useState(0);
     const [kingdom, setKingdom] = useState(0);
     const [king, setKing] = useState(0);
@@ -220,6 +221,14 @@ export const Cards = () => {
         cardP = classes.squireCard
     }
 
+    function handleOpenModalRules(){
+        setShowRules(true);
+    }
+
+    function handleCloseModalRules(){
+        setShowRules(false);
+    }
+
     return (
         <div className={classes.miniGamePage}>
             
@@ -228,14 +237,29 @@ export const Cards = () => {
                 <div className={classes.kingdomCard} title="Очки игрока"><h1>Очки королевства: {kingdom}</h1></div>
             </div>
 
+            <button className={classes.rulesButton} onClick={handleOpenModalRules}>Правила</button>
+
+            {showRules && <div className={classes.rules}>
+                    <div className={classes.block1}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam obcaecati, explicabo quia repellendus impedit laborum quas quos quibusdam voluptatibus totam eos cum optio, repellat excepturi! Suscipit nihil voluptate dolorum?</span></div>
+                    <div className={classes.block2}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
+                    <div className={classes.block3}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
+                    <div className={classes.block4}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
+                    <div className={classes.block5}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
+                    <div className={classes.block6}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
+                    <div className={classes.block7}><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi quidem, iste veritatis commodi minima unde? Ea, eius quidem qui autem nobis eos ipsam tempore voluptatum, accusantium nihil labore repellat.</span></div>
+                <button className={classes.closeButton} onClick={handleCloseModalRules}>Закрыть</button>
+            </div>}
+
             <div className={classes.king} title="Очки короля">
                 <h1>Очки короля: {king}</h1>
             </div>
 
             <div>
-                {showCardOpponent && <button className={cardO} onClick={handleClickAtackCard} title="Карта оппонента"><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></button>}
-                {showCard && <button className={cardP} onClick={handleClickAtackCard} title="Карта игрока"><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></button>}
+                {showCardOpponent && <div className={cardO}  title="Карта оппонента"><h1 className={classes.top}>{cardOpponent}</h1><h1 className={classes.bottom}>{cardOpponent}</h1></div>}
+                {showCard && <div className={cardP} title="Карта игрока"><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></div>}
             </div>
+
+            <button className={classes.cardReset} onClick={handleClickAtackCard}>Сбросить карты</button>
 
             <div>
                 {showBastardOpponent && <button className={classes.bastardCardOpponent} title="Бастард"><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
@@ -253,7 +277,7 @@ export const Cards = () => {
             </div>
             
             <div>
-               <button className={classes.deck} onClick={handleClickDecks} title="Колода"><h1>Колода: {deck.length + deckOpponent.length}</h1></button>
+               <button className={classes.deck} onClick={handleClickDecks} title="Колода"></button><h1 className={classes.deckTitle}>Колода: {deck.length + deckOpponent.length}</h1>
             </div>
 
         </div>

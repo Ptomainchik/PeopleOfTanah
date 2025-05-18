@@ -75,6 +75,24 @@
     font-size: 1.5vw;
 }
 
+.cardReset{
+    width: 20vw;
+    height: 4vw;
+    background: darkcyan;
+    position: absolute;
+    top: 50% ;
+    right: 22%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.cardReset:hover{
+    opacity: 0.8;
+}
+
 .deckCard{
     width: 10vw;
     height: 15vw;
@@ -118,7 +136,6 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .orderCard{
@@ -137,7 +154,6 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .monkCardOpponent{
@@ -156,7 +172,6 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .monkCard{
@@ -175,7 +190,6 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .tradesmanCardOpponent{
@@ -194,7 +208,6 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .tradesmanCard{
@@ -213,7 +226,6 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .fishermanCardOpponent{
@@ -232,7 +244,6 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 .fishermanCard{
@@ -251,7 +262,6 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards;
-    cursor: pointer; 
 }
 
 .squireCardOpponent{
@@ -270,7 +280,6 @@
     color: darkblue;
     animation: shiftOpponent 1s ;
     animation-fill-mode: forwards;
-    cursor: pointer; 
 }
 
 .squireCard{
@@ -289,7 +298,6 @@
     color: red;
     animation: shiftPlayer 1s ;
     animation-fill-mode: forwards; 
-    cursor: pointer;
 }
 
 @keyframes  shiftOpponent {
@@ -359,6 +367,10 @@
     cursor: pointer;
 }
 
+.vassalCard:hover{
+    filter: drop-shadow( 0.5vw 0.5vw 0.5vw black);
+}
+
 .assassinCardOpponent{
     width: 10vw;
     height: 15vw;
@@ -388,6 +400,10 @@
     font-family: "Rakkas";
     color: red;
     cursor: pointer;
+}
+
+.assassinCard:hover{
+    filter: drop-shadow( 0.5vw 0.5vw 0.5vw black);
 }
 
 .bastardCardOpponent{
@@ -421,6 +437,10 @@
     cursor: pointer;
 }
 
+.bastardCard:hover{
+    filter: drop-shadow( 0.5vw 0.5vw 0.5vw black);
+}
+
 .top{
     position: absolute;
     top: -5%;
@@ -451,12 +471,158 @@
     cursor: pointer;
 }
 
-.deck h1{
-    width: 13vw;
+.deck:hover{
+    filter: drop-shadow( 0.5vw 0.5vw 0.5vw black);
+}
+
+.deckTitle{
+    width: 10vw;
     position: absolute;
-    top: -30%;
-    left: 50%;
+    top: 25%;
+    right: -4.5%;
     transform: translateX(-50%);
     font-size: 1.5vw;
 }
 
+.rulesButton{
+    width: 10vw;
+    height: 4vw;
+    background: darkcyan;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: 2vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rulesButton:hover{
+    opacity: 0.8;
+}
+
+.rules{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 200;
+    border: solid 0.3vw darkred;
+    background: grey;
+}
+
+.block1{
+    background: url(../../Images/CardBack.webp) no-repeat center;
+    background-color: darkcyan;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+
+.block2{
+    background: url(../../Images/King.webp) no-repeat center;
+    background-color: darkcyan;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+}
+
+.block3{
+    background: url(../../Images/Castle.webp) no-repeat center;
+    background-color: darkcyan;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
+
+.block4{
+    background: url(../../Images/Bastard.webp) no-repeat center;
+    background-color: wheat;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    top: 1%;
+    left: 40%;
+}
+
+.block5{
+    background: url(../../Images/Assassin.webp) no-repeat center;
+    background-color: wheat;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+}
+
+.block6{
+    background: url(../../Images/Vassal.webp) no-repeat center;
+    background-color: wheat;
+    background-size: contain;
+    width: 8vw;
+    height: 13vw;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 1%;
+    left: 40%;
+}
+
+.block7{
+    width: 15vw;
+    height: 25vw;
+    border-right: solid 0.3vw darkred ;
+    position: absolute;
+    top: 0%;
+    right: 20%;
+}
+
+.block7 span{
+    width: 100%;
+}
+
+span{
+    width: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 110%;
+    font-family: "Pangolin";
+    font-size: 1vw;
+}
+
+.closeButton{
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+.closeButton:hover{
+    opacity: 0.8;
+}

@@ -10,8 +10,8 @@
     height: 4vw;
     position: absolute;
     left: 50%;
-    top: 48%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
     background: grey;
     font-family: "El Messiri";
     font-size: 1vw;
@@ -131,7 +131,7 @@
 }
 
 .chipPlayerField h1{
-    width: 100%;
+    width: 10vw;
     text-align: center;
     position: absolute;
     bottom: 5%;
@@ -166,7 +166,7 @@
 }
 
 .chipOpponentField h1{
-    width: 100%;
+    width: 10vw;
     text-align: center;
     position: absolute;
     top: 5%;
@@ -185,7 +185,7 @@
     background-size: contain;
     z-index: 200;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     left: 30%;
     animation: shiftPlayer 1s forwards;
 }
@@ -197,7 +197,7 @@
     }
 
     100% {
-        top: 45%;
+        top: 41.5%;
         left: 30%;
     }
 }
@@ -210,7 +210,7 @@
     background-size: contain;
     z-index: 199;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     left: 30%;
 }
 
@@ -222,7 +222,7 @@
     background-size: contain;
     z-index: 198;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     left: 33%;
 }
 
@@ -234,7 +234,7 @@
     background-size: contain;
     z-index: 197;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     left: 36%;
 }
 
@@ -247,7 +247,7 @@
     background-size: contain;
     z-index: 200;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     right: 30%;
     animation: shiftOpponent 1s forwards;
 }
@@ -259,7 +259,7 @@
     }
 
     100% {
-        top: 45%;
+        top: 41.5%;
         right: 30%;
     }
 }
@@ -272,7 +272,7 @@
     background-size: contain;
     z-index: 199;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     right: 30%;
 }
 
@@ -284,7 +284,7 @@
     background-size: contain;
     z-index: 198;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     right: 33%;
 }
 
@@ -296,13 +296,50 @@
     background-size: contain;
     z-index: 197;
     position: absolute;
-    top: 45%;
+    top: 41.5%;
     right: 36%;
 }
 
-.pointChipPlayerField{
-    width: 15vw;
-    height: 15vw;
+.buttonCheating{
+    width: 10vw;
+    height: 4vw;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 1vw;
+}
+
+.buttonCheating:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.buttonTrickery{
+    width: 10vw;
+    height: 4vw;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+    position: absolute;
+    top: 60%;
+    left: 4%;
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.buttonTrickery:hover{
+    opacity: 0.8;
+}
+
+.pointDicePlayerField{
+    width: 15%;
+    height: 15%;
     position: absolute;
     right: 1%;
     top: 5%;
@@ -310,20 +347,19 @@
     border: solid 0.3vw goldenrod;
 }
 
-.pointChipPlayerField h1{
+.pointDicePlayerField h1{
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20%;
     font-family: "El Messiri";
     font-size: 1.5vw;
     font-weight: 700
 }
 
-.pointChipOpponentField{
-    width: 15vw;
-    height: 15vw;
+.pointDiceOpponentField{
+    width: 15%;
+    height: 15%;
     position: absolute;
     left: 1%;
     bottom: 5%;
@@ -331,13 +367,101 @@
     border: solid 0.3vw goldenrod;
 }
 
-.pointChipOpponentField h1{
+.pointDiceOpponentField h1{
     width: 100%;
     text-align: center;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20%;
     font-family: "El Messiri";
     font-size: 1.5vw;
     font-weight: 700
+}
+
+.buttonRules{
+    width: 10vw;
+    height: 4vw;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.buttonRules:hover{
+    opacity: 0.8;
+}
+
+.modalRules{
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 201;
+    background: grey;
+    border: solid 0.3vw goldenrod;
+}
+
+.rules1{
+    width: 33%;
+    height: 70%;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 1.5vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    padding: 1.5%;
+    margin: 0;
+}
+
+.rules2{
+    width: 33%;
+    height: 70%;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 1.5vw;
+    position: absolute;
+    top: 0;
+    left: 33%;
+    border-left: solid 0.3vw goldenrod;
+    padding: 1.5%;
+    margin: 0;
+}
+
+.rules3{
+    width: 33%;
+    height: 70%;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 1.5vw;
+    position: absolute;
+    top: 0%;
+    left: 66%;
+    border-left: solid 0.3vw goldenrod;
+    padding: 1.5%;
+    margin: 0;
+}
+
+.closeButton{
+    width: 15vw;
+    height: 3vw;
+    font-size: 2vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+.closeButton:hover{
+    opacity: 0.8;
 }
