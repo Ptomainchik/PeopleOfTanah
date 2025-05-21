@@ -115,6 +115,7 @@
     left: 0;
     background: grey;
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
 }
 
 .buttonOpenModal1:hover{
@@ -129,6 +130,7 @@
     right: 0;
     background: grey;
     clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
 }
 
 .buttonOpenModal2:hover{
@@ -143,6 +145,7 @@
     left: 0;
     background: grey;
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
 }
 
 .buttonOpenModal3:hover{
@@ -157,6 +160,7 @@
     right: 0;
     background: grey;
     clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
 }
 
 .buttonOpenModal4:hover{
@@ -171,6 +175,7 @@
     left: 0;
     background: grey;
     clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
 }
 
 .buttonOpenModal5:hover{

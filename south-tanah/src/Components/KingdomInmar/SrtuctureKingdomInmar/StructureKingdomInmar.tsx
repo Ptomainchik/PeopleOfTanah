@@ -12,7 +12,6 @@ import BullMonument from "../../../Images/BullMonument.jpg";
 import HighCouncil from "../../../Images/HighCouncil.jpg";
 import Keys from "../../../Images/Keys.jpg";
 
-
 export const StructureKingdomInmar = () => {
     const [showModalId, setShowModalId] = useState(null);
     const [activeOpenButton, setActiveOpenButton] = useState(false);
