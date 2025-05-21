@@ -2,7 +2,16 @@ import { useState } from "react";
 import classes from "../../../Styles/StylesKingdomInmar/StructureKingdomInmar.module.css";
 import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
 import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
-import Image from "../../../Images/InmarForest.jpg";
+import North from "../../../Images/North.jpg";
+import Northeast from "../../../Images/East.jpg";
+import Northwest from "../../../Images/West.jpg";
+import Center from "../../../Images/Center.jpg";
+import Southeast from "../../../Images/Southeast.jpg";
+import Southwest from "../../../Images/Southwest.jpg";
+import BullMonument from "../../../Images/BullMonument.jpg";
+import HighCouncil from "../../../Images/HighCouncil.jpg";
+import Keys from "../../../Images/Keys.jpg";
+
 
 export const StructureKingdomInmar = () => {
     const [showModalId, setShowModalId] = useState(null);
@@ -46,7 +55,7 @@ export const StructureKingdomInmar = () => {
                             Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.
                             </p>
                         <div>
-                            <img style={{borderRight: "solid 1vw blue", borderBottom: "solid 1vw blue"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw blue", borderBottom: "solid 1vw blue"}} src={North} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "2" && (<div className={classes.modalStructure} id={"2"} style={{border: "solid 0.3vw blueviolet"}}>
@@ -54,7 +63,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "blueviolet"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw blueviolet", borderBottom: "solid 1vw blueviolet"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw blueviolet", borderBottom: "solid 1vw blueviolet"}} src={Northwest} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "3" && (<div className={classes.modalStructure} id={"3"} style={{border: "solid 0.3vw yellow"}}>
@@ -62,7 +71,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "yellow"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw yellow", borderBottom: "solid 1vw yellow"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw yellow", borderBottom: "solid 1vw yellow"}} src={Northeast} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "4" && (<div className={classes.modalStructure} id={"4"} style={{border: "solid 0.3vw green"}}>
@@ -70,7 +79,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "green"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw green", borderBottom: "solid 1vw green"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw green", borderBottom: "solid 1vw green"}} src={Center} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"4"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "5" && (<div className={classes.modalStructure} id={"5"} style={{border: "solid 0.3vw orange"}}>
@@ -78,7 +87,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "orange"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw orange", borderBottom: "solid 1vw orange"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw orange", borderBottom: "solid 1vw orange"}} src={Southwest} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "6" && (<div className={classes.modalStructure} id={"6"} style={{border: "solid 0.3vw red"}}>
@@ -86,7 +95,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "red"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw red", borderBottom: "solid 1vw red"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw red", borderBottom: "solid 1vw red"}} src={Southeast} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"6"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "7" && (<div className={structureInmar} id={"7"} style={{border: "solid 0.3vw rgb(221, 221, 128)"}}>
@@ -94,7 +103,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "rgb(221, 221, 128)"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={BullMonument} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw chartreuse"}}>
@@ -102,7 +111,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "chartreuse"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw chartreuse", borderBottom: "solid 1vw chartreuse"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw chartreuse", borderBottom: "solid 1vw chartreuse"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "9" && (<div className={structureInmar} id={"9"} style={{border: "solid 0.3vw darkblue"}}>
@@ -110,7 +119,7 @@ export const StructureKingdomInmar = () => {
                         <p style={{color: "darkblue"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
                         Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
                         <div>
-                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={Image} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={Keys} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"9"} onClick={handleCloseModal}>Закрыть</button></div>)}
                 </div>
