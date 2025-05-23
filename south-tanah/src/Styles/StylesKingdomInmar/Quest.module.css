@@ -1,9 +1,10 @@
 .miniGamePage{
     width: 100%;
-    height: 90%;
+    height: 100%;
     background: rgb(102, 80, 68);
+    z-index: 200;
     position: absolute;
-    top: 10%;
+    top: 0;
     font-family: "El Messiri";
     font-weight: 700;
 }

@@ -1,16 +1,25 @@
 import classes from "../../../../Styles/StylesKingdomInmar/QuestLevel.module.css";
 import { useState } from "react";
-import Master from "../../../../Images/Master.webp";
+import Sailor from "../../../../Images/Sailor.webp";
+import { Cards } from "../Cards";
 
-export const Level2 = () => {
+export const Level3 = () => {
     const [showMessageQuest, setShowMessageQuest] = useState(true);
+    const [showCards, setShowCards] = useState(false);
+
+    function handleOpenCards() {
+        setShowCards(true);
+    }
 
     return (
         <div className={classes.questPage}>
-            <div className={classes.playingFieldLevel2}>
-                <img src={Master} alt="Master"  className={classes.characterImg2}/>
-                <button className={classes.secretLetter}></button>
+            <div className={classes.playingFieldLevel3}>
+                <img src={Sailor} alt="Master"  className={classes.characterImg3}/>
+                <button onClick={handleOpenCards}>Open Cards</button>
             </div>
+
+            {showCards && <Cards/>}
+
             {showMessageQuest && <div className={classes.blockMessage}>
                 <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
@@ -20,7 +29,6 @@ export const Level2 = () => {
                     <p id={"2"} className={classes.answer2}>No</p>
                     <p id={"3"} className={classes.answer3}>Nothing</p>
                 </div>
-         
             </div> }
         </div>
     )
