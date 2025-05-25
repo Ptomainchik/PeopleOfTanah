@@ -73,6 +73,7 @@
     position: absolute;
     left: 9%;
     top: 20%;
+    cursor: pointer;
 }
 
 .choiceKingdomInmar:hover{
@@ -89,6 +90,7 @@
     position: absolute;
     right: 3%;
     top: 20%;
+    cursor: pointer;
 }
 
 .choiceConfederationOfTribes:hover{
