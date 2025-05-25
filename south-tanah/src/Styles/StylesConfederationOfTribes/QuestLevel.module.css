@@ -1,0 +1,114 @@
+.questPage{
+    width: 100%;
+    height: 90%;
+    background: url(../../Images/DesertTexture.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+/* ----- Scene1 ----- */
+
+.playingFieldLevel1{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/Market.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg1{
+    width: 10vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.characterImg1:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+/* ----- Scene2 ----- */
+
+.playingFieldLevel2{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/СabinetCastle.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg2{
+    width: 9vw;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+.characterImg2:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+/* ----- Scene3 ----- */
+
+/* ----- Scene4 ----- */
+
+/* ----- Scene5 ----- */
+
+/* ----- Scene6 ----- */
+
+/* ----- Scene7 ----- */
+
+/* ----- OverallScenes ----- */
+
+.blockMessage{
+    width: 99.5%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    background: wheat;
+    border: solid 0.3vw goldenrod;
+    font-family: "Pangolin";
+}
+
+.question{
+    font-size: 2vw;
+    margin: 1%;
+}
+
+.answer1{
+    width: 30%;
+    font-size: 1.5vw;
+    color: red;
+    cursor: pointer;
+}
+
+.answer1:hover{
+    filter: drop-shadow(0 0 0.5vw red);
+}
+
+.answer2{
+    width: 30%;
+    font-size: 1.5vw;
+    color: blue;
+    cursor: pointer;
+}
+
+.answer2:hover{
+    filter: drop-shadow(0 0 0.5vw blue);
+}
+
+.answer3{
+    width: 30%;
+    font-size: 1.5vw;
+    color: green;
+    cursor: pointer;
+}
+
+.answer3:hover{
+    filter: drop-shadow(0 0 0.5vw green);
+}
+
