@@ -76,11 +76,91 @@
 
 /* ----- Scene4 ----- */
 
+.playingFieldLevel4{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/Tavern.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg4{
+    width: 13vw;
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+}
+
+.characterImg4:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
 /* ----- Scene5 ----- */
+
+.playingFieldLevel5{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/ForestInmar.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg5{
+    width: 14vw;
+    position: absolute;
+    bottom: -8%;
+    right: 40%;
+}
+
+.characterImg5:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
 
 /* ----- Scene6 ----- */
 
+.playingFieldLevel6{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/StreetsOfKillat.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg6{
+    width: 14vw;
+    position: absolute;
+    bottom: -2%;
+    left: 30%;
+}
+
+.characterImg6:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
 /* ----- Scene7 ----- */
+
+.playingFieldLevel7{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background: url(../../Images/BullTemple.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.characterImg7{
+    width: 13vw;
+    position: absolute;
+    bottom: -20%;
+    right: 30%;
+}
+
+.characterImg7:hover{
+    filter: drop-shadow(0 0 0.5vw goldenrod);
+}
 
 /* ----- OverallScenes ----- */
 
