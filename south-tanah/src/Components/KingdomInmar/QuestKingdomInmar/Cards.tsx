@@ -41,7 +41,7 @@ export const Cards = () => {
         return drawnCard;
     }
 
-    function handleClickDeck() {
+    function handleClickDeck(){
         if (card === 0) {
             const drawnCard = drawRandomCard();
             if (drawnCard) {
@@ -52,7 +52,7 @@ export const Cards = () => {
         }
     }
 
-    function handleClickDeckOpponent() {
+    function handleClickDeckOpponent(){
         if (cardOpponent === 0) {
             const drawnCardOpponent = drawRandomCardOpponent();
             if (drawnCardOpponent) {
@@ -83,7 +83,7 @@ export const Cards = () => {
         handleClickDeckOpponent()
     }
 
-    function handleClickAtackCard() {
+    function handleClickAtackCard(){
         if(card > cardOpponent){
             setKingdom(kingdom + card + cardOpponent);
             setShowCardOpponent(false);
