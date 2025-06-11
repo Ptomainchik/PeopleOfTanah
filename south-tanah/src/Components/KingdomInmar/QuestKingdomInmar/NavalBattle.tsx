@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import classes from "../../../Styles/StylesKingdomInmar/NavalBattle.module.css";
-import Ship from "../../../Images/FisherMan.webp";
 
 export const NavalBattle = () => {
     const [healthShip, setHealthShip] = useState(1000);
@@ -17,6 +16,16 @@ export const NavalBattle = () => {
     const classTentacle4 = attackQueue === 4 ? classes.rightTentacle2Up : classes.rightTentacle2Down;
     const classHeadMonster = attackQueue === 5 ? classes.headMonsterUp : classes.headMonsterDown;
 
+    if(healthHeadMonster <= 0){
+        alert("Вы победили!")
+    }
+    else if(healthShip <= 0){
+        alert("Вы проиграли!")
+    }
+    else if(healthShip <= 50){
+        alert("Необходим ремонт!")
+    }
+    
     useEffect(() => {
         if (healthTentacle <= 0) {
             setShowTentacle(false);
@@ -62,8 +71,8 @@ export const NavalBattle = () => {
     return (
         <div className={classes.navalBattlePage}>
             <div className={classes.blockShip}>
+                <p>Корабль</p>
                 <progress className={classes.healthShip} max="1000" value={healthShip}></progress>
-                <img src={Ship} alt="Ship" className={classes.shipImage}/>
             </div>
 
             <div className={classes.monsterField}>
@@ -75,15 +84,19 @@ export const NavalBattle = () => {
             </div>
 
             <div className={classes.blockMonster}>
-                <p>Tentacle</p>
+                <p>Щупальца</p>
                 <progress className={classes.healthMonster} max="500" value={healthTentacle}></progress>
-                <p>HeadMonster</p>
+                <p>Монстр</p>
                 <progress className={classes.healthMonster} max="500" value={healthHeadMonster}></progress>
             </div>
 
             <div className={classes.sideOfTheShip}>
-                <button onClick={handleStart}>Start</button>
-                {showRepair && <button onClick={handleRepair}>Repair</button>}
+                {/* <button onClick={handleStart}>Start</button> */}
+                {showRepair && <div className={classes.repair}>
+                    <button className={classes.repair} title="Ремонт" onClick={handleRepair}></button> 
+                    <p>Ремонт</p>
+                </div>}
+
             </div>
         </div>
     )

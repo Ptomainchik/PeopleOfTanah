@@ -1,8 +1,9 @@
 .navalBattlePage{
     width: 100%;
     height: 90%;
-    position: absolute  ;
-    background: lightskyblue;
+    position: fixed;
+    background: url(../../Images/Storm.jpg) no-repeat;
+    background-size: cover;
 }
 
 .blockShip{
@@ -11,6 +12,12 @@
     position: absolute;
     top: 5%;
     right: 5%;
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.blockShip p{
+    margin: 0;
 }
 
 .healthShip{
@@ -39,6 +46,12 @@
     position: absolute;
     top: 5%;
     left: 5%;
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.blockMonster p{
+    margin: 0;
 }
 
 .healthMonster{
@@ -58,7 +71,7 @@
 }
   
 .healthMonster::-webkit-progress-value {
-    background-color: pink;
+    background-color: darkgreen;
 }
 
 
@@ -67,20 +80,28 @@
 }
 
 .leftTentacle1Up{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 16vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
     left: 10%;
     bottom: 0%;
     cursor: pointer;
     animation: shiftUp 2s forwards;
+}
+
+.leftTentacle1Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
 .leftTentacle1Down{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 16vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
     left: 10%;
     bottom: 20%;
@@ -88,43 +109,69 @@
     animation: shiftDown 2s forwards;
 }
 
+.leftTentacle1Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
 .leftTentacle2Up{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 21vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
-    left: 30%;
+    left: 25%;
     bottom: 0%;
     cursor: pointer;
     animation: shiftUp 2s forwards;
 }
 
+.leftTentacle2Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
 .leftTentacle2Down{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 21vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
-    left: 30%;
+    left: 25%;
     bottom: 20%;
     cursor: pointer;
     animation: shiftDown 2s forwards;
+}
+
+.leftTentacle2Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
 .rightTentacle1Up{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 16vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
     position: absolute;
     right: 10%;
     bottom: 20%;
     cursor: pointer;
     animation: shiftUp 2s forwards;
+}
+
+.rightTentacle1Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
 .rightTentacle1Down{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 16vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
     position: absolute;
     right: 10%;
     bottom: 20%;
@@ -132,32 +179,52 @@
     animation: shiftDown 2s forwards;
 }
 
+.rightTentacle1Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
 .rightTentacle2Up{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 21vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
     position: absolute;
-    right: 30%;
+    right: 25%;
     bottom: 20%;
     cursor: pointer;
     animation: shiftUp 2s forwards;
+}
+
+.rightTentacle2Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
 .rightTentacle2Down{
-    width: 5vw;
-    height: 20vw;
-    background: pink;
+    width: 10vw;
+    height: 21vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
     position: absolute;
-    right: 30%;
+    right: 25%;
     bottom: 20%;
     cursor: pointer;
     animation: shiftDown 2s forwards;
 }
 
+.rightTentacle1Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
 .headMonsterUp{
-    width: 10vw;
-    height: 20vw;
-    background: pink;
+    width: 25vw;
+    height: 25vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -166,44 +233,80 @@
     animation: shiftUp 2s forwards;
 }
 
+.headMonsterUp:active{
+    filter: drop-shadow( 0 0 0.5vw darkred);
+}
+
 .headMonsterDown{
-    width: 10vw;
-    height: 20vw;
-    background: pink;
+    width: 25vw;
+    height: 25vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
     position: absolute;
     bottom: 20%;
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
     animation: shiftDown 2s forwards;
+}
+
+.headMonsterUp:active{
+    filter: drop-shadow( 0 0 0.5vw darkred);
 }
 
 
 @keyframes  shiftUp {
     0%, 100% {
-        bottom: -20%;
+        bottom: -30%;
     }
 
     100% {
-        bottom: 20%;
+        bottom: 30%;
     }
 }
 
 @keyframes  shiftDown {
     0%, 100% {
-        bottom: 20%;
+        bottom: 30%;
     }
 
     100% {
-        bottom: -20%;
+        bottom: -30%;
     }
 }
 
 .sideOfTheShip{
     width: 100%;
     height: 30%;
+    background: url(../../Images/BortOfShip.jpg) no-repeat ;
+    background-size: cover;
     position: absolute;
     bottom: 0;
-    background: brown;
     z-index: 20;
 }
+
+.repair{
+    width: 8.5vw;
+    height: 8.5vw;
+    background: url(../../Images/BarrelWithTools.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    cursor: pointer;
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.repair p{
+    position: absolute;
+    top: -60%;
+    right: 32%;
+}
+
+.repair:hover{
+    filter: drop-shadow( 0 0 0.5vw darkblue);
+}
+
