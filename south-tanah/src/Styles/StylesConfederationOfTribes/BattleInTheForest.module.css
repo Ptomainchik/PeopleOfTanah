@@ -1,83 +1,81 @@
-.navalBattlePage{
+.battleInTheForestPage{
     width: 100%;
     height: 90%;
     position: fixed;
-    background: url(../../Images/Storm.jpg) no-repeat;
+    background: url(../../Images/Forest.jpg) no-repeat;
     background-size: cover;
-}
-
-.blockShip{
-    width: 10vw;
-    height: 10vw;
-    position: absolute;
-    top: 5%;
-    right: 5%;
     color: wheat;
     font-size: 1.5vw;
 }
 
-.blockShip p{
-    margin: 0;
-}
-
-.healthShip{
-    appearance: none;
-    -webkit-appearance: none;
-    width: 10vw;
-    height: 1vw;
-}
-
-.healthShip::-webkit-progress-inner-element {
-    border: 0.1vw solid rgb(0, 0, 0);
-}
-  
-.healthShip::-webkit-progress-bar {
-    background-color: rgb(189, 189, 189);
-    
-}
-  
-.healthShip::-webkit-progress-value {
-    background-color: darkred;
-}
-
-.blockMonster{
+.blockBandit{
     width: 10vw;
     height: 10vw;
     position: absolute;
     top: 5%;
     left: 5%;
-    color: wheat;
-    font-size: 1.5vw;
 }
 
-.blockMonster p{
+.blockBandit p{
     margin: 0;
 }
 
-.healthMonster{
+.healthBandits{
     appearance: none;
     -webkit-appearance: none;
     width: 10vw;
     height: 1vw;
 }
 
-.healthMonster::-webkit-progress-inner-element {
+.healthBandits::-webkit-progress-inner-element {
     border: 0.1vw solid rgb(0, 0, 0);
 }
   
-.healthMonster::-webkit-progress-bar {
+.healthBandits::-webkit-progress-bar {
     background-color: rgb(189, 189, 189);
     
 }
   
-.healthMonster::-webkit-progress-value {
-    background-color: darkgreen;
+.healthBandits::-webkit-progress-value {
+    background-color: brown;
 }
 
-.leftTentacle1Up{
+.blockBaggage{
     width: 10vw;
-    height: 16vw;
-    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    height: 10vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockBaggage p{
+    margin: 0;
+}
+
+.healthBaggage{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10vw;
+    height: 1vw;
+}
+
+.healthBaggage::-webkit-progress-inner-element {
+    border: 0.1vw solid rgb(0, 0, 0);
+}
+  
+.healthBaggage::-webkit-progress-bar {
+    background-color: rgb(189, 189, 189);
+    
+}
+  
+.healthBaggage::-webkit-progress-value {
+    background-color: orange;
+}
+
+.leftBandit1Up{
+    width: 15vw;
+    height: 24vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
     background-size: contain;
     border: none;
     position: absolute;
@@ -87,14 +85,14 @@
     animation: shiftUp 2s forwards;
 }
 
-.leftTentacle1Up:active{
+.leftBandit1Up:active{
     filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
-.leftTentacle1Down{
-    width: 10vw;
-    height: 16vw;
-    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+.leftBandit1Down{
+    width: 15vw;
+    height: 24svw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
     background-size: contain;
     border: none;
     position: absolute;
@@ -104,120 +102,120 @@
     animation: shiftDown 2s forwards;
 }
 
-.leftTentacle1Down:active{
+.leftBandit1Down:active{
     filter: drop-shadow( 0 0 0.5vw darkred); 
 }
 
-.leftTentacle2Up{
-    width: 10vw;
-    height: 21vw;
-    background: url(../../Images/BigTentacle.webp) no-repeat center;
-    background-size: contain;
-    border: none;
-    position: absolute;
-    left: 25%;
-    bottom: 0%;
-    cursor: pointer;
-    animation: shiftUp 2s forwards;
-}
-
-.leftTentacle2Up:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.leftTentacle2Down{
-    width: 10vw;
-    height: 21vw;
-    background: url(../../Images/BigTentacle.webp) no-repeat center;
-    background-size: contain;
-    border: none;
-    position: absolute;
-    left: 25%;
-    bottom: 20%;
-    cursor: pointer;
-    animation: shiftDown 2s forwards;
-}
-
-.leftTentacle2Down:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.rightTentacle1Up{
-    width: 10vw;
-    height: 16vw;
-    background: url(../../Images/SmallTentacle.webp) no-repeat center;
-    background-size: contain;
-    border: none;
-    transform: scaleX(-1);
-    position: absolute;
-    right: 10%;
-    bottom: 20%;
-    cursor: pointer;
-    animation: shiftUp 2s forwards;
-}
-
-.rightTentacle1Up:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.rightTentacle1Down{
-    width: 10vw;
-    height: 16vw;
-    background: url(../../Images/SmallTentacle.webp) no-repeat center;
-    background-size: contain;
-    border: none;
-    transform: scaleX(-1);
-    position: absolute;
-    right: 10%;
-    bottom: 20%;
-    cursor: pointer;
-    animation: shiftDown 2s forwards;
-}
-
-.rightTentacle1Down:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.rightTentacle2Up{
-    width: 10vw;
-    height: 21vw;
-    background: url(../../Images/BigTentacle.webp) no-repeat center;
-    background-size: contain;
-    border: none;
-    transform: scaleX(-1);
-    position: absolute;
-    right: 25%;
-    bottom: 20%;
-    cursor: pointer;
-    animation: shiftUp 2s forwards;
-}
-
-.rightTentacle2Up:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.rightTentacle2Down{
-    width: 10vw;
-    height: 21vw;
-    background: url(../../Images/BigTentacle.webp) no-repeat center;
-    background-size: contain;
-    transform: scaleX(-1);
-    border: none;
-    position: absolute;
-    right: 25%;
-    bottom: 20%;
-    cursor: pointer;
-    animation: shiftDown 2s forwards;
-}
-
-.rightTentacle1Down:active{
-    filter: drop-shadow( 0 0 0.5vw darkred); 
-}
-
-.headMonsterUp{
-    width: 25vw;
+.leftBandit2Up{
+    width: 15vw;
     height: 25vw;
-    background: url(../../Images/Monster.webp) no-repeat center;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 25%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 2s forwards;
+}
+
+.leftBandit2Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.leftBandit2Down{
+    width: 15vw;
+    height: 25vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 25%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 2s forwards;
+}
+
+.leftBandit2Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.rightBandit1Up{
+    width: 15vw;
+    height: 24vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 2s forwards;
+}
+
+.rightBandit1Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.rightBandit1Down{
+    width: 15vw;
+    height: 24vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 2s forwards;
+}
+
+.rightBandit1Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.rightBandit2Up{
+    width: 15vw;
+    height: 25vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 25%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 2s forwards;
+}
+
+.rightBandit2Up:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.rightBandit2Down{
+    width: 15vw;
+    height: 25vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 25%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 2s forwards;
+}
+
+.rightBandit1Down:active{
+    filter: drop-shadow( 0 0 0.5vw darkred); 
+}
+
+.headBanditUp{
+    width: 30vw;
+    height: 30vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
     background-size: contain;
     border: none;
     position: absolute;
@@ -228,14 +226,14 @@
     animation: shiftUp 2s forwards;
 }
 
-.headMonsterUp:active{
+.headBanditUp:active{
     filter: drop-shadow( 0 0 0.5vw darkred);
 }
 
-.headMonsterDown{
-    width: 25vw;
-    height: 25vw;
-    background: url(../../Images/Monster.webp) no-repeat center;
+.headBanditDown{
+    width: 30vw;
+    height: 30vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
     background-size: contain;
     border: none;
     position: absolute;
@@ -246,7 +244,7 @@
     animation: shiftDown 2s forwards;
 }
 
-.headMonsterUp:active{
+.headBanditUp:active{
     filter: drop-shadow( 0 0 0.5vw darkred);
 }
 
@@ -257,13 +255,13 @@
     }
 
     100% {
-        bottom: 30%;
+        bottom: 20%;
     }
 }
 
 @keyframes  shiftDown {
     0%, 100% {
-        bottom: 30%;
+        bottom: 20%;
     }
 
     100% {
@@ -271,37 +269,12 @@
     }
 }
 
-.sideOfTheShip{
+.baggage{
     width: 100%;
-    height: 30%;
-    background: url(../../Images/BortOfShip.jpg) no-repeat ;
-    background-size: cover;
+    height: 40%;
     position: absolute;
     bottom: 0;
+    background: url(../../Images/Baggage.webp) no-repeat;
+    background-size: cover;
     z-index: 20;
 }
-
-.repair{
-    width: 8.5vw;
-    height: 8.5vw;
-    background: url(../../Images/BarrelWithTools.webp) no-repeat;
-    background-size: contain;
-    border: none;
-    position: absolute;
-    bottom: 5%;
-    right: 3%;
-    cursor: pointer;
-    color: wheat;
-    font-size: 1.5vw;
-}
-
-.repair p{
-    position: absolute;
-    top: -60%;
-    right: 32%;
-}
-
-.repair:hover{
-    filter: drop-shadow( 0 0 0.5vw darkblue);
-}
-

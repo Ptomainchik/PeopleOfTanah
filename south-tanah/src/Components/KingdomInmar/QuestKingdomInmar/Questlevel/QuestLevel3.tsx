@@ -14,7 +14,7 @@ export const Level3 = () => {
     return (
         <div className={classes.questPage}>
             <div className={classes.playingFieldLevel3}>
-                <img src={Sailor} alt="Master"  className={classes.characterImg3}/>
+                <img src={Sailor} alt="Sailor"  className={classes.characterImg3}/>
                 <button onClick={handleOpenCards}>Open Cards</button>
             </div>
 

@@ -15,16 +15,7 @@ export const NavalBattle = () => {
     const classTentacle3 = attackQueue === 3 ? classes.rightTentacle1Up : classes.rightTentacle1Down;
     const classTentacle4 = attackQueue === 4 ? classes.rightTentacle2Up : classes.rightTentacle2Down;
     const classHeadMonster = attackQueue === 5 ? classes.headMonsterUp : classes.headMonsterDown;
-
-    if(healthHeadMonster <= 0){
-        alert("Вы победили!")
-    }
-    else if(healthShip <= 0){
-        alert("Вы проиграли!")
-    }
-    else if(healthShip <= 50){
-        alert("Необходим ремонт!")
-    }
+    
     
     useEffect(() => {
         if (healthTentacle <= 0) {
