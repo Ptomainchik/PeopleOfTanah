@@ -4,6 +4,9 @@
     position: fixed;
     background: url(../../Images/Storm.jpg) no-repeat;
     background-size: cover;
+    font-family: "El Messiri";
+    color: wheat;
+    font-size: 1.5vw;
 }
 
 .blockShip{
@@ -12,8 +15,6 @@
     position: absolute;
     top: 5%;
     right: 5%;
-    color: wheat;
-    font-size: 1.5vw;
 }
 
 .blockShip p{
@@ -46,8 +47,6 @@
     position: absolute;
     top: 5%;
     left: 5%;
-    color: wheat;
-    font-size: 1.5vw;
 }
 
 .blockMonster p{
@@ -291,8 +290,6 @@
     bottom: 5%;
     right: 3%;
     cursor: pointer;
-    color: wheat;
-    font-size: 1.5vw;
 }
 
 .repair p{
