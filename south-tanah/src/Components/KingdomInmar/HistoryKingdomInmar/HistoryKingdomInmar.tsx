@@ -2,7 +2,8 @@ import { useState } from "react";
 import classes from "../../../Styles/History.module.css";
 import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
 import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
-import Image from "../../../Images/InmarForestBackroundChoice.jpg"
+import Image from "../../../Images/InmarForestBackroundChoice.jpg";
+import Background from "../../../Images/InmarForest.jpg";
 
 export const HistoryKingdomInmar = () => {
     const [showModalId, setshowModalId] = useState(null);
@@ -30,7 +31,7 @@ export const HistoryKingdomInmar = () => {
     }
 
     return (
-        <div className={classes.historyPage}>
+        <div className={classes.historyPage} style={{ backgroundImage: `url(${Background})` }}>
             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>История Королевства Инмар<BackButton/></div>
             <button className={classes.buttonOpenModal1} id={"1"} onClick={() => {handleOpenModal("1")}}><p className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Глава 1</p></button>
             {showModalId === "1" && (<div className={buttonClassLeft} id={"1"}>

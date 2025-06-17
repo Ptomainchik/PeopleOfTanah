@@ -82,7 +82,7 @@ export const NavalBattle = () => {
             <div className={classes.sideOfTheShip}>
                 {showRepair && <div className={classes.blockRepair}>
                     <p>Ремонт</p>
-                    <button className={classes.buttonRepair} title="Ремонт" onClick={handleRepair} disabled={buttonDisabled === true}></button> 
+                    <button className={classes.buttonRepair} style={healthShip > 300 ? {opacity: "0.5"} : {}} title="Ремонт" onClick={handleRepair} disabled={buttonDisabled === true || healthShip > 300}></button> 
                 </div>}
 
             </div>

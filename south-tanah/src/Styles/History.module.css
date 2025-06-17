@@ -10,7 +10,6 @@
 .historyPage{
     width: 100%;
     height: 100%;
-    background: url(../Images/DesertConfederation.jpg) no-repeat;
     background-size: cover;
     position: fixed;
 }
