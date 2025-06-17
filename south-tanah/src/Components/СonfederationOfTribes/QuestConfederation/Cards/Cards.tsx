@@ -1,5 +1,6 @@
 import { useState } from "react";
-import classes from "../../../Styles/StylesKingdomInmar/Quest.module.css";
+import classes from "../../../../Styles/StylesConfederationOfTribes/Cards.module.css";
+import { RulesCards } from "./RulesCards";
 
 export const Cards = () => {
     const [cardOpponent, setCardOpponent] = useState(0);
@@ -25,6 +26,7 @@ export const Cards = () => {
     const [opponentCounterAssasin, setOpponentCounterAssasin] = useState(0);
     const [randomNumberBastard, setRandomNumberBastard] = useState(0);
     const [opponentCounterBastard, setOpponentCounterBastard] = useState(0);
+    const [buttonDisabled, setButtonDisabled] = useState(true);
 
     function drawRandomCard(): number | null {
         if (deck.length === 0) return null;
@@ -231,13 +233,13 @@ export const Cards = () => {
 
     return (
         <div className={classes.miniGamePage}>
-            
+            <RulesCards setButtonDisabled={setButtonDisabled}/>
             <div>
                 <div className={classes.kingdomCardOpponent} title="Очки оппонента"><h1>Очки королевства: {kingdomOpponent}</h1></div>
                 <div className={classes.kingdomCard} title="Очки игрока"><h1>Очки королевства: {kingdom}</h1></div>
             </div>
 
-            <button className={classes.rulesButton} onClick={handleOpenModalRules}>Правила</button>
+            <button className={classes.rulesButton} onClick={handleOpenModalRules} disabled={buttonDisabled === true}>Правила</button>
 
             {showRules && <div className={classes.rules}>
                     <div className={classes.block1}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam obcaecati, explicabo quia repellendus impedit laborum quas quos quibusdam voluptatibus totam eos cum optio, repellat excepturi! Suscipit nihil voluptate dolorum?</span></div>
@@ -259,25 +261,25 @@ export const Cards = () => {
                 {showCard && <div className={cardP} title="Карта игрока"><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></div>}
             </div>
 
-            <button className={classes.cardReset} onClick={handleClickAtackCard}>Сбросить карты</button>
+            <button className={classes.cardReset} onClick={handleClickAtackCard} disabled={buttonDisabled === true}>Сбросить карты</button>
 
             <div>
-                {showBastardOpponent && <button className={classes.bastardCardOpponent} title="Бастард"><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
-                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard} title="Бастард"><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showBastardOpponent && <button className={classes.bastardCardOpponent} title="Бастард" disabled={buttonDisabled === true}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard} title="Бастард" disabled={buttonDisabled === true}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
             </div>
             
             <div>
-                {showAssassinOpponent && <button className={classes.assassinCardOpponent} title="Ассасин"><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
-                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin} title="Ассасин"><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassinOpponent && <button className={classes.assassinCardOpponent} title="Ассасин" disabled={buttonDisabled === true}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin} title="Ассасин" disabled={buttonDisabled === true}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
             </div>
             
             <div>
-                {showVassalOpponent && <button className={classes.vassalCardOpponent} title="Вассал"><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
-                {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal} title="Вассал"><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassalOpponent && <button className={classes.vassalCardOpponent} title="Вассал" disabled={buttonDisabled === true}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassal && <button className={classes.vassalCard} onClick={handleClickVassal} title="Вассал" disabled={buttonDisabled === true}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
             </div>
             
             <div>
-               <button className={classes.deck} onClick={handleClickDecks} title="Колода"></button><h1 className={classes.deckTitle}>Колода: {deck.length + deckOpponent.length}</h1>
+               <button className={classes.deck} onClick={handleClickDecks} title="Колода" disabled={buttonDisabled === true}></button><h1 className={classes.deckTitle}>Колода: {deck.length + deckOpponent.length}</h1>
             </div>
 
         </div>

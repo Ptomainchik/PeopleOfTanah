@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import classes from "../../../Styles/StylesConfederationOfTribes/BattleInTheForest.module.css";
+import classes from "../../../../../Styles/StylesConfederationOfTribes/BattleInTheForest.module.css";
+import { RulesBattleInTheForest } from "./RulesBattleInTheForest";
+
 
 export const BattleInTheForest = () => {
     const [healthBandit, setHealthBandit] = useState(500);
@@ -12,6 +14,7 @@ export const BattleInTheForest = () => {
     const [countAttackBandit, setCountAttackBandit] = useState(5);
     const [theftPrevention, setTheftPrevention] = useState(false);
     const [theftPreventionIndicator, setTheftPreventionIndicator] = useState(false);
+    const [buttonDisabled, setButtonDisabled] = useState(true);
 
     const classBandit1 = attackQueue === 1 ? classes.leftBandit1Up : classes.leftBandit1Down;
     const classBandit2 = attackQueue === 2 ? classes.leftBandit2Up : classes.leftBandit2Down;
@@ -113,17 +116,18 @@ export const BattleInTheForest = () => {
 
     return (
         <div className={classes.battleInTheForestPage}>
+            <RulesBattleInTheForest setButtonDisabled={setButtonDisabled}/>
             <div className={classes.blockBaggage}>
                 <p>Обоз</p>
                 <progress className={classes.healthBaggage} max="1000" value={healthBaggage}></progress>
             </div>
 
             <div className={classes.banditField}>
-                {showBandit && <button className={classBandit1} onClick={handleAttackBandit} disabled={attackQueue !== 1}></button>}
-                {showBandit && <button className={classBandit2} onClick={handleAttackBandit} disabled={attackQueue !== 2}></button>}
-                {showHeadBandit && <button className={classHeadBandit} onClick={handleAttackHeadBandit} disabled={attackQueue !== 5}></button>}
-                {showBandit && <button className={classBandit3} onClick={handleAttackBandit} disabled={attackQueue !== 3}></button>}
-                {showBandit && <button className={classBandit4} onClick={handleAttackBandit} disabled={attackQueue !== 4}></button>}
+                {showBandit && <button className={classBandit1} onClick={handleAttackBandit} disabled={attackQueue !== 1 || buttonDisabled === true}></button>}
+                {showBandit && <button className={classBandit2} onClick={handleAttackBandit} disabled={attackQueue !== 2 || buttonDisabled === true}></button>}
+                {showHeadBandit && <button className={classHeadBandit} onClick={handleAttackHeadBandit} disabled={attackQueue !== 5 || buttonDisabled === true}></button>}
+                {showBandit && <button className={classBandit3} onClick={handleAttackBandit} disabled={attackQueue !== 3 || buttonDisabled === true}></button>}
+                {showBandit && <button className={classBandit4} onClick={handleAttackBandit} disabled={attackQueue !== 4 || buttonDisabled === true}></button>}
             </div>
 
             <div className={classes.blockBandit}>
@@ -137,7 +141,7 @@ export const BattleInTheForest = () => {
                 <div className={classes.blockTheftPrevention}>
                     <p>Пресечение</p>  
                     <progress className={classes.healthBaggage} max="5" value={countAttackBandit}></progress>
-                    <button className={classes.buttonTheftPrevention} title="Пресечение" onClick={handleTheftPrevention} disabled={theftPrevention === true || countAttack >= 4}></button> 
+                    <button className={classes.buttonTheftPrevention} title="Пресечение" onClick={handleTheftPrevention} disabled={theftPrevention === true || countAttack >= 4 || buttonDisabled === true}></button> 
                 </div>
             </div>
         </div>

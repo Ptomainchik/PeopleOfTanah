@@ -1,7 +1,7 @@
 import classes from "../../../../Styles/StylesKingdomInmar/QuestLevel.module.css";
 import { useState } from "react";
 import Sailor from "../../../../Images/Sailor.webp";
-import { Cards } from "../Cards";
+import { Cards } from "../../../СonfederationOfTribes/QuestConfederation/Cards/Cards";
 
 export const Level3 = () => {
     const [showMessageQuest, setShowMessageQuest] = useState(true);

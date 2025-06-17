@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import classes from "../../../Styles/StylesKingdomInmar/NavalBattle.module.css";
+import classes from "../../../../Styles/StylesKingdomInmar/NavalBattle.module.css";
+import { RulesNavalBattle } from "./RulesNavalBattle";
 
 export const NavalBattle = () => {
     const [healthShip, setHealthShip] = useState(1000);
@@ -9,6 +10,7 @@ export const NavalBattle = () => {
     const [showHeadMonster, setShowHeadMonster] = useState(true);
     const [attackQueue, setAttackQueue] = useState(5);
     const [showRepair, setShowRepair] = useState(true);
+    const [buttonDisabled, setButtonDisabled] = useState(true);
 
     const classTentacle1 = attackQueue === 1 ? classes.leftTentacle1Up : classes.leftTentacle1Down;
     const classTentacle2 = attackQueue === 2 ? classes.leftTentacle2Up : classes.leftTentacle2Down;
@@ -16,17 +18,12 @@ export const NavalBattle = () => {
     const classTentacle4 = attackQueue === 4 ? classes.rightTentacle2Up : classes.rightTentacle2Down;
     const classHeadMonster = attackQueue === 5 ? classes.headMonsterUp : classes.headMonsterDown;
     
-    
     useEffect(() => {
         if (healthTentacle <= 0) {
             setShowTentacle(false);
             setAttackQueue(5); 
         }
     }, [healthTentacle]);
-
-    function handleStart(){
-        setAttackQueue(5);
-    }
 
     function handleAttackHeadMonster(){
         if(healthHeadMonster <= 0) {
@@ -61,17 +58,18 @@ export const NavalBattle = () => {
 
     return (
         <div className={classes.navalBattlePage}>
+            <RulesNavalBattle setButtonDisabled={setButtonDisabled}/>
             <div className={classes.blockShip}>
                 <p>Корабль</p>
                 <progress className={classes.healthShip} max="1000" value={healthShip}></progress>
             </div>
 
             <div className={classes.monsterField}>
-                {showTentacle && <button className={classTentacle1} onClick={handleAttackTentacle} disabled={attackQueue !== 1}></button>}
-                {showTentacle && <button className={classTentacle2} onClick={handleAttackTentacle} disabled={attackQueue !== 2}></button>}
-                {showHeadMonster && <button className={classHeadMonster} onClick={handleAttackHeadMonster} disabled={attackQueue !== 5}></button>}
-                {showTentacle && <button className={classTentacle3} onClick={handleAttackTentacle} disabled={attackQueue !== 3}></button>}
-                {showTentacle && <button className={classTentacle4} onClick={handleAttackTentacle} disabled={attackQueue !== 4}></button>}
+                {showTentacle && <button className={classTentacle1} onClick={handleAttackTentacle} disabled={attackQueue !== 1 || buttonDisabled === true}></button>}
+                {showTentacle && <button className={classTentacle2} onClick={handleAttackTentacle} disabled={attackQueue !== 2 || buttonDisabled === true}></button>}
+                {showHeadMonster && <button className={classHeadMonster} onClick={handleAttackHeadMonster} disabled={attackQueue !== 5 || buttonDisabled === true}></button>}
+                {showTentacle && <button className={classTentacle3} onClick={handleAttackTentacle} disabled={attackQueue !== 3 || buttonDisabled === true}></button>}
+                {showTentacle && <button className={classTentacle4} onClick={handleAttackTentacle} disabled={attackQueue !== 4 || buttonDisabled === true}></button>}
             </div>
 
             <div className={classes.blockMonster}>
@@ -82,10 +80,9 @@ export const NavalBattle = () => {
             </div>
 
             <div className={classes.sideOfTheShip}>
-                {/* <button onClick={handleStart}>Start</button> */}
-                {showRepair && <div className={classes.repair}>
-                    <button className={classes.repair} title="Ремонт" onClick={handleRepair}></button> 
+                {showRepair && <div className={classes.blockRepair}>
                     <p>Ремонт</p>
+                    <button className={classes.buttonRepair} title="Ремонт" onClick={handleRepair} disabled={buttonDisabled === true}></button> 
                 </div>}
 
             </div>

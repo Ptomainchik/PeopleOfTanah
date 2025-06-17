@@ -1,5 +1,6 @@
 import { useState } from "react";
-import classes from "../../../Styles/StylesConfederationOfTribes/Quest.module.css";
+import classes from "../../../../Styles/StylesKingdomInmar/Dice.module.css";
+import { RulesDice } from "./RulesDice";
 
 export const Dice = () => {
     const [showChip, setShowChip] = useState(false);
@@ -22,6 +23,7 @@ export const Dice = () => {
     const [randomDice, setRandomDice] = useState([0, 0, 0, 0, 0]);
     const [randomDiceOpponent, setRandomDiceOpponent] = useState([0, 0, 0, 0, 0]);
     const [animationKey, setAnimationKey] = useState(0);
+    const [buttonDisabled, setButtonDisabled] = useState(true);
 
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
@@ -142,6 +144,7 @@ export const Dice = () => {
   
     return (
         <div className={classes.miniGamePage}>
+            <RulesDice setButtonDisabled={setButtonDisabled}/>
             {showChip && (
                 <div className={classes.dicePlayerField}>
                     {randomDice.map((dice, index) => {
@@ -169,10 +172,10 @@ export const Dice = () => {
 
             {showBet && <div className={classes.betPlayer} key={`bet-player-${animationKey}`}></div>}
 
-            {showCheating &&  <button className={classes.buttonCheating} onClick={handleCheating} disabled={buttonBetState === false}>Шулерство</button>}
-            {showTrickery && <button className={classes.buttonTrickery} onClick={handleTrickery} disabled={buttonBetState === true}>Хитрость</button> }
+            {showCheating &&  <button className={classes.buttonCheating} onClick={handleCheating} disabled={buttonBetState === false || buttonDisabled === true}>Шулерство</button>}
+            {showTrickery && <button className={classes.buttonTrickery} onClick={handleTrickery} disabled={buttonBetState === true || buttonDisabled === true}>Хитрость</button> }
 
-            <button className={classes.buttonRules} onClick={handleOpenModalRules}>Правила</button>
+            <button className={classes.buttonRules} onClick={handleOpenModalRules} disabled={buttonDisabled === true}>Правила</button>
             {showModalRules && <div className={classes.modalRules}> 
                 <p className={classes.rules1}>Шулерство - победа в следующем розигрыше кубиков.</p>
                 <p className={classes.rules2}>Хитрость - хитростью выманить монеты у оппонента.</p>
@@ -185,14 +188,14 @@ export const Dice = () => {
             {showBet3 && <div className={classes.betPlayer3}></div> }
 
             <div className={classes.chipPlayerField}>
-                <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0} title="Монеты игрока"></button>
+                <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0 || buttonDisabled === true} title="Монеты игрока"></button>
                 <h1>Монеты игрока: {chipPlayer}</h1>
             </div>
             
-            <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0}>Бросить кубики</button>
+            <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0 || buttonDisabled === true}>Бросить кубики</button>
 
             <div className={classes.chipOpponentField}>
-                <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0} title="Монеты оппонента"></button>
+                <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0 || buttonDisabled === true} title="Монеты оппонента"></button>
                 <h1>Монеты оппонента: {chipOpponent}</h1>
             </div>
             
