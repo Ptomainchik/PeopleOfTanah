@@ -207,6 +207,7 @@
     bottom: 5%;
     right: 5%;
     background: red;
+    cursor: pointer;
 }
 
 .buttonCloseModal:hover{
