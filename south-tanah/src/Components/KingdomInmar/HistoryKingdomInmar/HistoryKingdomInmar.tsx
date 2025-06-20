@@ -4,10 +4,10 @@ import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
 import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
 import Background from "../../../Images/InmarForest.jpg";
 import KingOfInmar from "../../../Images/KingOfInmar.jpg";
-import BattlteInTheRuins from "../../../Images/BattlteInTheRuins.jpg";
+import Ruin from "../../../Images/Ruin.jpg";
 import Mesa from "../../../Images/Mesa.jpg";
 import SecretOrder from "../../../Images/SecretOrder.jpg";
-import SoldiersOfInmar from "../../../Images/SoldiersOfInmar.jpg";
+import SoldierOfInmar from "../../../Images/SoldierOfInmar.jpg";
 
 export const HistoryKingdomInmar = () => {
     const [showModalId, setshowModalId] = useState(null);
@@ -51,7 +51,7 @@ export const HistoryKingdomInmar = () => {
                 <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <img className={classes.imageModalHistory} src={BattlteInTheRuins} alt="BattlteInTheRuins" draggable={"false"} style={{borderRight: "solid 1vw darkred", borderBottom: "solid 1vw darkred"}}/> 
+                <img className={classes.imageModalHistory} src={Ruin} alt="Ruin" draggable={"false"} style={{borderRight: "solid 1vw darkred", borderBottom: "solid 1vw darkred"}}/> 
                 <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Закрыть</button></div>)}
             <button className={classes.buttonOpenModal3} id={"3"} onClick={() => {handleOpenModal("3")}}><p className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Глава 3</p></button>
             {showModalId === "3" && (<div className={buttonClassLeft} id={"3"} style={{border: "solid 0.3vw darkred"}}>
@@ -75,7 +75,7 @@ export const HistoryKingdomInmar = () => {
                 <p style={{color: "darkred"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <img className={classes.imageModalHistory} src={SoldiersOfInmar} alt="SoldiersOfInmar" draggable={"false"} style={{borderRight: "solid 1vw darkred", borderBottom: "solid 1vw darkred"}}/> 
+                <img className={classes.imageModalHistory} src={SoldierOfInmar} alt="SoldierOfInmar" draggable={"false"} style={{borderRight: "solid 1vw darkred", borderBottom: "solid 1vw darkred"}}/> 
                 <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Закрыть</button></div>)}
         </div>
     )

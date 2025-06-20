@@ -7,7 +7,7 @@ import Eltabar from "../../../Images/Eltabar.jpg";
 import Insurrection from "../../../Images/Insurrection.jpg";
 import Temple from "../../../Images/Temple.jpg";
 import Caravans from "../../../Images/Caravans.jpg";
-import SoldiersOfRegistan from "../../../Images/SoldiersOfRegistan.jpg";
+import SoldierOfRegistan from "../../../Images/SoldierOfRegistan.jpg";
 
 export const HistoryConfederation = () => {
     const [showModalId, setshowModalId] = useState(null);
@@ -76,7 +76,7 @@ export const HistoryConfederation = () => {
                 <p style={{color:"goldenrod"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam doloremque, maiores hic dignissimos ad omnis. 
                 Mollitia sunt minima ad minus quidem voluptatem soluta cum. Ad velit eligendi assumenda reiciendis aliquam?
                 </p>
-                <img className={classes.imageModalHistory} src={SoldiersOfRegistan} alt="SoldiersOfRegistan" draggable={"false"} style={{borderRight: "solid 1vw goldenrod", borderBottom: "solid 1vw goldenrod"}}/> 
+                <img className={classes.imageModalHistory} src={SoldierOfRegistan} alt="SoldierOfRegistan" draggable={"false"} style={{borderRight: "solid 1vw goldenrod", borderBottom: "solid 1vw goldenrod"}}/> 
                 <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Закрыть</button></div>)}
         </div>
     )
