@@ -28,7 +28,7 @@ export const StructureConfederation = () => {
 
     return (
         <div className={classes.structureConfederationPage}>
-            <div className={classes.topbar}><HomeButton/>Структура Конфедерации племён<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Структура<BackButton/></div>
             
             <div>
                 <button className={classes.buttonModalHuman} onClick={() => {handleOpenModal("1")}} id={"1"}><p>Люди</p></button>

@@ -8,6 +8,7 @@ import Insurrection from "../../../Images/Insurrection.jpg";
 import Temple from "../../../Images/Temple.jpg";
 import Caravans from "../../../Images/Caravans.jpg";
 import SoldierOfRegistan from "../../../Images/SoldierOfRegistan.jpg";
+import CoatOfArmsOfTheConfederationOfTribes from "../../../Images/CoatOfArmsOfTheConfederationOfTribes.webp";
 
 export const HistoryConfederation = () => {
     const [showModalId, setshowModalId] = useState(null);
@@ -36,7 +37,11 @@ export const HistoryConfederation = () => {
 
     return (
         <div className={classes.historyPage} style={{ backgroundImage: `url(${Background})` }}>
-            <div className={classes.topbar} style={{background: "goldenrod"}}><HomeButton/>История Конфедерации племён<BackButton/></div>
+            <div className={classes.topbar} style={{background: "goldenrod"}}><HomeButton/>История<BackButton/></div>
+            <div className={classes.coatOfArms}>
+                <h2 style={{color:"goldenrod"}}>Конфедерация племён</h2>
+                <img src={CoatOfArmsOfTheConfederationOfTribes} alt="CoatOfTheConfederationOfTribes" title="Герб Конфедерации племён"  draggable={"false"}/>
+            </div>
             <button className={classes.buttonOpenModal1} id={"1"} onClick={() => {handleOpenModal("1")}}><p className={classes.titleChapterHistory} style={{color: "goldenrod", WebkitTextStroke: "1px black"}}>Глава 1</p></button>
             {showModalId === "1" && (<div className={buttonClassLeft} id={"1"} style={{border: "solid 0.3vw goldenrod"}}>
                 <h4 style={{color:"goldenrod"}}>Глава 1</h4> 

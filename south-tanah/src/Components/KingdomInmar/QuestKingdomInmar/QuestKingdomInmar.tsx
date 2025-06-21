@@ -7,7 +7,7 @@ export const QuestKingdomInmar = () => {
 
     return (
         <div>
-             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>Квест Королевства Инмар<BackButton/></div>
+             <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>Квест<BackButton/></div>
              <NavalBattle/>
         </div>
         

@@ -34,7 +34,7 @@ export const StructureKingdomInmar = () => {
     
     return (
         <div className={classes.structureKindomInmarPage}>
-            <div className={classes.topbar}><HomeButton/>Структура Королевства Инмар<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Структура<BackButton/></div>
                 <div>
                     <p className={classes.buttonModalNorth} id={"1"} onClick={() => {handleOpenModal("1")}}><p>Север</p></p>
                     <p className={classes.buttonModalNorthwest} id={"2"} onClick={() => {handleOpenModal("2")}}><p>Северо-Запад</p></p>

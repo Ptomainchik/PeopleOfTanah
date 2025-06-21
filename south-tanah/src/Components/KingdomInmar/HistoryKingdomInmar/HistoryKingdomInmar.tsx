@@ -8,6 +8,7 @@ import Ruin from "../../../Images/Ruin.jpg";
 import Mesa from "../../../Images/Mesa.jpg";
 import SecretOrder from "../../../Images/SecretOrder.jpg";
 import SoldierOfInmar from "../../../Images/SoldierOfInmar.jpg";
+import CoatOfArmsOfTheKingdomOfInmar from "../../../Images/CoatOfArmsOfTheKingdomOfInmar.webp";
 
 export const HistoryKingdomInmar = () => {
     const [showModalId, setshowModalId] = useState(null);
@@ -36,7 +37,11 @@ export const HistoryKingdomInmar = () => {
 
     return (
         <div className={classes.historyPage} style={{ backgroundImage: `url(${Background})` }}>
-            <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>История Королевства Инмар<BackButton/></div>
+            <div className={classes.topbar} style={{background: "darkred"}}><HomeButton/>История<BackButton/></div>
+            <div className={classes.coatOfArms}>
+                <h2 style={{color: "darkred"}}>Королевство Инмар</h2>
+                <img src={CoatOfArmsOfTheKingdomOfInmar} alt="CoatOfArmsOfTheKingdomOfInmar" title="Герб Королевства Инмар" draggable={"false"}/>
+            </div>
             <button className={classes.buttonOpenModal1} id={"1"} onClick={() => {handleOpenModal("1")}}><p className={classes.titleChapterHistory} style={{color: "darkred", WebkitTextStroke: "1px black"}}>Глава 1</p></button>
             {showModalId === "1" && (<div className={buttonClassLeft} id={"1"} style={{border: "solid 0.3vw darkred"}}>
                 <h4 style={{color: "darkred"}}>Глава 1</h4>

@@ -6,7 +6,7 @@ import { BattleInTheForest } from "./QuestLevel/BattleInTheForest/BattleInTheFor
 export const QuestConfederation = () => {
     return (
         <div>
-            <div className={classes.topbar}><HomeButton/>Квест Конфедирации племён<BackButton/></div>
+            <div className={classes.topbar}><HomeButton/>Квест<BackButton/></div>
            <BattleInTheForest/>
         </div>
     )
