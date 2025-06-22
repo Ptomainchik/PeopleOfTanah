@@ -67,8 +67,8 @@
 
 .leftModal h4{
     position: absolute;
-    top: 5%;
-    right: 30%;
+    top: 2%;
+    right: 25%;
     font-size: 3vw;
     font-family: "El Messiri";
     font-weight: 700;
@@ -76,12 +76,12 @@
 }
 
 .leftModal p{
-    width: 45vw;
+    width: 50vw;
     height: 30vw;
     position: absolute;
     right: 0;
-    top: 10%;
-    font-size: 1.5vw;
+    top: 8%;
+    font-size: 1.3vw;
     font-family: "Pangolin";
     padding: 2%;
     margin: 0;
@@ -113,8 +113,8 @@
 
 .rightModal h4{
     position: absolute;
-    top: 5%;
-    right: 30%;
+    top: 2%;
+    right: 25%;
     font-size: 3vw;
     font-family: "El Messiri";
     font-weight: 700;
@@ -122,12 +122,12 @@
 }
 
 .rightModal p{
-    width: 45vw;
+    width: 50vw;
     height: 30vw;
     position: absolute;
     right: 0;
-    top: 10%;
-    font-size: 1.5vw;
+    top: 8%;
+    font-size: 1.3vw;
     font-family: "Pangolin";
     padding: 2%;
     margin: 0;
@@ -216,8 +216,8 @@
 }
 
 .imageModalHistory{
-    width: 50vw;
-    height: 30vw;
+    width: 45vw;
+    height: 25vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -232,7 +232,7 @@
     font-weight: 700;
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    left: 5%;
     background: red;
     cursor: pointer;
 }

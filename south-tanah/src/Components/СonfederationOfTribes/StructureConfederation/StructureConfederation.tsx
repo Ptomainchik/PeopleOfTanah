@@ -33,7 +33,7 @@ export const StructureConfederation = () => {
             <div>
                 <button className={classes.buttonModalHuman} onClick={() => {handleOpenModal("1")}} id={"1"}><p>Люди</p></button>
                 <button className={classes.buttonModalDesertHuman} onClick={() => {handleOpenModal("2")}} id={"2"}><p>Пустынные люди</p></button>
-                <button className={classes.buttonModalRegistan} onClick={() => {handleOpenModal("3")}} id={"3"}><p>Регистанцы</p></button>
+                <button className={classes.buttonModalRegistan} onClick={() => {handleOpenModal("3")}} id={"3"}><p>Регистаны</p></button>
             </div>
 
             <div>
@@ -52,7 +52,7 @@ export const StructureConfederation = () => {
                     <img style={{borderRight: "solid 1vw rgb(146, 112, 38)", borderBottom: "solid 1vw rgb(146, 112, 38)"}} src={Caravaner} alt="Image1" draggable={"false"}/>
                     <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Закрыть</button></div>)}
                 {showModalId === "3" && (<div className={structureConfederation} style={{border: "solid 0.3vw rgb(20, 107, 122)"}}>
-                    <h4 style={{color: "rgb(20, 107, 122)"}}>Регистанцы</h4>
+                    <h4 style={{color: "rgb(20, 107, 122)"}}>Регистаны</h4>
                     <p style={{color: " rgb(20, 107, 122)"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi vel, esse cum quos officiis hic nostrum placeat minima eveniet, 
                     quod, perspiciatis sequi obcaecati dolores neque debitis quidem exercitationem optio assumenda?
                     </p>
