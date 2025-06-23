@@ -117,8 +117,8 @@
 }
 
 .modalStructureConfederation img{
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -141,7 +141,7 @@
     position: absolute;
     right: 5%;
     top: 10%;
-    font-size: 2vw;
+    font-size: 1.3vw;
     font-family: "Pangolin";
 }
 
@@ -164,7 +164,7 @@
     font-family: "El Messiri";
     font-weight: 700;
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     right: 5%;
     background: red;
     cursor: pointer;

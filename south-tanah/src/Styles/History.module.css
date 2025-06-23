@@ -231,8 +231,8 @@
     font-family: "El Messiri";
     font-weight: 700;
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 3%;
+    right: 5%;
     background: red;
     cursor: pointer;
 }
