@@ -43,80 +43,133 @@ export const StructureKingdomInmar = () => {
                     <p className={classes.buttonModalSouthwest} id={"5"} onClick={() => {handleOpenModal("5")}}><p>Юго-Запад</p></p>
                     <p className={classes.buttonModalSoutheast} id={"6"} onClick={() => {handleOpenModal("6")}}><p>Юго-Восток</p></p>
                     <button className={classes.buttonModalRighteous} id={"7"} onClick={() => {handleOpenModal("7")}}><p>Праведники</p></button>
-                    <button className={classes.buttonModalCouncil} id={"8"} onClick={() => {handleOpenModal("8")}}><p>Совет</p></button>
+                    <button className={classes.buttonModalCouncil} id={"8"} onClick={() => {handleOpenModal("8")}}><p>Высший Совет</p></button>
                     <button className={classes.buttonModalOrder} id={"9"} onClick={() => {handleOpenModal("9")}}><p>Орден</p></button>
                 </div>
 
                 <div>
                     {showModalId === "1" && (<div className={classes.modalStructure} id={"1"} style={{border: "solid 0.3vw blue"}}> 
                             <h4 style={{color: "blue"}}>Модхал</h4> 
-                            <p style={{color: "blue"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                            Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.
+                            <p style={{color: "blue"}}>
+                                Здесь, на севере королевства, располагается столица Модхал. Величественный замок возвышается над водами реки Тамиз и является местом, где стоит королевский дворец.
+                                Отсюда Диперанг и Высший совет ведут управление и диктуют законы для всего Инмара. Здесь же находится главный штаб Ордена Ключей, где происходят заседания шести магистров и решается судьба дальнейших действий организации.
+                                Тут проживают высшие чины королевства, и каждый мало-мальски знатный человек мечтает обосноваться здесь. Сюда стекаются все налоги страны, и здесь решаются все вопросы экономики королевства.
+                                Если по воле судьбы тебе повезло быть жителем этого города - считай, что ты счастливчик. Ещё здесь находится руководство армии, отдающее приказы войскам по всему Инмару и за его пределами.
                             </p>
                         <div>
                             <img style={{borderRight: "solid 1vw blue", borderBottom: "solid 1vw blue"}} src={North} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"1"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "2" && (<div className={classes.modalStructure} id={"2"} style={{border: "solid 0.3vw blueviolet"}}>
-                        <h4 style={{color: "blueviolet"}}>Кива</h4> 
-                        <p style={{color: "blueviolet"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "blueviolet"}}>Кива</h4> 
+                            <p style={{color: "blueviolet"}}>
+                                Этот регион - житница всего королевства. От бескрайних полей до крупнейших в Танахе ферм, где пасутся многочисленные табуны лошадей и стада скота.
+                                Здесь выводят крепкие и выносливые породы лошадей, способных на длительные переходы. Жеребцов с раннего возраста приучают к боевым действиям. Большинство кавалеристов королевства обучаются верховой езде в местных школах под руководством опытных конюхов.
+                                Обнимаемый западными ветрами, здесь расположился трудолюбивый и умиротворённый город Явис. В этом краю искусство трудиться и жить во благо королевства возведено в культ.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw blueviolet", borderBottom: "solid 1vw blueviolet"}} src={Northwest} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"2"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "3" && (<div className={classes.modalStructure} id={"3"} style={{border: "solid 0.3vw yellow"}}>
-                        <h4 style={{color: "yellow"}}>Явис</h4> 
-                        <p style={{color: "yellow"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "yellow"}}>Явис</h4> 
+                            <p style={{color: "yellow"}}>
+                                Негласная столица оружейников, кузнечных артелей и всех, кто связан с производством оружия, доспехов, выделкой кожи и оборонной промышленностью.
+                                Большая часть армейского снаряжения производится и закупается именно здесь. Богатые вельможи соревнуются между собой, чьи доспехи изысканнее, а мечи искуснее украшены, тратя на это целые состояния. 
+                                Скотоводство и земледелие развиты слабо, но всё же присутствуют. Город любим членами Ордена Ключей, но считается духовно слабым из-за малого количества церквей и монастырских подворий. 
+                                Это не место для простолюдинов - практически каждая семья здесь владеет мастерской или лавкой. Работа кипит круглосуточно, делая его, пожалуй, самым шумным городом королевства.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw yellow", borderBottom: "solid 1vw yellow"}} src={Northeast} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"3"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "4" && (<div className={classes.modalStructure} id={"4"} style={{border: "solid 0.3vw green"}}>
-                        <h4 style={{color: "green"}}>Киллат</h4> 
-                        <p style={{color: "green"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "green"}}>Киллат</h4> 
+                            <p style={{color: "green"}}>
+                                В окрестных лесах Киллата гордо и молчаливо возвышается обитель веры Белого Быка. Древние руины храмов и олицетворения богов в виде скульптур и барельефов взирают сквозь чащу на наследников утраченного величия человечества.
+                                Отсюда идёт начало всего мира, и здесь проводятся еженедельные праздники, восхваляющие божество.
+                                В самом городе вздымаются к небесам шпили храмов и монастырей, а многочисленные ремесленные мастерские производят товары для всего королевства.
+                                Множественные подворья воспитывают молодёжь и занимаются земледелием, чтобы прокормить жителей и паломников этого чудесного города и всего региона.   
+                                Высшее духовенство, подобно незримым нитям, плетёт здесь церковную власть - назначает настоятелей, решает судьбоносные вопросы веры.
+                                Ни один благочестивый житель Инмара не считает свою жизнь полной, пока не совершит паломничество к этим древним стенам. Припасть к священным камням, вознести молитву Белому Быку - это не просто традиция, это таинство, скрепляющее связь между смертным и божеством. 
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw green", borderBottom: "solid 1vw green"}} src={Center} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"4"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "5" && (<div className={classes.modalStructure} id={"5"} style={{border: "solid 0.3vw orange"}}>
-                        <h4 style={{color: "orange"}}>Сикил</h4> 
-                        <p style={{color: "orange"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "orange"}}>Сикил</h4> 
+                            <p style={{color: "orange"}}>
+                                Город, пропахший солёным ветром Живого моря - главный портовый регион Инмара. Здесь со стапелей сходят могучие военные корабли, а большая часть населения занимается рыбным промыслом.
+                                Это последний оплот цивилизации - уже за городской чертой начинается безжизненная пустошь, где обитают ужасающие твари. Тех, кто отважился туда ступить, больше никто уже не видел.
+                                Улицы города живут двойной жизнью: днём - процветающий приморский град, обласканный солнцем; ночью - царство разврата и порока, где моряки ищут развлечений и женщин. Здесь благородство адмиралов соседствует с грязью доков, создавая неповторимый портовый колорит.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw orange", borderBottom: "solid 1vw orange"}} src={Southwest} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"5"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "6" && (<div className={classes.modalStructure} id={"6"} style={{border: "solid 0.3vw red"}}>
-                        <h4 style={{color: "red"}}>Лутут</h4> 
-                        <p style={{color: "red"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "red"}}>Лутут</h4> 
+                            <p style={{color: "red"}}>
+                                Место, где встречаются пустыня и лесостепь. Здесь брызги бушующего моря разбиваются о скалы, на которых возвышается бастион Лутут.
+                                Одноимённый город, прилегающий к крепости, с юга защищён сторожевыми башнями, оберегающими королевство от нашествия безбожных дикарей из Конфедерации племён.
+                                Народ живёт в постоянном напряжении, ожидая вероломного нападения. В таких условиях каждый незнакомец становится подозрительным - местные знают друг друга в лицо.
+                                Но помимо солдат и моряков, здесь процветает рыбный промысел и торговля. Самые внушительные флагманы королевства пришвартованы в этих гаванях, для защиты Инмара от морских атак.     
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw red", borderBottom: "solid 1vw red"}} src={Southeast} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"6"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "7" && (<div className={structureInmar} id={"7"} style={{border: "solid 0.3vw rgb(221, 221, 128)"}}>
                         <h4 style={{color: "rgb(221, 221, 128)"}}>Праведники</h4> 
-                        <p style={{color: "rgb(221, 221, 128)"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <p style={{color: "rgb(221, 221, 128)"}}>
+                                Столетия меняли Церковь, но её исконные устои, заложенные ещё при зарождении королевства, остались незыблемыми. "Праведниками" называют тех, кто посвятил себя служению Белому Быку.
+                                С юных лет будущих служителей веры принимают в семинарии, разбросанные по всему Инмару. Знатность рода не имеет значения - даже отпрыски благородных семейств с честью отправляются в монастыри на воспитание. По окончании обучения выпускник волен вернуться к светской жизни или продолжить служение Церкви.
+                                Праведникам открыты все двери в королевстве, они имеют представительство во всех регионах и в каждом городе. 
+                                Их представители восседают в Высшем Совете. 
+                                Существует несколько церковных чинов:
+                                Первый Святейший - собственно, это и есть глава Церкви.
+                                Приближённые к нему Сказители - доносящие и разъясняющие более низким чинам волю главы.
+                                Отдельным столбом стоят Указчики - участники совета и их помощники.
+                                Далее идут Настоятели храмов и монастырей.
+                                За ними следуют Проповедники - низший чин, получаемый после выпуска из семинарии.
+                                Святейший лично проводит великие мессы, толкует события как проявления воли Белого Быка - то милостивой, то гневной. Его слово - закон для всех праведников, которых он назначает и продвигает по службе.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={BullMonument} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw chartreuse"}}>
-                        <h4 style={{color: "chartreuse"}}>Высший совет</h4> 
-                        <p style={{color: "chartreuse"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "chartreuse"}}>Высший совет</h4> 
+                            <p style={{color: "chartreuse"}}>
+                                Хотя формально король олицетворяет верховную власть, его реальное влияние ограничено. Монарх действительно может: издавать указы, объявлять войну, принимать чрезвычайные меры.
+                                Но эти полномочия активируются лишь в ситуациях экстренной угрозы королевству, когда король объявляет "право верховного".
+                                В обычное же время все вопросы жизнедеятельности страны решает Высший Совет.
+                                Будь то налоги, армия, распределение продовольствия, внутренние цены или даже правосудие - всё это находится в ведении Совета. Король лишь подписывает законы и может выдвинуть указ на рассмотрение. 
+                                В Совете заседает двадцать четыре участника - по четыре от каждого региона. В их число входят: один представитель Праведников, один от Ордена Ключей, один от командования войсками, один от знати.
+                                Каждый представляет свой регион.
+                                Руководит Советом ежегодно избираемый глава. При равенстве голосов проводится повторное голосование между двумя лидирующими кандидатами.
+                                Король не участвует в выборах, но если Совет заходит в тупик, монарх может назначить главу самостоятельно. В истории это случалось лишь однажды, когда в Совете царило полное недоверие и выбрать руководителя не удавалось.
+                                Все законы и указы рождаются в Зале Советов столицы, откуда расходятся по всему королевству.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw chartreuse", borderBottom: "solid 1vw chartreuse"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "9" && (<div className={structureInmar} id={"9"} style={{border: "solid 0.3vw darkblue"}}>
-                        <h4 style={{color: "darkblue"}}>Орден ключей</h4> 
-                        <p style={{color: "darkblue"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore nobis facilis voluptates, consequuntur officiis. 
-                        Quaerat, ducimus dolor voluptas fugiat maiores veritatis ab dolorem sint incidunt ea, corrupti quidem sapiente.</p>
+                            <h4 style={{color: "darkblue"}}>Орден ключей</h4> 
+                            <p style={{color: "darkblue"}}>
+                                О том, что происходит внутри Ордена, известно немного. Тех, кто пытался донести миру хоть что-то о нём, уже давно нет в живых - их останки истлели, и места захоронений неизвестны.
+                                Ореол тайны окружает Ключников с момента основания организации. Вступивший однажды остаётся в ней навеки. Одни считают их личной гвардией короля, другие - сборищем распоясавшихся головорезов, опьянённых вседозволенностью.
+                                Достоверно известно лишь, что Орден обладает огромным влиянием, а его сети простираются далеко за пределы Инмара.
+                                Вступивший в организацию неофит отказывается от прежней жизни навсегда и отдаёт часть имущества в пользу Ордена. Само вступление происходит поэтапно. В самом начале новоиспечённый Ключник проходит проверку после того, как внёс вклад в казну Ордена.
+                                Проверка происходит по-разному, в зависимости от статуса и того, чем занимается вступивший: будь то шпионаж, кража или вовсе убийство неугодных людей.
+                                Пройдя проверку, которая может длиться от месяца до года, неофит получает своё новое имя, по которому его будут знать только в Ордене.
+                                Затем он проходит церемонию инициации, где один из магистров вручает ему открытый замок с ключом, который он при остальных членах Ордена закрывает, отдавая замок обратно в руки проводящего церемонию магистра, а ключ бросает в огромную серебряную чашу.
+                                Далее ему вручают церемониальный кинжал, которым необходимо разрезать правую ладонь, а затем взять ключ из множества ключей в чаше (так как обряд посвящения проходит сразу несколько неофитов). Затем он, крепко сжимая ключ в правой руке, произносит клятву верности Ордену.
+                                Сама чаша символизирует общее дело организации, а ключи в ней - каждого как единое целое. И не имеет значения, какой ключ вытянет посвящающийся - все равны как один.
+                                Замок же означает жизнь, вручаемую Ордену без остатка. Никто не знает, правда ли это, так как версий множество, и какая из них является истиной - неизвестно.
+                            </p>
                         <div>
                             <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={Keys} alt="Image1" draggable={"false"}/>
                         </div>

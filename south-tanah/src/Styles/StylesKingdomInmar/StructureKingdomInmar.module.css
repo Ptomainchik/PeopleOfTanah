@@ -215,7 +215,7 @@
 .modalStructure p{
     width: 50%;
     height: 100%;
-    font-size: 2vw;
+    font-size: 1.3vw;
     font-family: "Pangolin";
     padding-left: 5%;
     position: absolute;
@@ -224,11 +224,11 @@
 }
 
 .modalClassStructureInmar{
-    width: 96%;
+    width: 99.5%;
     height: 89%;
     position: absolute;
     top: 10%;
-    left: 2%;
+    left: 0%;
     background: rgb(25, 25, 25);
     animation: shift 1.5s ;
     animation-fill-mode: forwards; 
@@ -244,18 +244,18 @@
 }
 
 .modalClassStructureInmar p{
-    width: 45%;
+    width: 55%;
     height: 100%;
     position: absolute;
     right: 5%;
     top: 10%;
-    font-size: 2vw;
+    font-size: 1.3vw;
     font-family: "PAngolin";
 }
 
 .modalClassStructureInmar img{
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -282,7 +282,7 @@
     font-family: "El Messiri";
     font-weight: 700;
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     right: 5%;
     background: red;
     cursor: pointer;
