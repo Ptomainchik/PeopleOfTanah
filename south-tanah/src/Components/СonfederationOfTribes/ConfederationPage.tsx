@@ -14,10 +14,9 @@ export const ConfederationPage = () => {
             <div className={classes.overflowInfoConfederation}>
                 <div className={classes.infoConfederation}>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Voluptatibus placeat repellat aspernatur amet ipsum enim nemo, 
-                        sint natus illo porro quos voluptas alias labore inventore vel. 
-                        Iusto aut perferendis omnis?
+                        В Конфедерации племён нет предрассудков по отношению к другим народам, и они рады приветствовать на своей земле представителей любых рас. 
+                        Их мировоззрение пронизано духом созидания и творчества, где нет места разделению по происхождению.
+                        Основу населения составляют переселившиеся из Инмара люди, коренные обитатели пустыни — регистаны, а также их общие потомки, именуемые пустынными людьми. 
                     </p>
                 </div>
             </div>

@@ -105,11 +105,11 @@
 }
 
 .modalStructureConfederation{
-    width: 96%;
+    width: 99.5%;
     height: 89%;
     position: absolute;
     top: 10%;
-    left: 2%;
+    left: 0;
     transform: translateX(-50%);
     background: rgb(25, 25, 25);
     animation: shift 1.5s ;

@@ -11,10 +11,11 @@ export const StartPage = () => {
             </div>
             <div className={classes.overlayInfoBlockStartPage}>
                 <div className={classes.infoBlockStartPage}>
-                    <h1>Юг Танаха</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Corrupti autem repellendus neque veniam, sed beatae rem numquam, rerum voluptatem adipisci, provident consequatur iste? 
-                    Facilis beatae dolor ea? Cumque, sint quia.</p>
+                    <h1>Люди Танаха</h1>
+                    <p>
+                        На юго-востоке континента ведут постоянные междоусобные войны две, казалось бы, внешне похожие расы, но такие разные по образу жизни фракции.
+                        В этой главе идёт повествование о двух непримиримых соперниках - Королевстве Инмар и Конфедерации племён.
+                    </p>
                 </div>
             </div>
             

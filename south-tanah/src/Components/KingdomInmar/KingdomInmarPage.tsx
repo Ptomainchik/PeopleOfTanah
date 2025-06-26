@@ -13,10 +13,10 @@ export const KingdomInmarPage = () => {
             <div className={classes.overflowInfoKingdomInmar}>
                 <div className={classes.infoKingdomInmar}>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Ad non facilis saepe reiciendis dicta placeat, repudiandae labore? 
-                    Laudantium, recusandae? Quisquam magni quae quia cupiditate dolores! 
-                    Accusamus sit non qui consequuntur.
+                        Королевство Инмар ведёт обособленный образ жизни, где нет места другим расам. 
+                        Их религия проповедует исключительность человеческой расы, и было бы странно обнаружить здесь представителей иных народов, населяющих континент.
+                        Те немногочисленные чужеземцы, что оказываются в королевстве, обычно являются либо торговцами, либо послами. 
+                        Их численность и передвижение по территории страны строго контролируются властями.
                     </p>
                 </div>
             </div>
