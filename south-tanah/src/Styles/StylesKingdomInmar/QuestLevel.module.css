@@ -10,12 +10,15 @@
 /* ----- Scene1 ----- */
 
 .playingFieldLevel1{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/RoomCastle.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 .characterImg1{
@@ -33,12 +36,15 @@
 /* ----- Scene2 ----- */
 
 .playingFieldLevel2{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/СabinetCastle.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 .characterImg2{
@@ -72,12 +78,15 @@
 /* ----- Scene3 ----- */
 
 .playingFieldLevel3{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/ShipInmar.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 .characterImg3{
@@ -96,12 +105,15 @@
 /* ----- Scene5 ----- */
 
 .playingFieldLevel5{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/StreetsRegistan.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 .characterImg5{
@@ -129,23 +141,29 @@
 /* ----- Scene6 ----- */
 
 .playingFieldLevel6{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/Casemates.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 /* ----- Scene7 ----- */
 
 .playingFieldLevel7{
-    width: 100%;
+    width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url(../../Images/PrisonRoom.jpg) no-repeat center;
-    background-size: contain;
+    background-size: cover;
+    border: solid 0.3vw darkred;
 }
 
 .characterImg6{
