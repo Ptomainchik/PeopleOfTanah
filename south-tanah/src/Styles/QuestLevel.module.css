@@ -1,9 +1,8 @@
 .questPage{
     width: 100%;
     height: 90%;
-    background: url(../../Images/DesertTexture.jpg) no-repeat;
     background-size: cover;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
@@ -17,7 +16,6 @@
     background: wheat;
     color: black;
     font-family: "Pangolin";
-    border: solid 0.3vw goldenrod;
     font-size: 2vw;
     z-index: 21;
 }
@@ -53,12 +51,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/Market.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg1{
+.characterConfederationImg1{
     width: 10vw;
     position: absolute;
     top: 25%;
@@ -66,9 +62,22 @@
     transform: translateX(-50%);
 }
 
-.characterImg1:hover{
+.characterConfederationImg1:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
 }
+
+.characterInmarImg1{
+    width: 18vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.characterInmarImg1:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
+}
+
 
 /* ----- Scene2 ----- */
 
@@ -79,20 +88,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/CamelCaravaner.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg2{
+.characterConfederationImg2{
     width: 12vw;
     position: absolute;
     top: 25%;
     right: 25%;
 }
 
-.characterImg2:hover{
+.characterConfederationImg2:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+.characterInmarImg2{
+    width: 10vw;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+}
+
+.characterInmarImg2:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene3 ----- */
@@ -104,20 +122,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/DesertInmar.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg3{
+.characterConfederationImg3{
     width: 15vw;
     position: absolute;
     bottom: -8%;
     left: 30%;
 }
 
-.characterImg3:hover{
+.characterConfederationImg3:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+.characterInmarImg3{
+    width: 18vw;
+    position: absolute;
+    bottom: -5%;
+    right: 5%;
+}
+
+.characterInmarImg3:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene4 ----- */
@@ -129,20 +156,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/Tavern.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg4{
+.characterConfederationImg4{
     width: 13vw;
     position: absolute;
     bottom: 0%;
     left: 30%;
 }
 
-.characterImg4:hover{
+.characterConfederationImg4:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+.characterInmarImg4{
+    width: 13vw;
+    position: absolute;
+    bottom: 0%;
+    left: 30%;
+}
+
+.characterInmarImg4:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene5 ----- */
@@ -154,20 +190,41 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/ForestInmar.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg5{
+.characterConfederationImg5{
     width: 14vw;
     position: absolute;
     bottom: -8%;
     right: 40%;
 }
 
-.characterImg5:hover{
+.characterConfederationImg5:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+.characterInmarImg5{
+    width: 10vw;
+    position: absolute;
+    bottom: -22%;
+    right: 20%;
+}
+
+.characterInmarImg5:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
+}
+
+
+.characterInmarImg51{
+    width: 12vw;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+}
+
+.characterInmarImg51:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene6 ----- */
@@ -179,19 +236,17 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/StreetsOfKillat.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg6{
+.characterConfederationImg6{
     width: 14vw;
     position: absolute;
     bottom: -2%;
     left: 30%;
 }
 
-.characterImg6:hover{
+.characterConfederationImg6:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
 }
 
@@ -204,20 +259,29 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url(../../Images/BullTemple.jpg) no-repeat center;
     background-size: cover;
-    border: solid 0.3vw goldenrod;
 }
 
-.characterImg7{
+.characterConfederationImg7{
     width: 13vw;
     position: absolute;
     bottom: -20%;
     right: 30%;
 }
 
-.characterImg7:hover{
+.characterConfederationImg7:hover{
     filter: drop-shadow(0 0 0.5vw goldenrod);
+}
+
+.characterInmarImg7{
+    width: 13vw;
+    position: absolute;
+    bottom: -12%;
+    left: 50%;
+}
+
+.characterInmarImg7:hover{
+    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- OverallScenes ----- */
@@ -228,7 +292,6 @@
     position: absolute;
     bottom: 0;
     background: wheat;
-    border: solid 0.3vw goldenrod;
     font-family: "Pangolin";
 }
 
@@ -247,6 +310,19 @@
     bottom: 0;
     background: wheat;
     animation: typingWidth 3.5s forwards;
+}
+
+.buttonNextMessage{
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.buttonNextMessage:hover{
+    color: goldenrod;
 }
 
 .answer1{
