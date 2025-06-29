@@ -1,8 +1,7 @@
 import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
-import Sailor from "../../../../Images/Sailor.webp";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import CabinetCastle from "../../../../Images/CabinetCastle.jpg";
+import Storm from "../../../../Images/Storm.jpg";
 
 export const Level4 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({message1: true, message2: false, message3: false, message4: false, message5: false});
@@ -89,8 +88,8 @@ export const Level4 = (props:any) => {
                 </h3>
             </div> }
             <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
-            <div className={classes.playingFieldLevel4} style={{backgroundImage: `url(${CabinetCastle})`, border: "solid 0.3vw darkred"}}>
-                <img src={Sailor} alt="Sailor"  className={classes.characterImg4}/>
+            <div className={classes.playingFieldLevel4} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw darkred"}}>
+            
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
