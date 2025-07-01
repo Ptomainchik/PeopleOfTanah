@@ -9,6 +9,7 @@ import { Level4 } from "./QuestLevel/QuestLevel4";
 import { Level5 } from "./QuestLevel/QuestLevel5";
 import { Level6 } from "./QuestLevel/QuestLevel6";
 import { Level7 } from "./QuestLevel/QuestLevel7";
+import { Cards } from "./Cards/Cards";
 
 export const QuestConfederation = () => {
     const [countLoyal, setCountLoyal] = useState(0);

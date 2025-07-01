@@ -14,6 +14,7 @@ export const Level3 = (props:any) => {
         message6: false, 
         message7: false, 
         message8: false, 
+        message9: false,
     });
     const [showOpeningScene, setShowOpeningScene] = useState(true);
     
@@ -32,6 +33,7 @@ export const Level3 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
+                    message9: false,
                 })
             } 
             else if(showMessageQuest.message3 === true) {
@@ -44,6 +46,7 @@ export const Level3 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
+                    message9: false,
                 })
             }
             else if(showMessageQuest.message4 === true) {
@@ -56,6 +59,7 @@ export const Level3 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
+                    message9: false,
                 })
             }
             else if(showMessageQuest.message5 === true) {
@@ -68,6 +72,7 @@ export const Level3 = (props:any) => {
                     message6: true, 
                     message7: false, 
                     message8: false, 
+                    message9: false,
                 })
             }
             else if(showMessageQuest.message6 === true) {
@@ -80,6 +85,7 @@ export const Level3 = (props:any) => {
                     message6: false, 
                     message7: true, 
                     message8: false, 
+                    message9: false,
                 })
             }
             else if(showMessageQuest.message7 === true) {
@@ -92,6 +98,20 @@ export const Level3 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: true, 
+                    message9: false,
+                })
+            }
+            else if(showMessageQuest.message8 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: true,
                 })
             }
     }
@@ -121,6 +141,7 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
+                message9: false,
             })
         }
         else if(showMessageQuest.message2 === true) {
@@ -133,6 +154,7 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
+                message9: false,
             })
         } 
         else if(showMessageQuest.message3 === true) {
@@ -145,6 +167,7 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
+                message9: false,
             })
         }
         else if(showMessageQuest.message4 === true) {
@@ -157,6 +180,7 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
+                message9: false,
             })
         }
         else if(showMessageQuest.message5 === true) {
@@ -169,6 +193,7 @@ export const Level3 = (props:any) => {
                 message6: true, 
                 message7: false, 
                 message8: false, 
+                message9: false,
             })
         }
         else if(showMessageQuest.message6 === true) {
@@ -181,6 +206,7 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: true, 
                 message8: false, 
+                message9: false,
             })
         }
         else if(showMessageQuest.message7 === true) {
@@ -193,9 +219,23 @@ export const Level3 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: true, 
+                message9: false,
             })
         }
-            else if(showMessageQuest.message8 === true) {
+        else if(showMessageQuest.message8 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: true,
+            })
+        }
+        else if(showMessageQuest.message9 === true) {
             props.setShowLevel((prev: number) => prev + 1);
         }
     }
@@ -215,7 +255,7 @@ export const Level3 = (props:any) => {
             </div> }
             <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${DesertInmar})`, border: "solid 0.3vw goldenrod"}}>
-                {!showMessageQuest.message7 && !showMessageQuest.message8 && <img src={GuardInmar} alt="GuardInmar"  className={classes.characterConfederationImg3}/>}
+                {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={GuardInmar} alt="GuardInmar"  className={classes.characterConfederationImg3}/>}
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Стражник:</h1>
@@ -299,6 +339,22 @@ export const Level3 = (props:any) => {
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                </div>
+            </div> }
+            {showMessageQuest.message9 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+                <p>
+                    Спустя некоторое время караван вошёл в город. К счастью, искать место для регистрации торговцев долго не пришлось.
+                    Прямо на въезде, у ворот Лутута, к ним подошёл человек с серьёзным выражением лица и потребовал показать документы, после чего внимательно осмотрел весь караван и его груз, параллельно записывая что-то в красной толстой книге.
+                    Затем он предложил ознакомиться с записью и, если всё описанное было верно, поставить свои инициалы и расписаться под ней всей группе торговцев.   
+                    Когда бюрократические формальности были улажены, мужчина достал из сумки связку серебряных жетонов с выгравированной головой быка, подвешенных на простых верёвках.
+                    Вручив каждому члену каравана по одному, он строгим тоном потребовал не снимать их нигде, пока они находятся в Инмаре. На обратном же пути эти жетоны необходимо было сдать и оплатить пошлину.
+                    Когда они вошли в город, перед ними предстал портовый град во всей красе: брусчатые улицы, множество указателей. На одном из них значилось: "Рынок".
+                    Бросив взгляд на своих торговцев, Неман приказал им направляться туда и ожидать его там. Сам же он решил прогуляться по городу и обследовать такой незнакомый и завораживающий мир.   
+                </p>
+                <div>
+                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
+                        ---Продолжить--- 
+                    </h3>
                 </div>
             </div> }
         </div>

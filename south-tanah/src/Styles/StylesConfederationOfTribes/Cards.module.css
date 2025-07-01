@@ -1,10 +1,10 @@
 .miniGamePage{
     width: 100%;
-    height: 90%;
+    height: 100%;
     background: rgb(102, 80, 68);
     z-index: 200;
     position: absolute;
-    top: 10%;
+    top: 0%;
     font-family: "El Messiri";
     font-weight: 700;
 }
@@ -762,6 +762,44 @@ span{
     right: 10%;
     z-index: 21;
     animation: shiftHorizont 1s infinite;
+}
+
+.finalModal{
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%; 
+    transform: translateX(-50%);
+    border: solid 0.3vw goldenrod;
+    background: wheat;
+}
+
+.finalModal h3{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 2vw;
+    margin: 3%;
+    text-align: center;
+}
+
+.finalModal p{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.finalModal p:hover{
+    color: goldenrod;
 }
 
 @keyframes  shift {
