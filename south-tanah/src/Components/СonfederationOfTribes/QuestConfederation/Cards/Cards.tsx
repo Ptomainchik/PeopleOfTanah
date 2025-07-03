@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "../../../../Styles/StylesConfederationOfTribes/Cards.module.css";
 import { RulesCards } from "./RulesCards";
 
@@ -42,7 +42,24 @@ export const Cards = ({
     const [stateButton, setStateButton] = useState(false);
     const [stateFinal, setStateFinal] = useState({win: false, lose: false, draw: false, kingWin: false});
 
-    const currentCounterAttack = counterAttack + 1; 
+    useEffect(() => {
+        if (counterAttack > 0 && counterAttack % 2 === 1) {
+            const timer = setTimeout(() => {
+            handleClickDecks();
+            }, 1000);
+            return () => clearTimeout(timer);
+        }
+    }, [counterAttack]);
+
+    useEffect(() => {
+    if (counterAttack > 0 && counterAttack % 2 === 1 && card !== 0 && cardOpponent !== 0) {
+        const timer = setTimeout(() => {
+            handleClickAtackCard();
+        }, 3000);
+        return () => clearTimeout(timer);
+    }
+}, [card, cardOpponent]);
+        
     
     function drawRandomCard(): number | null {
         if (deck.length === 0) return null;
@@ -97,10 +114,10 @@ export const Cards = ({
     }
 
     function handleClickDecks(){
-        setStateButton(true)
-        handleClickDeck()
-        handleClickDeckOpponent()
-    }
+        setStateButton(true);
+        handleClickDeck();
+        handleClickDeckOpponent();
+    };
 
  function handleClickAtackCard(){
     setStateButton(false);
@@ -113,13 +130,13 @@ export const Cards = ({
     const currentCounterAttack = counterAttack + 1; 
 
     if(currentCard > currentCardOpponent){
-        setKingdom(currentKingdom + currentCard + currentCardOpponent);
+        setKingdom(prev => prev + currentCard + currentCardOpponent);
     }
     else if(currentCardOpponent > currentCard){
-        setKingdomOpponent(currentKingdomOpponent + currentCardOpponent + currentCard);
+        setKingdomOpponent(prev => prev + currentCardOpponent + currentCard);
     }
     else if(currentCardOpponent === currentCard){
-        setKing(currentKing + currentCardOpponent + currentCard);
+        setKing(prev => prev + currentCardOpponent + currentCard);
     }
     
     setShowCardOpponent(false);
@@ -155,10 +172,10 @@ export const Cards = ({
     }
 
         if(randomNumberVassal > 0){
-            setOpponentCounterVassal(opponentCounterVassal + 1);
+            setOpponentCounterVassal(prev => prev + 1);
         }
         if(opponentCounterVassal === 1){
-            setKingdomOpponent(kingdomOpponent + card + cardOpponent);
+            setKingdomOpponent(prev => prev + currentCard + currentCardOpponent);
             setShowVassalOpponent(false);
             setShowCard(false);
             setShowCardOpponent(false);
@@ -171,23 +188,23 @@ export const Cards = ({
             setRandomNumberAssassin(newRandom); 
         }
         if(randomNumberAssasin > 0){
-            setOpponentCounterAssasin(opponentCounterAssasin + 1);
+            setOpponentCounterAssasin(prev => prev + 1);
         }
-        if(opponentCounterAssasin === 1 && kingdom >= 7){
+        if(opponentCounterAssasin === 1 && currentKingdom >= 7){
             setShowAssassinOpponent(false);
-            setKingdom(kingdom - 7);
+            setKingdom(prev => prev - 7);
         }
         if(counterAttack >= 8 && counterAttack <= 15){
             const newRandom = Math.random();
             setRandomNumberBastard(newRandom); 
         }
         if(randomNumberBastard > 0){
-            setOpponentCounterBastard(opponentCounterBastard + 1);
+            setOpponentCounterBastard(prev => prev + 1);
         }
-        if(opponentCounterBastard === 1 && king >= 10){
+        if(opponentCounterBastard === 1 && currentKing >= 10){
             setShowBastardOpponent(false);
-            setKing(king - 10);
-            setKingdomOpponent(kingdomOpponent + 10);
+            setKing(prev => prev - 10);
+            setKingdomOpponent(prev => prev + 10);
         }
         if(counterAttack >= 10 && counterAttack <= 15){
             const newRandom = Math.random();
@@ -198,7 +215,7 @@ export const Cards = ({
     function handleClickAssassin(){
         if(kingdomOpponent >= 7){
             setShowAssassin(false);
-            setKingdomOpponent(kingdomOpponent - 7);
+            setKingdomOpponent(prev => prev - 7);
         }else{
             return
         }
@@ -207,8 +224,8 @@ export const Cards = ({
     function handleClickBastard(){
         if(king >= 10){
             setShowBastard(false);
-            setKing(king - 10);
-            setKingdom(kingdom + 10);
+            setKing(prev => prev - 10);
+            setKingdom(prev => prev + 10);
         }else{
             return
         }
@@ -217,7 +234,7 @@ export const Cards = ({
     function handleClickVassal(){
        
         if(cardOpponent !== 0){
-            setKingdom(kingdom + card + cardOpponent);
+            setKingdom(prev => prev + card + cardOpponent);
             setShowVassal(false);
             setShowCard(false);
             setShowCardOpponent(false);
@@ -299,13 +316,12 @@ export const Cards = ({
             <button className={classes.rulesButton} onClick={handleOpenModalRules} disabled={buttonDisabled === true}>Правила</button>
 
             {showRules && <div className={classes.rules}>
-                    <div className={classes.block1}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam obcaecati, explicabo quia repellendus impedit laborum quas quos quibusdam voluptatibus totam eos cum optio, repellat excepturi! Suscipit nihil voluptate dolorum?</span></div>
-                    <div className={classes.block2}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
-                    <div className={classes.block3}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
-                    <div className={classes.block4}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
-                    <div className={classes.block5}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
-                    <div className={classes.block6}><span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span></div>
-                    <div className={classes.block7}><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quasi quidem, iste veritatis commodi minima unde? Ea, eius quidem qui autem nobis eos ipsam tempore voluptatum, accusantium nihil labore repellat.</span></div>
+                    <div className={classes.block1}><span>Колоды игроков.</span></div>
+                    <div className={classes.block2}><span>Король(отбой при ничьей).</span></div>
+                    <div className={classes.block3}><span>Королевства игроков.</span></div>
+                    <div className={classes.block4}><span>Бастард - уникальная карта, используемая один раз в игре. Она ворует у короля десять очков из его королевства в своё, но только в том случае, если они у него имеются.</span></div>
+                    <div className={classes.block5}><span>Ассасин - уникальная карта, используемая один раз в игре. Она отнимает у королевства противника семь очков, но не забирает их себе и только в том случае, если они у него имеются.</span></div>
+                    <div className={classes.block6}><span>Вассал - уникальная карта, используемая один раз в игре. Она гарантирует победу в текущем раунде, даже в том случае, если по номиналу выпавшей карты использующий её игрок уступает противнику и при выпадении ничьей. Однако "вассала" нельзя использовать в последнем раунде.</span></div>
                 <button className={classes.closeButton} onClick={handleCloseModalRules}>Закрыть</button>
             </div>}
 
@@ -320,51 +336,52 @@ export const Cards = ({
                 {showCard && <div className={cardP} title="Карта игрока"><h1 className={classes.top}>{card}</h1><h1 className={classes.bottom}>{card}</h1></div>}
             </div>
 
-            <button className={classes.cardReset} onClick={handleClickAtackCard} disabled={buttonDisabled === true || stateButton === false}>Сбросить карты</button>
+            <button className={classes.cardReset} onClick={handleClickAtackCard} disabled={buttonDisabled === true || stateButton === false || counterAttack % 2 === 1} >Сбросить карты</button>
 
             <div>
                 {showBastardOpponent && <button className={classes.bastardCardOpponent} title="Бастард" disabled={buttonDisabled === true}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
-                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard} title="Бастард" disabled={buttonDisabled === true}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
+                {showBastard && <button className={classes.bastardCard} onClick={handleClickBastard} title="Бастард" disabled={buttonDisabled === true || counterAttack % 2 === 1}><h1 className={classes.top}>B</h1><h1 className={classes.bottom}>B</h1></button>}
             </div>
             
             <div>
                 {showAssassinOpponent && <button className={classes.assassinCardOpponent} title="Ассасин" disabled={buttonDisabled === true}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
-                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin} title="Ассасин" disabled={buttonDisabled === true}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
+                {showAssassin && <button className={classes.assassinCard} onClick={handleClickAssassin} title="Ассасин" disabled={buttonDisabled === true || counterAttack % 2 === 1}><h1 className={classes.top}>A</h1> <h1 className={classes.bottom}>A</h1></button>}
             </div>
             
             <div>
-                {showVassalOpponent && <button className={vassalClassOpponent} title="Вассал" disabled={buttonDisabled === true || counterAttack > 14}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
-                {showVassal && <button className={vassalClass} onClick={handleClickVassal} title="Вассал" disabled={buttonDisabled === true || counterAttack > 14}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassalOpponent && <button className={vassalClassOpponent} title="Вассал" disabled={buttonDisabled === true || counterAttack > 15}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
+                {showVassal && <button className={vassalClass} onClick={handleClickVassal} title="Вассал" disabled={buttonDisabled === true || counterAttack > 15 || counterAttack % 2 === 1}><h1 className={classes.top}>V</h1><h1 className={classes.bottom}>V</h1></button>}
             </div>
             
             <div>
-               <button className={classes.deck} onClick={handleClickDecks} title="Колода" disabled={buttonDisabled === true}></button><h1 className={classes.deckTitle}>Колода: {deck.length + deckOpponent.length}</h1>
+                <button className={classes.deck} onClick={handleClickDecks} title="Колода" disabled={buttonDisabled === true || counterAttack % 2 === 1}></button><h1 className={classes.deckTitle}>Колода: {deck.length}</h1>
+                <div className={classes.deckOpponent} title="Колода противника"></div><h1 className={classes.deckOpponentTitle}>Колода: {deckOpponent.length}</h1>
             </div>
 
             {stateFinal.win && <div className={classes.finalModal}>
                 <h3>
-                    Победа!!!
+                    Твоя взяла. Однако приятно проиграть такому настойчивому сопернику. Не всё так плохо у вас, как мне рассказывали, - удивленно промолвил хозяин таверны.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {stateFinal.lose && <div className={classes.finalModal}>
                 <h3>
-                    Поражение!!!
+                    Ты проиграл. Да, видимо, слабеет ваш брат. Нынче у вас не та хватка, как у ваших предшественников, - ехидно промолвил хозяин таверны и сгрёб все карты со стола в руки.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {stateFinal.draw && <div className={classes.finalModal}>
                 <h3>
-                    Ничья!!!
+                    Ничья. Как ни крути, а мы с тобой чем-то похожи. Видимо, мы учились у одних учителей, - потрескивая костяшками пальцев, произнес хозяин таверны.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {stateFinal.kingWin && <div className={classes.finalModal}>
                 <h3>
-                    Король выиграл!!!
+                    Хозяин таверны весело рассмеялся и, вытирая слезы от смеха, произнес:- Король победил! Даже в этой глупой игре, где короля выставили полным идиотом и возможность его выигрыша крайне мала, бывают казусы.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}

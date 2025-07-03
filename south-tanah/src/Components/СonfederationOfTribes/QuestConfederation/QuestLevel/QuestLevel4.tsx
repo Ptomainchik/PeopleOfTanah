@@ -19,11 +19,18 @@ export const Level4 = (props:any) => {
         message8: false, 
         message9: false, 
         message10: false,
+        message11: false,
     });
     const [showOpeningScene, setShowOpeningScene] = useState(true);
+    const [showOpeningScene2, setShowOpeningScene2] = useState(false);
     
     function handleModalOpening() {
         setShowOpeningScene(false);
+        setShowOpeningScene2(true);
+    }
+
+    function handleModalOpening2() {
+        setShowOpeningScene2(false);
     }
 
     function checkingMessageAccuracy() {
@@ -296,8 +303,8 @@ export const Level4 = (props:any) => {
                 message10: true,
             })
         }
-            else if(showMessageQuest.message10 === true) {
-            props.setShowLevel((prev: number) => prev + 1);
+        else if(showMessageQuest.message10 === true) {
+        props.setShowLevel((prev: number) => prev + 1);
         }
     }
 
@@ -320,12 +327,12 @@ export const Level4 = (props:any) => {
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Tavern})`, border: "solid 0.3vw goldenrod"}}>
                 <img src={Innkeeper} alt="Innkeeper"  className={classes.characterConfederationImg4}/>
             </div>
-            {showMessageQuest.message1 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
                 <img src={Certificate} alt="Certificate"/>
                 <h3 className={classes.inscription}>
                     Лутут
                     <hr/>
-                    Таверна: "Храмой песчанник"
+                    Таверна: "Хромой песчанник"
                     <hr color="black"/>
                     Поднялся южный ветер
                     <hr/>
@@ -333,15 +340,15 @@ export const Level4 = (props:any) => {
                 <p>
                     Развернув торговое свидетельство того бедолаги, Неман опешил.
                     Вот оно. Но что это? Где же имя и название торгового артели?
-                    Здесь не было ничего полезного. Первые две строки походили на адрес.
+                    Здесь не было ничего этого. Первые две строки походили на адрес.
                     А третья... третья вовсе не имела смысла.
                     Первое, что можно было попытаться сделать, чтобы распутать этот клубок - найти упомянутую таверну.
                 </p>
-                <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
+                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening2}> 
                     -----Продолжить-----
                 </h3>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Недолго плутая по закоулкам города, Неман вскоре нашёл таверну "Хромой пёсчанник".
@@ -353,10 +360,10 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
-                    Хозяин таверны произнёс: "Хороший день для игры в 'Глухого короля'".
+                    Хозяин таверны произнёс: "Хороший день для игры в 'Глухого короля'.
                     И тут же вынул из кармана колоду инмарских игральных карт.
                     Откуда молодому торговцу знать игры Инмара, но отказываться уже было поздно, да и интерес к тому, что будет происходить дальше, не оставлял в покое.
                     Неман молчаливым кивком головы согласился. Присев за ближайший стол, трактирщик стал раскладывать карты.
@@ -366,70 +373,84 @@ export const Level4 = (props:any) => {
                 </div>
             </div> }
             
-            {showMessageQuest.message4 && <Cards setCountLoyal={props.setCountLoyal}
+            {showMessageQuest.message3 && <Cards setCountLoyal={props.setCountLoyal}
         setCountContra={props.setCountContra} 
         setCountNeutral={props.setCountNeutral}
         handleNextMessage={handleNextMessage}/>}
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Хозяин таверны:</h1>
+                <p className={classes.question}>
+                    Я вижу, у тебя жетон торговца. Стало быть, предыдущий план изменился?
+                </p>
+                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я же торговец</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>По другому в Инмар не попасть</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Это всего лишь необходимось</p>
+                </div>
+            </div> }
             {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
-                    Это точно. Местные торговцы, узнав о твоём отъезде, организовали ставки на твоё возвращение. Пока лидирует вариант с твоей гибелью.
+                   В молодости я тоже ходил с караванами, и мне нравилась та романтика пустыни. Много мне довелось повидать за время торговых странствий. 
+                   Но раскалённый воздух, обжигавший лёгкие, и бескрайние барханы Конфедерации до сих пор вспоминаются с ностальгией, - тихо произнёс трактирщик, от чего на его щеках проступил лёгкий румянец.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Будет смешно, когда я вернусь</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не удивительно</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Ха-ха, я так и думал</p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
-                    Не обращай внимания, половина из них — трусливые хорьки, боящиеся отойти от прилавка. Им до тебя далеко.
+                    А как сейчас обстоят дела с прибылью у наших братьев? Прибыль, небось, рекой течёт после того, как открылись границы? 
                 </p>
-                <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Всё стало лучше</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не жалуются</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Надеюсь так и останется</p>
                 </div>
             </div> }
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
-                    Мы закупили самые лучшие товары, которые только смогли найти в округе. Надеюсь, они быстро окупятся на рынках Инмара. 
+                    Ладно, хватит воспоминаний. Ты же сюда не поболтать пришел. Не отвечай, сам всё вижу. 
+                    Вырядился как заправский торгаш, ещё и товаров с собой приволок наверняка. 
+                    Долго испытывать твоё терпение не буду, так как и сам рискую получить за это по полной.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Так и будет</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Скорее да, чем нет</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Они жадные, им точно понравится</p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
-                    Если у тебя всё получится, постарайся не растратить всё в их тавернах. Лучше вообще обходи их стороной, иначе останешься с пустыми карманами.
+                    То, что ты ищешь, находится к северу отсюда, в городе Киллат. Там, на местной площади, стоит храм Белого Быка. Внутри храма, посередине, есть алтарь самого божества в виде статуи. 
+                    У его подножия имеется выемка, заложенная кирпичом, на котором вырезан треугольник. Под ним и хранится твоя заветная цель.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Меня они не интересуют</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>В случае крайней жажды</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Может всего одну кружечку пенного</p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
-                    Не будь глупцом, помни: Инмар ненавидит нас, хотя и торгует. Они делают это сквозь зубы.
-                </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Буду на чеку</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Постараюсь не вляпаться</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Они до сих пор верят в Быка</p>
-                </div>
-            </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Хозяин таверны:</h1>
-                <p className={classes.question}>
-                    Ну что ж. Караван готов и ждет только тебя. Я буду ждать твоего возвращения живым и здоровым, с полными тюками, набитыми инмарскими товарами.
+                    А теперь проваливай отсюда и забудь меня навсегда. Недостаёт мне только того, чтобы меня обвинили в содействии Конфедерации.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                </div>
+            </div> }
+            {showMessageQuest.message10 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+                <p>
+                    Не заставляя ждать гнева трактирщика, Неман вышел из таверны на улицу. 
+                    И побрел на рынок, где его ждали караванщики, попутно обдумывая то, что ему сейчас довелось увидеть и услышать. 
+                    Ощущение, что он вляпался в какие-то неприятности или оказался не в том месте не в то время, сдавливало горло и не давало нормально дышать. 
+                    Инмарец, который с теплотой вспоминает о своих торговых странствиях по землям Конфедерации да ещё и знающий тонкости устройства караванного дела, - это уже аномалия, судорожно подумал Неман. 
+                    И что за странная заветная цель, о которой говорил хозяин таверны? 
+                    Кажется, тот бедолага не был простым торговцем. Страх и изнуряющий интерес заставляли Немана задуматься о поездке в Киллат. 
+                    К тому же, там явно можно будет набрать первоклассного товара для продажи на родине. Решено, направляемся в центр королевства Инмар, - чуть было не воскликнул он вслух.
+                </p>
+                <div>
+                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> ---Продолжить--- </h3>
                 </div>
             </div> }
         </div>

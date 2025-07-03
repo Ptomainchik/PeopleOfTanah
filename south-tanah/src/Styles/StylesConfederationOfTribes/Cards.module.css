@@ -108,18 +108,6 @@
     background-size: contain;
 }
 
-.cards{
-    width: 10vw;
-    height: 15vw;
-    background: wheat;
-    border-radius: 5%;
-    position: absolute;
-    top: 15%;
-    left: 33%;
-    font-size: 2.5vw;
-    font-family: "Rakkas";
-    color: black;
-}
 
 .orderCardOpponent{
     width: 10vw;
@@ -303,8 +291,8 @@
 
 @keyframes  shiftOpponent {
     0%,50%, 100% {
-        transform: translateX(0);
-        transform: translateX(0);
+        transform: translateX(-14%);
+        transform: translateX(-14%);
     }
     
     50% {
@@ -321,8 +309,8 @@
 
 @keyframes  shiftPlayer {
     0%,50%, 100% {
-        transform: translateX(0);
-        transform: translateX(0);
+        transform: translateX(-14%);
+        transform: translateX(-14%);
     }
     
     50% {
@@ -464,7 +452,7 @@
     background-color: darkcyan;
     border-radius: 5%;
     position: absolute;
-    top: 50%;
+    bottom: 0%;
     right: 2%;
     transform: translateY(-50%);
     font-family: "El Messiri";
@@ -479,7 +467,31 @@
 .deckTitle{
     width: 10vw;
     position: absolute;
-    top: 25%;
+    bottom: 8%;
+    right: -4.5%;
+    transform: translateX(-50%);
+    font-size: 1.5vw;
+}
+
+.deckOpponent{
+    width: 10vw;
+    height: 15vw;
+    background: url(../../Images/CardBack.webp) no-repeat center;
+    background-size: contain;
+    background-color: darkcyan;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 35%;
+    right: 2%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    color: black;
+}
+
+.deckOpponentTitle{
+    width: 10vw;
+    position: absolute;
+    top: 7%;
     right: -4.5%;
     transform: translateX(-50%);
     font-size: 1.5vw;
@@ -589,26 +601,13 @@
     left: 40%;
 }
 
-.block7{
-    width: 15vw;
-    height: 25vw;
-    border-right: solid 0.3vw darkred ;
-    position: absolute;
-    top: 0%;
-    right: 20%;
-}
-
-.block7 span{
-    width: 100%;
-}
-
 span{
     width: 25vw;
     position: absolute;
     top: 5%;
     left: 110%;
     font-family: "Pangolin";
-    font-size: 1vw;
+    font-size: 1.3vw;
 }
 
 .closeButton{
@@ -638,6 +637,22 @@ span{
 .rulesPage p{
     color: black;
     text-align: center;
+    margin: 3%;
+    font-family: "Pangolin";
+}
+
+.messageRules{
+    width: 80vw;
+    height: 40vw;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.8;
+    font-size: 1.7vw;
+    z-index: 22;
 }
 
 .message{
@@ -650,22 +665,22 @@ span{
     background: grey;
     border: solid 0.1vw black;
     opacity: 0.8;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     z-index: 22;
 }
 
 .buttonRules{
     width: 100%;
     position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0;
     font-size: 2.5vw;
+    font-family: "El Messiri";
     cursor: pointer;
+    text-align: center;
 }
 
 .buttonRules:hover{
-    filter: drop-shadow( 0 0 0.3vw goldenrod) ;
+    color: goldenrod;
 }
 
 .arrow1{
@@ -675,6 +690,18 @@ span{
     clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
     position: absolute;
     top: 72%;
+    right: 3%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow12{
+    width: 8vw;
+    height: 10vw;
+    background: goldenrod;
+    clip-path: polygon(40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%, 40% 70%);
+    position: absolute;
+    top: 5%;
     right: 3%;
     z-index: 21;
     animation: shift 1s infinite;
@@ -740,35 +767,11 @@ span{
     animation: shiftHorizont 1s infinite;
 }
 
-.arrow7{
-    width: 10vw;
-    height: 8vw;
-    background: goldenrod;
-    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
-    position: absolute;
-    bottom: 42%;
-    left: 3%;
-    z-index: 21;
-    animation: shiftHorizont 1s infinite;
-}
-
-.arrow8{
-    width: 10vw;
-    height: 8vw;
-    background: goldenrod;
-    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
-    position: absolute;
-    bottom: 42%;
-    right: 10%;
-    z-index: 21;
-    animation: shiftHorizont 1s infinite;
-}
-
 .finalModal{
-    width: 70%;
-    height: 80%;
+    width: 99%;
+    height: 99%;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 50%; 
     transform: translateX(-50%);
     border: solid 0.3vw goldenrod;
