@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "../../../../Styles/StylesConfederationOfTribes/Cards.module.css";
 import { RulesCards } from "./RulesCards";
 
-interface CardsProps {
+interface DevelopmentsProps {
     setCountLoyal: (value: any) => void;
     setCountContra: (value: any) => void;
     setCountNeutral: (value: any) => void;
@@ -14,7 +14,7 @@ export const Cards = ({
     setCountContra, 
     setCountNeutral,
     handleNextMessage
-}: CardsProps) => {
+}: DevelopmentsProps) => {
     const [cardOpponent, setCardOpponent] = useState(0);
     const [card, setCard] = useState(0);
     const [deck, setDeck] = useState([1,1,1,2,2,2,3,3,3,4,4,4,5,5,5]);
@@ -55,7 +55,7 @@ export const Cards = ({
     if (counterAttack > 0 && counterAttack % 2 === 1 && card !== 0 && cardOpponent !== 0) {
         const timer = setTimeout(() => {
             handleClickAtackCard();
-        }, 3000);
+        }, 2500);
         return () => clearTimeout(timer);
     }
 }, [card, cardOpponent]);

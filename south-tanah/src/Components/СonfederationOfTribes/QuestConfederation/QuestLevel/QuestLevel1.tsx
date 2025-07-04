@@ -306,7 +306,7 @@ export const Level1 = (props:any) => {
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Меруд:</h1>
                 <p className={classes.question}>
-                    Наконец-то ты явился! Похоже, твоя ночь была полна раздумий и страха перед неизвестностью. Я бы на твоем месте не отважился на подобное
+                    Наконец-то ты явился! Похоже, твоя ночь была полна раздумий и страха перед неизвестностью. Я бы на твоем месте не отважился на подобное.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>

@@ -49,10 +49,31 @@ export const RulesBattleInTheForest = ({
 
     return (
         <div className={classes.rulesPage}>
-            {showMessageRules.Message1 && <div className={classes.message}> <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam cum eius sed ipsum dolor? Eius in natus, quod tempora numquam accusamus eos sed sequi cupiditate illum iste accusantium optio nihil.</p> <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p></div>}
-            {showMessageRules.Message2 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est cumque veritatis, omnis fuga explicabo cupiditate ad accusamus unde doloremque esse accusantium voluptatem ab error. Porro dolorem totam adipisci doloremque?</p> <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow1}></div> </div> }
-            {showMessageRules.Message3 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti recusandae laudantium rerum nemo distinctio laboriosam aperiam ratione totam, qui laborum est modi aliquid maiores blanditiis. Unde molestias dolor est ducimus!</p> <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow2}></div> </div>}
-            {showMessageRules.Message4 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ducimus. Voluptatem in, dolorum provident commodi porro quae velit illo explicabo fugiat quas. Alias unde velit itaque, fuga voluptatum numquam. Dolores.</p> <p className={classes.buttonRules} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow3}></div> </div>}
+            {showMessageRules.Message1 && <div className={classes.message}> 
+                <p> 
+                    Разбойники атакуют по очереди - каждый их набег наносит урон обозу. Ваша задача - не допустить полного разграбления, атакуя грабителей.
+                    Чтобы предотвратить разграбление, используйте кнопку перехвата (пресечения) грабежа.
+                </p> 
+                <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p>
+            </div>}
+            {showMessageRules.Message2 && <div> <div className={classes.message}> 
+                <p> 
+                    Это шкала состояния обоза.
+                </p> 
+                <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow1}></div> 
+            </div>}
+            {showMessageRules.Message3 && <div> <div className={classes.message}> 
+                <p> 
+                    Это шкала здоровья разбойников и их атамана.
+                </p> 
+                <p className={classes.buttonRules} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow2}></div> 
+            </div>}
+            {showMessageRules.Message4 && <div> <div className={classes.message}> 
+                <p> 
+                    Это кнопка пресечения грабежа. Нажав на неё все разбойники не смогут грабить обоз 5 раундов, но для её востановления так же требуется 5 раундов.
+                </p> 
+                <p className={classes.buttonRules} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow3}></div> 
+            </div>}
         </div>
     )
 }

@@ -3,6 +3,7 @@ import classes from "../../../../Styles/QuestLevel.module.css";
 import Bandit from "../../../../Images/Bandit.webp";
 import DesertTexture from "../../../../Images/DesertTexture.jpg";
 import ForestInmar from "../../../../Images/ForestInmar.jpg";
+import { BattleInTheForest } from "./BattleInTheForest/BattleInTheForest";
 
 export const Level5 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({
@@ -14,7 +15,6 @@ export const Level5 = (props:any) => {
         message6: false, 
         message7: false, 
         message8: false, 
-        message9: false,
     });
     const [showOpeningScene, setShowOpeningScene] = useState(true);
     
@@ -33,7 +33,6 @@ export const Level5 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
-                    message9: false,
                 })
             } 
             else if(showMessageQuest.message3 === true) {
@@ -46,7 +45,6 @@ export const Level5 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
-                    message9: false,
                 })
             }
             else if(showMessageQuest.message4 === true) {
@@ -59,7 +57,6 @@ export const Level5 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: false, 
-                    message9: false,
                 })
             }
             else if(showMessageQuest.message5 === true) {
@@ -72,7 +69,6 @@ export const Level5 = (props:any) => {
                     message6: true, 
                     message7: false, 
                     message8: false, 
-                    message9: false,
                 })
             }
             else if(showMessageQuest.message6 === true) {
@@ -85,7 +81,6 @@ export const Level5 = (props:any) => {
                     message6: false, 
                     message7: true, 
                     message8: false, 
-                    message9: false,
                 })
             }
             else if(showMessageQuest.message7 === true) {
@@ -98,20 +93,6 @@ export const Level5 = (props:any) => {
                     message6: false, 
                     message7: false, 
                     message8: true, 
-                    message9: false,
-                })
-            }
-            else if(showMessageQuest.message8 === true) {
-                setShowMessageQuest({
-                    message1: false, 
-                    message2: false, 
-                    message3: false, 
-                    message4: false, 
-                    message5: false,
-                    message6: false, 
-                    message7: false, 
-                    message8: false, 
-                    message9: true,
                 })
             }
     }
@@ -141,7 +122,6 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message2 === true) {
@@ -154,7 +134,6 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
-                message9: false,
             })
         } 
         else if(showMessageQuest.message3 === true) {
@@ -167,7 +146,6 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message4 === true) {
@@ -180,7 +158,6 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: false, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message5 === true) {
@@ -193,7 +170,6 @@ export const Level5 = (props:any) => {
                 message6: true, 
                 message7: false, 
                 message8: false, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message6 === true) {
@@ -206,7 +182,6 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: true, 
                 message8: false, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message7 === true) {
@@ -219,23 +194,9 @@ export const Level5 = (props:any) => {
                 message6: false, 
                 message7: false, 
                 message8: true, 
-                message9: false,
             })
         }
         else if(showMessageQuest.message8 === true) {
-            setShowMessageQuest({
-                message1: false, 
-                message2: false, 
-                message3: false, 
-                message4: false, 
-                message5: false,
-                message6: false, 
-                message7: false, 
-                message8: false, 
-                message9: true,
-            })
-        }
-        else if(showMessageQuest.message9 === true) {
             props.setShowLevel((prev: number) => prev + 1);
         }
     }
@@ -244,10 +205,14 @@ export const Level5 = (props:any) => {
         <div className={classes.questPage} style={{ backgroundImage: `url(${DesertTexture})` }}>
             {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
                 <p>
-                    Вдали показались сторожевые крепости и пограничные башни Инмара. За ними лежал путь к портовому городу Лутут - тому самому месту, которого опасаются все торговцы. 
-                    Здесь уже не действовали законы Конфедерации, а по улицам слонялись пьяные солдаты и моряки, только и ждущие случая пристать к чужеземцу с нагруженными верблюдами.
-                    Заметив приближающийся караван, к Неману стал решительно приближаться стражник в стальных доспехах. 
-                    "Главное - не дрогнуть", - подумал торговец, стараясь сохранить дружелюбное и уверенное выражение лица.
+                    Спустя неделю плодотворной торговли в Лутуте, Неман всё же решил отправиться в Киллат.
+                    Но чтобы не тягаться с караваном по лесам Инмара, он взял в аренду обоз и загрузил в него нераспроданный товар, привезённый из Конфедерации, с намерением продать его уже в Киллате.
+                    Дорога предстояла нелёгкая, и тянуть с собой всех членов каравана было бы, по крайней мере, глупо, а то и небезопасно.
+                    Взяв с собой лишь часть торговцев, они отправились в долгий путь к центру королевства. Оставшаяся группа будет ждать их возвращения здесь.
+                    Перед путниками открылась новая, не изведанная природа, которой они за свою жизнь ещё никогда не лицезрели.
+                    Густые раскидистые леса и узкая дорога, ведущие их на север, удивляли каждого из них своей красотой и непривычностью.
+                    Солнце проскальзывало лучами сквозь кроны деревьев, а птичьи трели завораживали слух торговцев.
+                    Казалось, будто весь лес живой и даже камни шепчут. Такая идилия умиротворяла и настраивала на позитив. Что могло пойти не так?
                 </p>
                 <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
                     -----Продолжить-----
@@ -258,98 +223,77 @@ export const Level5 = (props:any) => {
                 {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={Bandit} alt="GuardInmar"  className={classes.characterConfederationImg5}/>}
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
+                <h1>----------</h1>
                 <p className={classes.question}>
-                    Спустившись с верблюда, Неман подошёл к приближающемуся стражнику. Перед ним стоял взрослый мужчина крепкого телосложения, облачённый в полные доспехи.
-                    Стараясь не выдать нервов, торговец первым делом подумал: как этот человек ещё не сварился заживо в своей металлической броне под палящим солнцем?
+                    Вдруг навстречу обозу, как из ниоткуда, выскочила свора мужчин, явно похожих на грабителей.
+                    Лошади встрепенулись и тут же встали на дыбы перед агрессивной толпой.
+                    Один из них вышел прямо перед Неманом и с злостным оскалом посмотрел за его спину, на гружённый обоз.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
+                <h1>Разбойник:</h1>
                 <p className={classes.question}>
-                   Вы находитесь на границе королевства Инмар. Куда вы направляетесь и по какой причине, все торговые караваны должны иметь при себе свидетельство на право торговли. Все противоправные действия будут караться на месте. 
+                    Ого! Торговцы из Конфедерации, а это, видимо, ваши товары. Какая удача, что мы вас встретили - такое у нас впервые 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я торговец(показать свидетельство)</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Это мой караван(показать свидетельство)</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Не нервничайте(показать свидетельство)</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что вам нужно от нас?</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Уйдите с дороги</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Кто мы вас не касается</p>
                 </div>
             </div> }
             {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
+                <h1>Разбойник:</h1>
                 <p className={classes.question}>
-                    Стражник осмотрел документ, взглянул исподлобья на Немана и, усмехнувшись, сказал: Кажется, всё в порядке. Можете проходить.
-                    Но предупредил: Вам нужно отметиться в списках торговцев, чтобы получить временный пропуск для нахождения на землях Инмара. Имейте в виду - не все здесь будут вам рады. За вашу безопасность отвечаете только вы сами.
+                    Я и мои друзья контролируем эту дорогу, и каждый, кто проезжает по ней, должен оплатить проезд
                 </p>
-                <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Это грабёж?</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>И не надейся</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Удобно устроились</p>
                 </div>
             </div> }
             {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
+                <h1>Разбойник:</h1>
                 <p className={classes.question}>
-                    Старайтесь не привлекать внимания. В городе и так неспокойно, а вдобавок участились случаи незаконного перехода границы.
+                    Хватит трындеть! Отдавайте барахло - и катитесь куда угодно.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Учту ваши предостережения</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Постараюсь</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Мы всего лишь торговцы</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Пошёл прочь!</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Оставьте хотя бы половину</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>А ты попробуй отними</p>
                 </div>
             </div> }
             {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
+                 <h1>----------</h1>
                 <p className={classes.question}>
-                    Вчера поймали одного, бегал тут уже две недели, всё разнюхивал, что да как. Без документов, кричал будто он состоит в лиге караванщиков, а свидетельство просто забыл. 
-                    Вроде ждёт какого то человека, который ему его привезёт со дня на день. Придумал же, торгаш, да без товара и золота. Долго его пытали, крепкий оказался, но не выдержал, помер.  
+                    В это время толпа медленно начала окружать обоз. Похоже, без драки не обойтись.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Стражник:</h1>
-                <p className={classes.question}>
-                    А вы случаем не тот о ком он говорил? 
-                </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Точно нет</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Даже не представляю о ком идёт речь</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Нет, это просто безумец</p>
-                </div>
-            </div> }
+            {showMessageQuest.message6 && <BattleInTheForest setCountLoyal={props.setCountLoyal}
+                setCountContra={props.setCountContra} 
+                setCountNeutral={props.setCountNeutral}
+                handleNextMessage={handleNextMessage}/> }
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                    Едва сдерживаясь, чтобы стража не заподозрила, что он понял, о ком идёт речь, Неман махнул рукой каравану - и они двинулись дальше по дороге в Лутут.
-                    Ужас и трепет, охватившие торговца, были нестерпимы. Но сейчас любое проявление нервозности могло стоить ему и его людям не только товаров и золота, но, возможно, и жизней.  
+                    После нападения Неман не стал искушать судьбу и погнал лошадей дальше, озираясь по сторонам в ожидании ещё каких-нибудь сюрпризов из чащи.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>----------</h1>
-                <p className={classes.question}>
-                    Тревожные мысли не давали покоя. Зачем этот караванщик испытывал судьбу, играя с огнём? Почему так суетился на границе? И как оказался без денег и товара?
-                    Всё это было слишком подозрительно, чтобы быть простым совпадением. Единственная ниточка - свидетельство, лежавшее во внутреннем кармане Немана.
-                    Но сначала нужно было спокойно попасть в город, не привлекая внимания стражников, излишней нервозностью. 
-                </p>
-                <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
-                </div>
-            </div> }
-            {showMessageQuest.message9 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message8 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
                 <p>
-                    Спустя некоторое время караван вошёл в город. К счастью, искать место для регистрации торговцев долго не пришлось.
-                    Прямо на въезде, у ворот Лутута, к ним подошёл человек с серьёзным выражением лица и потребовал показать документы, после чего внимательно осмотрел весь караван и его груз, параллельно записывая что-то в красной толстой книге.
-                    Затем он предложил ознакомиться с записью и, если всё описанное было верно, поставить свои инициалы и расписаться под ней всей группе торговцев.   
-                    Когда бюрократические формальности были улажены, мужчина достал из сумки связку серебряных жетонов с выгравированной головой быка, подвешенных на простых верёвках.
-                    Вручив каждому члену каравана по одному, он строгим тоном потребовал не снимать их нигде, пока они находятся в Инмаре. На обратном же пути эти жетоны необходимо было сдать и оплатить пошлину.
-                    Когда они вошли в город, перед ними предстал портовый град во всей красе: брусчатые улицы, множество указателей. На одном из них значилось: "Рынок".
-                    Бросив взгляд на своих торговцев, Неман приказал им направляться туда и ожидать его там. Сам же он решил прогуляться по городу и обследовать такой незнакомый и завораживающий мир.   
+                    Оставшаяся дорога к Киллату прошла незаметно - то ли оттого, что торговцы сильно нервничали, то ли оттого, что Неман не давал лошадям отдохнуть, постоянно подгоняя их.
+                    Но тот прекрасный вид, которым они любовались в начале поездки на север, уже не казался им таким идеальным. Из-за каждого куста или дерева то и дело чудились лица и силуэты каких-то людей.
+                    Не всё оказалось так чудесно, как показалось торговцу в Инмаре, когда он заворожённо гулял по улицам Лутута. Напротив, под красивой внешней стороной этого края скрывалась тёмная личина беззакония, где любой мог оказаться грабителем, воришкой или, куда хуже, убийцей.
+                    Что ждёт их дальше - Неман боялся подумать. Будет ли Киллат таким же приветливым, как Лутут, или их ожидает мрачная сторона Инмара? Но возвращаться было уже слишком поздно.
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
