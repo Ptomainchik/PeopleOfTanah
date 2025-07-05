@@ -9,7 +9,7 @@ import { Level4 } from "./QuestLevel/QuestLevel4";
 import { Level5 } from "./QuestLevel/QuestLevel5";
 import { Level6 } from "./QuestLevel/QuestLevel6";
 import { Level7 } from "./QuestLevel/QuestLevel7";
-import { Cards } from "./Cards/Cards";
+import { Level8 } from "./QuestLevel/QuestLevel8";
 
 export const QuestConfederation = () => {
     const [countLoyal, setCountLoyal] = useState(0);
@@ -20,7 +20,7 @@ export const QuestConfederation = () => {
     return (
         <div>
             <div className={classes.topbar}><HomeButton/>Квест<BackButton/></div>
-            {showLevel === 1 && (
+            {/* {showLevel === 1 && (
                 <Level1 
                     countLoyal={countLoyal}
                     countContra={countContra}
@@ -96,7 +96,17 @@ export const QuestConfederation = () => {
                     setCountNeutral={setCountNeutral}
                     setShowLevel={setShowLevel}
                 />
-            )}
+            )} */}
+          
+                <Level8 
+                    countLoyal={countLoyal}
+                    countContra={countContra}
+                    countNeutral={countNeutral}
+                    setCountLoyal={setCountLoyal}
+                    setCountContra={setCountContra} 
+                    setCountNeutral={setCountNeutral}
+                />
+            
         </div>
     )
 }

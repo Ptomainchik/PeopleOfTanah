@@ -58,10 +58,6 @@
     transform: translateX(-50%);
 }
 
-.characterConfederationImg1:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
-}
-
 .characterInmarImg1{
     width: 18vw;
     position: absolute;
@@ -69,11 +65,6 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
-.characterInmarImg1:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
-}
-
 
 /* ----- Scene2 ----- */
 
@@ -85,19 +76,11 @@
     animation: typingOpacity forwards 1.5s ;
 }
 
-.characterConfederationImg2:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
-}
-
 .characterInmarImg2{
     width: 10vw;
     position: absolute;
     top: 30%;
     right: 15%;
-}
-
-.characterInmarImg2:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene3 ----- */
@@ -109,19 +92,11 @@
     left: 30%;
 }
 
-.characterConfederationImg3:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
-}
-
 .characterInmarImg3{
     width: 18vw;
     position: absolute;
     bottom: -5%;
     right: 5%;
-}
-
-.characterInmarImg3:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene4 ----- */
@@ -131,10 +106,6 @@
     position: absolute;
     bottom: 0%;
     left: 30%;
-}
-
-.characterConfederationImg4:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
 }
 
 .inscription{
@@ -160,10 +131,6 @@
     left: 30%;
 }
 
-.characterInmarImg4:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
-}
-
 /* ----- Scene5 ----- */
 
 .characterConfederationImg5{
@@ -173,10 +140,6 @@
     right: 40%;
 }
 
-.characterConfederationImg5:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
-}
-
 .characterInmarImg5{
     width: 10vw;
     position: absolute;
@@ -184,20 +147,11 @@
     right: 20%;
 }
 
-.characterInmarImg5:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
-}
-
-
 .characterInmarImg51{
     width: 12vw;
     position: absolute;
     bottom: -10%;
     left: 20%;
-}
-
-.characterInmarImg51:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
 }
 
 /* ----- Scene6 ----- */
@@ -221,10 +175,7 @@
     position: absolute;
     bottom: -20%;
     right: 30%;
-}
-
-.characterConfederationImg7:hover{
-    filter: drop-shadow(0 0 0.5vw goldenrod);
+    animation: typingOpacity forwards 1.5s ;
 }
 
 .characterInmarImg7{
@@ -234,8 +185,11 @@
     left: 50%;
 }
 
-.characterInmarImg7:hover{
-    filter: drop-shadow(0 0 0.5vw darkred);
+/* ----- Scene8 ----- */
+
+.finalBlockAnswer{
+    position: relative;
+    top: 80%;
 }
 
 /* ----- OverallScenes ----- */

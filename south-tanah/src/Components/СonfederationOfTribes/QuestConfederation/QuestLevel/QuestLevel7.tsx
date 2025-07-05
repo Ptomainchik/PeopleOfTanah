@@ -3,6 +3,7 @@ import classes from "../../../../Styles/QuestLevel.module.css";
 import Acolyte from "../../../../Images/Acolyte.webp";
 import DesertTexture from "../../../../Images/DesertTexture.jpg";
 import BullTemple from "../../../../Images/BullTemple.jpg";
+import TempleOfKillat from "../../../../Images/TempleOfKillat.jpg";
 
 export const Level7 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({
@@ -567,12 +568,15 @@ export const Level7 = (props:any) => {
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${DesertTexture})` }}>
             {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+                <img src={TempleOfKillat} alt="TempleOfKillat" style={{borderRight: "solid 0.3vw goldenrod", borderLeft: "solid 0.3vw goldenrod", borderBottom: "solid 0.3vw goldenrod"}}/>
                 <p>
-                    Наконец, добравшись до Киллата, перед караванщиками предстал город, утопавший в зелени. Будто среди лесов и скал из-под земли вдруг вырос град со шпилями церквей и храмов.
-                    А среди построек, куда ни посмотри, возвышались монументы Белого Быка. На этот раз их даже никто не проверял на въезде, а вместо толп стражников и солдат по улицам ходили мужчины и женщины, облачённые в белые рясы.
-                    Простых людей здесь также было очень много, но все они передвигались большими группами, изредка спрашивая дорогу у праведников. Видимо, это и есть паломники, посещающие центр Инмара для поклонения своему богу - Быку.
-                    От гула, доносившегося из церквей, закладывало уши - так громко звучали трубы, восхваляющие божество. А от запаха благовоний, исходившего ото всюду, порой мутило в голове. Весь город жил одной целью: как можно больше воздать почестей великому Белому Быку.
-                    Остановив повозку посреди небольшой площади, Неман спустился на землю, но его место тут же занял другой караванщик из их группы, лишь вскользь бросив: Мы поедем дальше искать рынок. Развлекайся. 
+                    Наконец они вышли на огромную площадь, где посредине стоял белоснежный храм.
+                    "Дальше пойдёшь сам. Тут ты уже должен находиться один на один с богом", - сказала старушка и тут же быстро пошла обратно.
+                    "Спасибо вам, бабушка!" - прокричал ей вслед Неман.
+                    "Вот это место, о котором говорил хозяин таверны в Лутуте", - подумал он.
+                    Уверенным шагом торговец направился к дверям храма. Но что-то внутри него вопило: "Не нужно этого делать!"
+                    Отмахнувшись от странных мыслей, Неман потянул за ручку двери. 
+
                 </p>
                 <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
                     -----Продолжить-----
@@ -585,165 +589,161 @@ export const Level7 = (props:any) => {
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                    Как только обоз скрылся за углом, Неман обвёл взглядом площадь и не знал, куда ему направиться дальше.
-                    Как неожиданно из-за спины вышла пожилая женщина в старых обносках и хриплым голосом обратилась к нему.
+                    Войдя внутрь, молодой торговец тут же ощутил на себе тяжёлый взгляд статуи Белого Быка, озаряемой лучами света и возвышающейся в центре храма. 
+                    Этот взгляд пронизывал до костей, словно безмолвно вопрошая: "Зачем ты здесь?"
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Молодой человек, вы откуда?
+                    Из соседнего зала вышел лысый мужчина, облачённый в белую рясу, с умиротворённым выражением лица.
+                    Добрый день. Да благословит вас Белый Бык, - произнёс он. 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Из Конфедерации</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну из пустыни, а что?</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Из далёкого юга</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>(Поклониться)</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну привет</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Благословление мне не помешает</p>
                 </div>
             </div> }
             {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    По вам сразу видно, что вы не инмарец.
+                    Мы рады видеть любого человека в этих стенах. Уже сам факт вашего присутствия здесь - есть воля бога, приведшего вас к нам.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что меня выдаёт?</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Чего это?</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Видимо, из-за одежды</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Возможно и так</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Меня никто не направляет</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Я сам сюда пришёл</p>
                 </div>
             </div> }
             {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Вы ни разу не поклонились перед обликом Быка. Да и ваш взгляд выглядит потерянным, словно вы здесь впервые. Что привело вас сюда?
+                    Вы - чужеземец. Я понимаю ваши сомнения: старые стереотипы не отпускают вас. Но оглянитесь! Если бы не бог, вы вряд ли оказались бы в этом месте.
+                    Ну что же, что вас сюда привело?
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я торговец</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Торговые дела</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Я хозяин каравана</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я уже и сам незнаю</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Просто прогуливался</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Интерес</p>
                 </div>
             </div> }
             {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    О… В этом городе, кроме сувениров и церковной утвари, вы ничего не найдете. Но можете посетить храмы и местные церкви, если вам это интересно. 
+                    Причины не важны. Главное - ваше присутствие здесь. Позвольте мне просветить вас и поведать о Белом Быке? 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Это было бы здорово</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Разве что из интереса</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Возможно это стоит того</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С радость послушаю</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Как хотите</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Было бы, не плохо</p>
                 </div>
             </div> }
             {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Это хорошие мысли. Откуда ты родом - не имеет значения: Белый Бык принимает всех людей в свои объятия.
-                    Тебе обязательно понравится, главное - быть открытым к богу. А наши праведники помогут и направят тебя в верном направлении.
-                    Главное - не бойся.
+                    В начале времён, когда ещё ничего не существовало, явился Бык. 
+                    Первым ударом копыта он создал время, вторым - моря и океаны, равнины и горы, леса и поля.
+                    Когда мир обрёл свои очертания, бог ударил копытом в третий раз - и сотворил мужчину и женщину.
+                    Четвёртым ударом он призвал своих детей, и те породили всю фауну по образу и подобию своему.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Когда-то церковь меня спасла и продолжает помогать и впредь. Когда я была ещё молода и здорова… Извини, тебе интересно?
+                    Первые люди жили бок о бок с Белым Быком и его детьми. Он направлял и оберегал их, а они возводили грандиозные храмы и скульптуры в Его честь.
+                    Спустя четыре тысячи лет, когда Владыка осознал, что учить людей больше нечему, Он покинул их вместе со своими детьми, наказав: "Живите в гармонии с миром и друг другом"
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Да бабуля</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не очень, но я послушаю</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Продолжайте, продолжайте</p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Так вот о чём это я. А ну да. В моей молодости произошла страшная трагедия в семье. 
-                    Отец поступил на службу и пропал без вести, мать не выдержала этого и повесилась, оставив меня одну с маленькими братьями. 
-                    Мне приходилось трудиться день и ночь, чтобы их прокормить, но тех денег, что я зарабатывала, совсем не хватало. 
-                    Тогда, скрипя сердцем, мне пришлось отдать самого младшего брата в монастырь.
+                    Шли века, и люди стали забывать о своём создателе, живя как им вздумается. Стерелись заветы и учения, дарованные им Владыкой.
+                    Храмы опустели, молитвы больше не возносились, а в сердцах людей поселились злоба и зависть.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Как же я тогда была не права, думая, что больше никогда его не увижу. 
-                    Теперь он служит в местной церкви Сикила и иногда навещает меня.Пристроив младшего, я думала, что с остальными двумя мне будет легче. Но то, что случилось дальше, разорвало мне душу. 
-                    Ночью, когда я была на работе, Кесил, мой средний брат, играя, случайно опрокинул лампу на старшего брата, тот загорелся и, пытаясь сбить пламя, поджёг дом.  
+                    Наблюдая за тем, что происходит с людьми из запретного мира, Белый Бык разгневался и обрушил на них всемирный катаклизм, который ныне зовётся "Эпохой Зимы".
+                    Хлад поглотил всё и вся - практически весь Танах превратился в ледяную пустыню.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Наблюдая, как его брат горит заживо, Кесил в ужасе убежал из дома в лес. 
-                    Когда я вернулась, то обнаружила пепелище, а посреди улицы лежало обгоревшее тело брата.Соседи вытащили его тогда из огня, но из-за тяжёлых ожогов он скончался спустя некоторое время, успев только рассказать, что произошло. 
-                    Люди, конечно, помогали мне искать Кесила.Но то, что мы тогда нашли в лесу, свело меня с ума окончательно.
+                    Когда холода отступили, большинство людей погибло, замёрзнув насмерть.
+                    Те, кто пережил катаклизм, осознали свои ошибки и вспомнили о своём Создателе.
+                    Возобновив молитвы и вновь отстраивая храмы, они вернулись на истинный путь. 
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message11 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Посередине лесной чащи, в траве лежало изувеченное тельце моего братишки. У него не было лица и рук, он был весь изодран клыками животных. 
-                    Когда я это увидела, то упала в обморок, а очнувшись, уже ничего не помнила и не понимала, что происходит. 
-                    Тогда я была как тряпичная кукла, и меня отвели на местное подворье.Там за мной стали ухаживать настоятельница со своими сестрами.
+                    Но были и те, кто возненавидел Белого Быка, проклиная Его за гибель родных в ледяном плену.
+                    Не ведая, что творят, эти люди стали осквернять святыни и убивать верующих, тем самым предав Создателя и пробудив Его гнев вновь.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message12 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Лишь через три года жизни в монастыре ко мне постепенно начал возвращаться разум. И вот тогда я вспомнила всё, что произошло с моей семьей. 
-                    Весь ужас, что мне довелось пережить. Идти мне уже было некуда, а по возрасту я не подходила в послушницы. 
-                    Но настоятельница не выгнала меня из монастыря, а забрала к себе в келью.Там я и начала проникаться религией. 
+                    На этот раз Владыка заглянул в сердца всех людей, и тех, в ком узрел тьму, превратил в изуродованных существ, лишь отдалённо напоминающих людей.
+                    Так в мире появились прочие расы. Лишь вера в Белого Быка сможет вернуть им истинный облик - но уже по ту сторону жизни, в обители запретного мира Создателя.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message13 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Так год за годом, обретя покой, я и сама стала помогать обиженным судьбой людям.Сначала это была простая помощь с раздачей еды нищим, а затем и уход за тяжело больными и раненными солдатами. 
-                    Мне нравилось приносить пользу и помогать обречённым, давая им надежду на завтрашний день. 
-                    Я была не одна такая: всё моё тогдашнее окружение стремилось помочь несчастным.
+                    В нынешние времена мы продолжаем восхвалять Бога, дабы не повторился ужас, пережитый нашими предками.
+                    Храним Его заветы: чтим всех людей в этом мире, а наше королевство стало оплотом Его веры и её колыбелью на континенте.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message14 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
-                <h1>Бабушка:</h1>
+                <h1>Праведник:</h1>
                 <p className={classes.question}>
-                    Сейчас я также стараюсь не отставать от молодых праведников, но уже не так, как когда-то: старость неумолимо сказывается на самочувствии. 
-                    Я бы посоветовала тебе для начала посетить наш главный храм в Киллате. Если хочешь, я проведу тебя туда?
+                    Тебе понравилось? Погоди, я принесу ещё книг - и ты узнаешь гораздо больше о Белом Быке. А пока можешь осмотреться в храме.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С удовольствием</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну показывайте его</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Веди, бабушка </p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С нетерпением буду ждать вас</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Да, да, идите</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Я пока что поразглядываю статую</p>
                 </div>
             </div> }
             {showMessageQuest.message15 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
                 <p>
-                    - Тут недалеко, иди за мной, - промолвила бабушка и тут же так быстро засеменила ногами в сторону, где над крышами возвышался шпиль белого цвета, что торговец едва успевал за ней. 
-                    В пути старушка то и дело рассказывала разные истории о добродетелях церкви и её последователях, о том, что всё в мире создал Белый Бык, и его благосклонность обнимает каждого, кто нуждается в его помощи. 
-                    Пока они шли, Неману казалось, будто его проводницу знает весь город. 
-                    Все, кто встречался им в дороге, уважительно кланялись старой доброй женщине.Она излучала такую тёплую и светлую энергию, что казалось, именно в этом и заключается истинное счастье — помогать другим, к чему стремятся многие, но ломаются под жерновами жизни, превращаясь в подобие бесчувственных кукол, как эта старушка, когда на её голову обрушилось столько испытаний. 
-                    "Возможно, нет ничего плохого в том, что люди Инмара исповедуют религию Белого Быка", - прозвучало где-то в глубине души молодого торговца.
+                    Улыбнувшись, праведник направился в соседний зал, закрыв за собой деревянную дверь, изысканно украшенную резьбой.
+                    Неман поднял взгляд на статую Белого Быка и замер, всматриваясь в глаза божества. Долгие годы ему, как и всем, рассказывали о глупости инмарской религии - о том, как их вера была всего лишь произведением искусства прошлых гениев, волей судьбы попавших в эти земли.
+                    Теперь он думал иначе, и все былые догмы потеряли значение. Какая разница, кто и когда существовал? Был ли Бык в этом мире на самом деле или же это плод воображения людей, перенёсших жуткий катаклизм? 
+                    Ведь если это приносит пользу всем, заставляет задуматься о хрупкости жизни и помогает справляться с тяготами, тогда и бог становится истиной, ведущей к гармонии и благополучию.
+                    Переварив нахлынувшие мысли, торговец опустил взгляд к подножию статуи, где увидел тот самый кирпич с вырезанным треугольником. Такой долгий путь пришлось пройти до этого момента, но интерес, прежде так сильно обуревавший его, превратился в простое любопытство.
+                    Он подошёл к монументу и, наклонившись, вытащил злополучный кирпич. За ним в небольшой нише лежал красный свиток с печатью Высшего совета королевства Инмар. 
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
