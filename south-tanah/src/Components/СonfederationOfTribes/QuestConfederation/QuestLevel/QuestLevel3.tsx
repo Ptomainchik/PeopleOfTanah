@@ -253,7 +253,6 @@ export const Level3 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${DesertInmar})`, border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={GuardInmar} alt="GuardInmar"  className={classes.characterConfederationImg3}/>}
             </div>
@@ -353,7 +352,7 @@ export const Level3 = (props:any) => {
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
-                        ---Продолжить--- 
+                        -----Продолжить----- 
                     </h3>
                 </div>
             </div> }

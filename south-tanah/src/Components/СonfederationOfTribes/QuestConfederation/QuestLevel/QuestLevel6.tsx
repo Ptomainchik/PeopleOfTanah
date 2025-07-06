@@ -578,7 +578,6 @@ export const Level6 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsOfKillat})`, border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message1 && <img src={OldWoman} alt="OldWoman"  className={classes.characterConfederationImg6}/>}
             </div>
@@ -751,7 +750,7 @@ export const Level6 = (props:any) => {
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
-                        ---Продолжить--- 
+                        -----Продолжить----- 
                     </h3>
                 </div>
             </div> }

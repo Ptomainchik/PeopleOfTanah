@@ -299,7 +299,6 @@ export const Level1 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Market})`, border: "solid 0.3vw goldenrod"}}>
                 <img src={Tradesman} alt="Tradesman"  className={classes.characterConfederationImg1}/>
             </div>
@@ -326,7 +325,7 @@ export const Level1 = (props:any) => {
             {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>Меруд:</h1>
                 <p className={classes.question}>
-                    Я так и думал. Не переживай, я присмотрю за лавкой. Когда вернёшься, всё будет в полном порядке.Отец гордился бы тобой.
+                    Я так и думал. Не переживай, я присмотрю за лавкой. Когда вернёшься, всё будет в полном порядке. Отец гордился бы тобой.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>

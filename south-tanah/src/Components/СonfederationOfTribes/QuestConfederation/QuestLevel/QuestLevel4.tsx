@@ -323,7 +323,6 @@ export const Level4 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Tavern})`, border: "solid 0.3vw goldenrod"}}>
                 <img src={Innkeeper} alt="Innkeeper"  className={classes.characterConfederationImg4}/>
             </div>
@@ -450,7 +449,7 @@ export const Level4 = (props:any) => {
                     К тому же, там явно можно будет набрать первоклассного товара для продажи на родине. Решено, направляемся в центр королевства Инмар, - чуть было не воскликнул он вслух.
                 </p>
                 <div>
-                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> ---Продолжить--- </h3>
+                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> -----Продолжить----- </h3>
                 </div>
             </div> }
         </div>

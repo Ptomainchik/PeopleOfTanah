@@ -208,7 +208,7 @@ export const BattleInTheForest = ({setCountLoyal,
                     Затем, обернувшись к членам группы, тихо произнёс:
                     - Не зря я в детстве подглядывал за тренировками пёсчанников.
                 </h3>
-                <p onClick={handleNextMessage}>-----Продолжить-----</p>
+                <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {showFinalModal.lose && <div className={classes.finalModal}>
@@ -217,7 +217,7 @@ export const BattleInTheForest = ({setCountLoyal,
                     Разбойники так же неожиданно исчезли, как и появились, но, опустошив весь обоз, оставив после себя лишь жизни караванщикам.
                     "Нам повезло, что мы хотя бы целы", — произнёс кто-то из торговцев.
                 </h3>
-                <p onClick={handleNextMessage}>-----Продолжить-----</p>
+                <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {showFinalModal.badWin && <div className={classes.finalModal}>
@@ -226,7 +226,7 @@ export const BattleInTheForest = ({setCountLoyal,
                     То, что осталось, конечно, не даст караванщикам умереть голодной смертью,
                     но и прибыли в Киллате они с этого не получат.
                 </h3>
-                <p onClick={handleNextMessage}>-----Продолжить-----</p>
+                <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
         </div>

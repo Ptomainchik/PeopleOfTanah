@@ -20,7 +20,7 @@ export const QuestConfederation = () => {
     return (
         <div>
             <div className={classes.topbar}><HomeButton/>Квест<BackButton/></div>
-            {/* {showLevel === 1 && (
+            {showLevel === 1 && (
                 <Level1 
                     countLoyal={countLoyal}
                     countContra={countContra}
@@ -96,8 +96,8 @@ export const QuestConfederation = () => {
                     setCountNeutral={setCountNeutral}
                     setShowLevel={setShowLevel}
                 />
-            )} */}
-          
+            )}
+            {showLevel === 8 && (
                 <Level8 
                     countLoyal={countLoyal}
                     countContra={countContra}
@@ -105,7 +105,9 @@ export const QuestConfederation = () => {
                     setCountLoyal={setCountLoyal}
                     setCountContra={setCountContra} 
                     setCountNeutral={setCountNeutral}
+                    setShowLevel={setShowLevel}
                 />
+            )}
             
         </div>
     )

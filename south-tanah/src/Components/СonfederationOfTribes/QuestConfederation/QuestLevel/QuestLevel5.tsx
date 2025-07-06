@@ -218,7 +218,6 @@ export const Level5 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${ForestInmar})`, border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={Bandit} alt="GuardInmar"  className={classes.characterConfederationImg5}/>}
             </div>
@@ -297,7 +296,7 @@ export const Level5 = (props:any) => {
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
-                        ---Продолжить--- 
+                        -----Продолжить-----
                     </h3>
                 </div>
             </div> }

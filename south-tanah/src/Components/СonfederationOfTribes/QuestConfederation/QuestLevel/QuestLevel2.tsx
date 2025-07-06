@@ -225,7 +225,6 @@ export const Level2 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${CamelCaravaner})`, border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message1 && !showMessageQuest.message6 && !showMessageQuest.message7 && <img src={RegistanWoman} alt="RegistanWoman"  className={classes.characterConfederationImg2}/>}
             </div>
@@ -283,7 +282,7 @@ export const Level2 = (props:any) => {
             {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                    Не успев опомниться, Неман обнаружил в руках бумажный свиток с жёлтым теснением — такой же, как и у него самого. Это явно было торговое свидетельство, которое выдают всем караванщикам.
+                    Не успев опомниться, Неман обнаружил в руках бумажный свиток с жёлтым теснением - такой же, как и у него самого. Это явно было торговое свидетельство, которое выдают всем караванщикам.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
@@ -292,7 +291,7 @@ export const Level2 = (props:any) => {
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                    Тем временем, самой девушки и след простыл. Странная, — подумал он. Ну что теперь поделаешь, не возвращаться же. К тому же, уже пообещал.
+                    Тем временем, самой девушки и след простыл. Странная, - подумал он. Ну что теперь поделаешь, не возвращаться же. К тому же, уже пообещал.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>

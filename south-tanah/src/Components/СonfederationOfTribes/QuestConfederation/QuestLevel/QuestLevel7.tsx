@@ -582,7 +582,6 @@ export const Level7 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${BullTemple})`, border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message1 && <img src={Acolyte} alt="Acolyte"  className={classes.characterConfederationImg7}/>}
             </div>
@@ -747,7 +746,7 @@ export const Level7 = (props:any) => {
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
-                        ---Продолжить--- 
+                        -----Продолжить----- 
                     </h3>
                 </div>
             </div> }
