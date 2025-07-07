@@ -268,16 +268,16 @@ export const Level8 = (props:any) => {
 
     return (
         <div className={classes.questPage}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
+                <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening}> 
                     -----Продолжить-----
                 </h3>
             </div> }
             
-            {showMessageQuest && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
@@ -288,68 +288,68 @@ export const Level8 = (props:any) => {
                 </div>
             </div> }
 
-            {showFinalScene.loyalL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                    
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
                     
                 </p>
-                <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
+                <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
            

@@ -307,46 +307,46 @@ export const Level4 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
-                <img src={Storm} alt="StreetsOfLutut" style={{borderRight: "solid 0.3vw goldenrod", borderLeft: "solid 0.3vw goldenrod", borderBottom: "solid 0.3vw goldenrod"}}/>
+            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+                <img src={Storm} alt="StreetsOfLutut" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                    
                 </p>
-                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
+                <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening}> 
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw goldenrod"}}>
+            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw darkred"}}>
                 <img  alt="Innkeeper"  className={classes.characterInmarImg4}/>
             </div>
-            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 
                 <p>
                     
                 </p>
-                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening2}> 
+                <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening2}> 
                     -----Продолжить-----
                 </h3>
             </div> }
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
                   
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Матрос:</h1>
                 <p className={classes.question}>
                    
@@ -357,7 +357,7 @@ export const Level4 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Матрос:</h1>
                 <p className={classes.question}>
                    
@@ -368,13 +368,13 @@ export const Level4 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Матрос:</h1>
                 <p className={classes.question}>
                   
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
@@ -394,7 +394,7 @@ export const Level4 = (props:any) => {
                    
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message8 && <NavalBattle setCountLoyal={props.setCountLoyal}
@@ -407,7 +407,7 @@ export const Level4 = (props:any) => {
                    
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
             {showMessageQuest.message10 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
@@ -415,7 +415,7 @@ export const Level4 = (props:any) => {
                    
                 </p>
                 <div>
-                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> -----Продолжить----- </h3>
+                    <h3 className={classes.buttonNextSceneInmar} onClick={handleNextMessage}> -----Продолжить----- </h3>
                 </div>
             </div> }
         </div>

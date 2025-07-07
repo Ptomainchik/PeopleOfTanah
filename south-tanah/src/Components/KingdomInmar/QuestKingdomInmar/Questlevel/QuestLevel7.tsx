@@ -566,28 +566,28 @@ export const Level7 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
-                <img src={PrisonRoom} alt="PrisonRoom" style={{borderRight: "solid 0.3vw goldenrod", borderLeft: "solid 0.3vw goldenrod", borderBottom: "solid 0.3vw goldenrod"}}/>
+            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+                <img src={PrisonRoom} alt="PrisonRoom" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                 
                 </p>
-                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
+                <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening}> 
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${PrisonRoom})`, border: "solid 0.3vw goldenrod"}}>
+            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${PrisonRoom})`, border: "solid 0.3vw darkred"}}>
                 {!showMessageQuest.message1 && <img src={Governor} alt="Governor"  className={classes.characterInmarImg7}/>}
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
@@ -598,7 +598,7 @@ export const Level7 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
@@ -609,7 +609,7 @@ export const Level7 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
@@ -620,7 +620,7 @@ export const Level7 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
@@ -631,79 +631,79 @@ export const Level7 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                    
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message12 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message12 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message13 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message13 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
                 </p>
                 <div>
-                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message14 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message14 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
                     
@@ -714,12 +714,12 @@ export const Level7 = (props:any) => {
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message15 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message15 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
 
                 </p>
                 <div>
-                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> 
+                    <h3 className={classes.buttonNextSceneInmar} onClick={handleNextMessage}> 
                         -----Продолжить----- 
                     </h3>
                 </div>
