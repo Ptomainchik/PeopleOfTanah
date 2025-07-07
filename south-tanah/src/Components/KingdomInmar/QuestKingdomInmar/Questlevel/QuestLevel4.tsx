@@ -2,23 +2,61 @@ import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import StoneTexture from "../../../../Images/Stone.jpg";
 import Storm from "../../../../Images/Storm.jpg";
+import { NavalBattle } from "../NavalBattle/NavalBattle";
 
 export const Level4 = (props:any) => {
-    const [showMessageQuest, setShowMessageQuest]:any = useState({message1: true, message2: false, message3: false, message4: false, message5: false});
+    const [showMessageQuest, setShowMessageQuest]:any = useState({
+        message1: true, 
+        message2: false, 
+        message3: false, 
+        message4: false, 
+        message5: false,
+        message6: false, 
+        message7: false, 
+        message8: false, 
+        message9: false, 
+        message10: false,
+        message11: false,
+    });
     const [showOpeningScene, setShowOpeningScene] = useState(true);
+    const [showOpeningScene2, setShowOpeningScene2] = useState(false);
     
     function handleModalOpening() {
         setShowOpeningScene(false);
+        setShowOpeningScene2(true);
+    }
+
+    function handleModalOpening2() {
+        setShowOpeningScene2(false);
     }
 
     function checkingMessageAccuracy() {
-        if(showMessageQuest.message2 === true) {
+            if(showMessageQuest.message1 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: true, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
+                })
+            } 
+            else if(showMessageQuest.message2 === true) {
                 setShowMessageQuest({
                     message1: false, 
                     message2: false, 
                     message3: true, 
                     message4: false, 
-                    message5: false
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
                 })
             } 
             else if(showMessageQuest.message3 === true) {
@@ -27,7 +65,12 @@ export const Level4 = (props:any) => {
                     message2: false, 
                     message3: false, 
                     message4: true, 
-                    message5: false
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
                 })
             }
             else if(showMessageQuest.message4 === true) {
@@ -36,11 +79,83 @@ export const Level4 = (props:any) => {
                     message2: false, 
                     message3: false, 
                     message4: false, 
-                    message5: true
+                    message5: true,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
                 })
             }
             else if(showMessageQuest.message5 === true) {
-                props.setShowLevel((prev: number) => prev + 1);
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: true, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
+                })
+            }
+            else if(showMessageQuest.message6 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: true, 
+                    message8: false, 
+                    message9: false, 
+                    message10: false,
+                })
+            }
+            else if(showMessageQuest.message7 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: true, 
+                    message9: false, 
+                    message10: false,
+                })
+            }
+            else if(showMessageQuest.message8 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: true, 
+                    message10: false,
+                })
+            }
+            else if(showMessageQuest.message9 === true) {
+                setShowMessageQuest({
+                    message1: false, 
+                    message2: false, 
+                    message3: false, 
+                    message4: false, 
+                    message5: false,
+                    message6: false, 
+                    message7: false, 
+                    message8: false, 
+                    message9: false, 
+                    message10: true,
+                })
             }
     }
 
@@ -65,78 +180,242 @@ export const Level4 = (props:any) => {
                 message2: true, 
                 message3: false, 
                 message4: false, 
-                message5: false}
-            )
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message2 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: true, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        } 
+        else if(showMessageQuest.message3 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: true, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message4 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: true,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message5 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: true, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message6 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: true, 
+                message8: false, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message7 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: true, 
+                message9: false, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message8 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: true, 
+                message10: false,
+            })
+        }
+        else if(showMessageQuest.message9 === true) {
+            setShowMessageQuest({
+                message1: false, 
+                message2: false, 
+                message3: false, 
+                message4: false, 
+                message5: false,
+                message6: false, 
+                message7: false, 
+                message8: false, 
+                message9: false, 
+                message10: true,
+            })
+        }
+        else if(showMessageQuest.message10 === true) {
+        props.setShowLevel((prev: number) => prev + 1);
         }
     }
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+                <img src={Storm} alt="StreetsOfLutut" style={{borderRight: "solid 0.3vw goldenrod", borderLeft: "solid 0.3vw goldenrod", borderBottom: "solid 0.3vw goldenrod"}}/>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure molestiae facere consequuntur laudantium minima quia dicta officia! 
-                    Alias voluptates ullam pariatur ea voluptatem cumque? 
-                    Optio consequatur ipsa in tempore itaque.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae distinctio aperiam ipsa officia dolor asperiores eius numquam! Praesentium magnam rerum a, quas ab perferendis molestias similique eaque provident asperiores. Laudantium!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. A quis, assumenda fugit facere rem architecto repellendus quasi illo, id cupiditate libero blanditiis impedit, sint doloremque dolor sapiente deserunt debitis provident.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis nulla sapiente incidunt ipsa expedita ab sunt laborum nostrum ea quibusdam accusamus eum, vitae ducimus ullam nobis. Fugit nam quaerat reiciendis!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam delectus dolorem magnam nulla accusamus reprehenderit perspiciatis quam harum alias quasi eveniet nemo praesentium quis, odit veritatis provident dolor libero officiis.
+                   
                 </p>
-                <h3 className={classes.buttonNextScene} onClick={handleModalOpening}> 
+                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening}> 
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div>{props.countLoyal}{props.countContra}{props.countNeutral}</div>
-            <div className={classes.playingFieldLevel4} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw darkred"}}>
-            
+            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw goldenrod"}}>
+                <img  alt="Innkeeper"  className={classes.characterInmarImg4}/>
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
-                ex libero deserunt soluta aperiam iusto aut laborum aliquam fugiat mollitia.</p>
+            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+                
+                <p>
+                    
+                </p>
+                <h3 className={classes.buttonNextSceneConfederation} onClick={handleModalOpening2}> 
+                    -----Продолжить-----
+                </h3>
+            </div> }
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>----------</h1>
+                <p className={classes.question}>
+                    
+                </p>
                 <div>
-                    <p className={classes.buttonNextMessage} onClick={handleNextMessage}> ---Продолжить--- </p>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
-                ex libero deserunt soluta aperiam iusto aut laborum aliquam fugiat mollitia.</p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Yes</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>No</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Nothing</p>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                 <h1>----------</h1>
+                <p className={classes.question}>
+                  
+                </p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
-                ex libero deserunt soluta aperiam iusto aut laborum aliquam fugiat mollitia.</p>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                   
+                </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Yes</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>No</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Nothing</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
-                ex libero deserunt soluta aperiam iusto aut laborum aliquam fugiat mollitia.</p>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                   
+                </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Yes</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>No</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Nothing</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <p className={classes.question}>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Perspiciatis ipsam tempore, sed inventore incidunt quia iure, natus obcaecati numquam, 
-                ex libero deserunt soluta aperiam iusto aut laborum aliquam fugiat mollitia.</p>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                  
+                </p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                </div>
+            </div> }
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                   
+                </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Yes</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>No</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Nothing</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
+                </div>
+            </div> }
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                   
+                </p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                </div>
+            </div> }
+            {showMessageQuest.message8 && <NavalBattle setCountLoyal={props.setCountLoyal}
+                setCountContra={props.setCountContra} 
+                setCountNeutral={props.setCountNeutral}
+                handleNextMessage={handleNextMessage}/> }
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+                <h1>Матрос:</h1>
+                <p className={classes.question}>
+                   
+                </p>
+                <div>
+                    <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
+                </div>
+            </div> }
+            {showMessageQuest.message10 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+                <p>
+                   
+                </p>
+                <div>
+                    <h3 className={classes.buttonNextSceneConfederation} onClick={handleNextMessage}> -----Продолжить----- </h3>
                 </div>
             </div> }
         </div>

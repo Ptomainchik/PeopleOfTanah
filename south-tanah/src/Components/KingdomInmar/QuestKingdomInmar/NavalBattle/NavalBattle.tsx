@@ -2,7 +2,17 @@ import { useEffect, useState } from "react";
 import classes from "../../../../Styles/StylesKingdomInmar/NavalBattle.module.css";
 import { RulesNavalBattle } from "./RulesNavalBattle";
 
-export const NavalBattle = () => {
+interface DevelopmentsProps {
+    setCountLoyal: (value: any) => void;
+    setCountContra: (value: any) => void;
+    setCountNeutral: (value: any) => void;
+    handleNextMessage: () => void;
+}
+
+export const NavalBattle = ({setCountLoyal,
+    setCountContra,
+    setCountNeutral,
+    handleNextMessage}: DevelopmentsProps) => {
     const [healthShip, setHealthShip] = useState(1000);
     const [healthTentacle, setHealthTentacle] = useState(500);
     const [healthHeadMonster, setHealthHeadMonser] = useState(500);

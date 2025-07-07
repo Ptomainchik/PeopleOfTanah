@@ -9,9 +9,10 @@ import { Level4 } from "./Questlevel/QuestLevel4";
 import { Level5 } from "./Questlevel/QuestLevel5";
 import { Level6 } from "./Questlevel/QuestLevel6";
 import { Level7 } from "./Questlevel/QuestLevel7";
+import { Level8 } from "./Questlevel/QuestLevel8";
 
 export const QuestKingdomInmar = () => {
- const [countLoyal, setCountLoyal] = useState(0);
+    const [countLoyal, setCountLoyal] = useState(0);
     const [countContra, setCountContra] = useState(0);
     const [countNeutral, setCountNeutral] = useState(0);
     const [showLevel, setShowLevel] = useState(1);
@@ -96,6 +97,18 @@ export const QuestKingdomInmar = () => {
                     setShowLevel={setShowLevel}
                 />
             )}
+            {showLevel === 8 && (
+                <Level8 
+                    countLoyal={countLoyal}
+                    countContra={countContra}
+                    countNeutral={countNeutral}
+                    setCountLoyal={setCountLoyal}
+                    setCountContra={setCountContra} 
+                    setCountNeutral={setCountNeutral}
+                    setShowLevel={setShowLevel}
+                />
+            )}
+            
         </div>
     )
 }

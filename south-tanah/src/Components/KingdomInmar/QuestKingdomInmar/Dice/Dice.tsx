@@ -2,7 +2,17 @@ import { useState } from "react";
 import classes from "../../../../Styles/StylesKingdomInmar/Dice.module.css";
 import { RulesDice } from "./RulesDice";
 
-export const Dice = () => {
+interface DevelopmentsProps {
+    setCountLoyal: (value: any) => void;
+    setCountContra: (value: any) => void;
+    setCountNeutral: (value: any) => void;
+    handleNextMessage: () => void;
+}
+
+export const Dice = ({setCountLoyal,
+    setCountContra,
+    setCountNeutral,
+    handleNextMessage}: DevelopmentsProps) => {
     const [showChip, setShowChip] = useState(false);
     const [showBet, setShowBet] = useState(false);  
     const [showBet1, setShowBet1] = useState(false);   
