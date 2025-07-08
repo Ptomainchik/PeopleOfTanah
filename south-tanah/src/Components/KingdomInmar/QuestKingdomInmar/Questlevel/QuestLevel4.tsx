@@ -2,6 +2,7 @@ import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import StoneTexture from "../../../../Images/Stone.jpg";
 import Storm from "../../../../Images/Storm.jpg";
+import SeaHorizon from "../../../../Images/SeaHorizon.jpg";
 import { NavalBattle } from "../NavalBattle/NavalBattle";
 
 export const Level4 = (props:any) => {
@@ -308,7 +309,7 @@ export const Level4 = (props:any) => {
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
             {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
-                <img src={Storm} alt="StreetsOfLutut" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
+                <img src={SeaHorizon} alt="SeaHorizon" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                    
                 </p>
@@ -317,7 +318,7 @@ export const Level4 = (props:any) => {
                 </h3>
             </div> }
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw darkred"}}>
-                <img  alt="Innkeeper"  className={classes.characterInmarImg4}/>
+                <div className={classes.bortOfShip}></div>
             </div>
             {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 
