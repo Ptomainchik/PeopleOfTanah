@@ -310,6 +310,46 @@
     filter: drop-shadow( 0 0 0.5vw darkred);
 }
 
+.finalModal{
+    width: 99.5%;
+    height: 99%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    border: solid 0.3vw darkred;
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 2vw;
+    margin: 3%;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 2vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.finalModal p:hover{
+    color: darkred;
+}
+
 /* -----Rules----- */
 
 .rulesPage{

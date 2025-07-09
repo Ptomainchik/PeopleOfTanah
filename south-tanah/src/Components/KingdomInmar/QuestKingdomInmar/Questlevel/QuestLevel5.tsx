@@ -4,6 +4,7 @@ import CaravanerMerchant from "../../../../Images/CaravanerMerchant.webp";
 import RegistanGuard from "../../../../Images/RegistanGuard.webp";
 import StoneTexture from "../../../../Images/Stone.jpg";
 import StreetsRegistan from "../../../../Images/StreetsRegistan.jpg";
+import RegistanСoast from "../../../../Images/RegistanСoast.jpg";
 import { Dice } from "../Dice/Dice";
 
 export const Level5 = (props:any) => {
@@ -18,9 +19,15 @@ export const Level5 = (props:any) => {
         message8: false, 
     });
     const [showOpeningScene, setShowOpeningScene] = useState(true);
+    const [showOpeningScene2, setShowOpeningScene2] = useState(false);
     
     function handleModalOpening() {
         setShowOpeningScene(false);
+        setShowOpeningScene2(true);
+    }
+
+    function handleModalOpening2() {
+        setShowOpeningScene2(false);
     }
 
     function checkingMessageAccuracy() {
@@ -205,6 +212,7 @@ export const Level5 = (props:any) => {
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
             {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+                <img src={RegistanСoast} alt="RegistanСoast" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                 
                 </p>
@@ -212,9 +220,17 @@ export const Level5 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
+            {showOpeningScene2 && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+                <p>
+                
+                </p>
+                <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening2}> 
+                    -----Продолжить-----
+                </h3>
+            </div> }
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsRegistan})`, border: "solid 0.3vw darkred"}}>
-                {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
-                <img src={RegistanGuard} alt="CaravanerMerchant"  className={classes.characterInmarImg51}/>
+                {!showMessageQuest.message1 && !showMessageQuest.message8 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
+                {!showMessageQuest.message1 && !showMessageQuest.message2 && !showMessageQuest.message3 && !showMessageQuest.message4 && !showMessageQuest.message5 && <img src={RegistanGuard} alt="CaravanerMerchant"  className={classes.characterInmarImg51}/>}
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
@@ -237,7 +253,7 @@ export const Level5 = (props:any) => {
                 </div>
             </div> }
             {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <h1>Стражник:</h1>
+                <h1>Караванщик:</h1>
                 <p className={classes.question}>
                   
                 </p>
@@ -270,7 +286,7 @@ export const Level5 = (props:any) => {
             {showMessageQuest.message6 && <Dice setCountLoyal={props.setCountLoyal}
                 setCountContra={props.setCountContra} 
                 setCountNeutral={props.setCountNeutral}
-                handleNextMessage={handleNextMessage}/> }
+                handleNextMessage={handleNextMessage}/>}
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>

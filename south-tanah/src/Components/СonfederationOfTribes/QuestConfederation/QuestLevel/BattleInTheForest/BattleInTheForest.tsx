@@ -49,7 +49,7 @@ export const BattleInTheForest = ({setCountLoyal,
         const currentHealthHeadBandit = healthHeadBandit;
         const currentHealthBaggage = healthBaggage;
 
-    if(currentHealthBandit <= 0 && currentHealthHeadBandit <= 0 && currentHealthBaggage <= 500 && currentHealthBaggage >= 250){
+    if(currentHealthBandit <= 0 && currentHealthHeadBandit <= 0 && currentHealthBaggage >= 251){
         setCountLoyal((prev:any) => prev + 1);
         setShowFinalModal({win: true, lose: false, badWin: false});
     }
@@ -61,7 +61,6 @@ export const BattleInTheForest = ({setCountLoyal,
         setCountContra((prev:any) => prev + 1);
         setShowFinalModal({win: false, lose: true, badWin: false});
     }
-
     }
 
     function handleAttackHeadBandit(){
@@ -167,7 +166,6 @@ export const BattleInTheForest = ({setCountLoyal,
         setShowButtonActions(true);
     }
 
-    
     return (
         <div className={classes.battleInTheForestPage}>
             <RulesBattleInTheForest setButtonDisabled={setButtonDisabled}/>
@@ -185,10 +183,10 @@ export const BattleInTheForest = ({setCountLoyal,
             </div>
 
             <div className={classes.blockBandit}>
-                <p>Разбойники</p>
-                <progress className={classes.healthBandits} max="500" value={healthBandit}></progress>
                 <p>Атаман</p>
                 <progress className={classes.healthBandits} max="500" value={healthHeadBandit}></progress>
+                <p>Разбойники</p>
+                <progress className={classes.healthBandits} max="500" value={healthBandit}></progress>
             </div>
 
             <div className={classes.baggage}>
