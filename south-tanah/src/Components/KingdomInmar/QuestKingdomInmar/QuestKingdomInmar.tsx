@@ -20,7 +20,7 @@ export const QuestKingdomInmar = () => {
     return (
         <div>
             <div className={classes.topbar}><HomeButton/>Квест<BackButton/></div>
-            {/* {showLevel === 1 && (
+            {showLevel === 1 && (
                 <Level1 
                     countLoyal={countLoyal}
                     countContra={countContra}
@@ -63,7 +63,7 @@ export const QuestKingdomInmar = () => {
                     setCountNeutral={setCountNeutral}
                     setShowLevel={setShowLevel}
                 />
-            )} */}
+            )}
             {showLevel === 5 && (
                 <Level5 
                     countLoyal={countLoyal}
@@ -75,7 +75,7 @@ export const QuestKingdomInmar = () => {
                     setShowLevel={setShowLevel}
                 />
             )}
-            {/* {showLevel === 6 && (
+            {showLevel === 6 && (
                 <Level6 
                     countLoyal={countLoyal}
                     countContra={countContra}
@@ -107,7 +107,7 @@ export const QuestKingdomInmar = () => {
                     setCountNeutral={setCountNeutral}
                     setShowLevel={setShowLevel}
                 />
-            )} */}
+            )}
             
         </div>
     )

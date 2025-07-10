@@ -62,11 +62,35 @@ export const RulesDice = ({
     
     return (
         <div className={classes.rulesPage}>
-            {showMessageRules.Message1 && <div className={classes.message}> <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam cum eius sed ipsum dolor? Eius in natus, quod tempora numquam accusamus eos sed sequi cupiditate illum iste accusantium optio nihil.</p> <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div>}
-            {showMessageRules.Message2 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime est cumque veritatis, omnis fuga explicabo cupiditate ad accusamus unde doloremque esse accusantium voluptatem ab error. Porro dolorem totam adipisci doloremque?</p> <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow1}></div> <div className={classes.arrow2}></div> </div> }
-            {showMessageRules.Message3 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti recusandae laudantium rerum nemo distinctio laboriosam aperiam ratione totam, qui laborum est modi aliquid maiores blanditiis. Unde molestias dolor est ducimus!</p> <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow3}></div> <div className={classes.arrow4}></div> </div>}
-            {showMessageRules.Message4 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ducimus. Voluptatem in, dolorum provident commodi porro quae velit illo explicabo fugiat quas. Alias unde velit itaque, fuga voluptatum numquam. Dolores.</p> <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow5}></div> <div className={classes.arrow6}></div> </div>}
-            {showMessageRules.Message5 && <div> <div className={classes.message}> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ducimus. Voluptatem in, dolorum provident commodi porro quae velit illo explicabo fugiat quas. Alias unde velit itaque, fuga voluptatum numquam. Dolores.</p> <p className={classes.buttonRule} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow7}></div> <div className={classes.arrow8}></div> </div>}
+            {showMessageRules.Message1 && <div className={classes.message}> 
+                <p>
+                    В начале раунда игрок делает ставку, максимальная сумма которой составляет три монеты. Противник в ответ делает аналогичную ставку. 
+                    Затем игроки бросают кубики, и выигрывает тот, чья сумма выпадет больше, чем у соперника.
+                    У игрока также есть две уникальные возможности ("Шулерство" и "Хитрость"), каждая из которых доступна только один раз за игру. 
+                    В игре проигрывает тот, у кого не осталось монет.
+                </p> 
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div>}
+            {showMessageRules.Message2 && <div> <div className={classes.message}> 
+                <p>
+                    Здесь отображаются суммы выпавших кубиков.
+                </p> 
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow1}></div> <div className={classes.arrow2}></div> </div> }
+            {showMessageRules.Message3 && <div> <div className={classes.message}> 
+                <p>
+                    Это монеты и их количество у каждого игрока. Нажимая на свою монету, вы делаете ставку.
+                </p> 
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow3}></div> <div className={classes.arrow4}></div> </div>}
+            {showMessageRules.Message4 && <div> <div className={classes.message}> 
+                <p>
+                    Шулерство - Нажав эту кнопку во время ставки, вам гарантирована победа в данном розыгрыше независимо от результата выпавших сумм кубиков.
+                    Хитрость - Позволяет аккуратно украсть у соперника три монеты, но только если у него их больше трех.
+                </p> 
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow5}></div> <div className={classes.arrow6}></div> </div>}
+            {showMessageRules.Message5 && <div> <div className={classes.message}> 
+                <p>
+                    Это кнопки броска кубиков и распределения выигрыша. 
+                </p> 
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow7}></div> </div>}
         </div>
     )
 }

@@ -80,6 +80,7 @@ export const NavalBattle = ({setCountLoyal,
     }
 
     function handleAttackTentacle(){
+        accuraty()
         setHealthTentacle(prev => prev - 20);
         setHealthShip(prev => prev - 20);
         const nextTarget = Math.random() > 0.5 ? Math.floor(Math.random() * 4) + 1 : 5;
@@ -101,7 +102,7 @@ export const NavalBattle = ({setCountLoyal,
         <div className={classes.navalBattlePage}>
             <RulesNavalBattle setButtonDisabled={setButtonDisabled}/>
             <div className={classes.blockShip}>
-                <p>Корабль <p>Head: {healthHeadMonster} Ten: {healthTentacle} Ship: {healthShip}</p></p>
+                <p>Корабль</p>
                 <progress className={classes.healthShip} max="1000" value={healthShip}></progress>
             </div>
             
@@ -129,21 +130,32 @@ export const NavalBattle = ({setCountLoyal,
 
             {showFinalModal.win && <div className={classes.finalModal}>
                 <h3>
-                    Пора готовить суши.
+                    После изнурительной битвы с чудовищем Корос уже крепко стоял на палубе корабля.
+                    Будто это сражение вселило в него уверенность.
+                    А кровь, которой было покрыто всё вокруг "Алиеты", развеяла страх перед морем так же стремительно, как поверженный монстр погружался в его пучины.
+                    - Вот это улов, так улов! - весь мокрый от волн и дождя, запыхавшись, промолвил рыцарь.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {showFinalModal.lose && <div className={classes.finalModal}>
                 <h3>
-                    Шлюпки на воду!
+                    Не выдерживая напора, корабль трещал по швам, а мачта была вырвана, как дерево с корнем.
+                    Вторая же была сломана пополам, как тростинка, под мощью гигантских щупалец чудовища.
+                    Когда барк начал тонуть, капитан скомандовал:
+                    Покинуть корабль! Все в шлюпки!
+                    Лишь отойдя на достаточное расстояние от утягиваемой на дно "Алиеты" монстром, он, опустив глаза, прошептал:
+                    Это было последнее, что осталось мне от отца... 
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}
 
             {showFinalModal.badWin && <div className={classes.finalModal}>
                 <h3>
-                    Едва не потонули.
+                    С невыносимым трудом команде и Коросу всё же удалось взять верх над чудовищем.
+                    Вот только после сражения корабль был сильно повреждён, но всё ещё держался на воде.
+                    Осмотревшись по сторонам и пересчитав взглядом всех матросов, капитан тихо произнёс:
+                    Кажется, все живы. И тут же принялся отдавать приказы, чтобы те, как можно быстрее латали паруса.
                 </h3>
                 <p onClick={handleNextMessage}>---Продолжить---</p>
             </div>}

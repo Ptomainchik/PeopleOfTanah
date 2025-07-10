@@ -214,7 +214,10 @@ export const Level5 = (props:any) => {
             {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
                 <img src={RegistanСoast} alt="RegistanСoast" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
-                
+                    На подступах в бухту, перед путниками открылся сияющий и утопающий в песках город "Хоршид". 
+                    Портовая крепость и главный морской торговый узел Конфедерации племён. 
+                    Вход в бухду охраняли две огромные башни из песчаника, а за ними по суше простирались дома и улицы, храмы и велечиственные сооружения, увенчаные огромными золотыми куполами. 
+                    Такой торжествующей красоты Корос не видел ещё нигде. От одного вида на всё это, у него перехватывало дыхание, а со стороны берега доносился сладкий запах выпечки.
                 </p>
                 <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening}> 
                     -----Продолжить-----
@@ -222,20 +225,26 @@ export const Level5 = (props:any) => {
             </div> }
             {showOpeningScene2 && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
                 <p>
-                
+                    Сойдя на берег, Корос протянул руку капитану в тайном рукопожатии, а затем положив ему руку на плечо, улыбнулся и тихо сказал: - Всё будет хорошо. 
+                    Пожав ему руку, парень понималще кивнул и улыбнулся в ответ, не говоря ни слова. Затем Корос молча развернулся и пошёл в сторону прибрежных улиц.
+                    Всюду сновали торговцы, словно здесь проходил съезд всех мало-мальски связанных с этим делом дельцов.На суше было очень жарко, но ветерок с моря обдувал щеки, заросшие недельной щетиной, рыцаря. 
+                    В животе урчало так сильно, что хотелось уже купить хотя бы одну булочку, которую продавали бегающие тут и там дети с огромными подносами, подвязанными у них на плечах, на которых лежала румяная с блестящей сахарной корочкой сдоба. 
+                    Запах сводил с ума, слюни от голода приходилось то и дело сглатывать. 
+                    Корос уже было хотел потянуться к кошелю, но тут его одёрнул высокий и худощавый мужчина, похожий на караванщика.
                 </p>
                 <h3 className={classes.buttonNextSceneInmar} onClick={handleModalOpening2}> 
                     -----Продолжить-----
                 </h3>
             </div> }
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsRegistan})`, border: "solid 0.3vw darkred"}}>
-                {!showMessageQuest.message1 && !showMessageQuest.message8 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
+                {!showMessageQuest.message8 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
                 {!showMessageQuest.message1 && !showMessageQuest.message2 && !showMessageQuest.message3 && !showMessageQuest.message4 && !showMessageQuest.message5 && <img src={RegistanGuard} alt="CaravanerMerchant"  className={classes.characterInmarImg51}/>}
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <h1>----------</h1>
+                <h1>Караванщик:</h1>
                 <p className={classes.question}>
-                   
+                    Такому мужчине, как вы, скорее всего, не помешали бы хорошие сапоги, а может, желаете весь наряд обновить? 
+                    В моей лавке вы найдёте всё, что пожелаете, - наводящим тоном произнёс караванщик. 
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
@@ -244,40 +253,43 @@ export const Level5 = (props:any) => {
             {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
-                  
+                    Также имеется большой ассортимент украшений из драгоценных камней. 
+                    Давайте пройдем ко мне, вам обязательно что-нибудь приглянется.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Было бы не плохо</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Что не так с моей одеждой?</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Эм... не знаю</p>
                 </div>
             </div> }
             {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
-                  
+                    Возможно, вас еще заинтересуют разного вида развлечения?
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я как раз об этом думал</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Так сходу?</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Например что?</p>
                 </div>
             </div> }
             {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
-                   
+                    Для начала могу предложить сыграть в кости. А дальше посмотрим. 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>+</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>-</p>
-                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>/</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С удовольствием</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну давай... игрок</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Тебе меня не обыграть</p>
                 </div>
             </div> }
             {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
-                   
+                    Караванщик отошёл в сторону и присел на пороге небольшого дома. 
+                    Затем, призывающе махнув рукой в сторону Короса, вытащил из кармана мешочек, в котором были кости.  
+                    {props.countLoyal} {props.countContra} {props.countNeutral}
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
@@ -290,7 +302,7 @@ export const Level5 = (props:any) => {
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                   
+                   {props.countLoyal} {props.countContra} {props.countNeutral}
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>

@@ -16,7 +16,6 @@ export const Dice = ({setCountLoyal,
     const [showBet, setShowBet] = useState(false);  
     const [showCheating, setShowCheating] = useState(true);
     const [showTrickery, setShowTrickery] = useState(true);
-    const [showModalRules, setShowModalRules] = useState(false);
     const [buttonCheatingState, setButtonCheatingState] = useState(false);
     const [buttonBetState, setButtonBetState] = useState(false);
     const [counterBet, setCounterBet] = useState(0);    
@@ -38,6 +37,9 @@ export const Dice = ({setCountLoyal,
     const [stateFinal, setStateFinal] = useState({win: false, lose: false, draw: false,});
     const [stateTime, setStateTime] = useState(true);
     const [stateCoinsButton, setStateCoinsButton] = useState(false);
+    const [showButtonOpponent, setShowButtonOpponent] = useState(true);
+    const [showButtonOpponentCoins, setShowButtonOpponentCoins] = useState(true);
+    const [stateCalculationButton, setStateCalculationButton] = useState(false);
 
     const currentCountRound = countRound;
     const currentChipPlayer = chipPlayer;
@@ -48,11 +50,11 @@ export const Dice = ({setCountLoyal,
 
     useEffect(() => {
         let timer: NodeJS.Timeout;
-        if(chipOpponent === 0 && stateOpponentThrow === false) {
+        if(chipOpponent === 0 && stateOpponentThrow === false && stateCalculationButton === true) {
         setCountLoyal((prev:any) => prev + 1);
         setStateFinal({win: true, lose: false, draw: false,});
     }
-    else if(chipPlayer === 0 && statePlayerThrow === false) {
+    else if(chipPlayer === 0 && statePlayerThrow === false && stateCalculationButton === true) {
         setCountContra((prev:any) => prev + 1);
         setStateFinal({win: false, lose: true, draw: false,});
     }
@@ -66,34 +68,38 @@ export const Dice = ({setCountLoyal,
     }, [chipOpponent, chipPlayer, stateOpponentThrow, statePlayerThrow, stateTime]);
     
     function handleBetPlayer() {
+        if(chipPlayer === 0) return;
+        if(chipOpponent === 0) return;
+        if (betPlayer >= 3 || chipPlayer <= 0) return;
+        if (betOpponent >= 3 || chipOpponent <= 0) return;
+        setStateCalculationButton(false);
+        if(countRound > 0 && countRound % 2 === 1){
+            setButtonBetState(true);
+        };
+        if(countRound > 0 && countRound % 2 === 0){
+            setButtonBetState(false);
+        };
         setStateTime(false);
         setStatePlayerThrow(true);
-        if (betPlayer >= 3 || chipPlayer <= 0) return;
-        setButtonBetState(true);
         setShowBet(true);
         setChipPlayer(prev => prev - 1);
         setBetPlayer(prev => prev +1);
-        handleBetOpponent();
-        setCounterBet(prev => prev + 1);
-        if(chipPlayer === 0) return;
-        if(chipOpponent === 0) return;
-    };
-
-    function handleBetOpponent() {
-        if(betOpponent >= 3 || chipOpponent <= 0) return;
         setChipOpponent(prev => prev - 1);
         setBetOpponent(prev => prev + 1);
+        setCounterBet(prev => prev + 1);
     };
 
     useEffect(() => {
         if(countRound > 0 && countRound % 2 === 0) {
-            setStateCoinsButton(true);
+            setShowButtonOpponent(true);
         }
     }, [countRound]);
 
     useEffect(() => {
         if(countRound > 0 && countRound % 2 === 1) {
             setStateCoinsButton(false);
+            setShowButtonOpponent(false);
+            setShowButtonOpponentCoins(false)
 
         const numberOfCalls = Math.floor(Math.random() * 3) + 1;
 
@@ -117,13 +123,14 @@ export const Dice = ({setCountLoyal,
     },[stateBetOpponent]);
 
     useEffect(() => {
-        if(stateOpponentThrow === true){
-            setTimeout(() => {
-                handlePickUpCoins();
-            }, 1000)
-            
-        }
-    },[stateOpponentThrow]);
+    let timer: NodeJS.Timeout;
+    if (stateOpponentThrow === true) {
+        timer = setTimeout(() => {
+            handlePickUpCoins();
+        }, 1000);
+    }
+    return () => clearTimeout(timer);
+}, [stateOpponentThrow]);
 
     function handleCheating() {
         setShowCheating(false);
@@ -133,25 +140,23 @@ export const Dice = ({setCountLoyal,
     function handleTrickery() {
         setShowTrickery(false);
 
-        if(chipOpponent >= 5) {
+        if(chipOpponent >= 4) {
             setChipOpponent(prevChip => prevChip - 3);
             setChipPlayer(prevChip => prevChip + 3);
         }
-        else if(chipOpponent === 1) {
+        else if(chipOpponent <= 3) {
             return;
-        }
-        else{
-            setChipOpponent(prevChip => prevChip - 1);
-            setChipPlayer(prevChip => prevChip + 1);
         }
     };
 
     function handleDice() {
         setCountDice(prev => prev + 1);
+        if(countRound > 0 && countRound % 2 === 0) {
+            setShowButtonOpponentCoins(true);
+        }
+        setButtonBetState(true);
         
         if(betPlayer === 0 && betOpponent === 0) return;
-
-        setButtonBetState(false);
 
         const playerDice = Array.from({length: 5}, () => rollDice());
         setRandomDice(playerDice);
@@ -185,23 +190,17 @@ export const Dice = ({setCountLoyal,
             setChipPlayer(prev => prev + betPlayer + betOpponent);
             setButtonCheatingState(false);
         }
-        },2000);
+        },1000);
 
         setShowBet(false);
         setBetPlayer(0);
         setBetOpponent(0);
         setStateDice(true);
         setCountRound(prev => prev + 1);
-        
+        setStateCoinsButton(false);
+        setStateCalculationButton(true);
+       
         return () => clearTimeout(timer);
-    }
-
-    function handleOpenModalRules() {
-        setShowModalRules(true);
-    }
-
-    function handleCloseModalRules() {
-        setShowModalRules(false);
     }
   
     return (
@@ -233,33 +232,24 @@ export const Dice = ({setCountLoyal,
 
             {showBet && <div className={classes.betPlayer}><h1>{currentCounterBet}</h1></div>}
                     
-            {showCheating &&  <button className={classes.buttonCheating} onClick={handleCheating} disabled={buttonBetState === false || buttonDisabled === true || stateBetOpponent === false}>Шулерство</button>}
+            {showCheating &&  <button className={classes.buttonCheating} onClick={handleCheating} disabled={buttonBetState === true || buttonDisabled === true }>Шулерство</button>}
             {showTrickery && <button className={classes.buttonTrickery} onClick={handleTrickery} disabled={buttonBetState === true || buttonDisabled === true}>Хитрость</button> }
-
-            <button className={classes.buttonRules} onClick={handleOpenModalRules} disabled={buttonDisabled === true}>Правила</button>
-            {showModalRules && <div className={classes.modalRules}> 
-                <p className={classes.rules1}>Шулерство - победа в следующем розигрыше кубиков.</p>
-                <p className={classes.rules2}>Хитрость - хитростью выманить монеты у оппонента.</p>
-                <p className={classes.rules3}>Общие правила игры - кидай кубы а дальше будет видно.</p>
-                <button className={classes.closeButton} onClick={handleCloseModalRules}>Закрыть</button>
-            </div>}
 
             <div className={classes.chipPlayerField}>
                 <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0 || buttonDisabled === true || currentCountRound % 1 === 1 } title="Монеты игрока"></button>
                 <h1>Монеты игрока: {currentChipPlayer}</h1>
             </div>
             
-            <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0 || buttonDisabled === true || countDice === 1}>Бросить кубики</button>
+            {showButtonOpponent && <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0 || buttonDisabled === true || countDice === 1}>Бросить кубики</button>}
             
-            <button className={classes.pickUpCoinsButton} onClick={handlePickUpCoins} disabled={stateDice === false && stateCoinsButton === false}>Забрать выигрыш</button>
+            {showButtonOpponentCoins && <button className={classes.pickUpCoinsButton} onClick={handlePickUpCoins} disabled={stateDice === false && stateCoinsButton === false}>Расчёт</button>}
 
             <div className={classes.chipOpponentField}>
                 <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0 || buttonDisabled === true} title="Монеты оппонента"></button>
                 <h1>Монеты оппонента: {currentChipOpponent}</h1>
             </div>
-            
 
-            {showBet && <div className={classes.betOpponent}><h1>{currentCounterBet}</h1> </div>  }
+            {showBet && <div className={classes.betOpponent}><h1>{currentCounterBet}</h1> </div>}
 
             <div className={classes.pointDiceOpponentField}><h1>Кости оппонента: {pointChipOpponent}</h1></div>
 
