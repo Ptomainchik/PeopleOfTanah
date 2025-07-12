@@ -83,14 +83,14 @@ export const RulesDice = ({
             {showMessageRules.Message4 && <div> <div className={classes.message}> 
                 <p>
                     Шулерство - Нажав эту кнопку во время ставки, вам гарантирована победа в данном розыгрыше независимо от результата выпавших сумм кубиков.
-                    Хитрость - Позволяет аккуратно украсть у соперника три монеты, но только если у него их больше трех.
+                    Хитрость - Позволяет аккуратно украсть у соперника три монеты, но только если у него их больше трех в момент использования кнопки.
                 </p> 
-                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow5}></div> <div className={classes.arrow6}></div> </div>}
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Продолжить-----</p></div> <div className={classes.arrow5}></div> <div className={classes.arrow6}></div>  </div>}
             {showMessageRules.Message5 && <div> <div className={classes.message}> 
                 <p>
-                    Это кнопки броска кубиков и распределения выигрыша. 
+                    Это кнопки броска кубиков, распределения выигрыша и отображение выпавших сумм кубиков игрока и оппонента.
                 </p> 
-                <p className={classes.buttonRule} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow7}></div> </div>}
+                <p className={classes.buttonRule} onClick={handleMessage}>-----Начать-----</p></div> <div className={classes.arrow7}></div> <div className={classes.arrow8}></div> <div className={classes.arrow9}></div></div>}
         </div>
     )
 }

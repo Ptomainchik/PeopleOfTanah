@@ -23,8 +23,8 @@ export const Dice = ({setCountLoyal,
     const [chipOpponent, setChipOpponent] = useState(10);
     const [betPlayer, setBetPlayer] = useState(0);
     const [betOpponent, setBetOpponent] = useState(0);
-    const [pointChipPlayer, setPointChipPlayer] = useState(0);
-    const [pointChipOpponent, setPointChipOpponent] = useState(0);
+    const [pointChipPlayer, setPointChipPlayer]:any = useState(0);
+    const [pointChipOpponent, setPointChipOpponent]:any = useState(0);
     const [randomDice, setRandomDice] = useState([0, 0, 0, 0, 0]);
     const [randomDiceOpponent, setRandomDiceOpponent] = useState([0, 0, 0, 0, 0]);
     const [buttonDisabled, setButtonDisabled] = useState(true);
@@ -40,6 +40,7 @@ export const Dice = ({setCountLoyal,
     const [showButtonOpponent, setShowButtonOpponent] = useState(true);
     const [showButtonOpponentCoins, setShowButtonOpponentCoins] = useState(true);
     const [stateCalculationButton, setStateCalculationButton] = useState(false);
+    const [showDicePoints, setShowDicePoints] = useState(false);
 
     const currentCountRound = countRound;
     const currentChipPlayer = chipPlayer;
@@ -49,29 +50,38 @@ export const Dice = ({setCountLoyal,
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
     useEffect(() => {
-        let timer: NodeJS.Timeout;
         if(chipOpponent === 0 && stateOpponentThrow === false && stateCalculationButton === true) {
         setCountLoyal((prev:any) => prev + 1);
         setStateFinal({win: true, lose: false, draw: false,});
     }
-    else if(chipPlayer === 0 && statePlayerThrow === false && stateCalculationButton === true) {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [chipOpponent, stateOpponentThrow, stateCalculationButton]);
+
+    useEffect(() => {
+        if(chipPlayer === 0 && statePlayerThrow === false && stateCalculationButton === true) {
         setCountContra((prev:any) => prev + 1);
         setStateFinal({win: false, lose: true, draw: false,});
     }
-    else if(stateTime === false) {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [chipPlayer, statePlayerThrow, stateCalculationButton])
+
+    useEffect(() => {
+        let timer: NodeJS.Timeout;
+        if(stateTime === false) {
             timer = setTimeout(() => {
             setCountNeutral((prev:any) => prev + 1);
             setStateFinal({win: false, lose: false, draw: true,});
-        }, 300000);  
+        }, 90000);  
     }
     return () => clearTimeout(timer); 
-    }, [chipOpponent, chipPlayer, stateOpponentThrow, statePlayerThrow, stateTime]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [stateTime]);
     
     function handleBetPlayer() {
         if(chipPlayer === 0) return;
         if(chipOpponent === 0) return;
-        if (betPlayer >= 3 || chipPlayer <= 0) return;
-        if (betOpponent >= 3 || chipOpponent <= 0) return;
+        if (betPlayer >= 3 && chipPlayer <= 0) return;
+        if (betOpponent >= 3 && chipOpponent <= 0) return;
         setStateCalculationButton(false);
         if(countRound > 0 && countRound % 2 === 1){
             setButtonBetState(true);
@@ -79,6 +89,7 @@ export const Dice = ({setCountLoyal,
         if(countRound > 0 && countRound % 2 === 0){
             setButtonBetState(false);
         };
+        setShowDicePoints(false);
         setStateTime(false);
         setStatePlayerThrow(true);
         setShowBet(true);
@@ -112,6 +123,7 @@ export const Dice = ({setCountLoyal,
             setStateBetOpponent(true);
         },4000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[countRound]);
 
     useEffect(() => {
@@ -120,6 +132,7 @@ export const Dice = ({setCountLoyal,
             setStateBetOpponent(false);
             setStateOpponentThrow(true);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[stateBetOpponent]);
 
     useEffect(() => {
@@ -130,6 +143,7 @@ export const Dice = ({setCountLoyal,
         }, 1000);
     }
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [stateOpponentThrow]);
 
     function handleCheating() {
@@ -151,6 +165,7 @@ export const Dice = ({setCountLoyal,
 
     function handleDice() {
         setCountDice(prev => prev + 1);
+        setShowDicePoints(true);
         if(countRound > 0 && countRound % 2 === 0) {
             setShowButtonOpponentCoins(true);
         }
@@ -228,7 +243,8 @@ export const Dice = ({setCountLoyal,
                     })}
                 </div>
 
-            <div className={classes.pointDicePlayerField}><h1>Кости игрока: {pointChipPlayer}</h1></div>
+            <div className={classes.pointDicePlayerField}><h1>Кости игрока</h1></div>
+            <div className={classes.sumPointsPlayer}><h1>{showDicePoints && `${pointChipPlayer}`}</h1></div>
 
             {showBet && <div className={classes.betPlayer}><h1>{currentCounterBet}</h1></div>}
                     
@@ -236,7 +252,7 @@ export const Dice = ({setCountLoyal,
             {showTrickery && <button className={classes.buttonTrickery} onClick={handleTrickery} disabled={buttonBetState === true || buttonDisabled === true}>Хитрость</button> }
 
             <div className={classes.chipPlayerField}>
-                <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0 || buttonDisabled === true || currentCountRound % 1 === 1 } title="Монеты игрока"></button>
+                <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0 || buttonDisabled === true || currentCountRound % 2 === 1 } title="Монеты игрока"></button>
                 <h1>Монеты игрока: {currentChipPlayer}</h1>
             </div>
             
@@ -251,7 +267,8 @@ export const Dice = ({setCountLoyal,
 
             {showBet && <div className={classes.betOpponent}><h1>{currentCounterBet}</h1> </div>}
 
-            <div className={classes.pointDiceOpponentField}><h1>Кости оппонента: {pointChipOpponent}</h1></div>
+            <div className={classes.pointDiceOpponentField}><h1>Кости оппонента</h1></div>
+            <div className={classes.sumPointsOpponent}><h1>{showDicePoints && `${pointChipOpponent}`}</h1></div>
 
                 <div className={classes.diceOpponentField}>
                     {randomDiceOpponent.map((dice, index) => {

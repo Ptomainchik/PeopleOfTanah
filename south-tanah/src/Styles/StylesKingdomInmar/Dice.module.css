@@ -322,6 +322,18 @@
     font-weight: 700
 }
 
+.sumPointsPlayer{
+    width: 5%;
+    height: 9%;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
 .pointDiceOpponentField{
     width: 15%;
     height: 15%;
@@ -342,6 +354,18 @@
     font-weight: 700
 }
 
+.sumPointsOpponent{
+    width: 5%;
+    height: 9%;
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
 .finalModal{
     width: 99.5%;
     height: 99%;
@@ -356,12 +380,12 @@
 
 .finalModal h3{
     position: absolute;
-    top: 0%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     font-family: "Pangolin";
     font-size: 2vw;
-    margin: 3%;
+    margin: 0;
     text-align: center;
     color: black;
 }
@@ -497,15 +521,39 @@
 }
 
 .arrow7{
-    width: 8vw;
-    height: 10vw;
+    width: 10vw;
+    height: 8vw;
     background: darkred;
-    clip-path: polygon(40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%, 40% 70%);
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
     position: absolute;
-    top: 20%;
-    left: 46%;
+    top: 18%;
+    left: 35%;
     z-index: 21;
-    animation: shift 1s infinite;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow8{
+    width: 10vw;
+    height: 8vw;
+    background: darkred;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    position: absolute;
+    top: 46%;
+    right: 33%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow9{
+    width: 10vw;
+    height: 8vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    bottom: 18%;
+    left: 35%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
 }
 
 @keyframes  shift {
