@@ -289,7 +289,6 @@ export const Level5 = (props:any) => {
                 <p className={classes.question}>
                     Караванщик отошёл в сторону и присел на пороге небольшого дома. 
                     Затем, призывающе махнув рукой в сторону Короса, вытащил из кармана мешочек, в котором были кости.  
-                    {props.countLoyal} {props.countContra} {props.countNeutral}
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
@@ -302,7 +301,7 @@ export const Level5 = (props:any) => {
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
-                   {props.countLoyal} {props.countContra} {props.countNeutral}
+                    
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>

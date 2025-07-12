@@ -50,20 +50,20 @@ export const Dice = ({setCountLoyal,
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
     useEffect(() => {
-        if(chipOpponent === 0 && stateOpponentThrow === false && stateCalculationButton === true) {
+        if(chipPlayer === 20 && stateCalculationButton === true) {
         setCountLoyal((prev:any) => prev + 1);
         setStateFinal({win: true, lose: false, draw: false,});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [chipOpponent, stateOpponentThrow, stateCalculationButton]);
+    }, [chipPlayer, stateOpponentThrow, stateCalculationButton]);
 
     useEffect(() => {
-        if(chipPlayer === 0 && statePlayerThrow === false && stateCalculationButton === true) {
+        if(chipOpponent === 20 && stateCalculationButton === true) {
         setCountContra((prev:any) => prev + 1);
         setStateFinal({win: false, lose: true, draw: false,});
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [chipPlayer, statePlayerThrow, stateCalculationButton])
+    }, [chipOpponent, statePlayerThrow, stateCalculationButton])
 
     useEffect(() => {
         let timer: NodeJS.Timeout;
@@ -114,14 +114,27 @@ export const Dice = ({setCountLoyal,
 
         const numberOfCalls = Math.floor(Math.random() * 3) + 1;
 
-        for(let i = 1; i <= numberOfCalls; i++) {
-            setTimeout(() => {
-                handleBetPlayer();
-            }, i * 1000); 
+        if(chipPlayer > 3){
+            for(let i = 1; i <= numberOfCalls; i++) {
+                    handleBetPlayer();
         }
+        }
+        else if(chipPlayer === 3){
+                    handleBetPlayer();
+                    handleBetPlayer();
+                    handleBetPlayer();
+        }
+        else if(chipPlayer === 2){
+                    handleBetPlayer();
+                    handleBetPlayer();
+        }
+        else if(chipPlayer === 1){
+                    handleBetPlayer();
+        }
+
         setTimeout(() => {
             setStateBetOpponent(true);
-        },4000);
+        },2000)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[countRound]);
@@ -293,21 +306,24 @@ export const Dice = ({setCountLoyal,
 
                 {stateFinal.win && <div className={classes.finalModal}>
                     <h3>
-                        Твоя взяла. 
+                        Вы победили. Новичкам везёт, - сказал караванщик. 
+                        Как вдруг, будто из ниоткуда, перед ними, заслоняя солнце, появился стражник. Нахмурив брови, он произнёс: - Так-так-так. 
+                        Азартными играми балуетесь?
                     </h3>
                     <p onClick={handleNextMessage}>---Продолжить---</p>
                 </div>}
 
                 {stateFinal.lose && <div className={classes.finalModal}>
                     <h3>
-                        Ты проиграл.
+                        Вы проиграли. Ничего, такое бывает, не расстраивайтесь, - с ехидной улыбкой промолвил караванщик. 
+                        Как неожиданно из-за угла к ним подошел стражник и уставился на разбросанные кости на пороге дома. 
                     </h3>
                     <p onClick={handleNextMessage}>---Продолжить---</p>
                 </div>}
 
                 {stateFinal.draw && <div className={classes.finalModal}>
                     <h3>
-                        Игру прервал стражник.
+                        Прекратите это немедленно! - жёстким тоном потребовал внезапно появившийся стражник.
                     </h3>
                     <p onClick={handleNextMessage}>---Продолжить---</p>
                 </div>}
