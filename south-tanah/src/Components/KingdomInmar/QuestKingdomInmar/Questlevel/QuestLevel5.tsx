@@ -237,7 +237,7 @@ export const Level5 = (props:any) => {
                 </h3>
             </div> }
             <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsRegistan})`, border: "solid 0.3vw darkred"}}>
-                {!showMessageQuest.message8 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
+                {!showMessageQuest.message8 && !showMessageQuest.message7 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
                 {!showMessageQuest.message1 && !showMessageQuest.message2 && !showMessageQuest.message3 && !showMessageQuest.message4 && !showMessageQuest.message5 && <img src={RegistanGuard} alt="CaravanerMerchant"  className={classes.characterInmarImg51}/>}
             </div>
             {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
@@ -299,9 +299,10 @@ export const Level5 = (props:any) => {
                 setCountNeutral={props.setCountNeutral}
                 handleNextMessage={handleNextMessage}/>}
             {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
-                <h1>----------</h1>
+                <h1>Стражник:</h1>
                 <p className={classes.question}>
-                    
+                    После недавних беспорядков губернатор запретил азартные игры на территории Хоршида. 
+                    Все, кто нарушают этот указ, будут задержаны и отправлены в местные казематы, - строго отчеканил стражник.
                 </p>
                 <div>
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
@@ -309,7 +310,12 @@ export const Level5 = (props:any) => {
             </div> }
             {showMessageQuest.message8 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
                 <p>
-                  
+                    Корос не успел даже подумать, как его тут же скрутил второй стражник, который всё это время стоял за спиной.
+                    Сам караванщик, почувствовав неладное, успел сбежать, когда стража задерживала рыцаря.
+                    - Это произвол! Я торговец из Инмара, между нашими государствами мир, - возмутился Корос, продумывая, как теперь уничтожить свиток, лежащий в кармане.
+                    - Закон писан для всех. Кто вы и откуда - не имеет значения, - вежливо, но настойчиво ответил один из стражников, ведущий рыцаря под руки.
+                    Опустив взгляд, Корос понял: вся его миссия под угрозой. Этот позор не смыть ничем - теперь орден отречётся от него.
+                    Не так он себе представлял встретить старость - в грязной камере Конфедерации.
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneInmar} onClick={handleNextMessage}> 
