@@ -1368,12 +1368,15 @@ export const Level7 = (props:any) => {
             {showMessageQuest.message19 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
                 <h1>Губернатор:</h1>
                 <p className={classes.question}>
-                    Ваше имя подслушал в разговоре между вами и капитаном ваш противник по игре в кости, когда вы только прибыли.
-                    Мы поймали его сразу после вашего задержания, и он выложил всё, что знал. Вот в чём кроется то, о чём вы не догадывались.
+                    Вот в чём кроется то, о чём вы не догадывались.
                     Каждый караванщик, вступающий в Лигу, записывает в Книгу Памяти всех своих родных и близких - и вы в ней есть. 
+                    Ваше имя подслушал в разговоре между вами и капитаном ваш противник по игре в кости, когда вы только прибыли.
+                    Мы поймали его сразу после вашего задержания, и он выложил всё, что знал. 
                 </p>
-                <div>
-                    <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
+                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Жалкий трус</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>От торгаша только этого и жди</p>
+                    <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Немудрено, он скользкий тип</p>
                 </div>
             </div> }
             {showMessageQuest.message20 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
