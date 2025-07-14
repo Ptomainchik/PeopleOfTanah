@@ -181,6 +181,7 @@
     position: absolute;
     bottom: -12%;
     left: 50%;
+    animation: typingOpacity forwards 1.5s ;
 }
 
 /* ----- Scene8 ----- */

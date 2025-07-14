@@ -50,7 +50,7 @@ export const Dice = ({setCountLoyal,
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
     useEffect(() => {
-        if(chipPlayer === 20 && stateCalculationButton === true) {
+        if(chipPlayer >= 20 && stateCalculationButton === true) {
         setCountLoyal((prev:any) => prev + 1);
         setStateFinal({win: true, lose: false, draw: false,});
     }
@@ -58,7 +58,7 @@ export const Dice = ({setCountLoyal,
     }, [chipPlayer, stateOpponentThrow, stateCalculationButton]);
 
     useEffect(() => {
-        if(chipOpponent === 20 && stateCalculationButton === true) {
+        if(chipOpponent >= 20 && stateCalculationButton === true) {
         setCountContra((prev:any) => prev + 1);
         setStateFinal({win: false, lose: true, draw: false,});
     }

@@ -83,7 +83,7 @@
     left: 10%;
     bottom: 0%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .leftTentacle1Up:active{
@@ -100,7 +100,7 @@
     left: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .leftTentacle1Down:active{
@@ -117,7 +117,7 @@
     left: 25%;
     bottom: 0%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .leftTentacle2Up:active{
@@ -134,7 +134,7 @@
     left: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .leftTentacle2Down:active{
@@ -152,7 +152,7 @@
     right: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .rightTentacle1Up:active{
@@ -170,7 +170,7 @@
     right: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .rightTentacle1Down:active{
@@ -188,7 +188,7 @@
     right: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .rightTentacle2Up:active{
@@ -206,7 +206,7 @@
     right: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .rightTentacle1Down:active{
@@ -224,7 +224,7 @@
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .headMonsterUp:active{
@@ -242,7 +242,7 @@
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .headMonsterUp:active{

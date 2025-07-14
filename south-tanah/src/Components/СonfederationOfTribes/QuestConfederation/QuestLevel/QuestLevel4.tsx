@@ -332,7 +332,7 @@ export const Level4 = (props:any) => {
                     Лутут
                     <hr/>
                     Таверна: "Хромой песчанник"
-                    <hr color="black"/>
+                    <hr/>
                     Поднялся южный ветер
                     <hr/>
                 </h3>

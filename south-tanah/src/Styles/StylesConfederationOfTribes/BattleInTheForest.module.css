@@ -84,7 +84,7 @@
     left: 10%;
     bottom: 0%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .leftBandit1Up:active{
@@ -101,7 +101,7 @@
     left: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .leftBandit1Down:active{
@@ -118,7 +118,7 @@
     left: 25%;
     bottom: 0%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .leftBandit2Up:active{
@@ -135,7 +135,7 @@
     left: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .leftBandit2Down:active{
@@ -153,7 +153,7 @@
     right: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .rightBandit1Up:active{
@@ -171,7 +171,7 @@
     right: 10%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .rightBandit1Down:active{
@@ -189,7 +189,7 @@
     right: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .rightBandit2Up:active{
@@ -207,7 +207,7 @@
     right: 25%;
     bottom: 20%;
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .rightBandit1Down:active{
@@ -225,7 +225,7 @@
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    animation: shiftUp 2s forwards;
+    animation: shiftUp 1s forwards;
 }
 
 .headBanditUp:active{
@@ -243,7 +243,7 @@
     left: 50%;
     transform: translate(-50%);
     cursor: pointer;
-    animation: shiftDown 2s forwards;
+    animation: shiftDown 1s forwards;
 }
 
 .headBanditUp:active{
