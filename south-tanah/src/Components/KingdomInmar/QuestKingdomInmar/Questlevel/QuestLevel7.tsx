@@ -1170,8 +1170,8 @@ export const Level7 = (props:any) => {
                     "Доброе утро, Корос", - спокойно произнёс высокий темнокожий мужчина в тёмно-жёлтой джеллабе.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Здраствуйте</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не очень то оно доброе</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Не очень то оно доброе</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Здраствуйте</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>И вам того же</p>
                 </div>
             </div> }
@@ -1181,8 +1181,8 @@ export const Level7 = (props:any) => {
                     Извините за этот инцидент, связанный с вашим задержанием. Но так уж у нас заведено.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Ничего страшного, я всё понимаю</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Вы издеваетесь?</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Вы издеваетесь?</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ничего страшного, я всё понимаю</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Закон есть закон</p>
                 </div>
             </div> }
@@ -1202,8 +1202,8 @@ export const Level7 = (props:any) => {
                     "Позвольте, я расскажу вам одну историю - она происходила на самом деле, но дошла до вас в искажённом виде."
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я послушаю</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну давай, рассказывай</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Ну давай, рассказывай</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Я послушаю</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Вы мне?.. Хорошо.</p>
                 </div>
             </div> }
@@ -1215,8 +1215,8 @@ export const Level7 = (props:any) => {
                     Вы, сами того не подозревая, не знаете о себе ничего из того, что с вами происходило, начиная с тех трагических событий, случившихся во время восстания." 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>(молча смотреть в глаза)</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Что вы несёте?</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что вы несёте?</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>(молча смотреть в глаза)</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Как такое возможно?</p>
                 </div>
             </div> }
@@ -1250,8 +1250,8 @@ export const Level7 = (props:any) => {
                     И когда чаша терпения переполнилась - вспыхнуло восстание. 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Допустим</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Так говорит каждый конфедерат</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Так говорит каждый конфедерат</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Допустим</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Что-то в этом есть</p>
                 </div>
             </div> }
@@ -1285,8 +1285,8 @@ export const Level7 = (props:any) => {
                     Ваших родителей убили не повстанцы. Их кровь на руках людей ордена Ключей.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что?!</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Как вы смеете их обвинять?</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Как вы смеете их обвинять?</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Что?!</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Не верю не единому слову</p>
                 </div>
             </div> }
@@ -1306,8 +1306,8 @@ export const Level7 = (props:any) => {
                     "Это откроет вам глаза, и вы наконец поймёте, кому служите на самом деле", - сказал губернатор, медленно протягивая руку со свёрнутой, потрескавшейся от старости бумагой.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Взять свиток</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Вырвать свиток из рук</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Вырвать свиток из рук</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Взять свиток</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>(аккуратно взять свиток)</p>
                 </div>
             </div> }
@@ -1347,8 +1347,8 @@ export const Level7 = (props:any) => {
                     Заметьте - бумаги подлинные, на них печать Лиги караванщиков, ставшей впоследствии слегка изменённым гербом Конфедерации.
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я ничего не понимаю</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Это враньё!</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Это враньё!</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Я ничего не понимаю</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Но тогда...</p>
                 </div>
             </div> }
@@ -1360,8 +1360,8 @@ export const Level7 = (props:any) => {
                     Вы не виноваты в этом.  
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Как вы узнали моё имя?</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Скажи, что меня ещё зовут по другому</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Скажи, что меня ещё зовут по другому</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Как вы узнали моё имя?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Ну я надеюсь, зовут меня также</p>
                 </div>
             </div> }
@@ -1374,8 +1374,8 @@ export const Level7 = (props:any) => {
                     Мы поймали его сразу после вашего задержания, и он выложил всё, что знал. 
                 </p>
                 <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
-                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Жалкий трус</p>
-                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>От торгаша только этого и жди</p>
+                    <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>От торгаша только этого и жди</p>
+                    <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Жалкий трус</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Немудрено, он скользкий тип</p>
                 </div>
             </div> }
@@ -1409,7 +1409,7 @@ export const Level7 = (props:any) => {
                     Правда, что ему открылась спустя долгие годы, сводила с ума, от чего ему хотелось громко закричать.
                     "Мой отец - караванщик. Мать и её забота. Предки родом с юга пустыни..."
                     Как это всё отличалось от того, во что он привык верить, ни на секунду даже не задумываясь о том, что это может быть иллюзией, созданной его же собственным мозгом.
-                    Сдерживая эмоции, он с дрожащими руками достал свиток, который должен был отдать тому торговцу, и медленно развернул его.
+                    Сдерживая эмоции, он с дрожащими руками достал свиток, который должен был отдать тому торговцу на складе, и медленно развернул его.
                 </p>
                 <div>
                     <h3 className={classes.buttonNextSceneInmar} onClick={handleNextMessage}> -----Продолжить----- </h3>

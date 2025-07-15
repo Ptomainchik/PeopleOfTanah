@@ -15,7 +15,7 @@ export const QuestKingdomInmar = () => {
     const [countLoyal, setCountLoyal] = useState(0);
     const [countContra, setCountContra] = useState(0);
     const [countNeutral, setCountNeutral] = useState(0);
-    const [showLevel, setShowLevel] = useState(7);
+    const [showLevel, setShowLevel] = useState(1);
 
     return (
         <div>

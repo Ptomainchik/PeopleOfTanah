@@ -32,7 +32,7 @@ export const Level8 = (props:any) => {
     navigate('/');
     }
 
-    useEffect(() => {
+  useEffect(() => {
     if(props.countLoyal > props.countContra && props.countLoyal > props.countNeutral && buttonFinal.buttonLoyal === true){
         setShowFinalScene({
         loyalL: true, 
@@ -98,9 +98,19 @@ export const Level8 = (props:any) => {
         neutralN: true,
     });
     }
-    
-
-
+    else if(props.countContra === props.countNeutral && props.countLoyal < props.countContra && buttonFinal.buttonLoyal === true){
+        setShowFinalScene({
+        loyalL: false, 
+        loyalC: false, 
+        loyalN: false, 
+        contraL: false, 
+        contraC: false, 
+        contraN: false, 
+        neutralL: false, 
+        neutralC: false, 
+        neutralN: true,
+    });
+    }
 
     if(props.countLoyal > props.countContra && props.countLoyal > props.countNeutral && buttonFinal.buttonContra === true){
         setShowFinalScene({
@@ -155,6 +165,19 @@ export const Level8 = (props:any) => {
     });
     }
     else if(props.countContra === props.countNeutral && props.countContra > props.countLoyal && buttonFinal.buttonContra === true){
+        setShowFinalScene({
+        loyalL: false, 
+        loyalC: false, 
+        loyalN: false, 
+        contraL: false, 
+        contraC: false, 
+        contraN: false, 
+        neutralL: false, 
+        neutralC: false, 
+        neutralN: true,
+    });
+    }
+    else if(props.countLoyal === props.countNeutral && props.countLoyal > props.countContra && buttonFinal.buttonContra === true){
         setShowFinalScene({
         loyalL: false, 
         loyalC: false, 
@@ -233,8 +256,21 @@ export const Level8 = (props:any) => {
         neutralN: true,
     });
     }
+    else if(props.countContra === props.countLoyal && props.countLoyal > props.countNeutral && buttonFinal.buttonNeutral === true){
+        setShowFinalScene({
+        loyalL: false, 
+        loyalC: false, 
+        loyalN: false, 
+        contraL: false, 
+        contraC: false, 
+        contraN: false, 
+        neutralL: false, 
+        neutralC: false, 
+        neutralN: true,
+    });
+    }
     
-    }, [buttonFinal, props.countLoyal, props.countContra, props.countNeutral])
+    }, [buttonFinal, props.countLoyal, props.countContra, props.countNeutral]);
 
     function handleFinalLoyal(){
         props.setCountLoyal((prev: number) => prev + 1);

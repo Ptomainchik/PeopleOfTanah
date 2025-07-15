@@ -41,6 +41,8 @@ export const Dice = ({setCountLoyal,
     const [showButtonOpponentCoins, setShowButtonOpponentCoins] = useState(true);
     const [stateCalculationButton, setStateCalculationButton] = useState(false);
     const [showDicePoints, setShowDicePoints] = useState(false);
+    const [showChipPlayer, setShowChipPlayer] = useState(true);
+    const [showChipOpponent, setShowChipOpponent] = useState(true);
 
     const currentCountRound = countRound;
     const currentChipPlayer = chipPlayer;
@@ -48,6 +50,24 @@ export const Dice = ({setCountLoyal,
     const currentCounterBet = counterBet;
 
     const rollDice = () => Math.floor(Math.random() * 6) + 1;
+
+    useEffect(() => {
+        if(currentChipPlayer <= 0){
+            setShowChipPlayer(false);
+        }
+        else if(currentChipPlayer > 0){
+            setShowChipPlayer(true);
+        }
+    }, [currentChipPlayer]);
+
+    useEffect(() => {
+        if(currentChipOpponent <= 0){
+            setShowChipOpponent(false);
+        }
+        else if(currentChipOpponent > 0){
+            setShowChipOpponent(true);
+        }
+    }, [currentChipOpponent]);
 
     useEffect(() => {
         if(chipPlayer >= 20 && stateCalculationButton === true) {
@@ -266,7 +286,7 @@ export const Dice = ({setCountLoyal,
 
             <div className={classes.chipPlayerField}>
                 <button className={classes.chipPlayer} onClick={handleBetPlayer} disabled={betPlayer === 3 || chipPlayer <= 0 || buttonDisabled === true || currentCountRound % 2 === 1 } title="Монеты игрока"></button>
-                <h1>Монеты игрока: {currentChipPlayer}</h1>
+                {showChipPlayer && <h1>Монеты игрока: {currentChipPlayer}</h1>}
             </div>
             
             {showButtonOpponent && <button className={classes.diceButton} onClick={handleDice} disabled={betPlayer === 0 || betOpponent === 0 || buttonDisabled === true || countDice === 1}>Бросить кубики</button>}
@@ -275,7 +295,7 @@ export const Dice = ({setCountLoyal,
 
             <div className={classes.chipOpponentField}>
                 <button className={classes.chipOpponent} disabled={betOpponent === 3 || chipOpponent <= 0 || buttonDisabled === true} title="Монеты оппонента"></button>
-                <h1>Монеты оппонента: {currentChipOpponent}</h1>
+                {showChipOpponent && <h1>Монеты оппонента: {currentChipOpponent}</h1>}
             </div>
 
             {showBet && <div className={classes.betOpponent}><h1>{currentCounterBet}</h1> </div>}

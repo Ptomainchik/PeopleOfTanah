@@ -139,9 +139,9 @@ export const StructureKingdomInmar = () => {
                             <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={BullMonument} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Закрыть</button></div>)}
-                    {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw chartreuse"}}>
-                            <h4 style={{color: "chartreuse"}}>Высший совет</h4> 
-                            <p style={{color: "chartreuse"}}>
+                    {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw darkblue"}}>
+                            <h4 style={{color: "darkblue"}}>Высший совет</h4> 
+                            <p style={{color: "darkblue"}}>
                                 Хотя формально король олицетворяет верховную власть, его реальное влияние ограничено. Монарх действительно может: издавать указы, объявлять войну, принимать чрезвычайные меры.
                                 Но эти полномочия активируются лишь в ситуациях экстренной угрозы королевству, когда король объявляет "право верховного".
                                 В обычное же время все вопросы жизнедеятельности страны решает Высший Совет.
@@ -153,12 +153,12 @@ export const StructureKingdomInmar = () => {
                                 Все законы и указы рождаются в Зале Советов столицы, откуда расходятся по всему королевству.
                             </p>
                         <div>
-                            <img style={{borderRight: "solid 1vw chartreuse", borderBottom: "solid 1vw chartreuse"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Закрыть</button></div>)}
-                    {showModalId === "9" && (<div className={structureInmar} id={"9"} style={{border: "solid 0.3vw darkblue"}}>
-                            <h4 style={{color: "darkblue"}}>Орден ключей</h4> 
-                            <p style={{color: "darkblue"}}>
+                    {showModalId === "9" && (<div className={structureInmar} id={"9"} style={{border: "solid 0.3vw darkturquoise"}}>
+                            <h4 style={{color: "darkturquoise"}}>Орден ключей</h4> 
+                            <p style={{color: "darkturquoise"}}>
                                 О том, что происходит внутри Ордена, известно немного. Тех, кто пытался донести миру хоть что-то о нём, уже давно нет в живых - их останки истлели, и места захоронений неизвестны.
                                 Ореол тайны окружает Ключников с момента основания организации. Вступивший однажды остаётся в ней навеки. Одни считают их личной гвардией короля, другие - сборищем распоясавшихся головорезов, опьянённых вседозволенностью.
                                 Достоверно известно лишь, что Орден обладает огромным влиянием, а его сети простираются далеко за пределы Инмара.
@@ -171,7 +171,7 @@ export const StructureKingdomInmar = () => {
                                 Замок же означает жизнь, вручаемую Ордену без остатка. Никто не знает, правда ли это, так как версий множество, и какая из них является истиной - неизвестно.
                             </p>
                         <div>
-                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={Keys} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw darkturquoise", borderBottom: "solid 1vw darkturquoise"}} src={Keys} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"9"} onClick={handleCloseModal}>Закрыть</button></div>)}
                 </div>

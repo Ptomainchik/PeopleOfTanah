@@ -11,9 +11,10 @@
 }
 
 .structureKindomInmarPage{
-    width: 100%;
+     width: 100%;
     height: 100%;
-    background: rgb(25, 25, 25);
+    background: url(../../Images/InmarForest.jpg) no-repeat;
+    background-size: cover;
     position: fixed;
 }
 
@@ -23,12 +24,13 @@
 }
 
 .buttonModalNorth{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-text-stroke: 0.1vw blue;
+    color: blue;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -37,11 +39,12 @@
 }
 
 .buttonModalNorthwest{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 15%;
     left: 5%;
-    -webkit-text-stroke: 0.1vw blueviolet;
+    color: blueviolet;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -50,11 +53,12 @@
 }
 
 .buttonModalNortheast{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 15%;
     right: 5%;
-    -webkit-text-stroke: 0.1vw yellow;
+    color: yellow;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -63,12 +67,13 @@
 }
 
 .buttonModalCenter{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-text-stroke: 0.1vw green;
+    color: green;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -77,11 +82,12 @@
 }
 
 .buttonModalSouthwest{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 35%;
     left: 5%;
-    -webkit-text-stroke: 0.1vw orange;
+    color: orange;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -90,11 +96,12 @@
 }
 
 .buttonModalSoutheast{
-    font-size: 3vw;
+    font-size: 3.5vw;
     position: absolute;
     top: 35%;
     right: 5%;
-    -webkit-text-stroke: 0.1vw red;
+    color: red;
+    -webkit-text-stroke: 0.1vw black;
     cursor: pointer;
 }
 
@@ -112,6 +119,7 @@
     background-size: contain;
     border: none;
     cursor: pointer;
+    filter: drop-shadow( 0 0 1vw rgb(221, 221, 128));
 }
 
 .buttonModalRighteous:hover{
@@ -122,10 +130,11 @@
     position: absolute;
     left: 80%;
     bottom: 20%;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: "El Messiri";
     font-weight: 700;
-    -webkit-text-stroke: 0.1vw rgb(221, 221, 128);
+    color: rgb(221, 221, 128);
+    -webkit-text-stroke: 0.1vw black;
 }
 
 .buttonModalCouncil{
@@ -139,10 +148,11 @@
     background-size: contain;
     border: none;
     cursor: pointer;
+    filter: drop-shadow( 0 0 1vw darkblue);
 }
 
 .buttonModalCouncil:hover{
-    filter: drop-shadow( 0 0 0.5vw chartreuse );
+    filter: drop-shadow( 0 0 0.5vw darkblue );
 }
 
 .buttonModalCouncil p{
@@ -150,10 +160,11 @@
     left: 50%;
     bottom: 40%;
     transform: translateX(-50%);
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: "El Messiri";
     font-weight: 700;
-    -webkit-text-stroke: 0.1vw chartreuse;
+    color: darkblue;
+    -webkit-text-stroke: 0.1vw black;
 }
 
 .buttonModalOrder{
@@ -166,10 +177,11 @@
     background-size: contain;
     border: none;
     cursor: pointer;
+    filter: drop-shadow( 0 0 1vw darkturquoise);
 }
 
 .buttonModalOrder:hover{
-    filter: drop-shadow( 0 0 0.5vw darkblue);
+    filter: drop-shadow( 0 0 0.5vw darkturquoise);
 }
 
 .buttonModalOrder p{
@@ -177,10 +189,11 @@
     position: absolute;
     right: 80%;
     bottom: 20%;
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-family: "El Messiri";
     font-weight: 700;
-    -webkit-text-stroke: 0.1vw darkblue;
+    color: darkturquoise;
+    -webkit-text-stroke: 0.1vw black;
 }
 
 .modalStructure{
@@ -191,6 +204,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: rgb(25, 25, 25);
+    animation: typingOpacity 0.5s forwards;
 }
 
 .modalStructure img{
@@ -250,7 +264,7 @@
     right: 5%;
     top: 10%;
     font-size: 1.3vw;
-    font-family: "PAngolin";
+    font-family: "Pangolin";
 }
 
 .modalClassStructureInmar img{
@@ -290,4 +304,9 @@
 
 .buttonCloseModal:hover{
     opacity: 0.7;
+}
+
+@keyframes typingOpacity {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }

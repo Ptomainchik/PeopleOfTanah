@@ -324,12 +324,12 @@
 
 .finalModal h3{
     position: absolute;
-    top: 0%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-family: "Pangolin";
     font-size: 2vw;
-    margin: 3%;
+    margin: 0;
     text-align: center;
     color: black;
 }
