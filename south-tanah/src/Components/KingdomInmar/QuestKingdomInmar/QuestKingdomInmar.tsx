@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from "../../../Styles/StylesKingdomInmar/KingdomInmarPage.module.css";
+import classes from "../../../Styles/Pages.module.css";
 import { BackButton } from "../../StartPage/Buttons/BackButton/BackButton";
 import { HomeButton } from "../../StartPage/Buttons/HomeButton/HomeButton";
 import { Level1 } from "./Questlevel/QuestLevel1";

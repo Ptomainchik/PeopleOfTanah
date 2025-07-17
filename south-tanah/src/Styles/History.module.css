@@ -7,9 +7,18 @@
     border: solid 0.3vw grey;
 }
 
-.historyPage{
+.historyPageInmar{
     width: 100%;
     height: 100%;
+    background: url(../Images/InmarForest.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.historyPageConfederation{
+    width: 100%;
+    height: 100%;
+    background: url(../Images/DesertConfederation.jpg) no-repeat;
     background-size: cover;
     position: fixed;
 }
@@ -49,7 +58,7 @@
     left: -65%;
     top: 10%;
     background: rgb(25, 25, 25);
-    animation: shiftLeft 3s ;
+    animation: shiftLeft 2s ;
     animation-fill-mode: forwards; 
 }
 
@@ -95,7 +104,7 @@
     right: -65%;
     top: 10%;
     background: rgb(25, 25, 25);
-    animation: shiftRight 3s ;
+    animation: shiftRight 2s ;
     animation-fill-mode: forwards; 
 }
 
@@ -212,7 +221,7 @@
     font-size: 2.5vw;
     font-family: "El Messiri";
     font-weight: 700;
-   
+    -webkit-text-stroke: 1px black;
 }
 
 .imageModalHistory{
@@ -239,4 +248,618 @@
 
 .buttonCloseModal:hover{
     opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+
+.topbar{
+    width: 100%;
+    height: 13vw;
+    font-size: 9vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 1vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.historyPageInmar{
+    background: url(../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+
+.historyPageConfederation{
+    background: url(../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+.coatOfArms{
+    width: 100%;
+    height: 90%;
+    clip-path: polygon(-2% 0, 50% 90%, 102% 0);
+    background: grey;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coatOfArms h2{
+    text-align: center;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    margin-top: 10%;
+   -webkit-text-stroke: 0.1vw black;
+}
+
+.coatOfArms img{
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leftModal{
+    width: 99.5%;
+    height: 92.5%;
+    z-index: 200;
+    position: absolute;
+    left: -65%;
+    top: 7.2%;
+    background: rgb(25, 25, 25);
+}
+
+.leftModal h4{
+    position: absolute;
+    top: 17%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.leftModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    font-size: 3.3vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.rightModal{
+    width: 99.5%;
+    height: 92.5%;
+    z-index: 200;
+    position: absolute;
+    right: -65%;
+    top: 7.2%;
+    background: rgb(25, 25, 25);
+}
+
+.rightModal h4{
+    position: absolute;
+    top: 17%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.rightModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    font-size: 3.3vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonOpenModal1{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal2{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 57%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal3{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 64%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal4{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 71%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal5{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 78%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.titleChapterHistory{
+    font-size: 5.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.imageModalHistory{
+    width: 75%;
+    height: 23%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.buttonCloseModal{
+    width: 30vw;
+    height: 8vw;
+    font-size: 4.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.7vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.historyPageInmar{
+    background: url(../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+
+.historyPageConfederation{
+    background: url(../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+
+.coatOfArms{
+    width: 100%;
+    height: 90%;
+    clip-path: polygon(-4% 0, 50% 90%, 104% 0);
+    background: grey;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coatOfArms h2{
+    text-align: center;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    margin-top: 10%;
+   -webkit-text-stroke: 0.1vw black;
+}
+
+.coatOfArms img{
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leftModal{
+    width: 99.5%;
+    height: 91.1%;
+    z-index: 200;
+    position: absolute;
+    left: -65%;
+    top: 8.5%;
+    background: rgb(25, 25, 25);
+}
+
+.leftModal h4{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.leftModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.rightModal{
+    width: 99.5%;
+    height: 91.1%;
+    z-index: 200;
+    position: absolute;
+    right: -65%;
+    top: 8.5%;
+    background: rgb(25, 25, 25);
+}
+
+.rightModal h4{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.rightModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonOpenModal1{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 54%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal2{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 61%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal3{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 68%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal4{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 75%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal5{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 82%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.titleChapterHistory{
+    font-size: 5.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.imageModalHistory{
+    width: 60%;
+    height: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.5vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.historyPageInmar{
+    background: url(../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+
+.historyPageConfederation{
+    background: url(../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+}
+
+.coatOfArms{
+    width: 100%;
+    height: 90%;
+    clip-path: polygon(-4% 0, 50% 90%, 104% 0);
+    background: grey;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coatOfArms h2{
+    text-align: center;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    margin-top: 7%;
+   -webkit-text-stroke: 0.1vw black;
+}
+
+.coatOfArms img{
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.leftModal{
+    width: 99.5%;
+    height: 91.3%;
+    z-index: 200;
+    position: absolute;
+    left: -65%;
+    top: 8.3%;
+    background: rgb(25, 25, 25);
+}
+
+.leftModal h4{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.leftModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.rightModal{
+    width: 99.5%;
+    height: 91.3%;
+    z-index: 200;
+    position: absolute;
+    right: -65%;
+    top: 8.3%;
+    background: rgb(25, 25, 25);
+}
+
+.rightModal h4{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+}
+
+.rightModal p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonOpenModal1{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal2{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 62%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal3{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 69%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.buttonOpenModal4{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 76%;
+    right: 0;
+    background: grey;
+    clip-path: polygon(30% 15%, 40% 30%, 100% 30%, 100% 70%, 40% 70%, 30% 85%, 0 50%);
+    cursor: pointer;
+}
+
+.buttonOpenModal5{
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    top: 83%;
+    left: 0;
+    background: grey;
+    clip-path: polygon(0 30%, 60% 30%, 70% 15%, 100% 50%, 70% 85%, 60% 70%, 0 70%);
+    cursor: pointer;
+}
+
+.titleChapterHistory{
+    font-size: 5.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.imageModalHistory{
+    width: 60%;
+    height: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
 }

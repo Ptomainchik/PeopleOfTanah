@@ -1,18 +1,16 @@
-import classes from "../../Styles/StylesConfederationOfTribes/ConfederationOfTribesPage.module.css"
-import { BackButton } from "../StartPage/Buttons/BackButton/BackButton"
-import { HomeButton } from "../StartPage/Buttons/HomeButton/HomeButton"
-import { ButtonHistoryConfederation } from "./Buttons/ButtonHistoryConfederation"
-import { ButtonQuestConfederation } from "./Buttons/ButtonQuestConfederation"
-import { ButtonStructureConfederation } from "./Buttons/ButtonStructureConfediration"
-import Registan from "../../Images/RegistanImg.jpg"
-
+import classes from "../../Styles/Pages.module.css";
+import { BackButton } from "../StartPage/Buttons/BackButton/BackButton";
+import { HomeButton } from "../StartPage/Buttons/HomeButton/HomeButton";
+import { ButtonHistoryConfederation } from "./Buttons/ButtonHistoryConfederation";
+import { ButtonQuestConfederation } from "./Buttons/ButtonQuestConfederation";
+import { ButtonStructureConfederation } from "./Buttons/ButtonStructureConfediration";
 
 export const ConfederationPage = () => {
     return (
         <div className={classes.confederationPage}>
-            <div className={classes.topbar}><HomeButton/>Конфедерация племён<BackButton/></div>
-            <div className={classes.overflowInfoConfederation}>
-                <div className={classes.infoConfederation}>
+            <div className={classes.topbar} style={{background: "goldenrod"}}><HomeButton/>Конфедерация племён<BackButton/></div>
+            <div className={classes.overflowInfoPages}>
+                <div className={classes.infoPages} style={{color: "goldenrod"}}>
                     <p>
                         В Конфедерации племён нет предрассудков по отношению к другим народам, и они рады приветствовать на своей земле представителей любых рас. 
                         Их мировоззрение пронизано духом созидания и творчества, где нет места разделению по происхождению.
@@ -21,9 +19,9 @@ export const ConfederationPage = () => {
                 </div>
             </div>
 
-                <img className={classes.imageConfederationPage} src={Registan} alt="Registan" draggable={"false"}/>
+                <div className={classes.imageConfederationPage} draggable={"false"}></div>
             
-            <div className={classes.buttonConfederation}>
+            <div className={classes.buttonConfederationPage}>
                 
                 <div className={classes.blockButtonHistory}>
                     <p>История</p>

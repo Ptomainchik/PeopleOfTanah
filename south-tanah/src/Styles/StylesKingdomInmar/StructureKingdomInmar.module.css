@@ -310,3 +310,972 @@
   from { opacity: 0 }
   to { opacity: 1 }
 }
+
+@media (max-width: 480px) {
+
+.topbar{
+    width: 100%;
+    height: 13vw;
+    font-size: 9vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 1vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureKindomInmarPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalNorth{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: blue;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalNorth p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalNorthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    left: -2%;
+    color: blueviolet;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalNorthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalNortheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    right: -2%;
+    color: yellow;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalNortheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalCenter{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalCenter p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalSouthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    left: -2%;
+    color: orange;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalSouthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalSoutheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    right: -2%;
+    color: red;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalSoutheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalRighteous{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 55%;
+    left: -2%;
+    background: url(../../Images/ButtonRighteousSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalRighteous p{
+    position: absolute;
+    left: 35%;
+    bottom: 7%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: rgb(221, 221, 128);
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalCouncil{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 65%;
+    left: 56%;
+    background: url(../../Images/ButtonCouncilSmall.webp) no-repeat bottom;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalCouncil p{
+    width: 80vw;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkblue;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalOrder{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 82.5%;
+    left: -2%;
+    background: url(../../Images/ButtonOrderSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0vw grey);
+}
+
+.buttonModalOrder p{
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkturquoise;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.modalStructure{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: typingOpacity 0.5s forwards;
+}
+
+.modalStructure img{
+    width: 70vw;
+    height: 40vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructure h4{
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    top: 17.5%;
+    left: 63%;
+    margin: 0;
+}
+
+.modalStructure p{
+    width: 95%;
+    height: 100%;
+    font-size: 3.3vw;
+    font-family: "Pangolin";
+    padding-left: 5%;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    text-align: center;
+}
+
+.modalClassStructureInmar{
+    width: 99.5%;
+    height: 92.5%;
+    position: absolute;
+    top: 7.2%;
+    left: 0%;
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalClassStructureInmar h4{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    margin: 0;
+    font-size: 8vw;
+    font-family: "El Messiri";
+}
+
+.modalClassStructureInmar p{
+    width: 94%;
+    height: 100%;
+    position: absolute;
+    right: 3%;
+    top: 33%;
+    font-size: 3.1vw;
+    font-family: "Pangolin";
+    text-align: center;
+}
+
+.modalClassStructureInmar img{
+    width: 60vw;
+    height: 60vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+
+.buttonCloseModal{
+    width: 30vw;
+    height: 8vw;
+    font-size: 4.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.7vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureKindomInmarPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalNorth{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: blue;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalNorth p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalNorthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    left: -2%;
+    color: blueviolet;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalNorthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalNortheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    right: -2%;
+    color: yellow;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalNortheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalCenter{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalCenter p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalSouthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    left: -2%;
+    color: orange;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalSouthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalSoutheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    right: -2%;
+    color: red;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalSoutheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalRighteous{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 55%;
+    left: -2%;
+    background: url(../../Images/ButtonRighteousSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalRighteous p{
+    position: absolute;
+    left: 35%;
+    bottom: 7%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: rgb(221, 221, 128);
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalCouncil{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 65%;
+    left: 56%;
+    background: url(../../Images/ButtonCouncilSmall.webp) no-repeat bottom;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalCouncil p{
+    width: 80vw;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkblue;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalOrder{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 86%;
+    left: -2%;
+    background: url(../../Images/ButtonOrderSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0vw grey);
+}
+
+.buttonModalOrder p{
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkturquoise;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.modalStructure{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: typingOpacity 0.5s forwards;
+}
+
+.modalStructure img{
+    width: 65vw;
+    height: 37.5vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructure h4{
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    margin: 0;
+}
+
+.modalStructure p{
+    width: 95%;
+    height: 100%;
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    padding-left: 5%;
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    text-align: center;
+}
+
+.modalClassStructureInmar{
+    width: 99.5%;
+    height: 91.1%;
+    position: absolute;
+    top: 8.5%;
+    left: 0%;
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalClassStructureInmar h4{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    margin: 0;
+    font-size: 8vw;
+    font-family: "El Messiri";
+}
+
+.modalClassStructureInmar p{
+    width: 94%;
+    height: 100%;
+    position: absolute;
+    right: 3%;
+    top: 40%;
+    font-size: 2.2vw;
+    font-family: "Pangolin";
+    text-align: center;
+}
+
+.modalClassStructureInmar img{
+    width: 45vw;
+    height: 45vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.5vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureKindomInmarPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/InmarForestBackroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalNorth{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: blue;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalNorth p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalNorthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    left: -2%;
+    color: blueviolet;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalNorthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalNortheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 18%;
+    right: -2%;
+    color: yellow;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalNortheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalCenter{
+    width: 110vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    text-align: center;
+}
+
+.buttonModalCenter p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+}
+
+.buttonModalSouthwest{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    left: -2%;
+    color: orange;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(-20deg);
+    text-align: center;
+}
+
+.buttonModalSouthwest p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(20deg)
+}
+
+.buttonModalSoutheast{
+    width: 50vw;
+    height: 10vw;
+    font-size: 6vw;
+    background: grey;
+    position: absolute;
+    top: 38%;
+    right: -2%;
+    color: red;
+    -webkit-text-stroke: 0.1vw black;
+    cursor: pointer;
+    transform: skewX(20deg);
+    text-align: center;
+}
+
+.buttonModalSoutheast p{
+    width: 100%;
+    position: relative;
+    top: -60%;
+    transform: skewX(-20deg)
+}
+
+.buttonModalRighteous{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 55%;
+    left: -2%;
+    background: url(../../Images/ButtonRighteousSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalRighteous p{
+    position: absolute;
+    left: 35%;
+    bottom: 7%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: rgb(221, 221, 128);
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalCouncil{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 65%;
+    left: 56%;
+    background: url(../../Images/ButtonCouncilSmall.webp) no-repeat bottom;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0 grey);
+}
+
+.buttonModalCouncil p{
+    width: 80vw;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkblue;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.buttonModalOrder{
+    width: 95vw;
+    height: 20vw;
+    position: absolute;
+    top: 86%;
+    left: -2%;
+    background: url(../../Images/ButtonOrderSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow( 0 0 0vw grey);
+}
+
+.buttonModalOrder p{
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    font-size: 6.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    color: darkturquoise;
+    -webkit-text-stroke: 0.1vw black;
+}
+
+.modalStructure{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: typingOpacity 0.5s forwards;
+}
+
+.modalStructure img{
+    width: 65vw;
+    height: 37.5vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructure h4{
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    margin: 0;
+}
+
+.modalStructure p{
+    width: 95%;
+    height: 100%;
+    font-size: 2.5vw;
+    font-family: "Pangolin";
+    padding-left: 5%;
+    position: absolute;
+    top: 37%;
+    right: 2%;
+    text-align: center;
+}
+
+.modalClassStructureInmar{
+    width: 99.5%;
+    height: 91.1%;
+    position: absolute;
+    top: 8.5%;
+    left: 0%;
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalClassStructureInmar h4{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    margin: 0;
+    font-size: 8vw;
+    font-family: "El Messiri";
+}
+
+.modalClassStructureInmar p{
+    width: 94%;
+    height: 100%;
+    position: absolute;
+    right: 3%;
+    top: 38%;
+    font-size: 2.2vw;
+    font-family: "Pangolin";
+    text-align: center;
+}
+
+.modalClassStructureInmar img{
+    width: 45vw;
+    height: 45vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+}

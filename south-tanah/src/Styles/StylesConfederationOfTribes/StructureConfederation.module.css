@@ -173,3 +173,468 @@
 .buttonCloseModal:hover{
     opacity: 0.7;
 }
+
+@media (max-width: 480px) {
+
+.topbar{
+    width: 100%;
+    height: 13vw;
+    font-size: 9vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 1vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureConfederationPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalHuman{
+    width: 100vw;
+    height: 50vw;
+    position: absolute;
+    left: -2%;
+    top: 15%;
+    background: url(../../Images/HumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalHuman p{
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(243, 234, 215);
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalDesertHuman{
+    width: 100vw;
+    height: 50vw;
+    position: absolute;
+    left: 48%;
+    top: 75%;
+    transform: translateX(-50%);
+    background: url(../../Images/DesertHumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalDesertHuman p{
+    width: 250%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(146, 112, 38);
+    position: absolute;
+    top: 2%;   
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalRegistan{
+    width: 100vw;
+    height: 50vw;
+    position: absolute;
+    right: -2%;
+    top: 45%;
+    background: url(../../Images/RegistanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalRegistan p{
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(20, 107, 122);
+    position: absolute;
+    top: 2%;
+    left: 45%;
+    margin: 0;
+}
+
+.modalStructureConfederation{
+    width: 99.5%;
+    height: 92.5%;
+    position: absolute;
+    top: 7.2%;
+    left: 0;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalStructureConfederation img{
+    width: 70vw;
+    height: 70vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructureConfederation h4{
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.modalStructureConfederation p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    font-size: 3.3vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonCloseModal{
+    width: 30vw;
+    height: 8vw;
+    font-size: 4.5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.7vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureConfederationPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalHuman{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    left: -2%;
+    top: 15%;
+    background: url(../../Images/HumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalHuman p{
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(243, 234, 215);
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalDesertHuman{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    left: 33%;
+    top: 75%;
+    transform: translateX(-50%);
+    background: url(../../Images/DesertHumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalDesertHuman p{
+    width: 250%;
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(146, 112, 38);
+    position: absolute;
+    top: 2%;   
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalRegistan{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    right: -2%;
+    top: 45%;
+    background: url(../../Images/RegistanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalRegistan p{
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(20, 107, 122);
+    position: absolute;
+    top: 2%;
+    left: 45%;
+    margin: 0;
+}
+
+.modalStructureConfederation{
+    width: 99.5%;
+    height: 91.1%;
+    position: absolute;
+    top: 8.5%;
+    left: 0;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalStructureConfederation img{
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructureConfederation h4{
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.modalStructureConfederation p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+.topbar{
+    width: 100%;
+    height: 10vw;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.5vw grey;
+    z-index: 20;
+    position: absolute;
+}
+
+.structureConfederationPage{
+    width: 100%;
+    height: 100%;
+    background: url(../../Images/DesertConfederationBackgroundChoice.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+}
+
+.buttonModalHuman{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    left: -2%;
+    top: 15%;
+    background: url(../../Images/HumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalHuman p{
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(243, 234, 215);
+    position: absolute;
+    top: 2%;
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalDesertHuman{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    left: 33%;
+    top: 75%;
+    transform: translateX(-50%);
+    background: url(../../Images/DesertHumanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalDesertHuman p{
+    width: 250%;
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(146, 112, 38);
+    position: absolute;
+    top: 2%;   
+    left: 55%;
+    margin: 0;
+}
+
+.buttonModalRegistan{
+    width: 70vw;
+    height: 30vw;
+    position: absolute;
+    right: -2%;
+    top: 45%;
+    background: url(../../Images/RegistanRaceSmall.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonModalRegistan p{
+    font-size: 5vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    -webkit-text-stroke: 0.1vw rgb(20, 107, 122);
+    position: absolute;
+    top: 2%;
+    left: 45%;
+    margin: 0;
+}
+
+.modalStructureConfederation{
+    width: 99.5%;
+    height: 91.3%;
+    position: absolute;
+    top: 8.3%;
+    left: 0;
+    transform: translateX(-50%);
+    background: rgb(25, 25, 25);
+    animation: shift 1.5s ;
+    animation-fill-mode: forwards; 
+}
+
+.modalStructureConfederation img{
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 100%;
+}
+
+.modalStructureConfederation h4{
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.modalStructureConfederation p{
+    width: 90%;
+    height: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 44%;
+    transform: translateX(-50%);
+    font-size: 2.6vw;
+    font-family: "Pangolin";
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.buttonCloseModal{
+    width: 27vw;
+    height: 6vw;
+    font-size: 3.8vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+    background: red;
+    cursor: pointer;
+}
+    
+}
