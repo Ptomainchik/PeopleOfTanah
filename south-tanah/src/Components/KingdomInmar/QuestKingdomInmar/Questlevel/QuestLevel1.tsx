@@ -2,7 +2,6 @@ import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import MorningSquire from "../../../../Images/MorningSquire.webp";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import RoomCastle from "../../../../Images/RoomCastle.jpg";
 
 export const Level1 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({
@@ -286,7 +285,7 @@ export const Level1 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Наконец-то эта ночь закончилась. Перевернувшись на спину в постели, подумал про себя Корос.
                     Солнце уже взошло и освещало его небольшую комнату, но свечи в лампах и просто расставленные по ней продолжали гореть ещё с вечера.
@@ -303,10 +302,10 @@ export const Level1 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${RoomCastle})`, border: "solid 0.3vw darkred"}}>
+            <div className={classes.playingFieldLevelInmar1} style={{border: "solid 0.3vw darkred"}}>
                 {!showMessageQuest.message10 && <img src={MorningSquire} alt="MorningSquire"  className={classes.characterInmarImg1}/>}
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     С широкой улыбкой сквайр подошёл к кровати, где лежал Корос, и произнёс: - Я по поручению магистра Пармера. Он желает вас видеть у себя.
@@ -321,13 +320,13 @@ export const Level1 = (props:any) => {
                 <p className={classes.question}>
                     Сквайр покраснел и заёрзал на месте: - Ой, простите! Я только недавно вступил в орден и ещё мало что знаю... Всё здесь так сложно устроено...
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Ничего, я сам был таким</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Это заметно</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Больше так не делай</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     В моё время за такую наглость уже выпороли бы плетьми, - проворчал Корос, а затем подумал: "Странно… Новобранец, а уже выполняет поручения самого главы ордена. Не иначе, сынок какого-нибудь вельможи". 
@@ -336,29 +335,29 @@ export const Level1 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Позвольте спросить, - со страхом в голосе спросил сквайр. 
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Спрашивай</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Чего тебе?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Ну ты и наглец, ладно, спрашивай</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Часто ли вы бываете за границей? - сквайр нервно переступил с ноги на ногу. - А вы... вы когда-нибудь видели солдат Конфедерации?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Нет... и да</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Что за вопросы?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Ха-ха, не терпится в бой?</p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Сквайр смутился, и его щёки покраснели. По нему было видно, что перед Коросом стоял зелёный юнец, наслушавшийся баек от трактирщиков.
@@ -369,40 +368,40 @@ export const Level1 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Говорят, они живут под землёй, - сквайр понизил голос до шёпота, - а потом... выползают и утаскивают целые армии в пески. Будто сами дюны их поглощают.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Не совсем так</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Полная чушь</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>А потом обгладывают их кости </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Наставники говорят, опасаться их изогнутых мечей, будто они могут отрубить тебе голову за доли секунды.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>А вот это правда</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не забивай себе голову</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>И не только голову</p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Ладно, я пойду тогда? Скоро будут раздавать завтрак в трапезной.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Ступай</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ты не похож на голодного</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Иди, только не объедайся</p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Сквайр:</h1>
                 <p className={classes.question}>
                     Нелепо засуетившись, пухлый юноша развернулся и бросился бежать, будто за ним гнались, стремительно покинув комнату. 

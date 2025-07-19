@@ -2,9 +2,7 @@ import { useState } from "react";
 import classes from "../../../../Styles/QuestLevel.module.css";
 import Innkeeper from "../../../../Images/Innkeeper.webp";
 import DesertTexture from "../../../../Images/DesertTexture.jpg";
-import Tavern from "../../../../Images/Tavern.jpg";
 import StreetsOfLutut from "../../../../Images/StreetsOfLutut.jpg";
-import Certificate from "../../../../Images/Certificate.webp";
 import { Cards } from "../Cards/Cards";
 
 export const Level4 = (props:any) => {
@@ -310,8 +308,8 @@ export const Level4 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${DesertTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
-                <img src={StreetsOfLutut} alt="StreetsOfLutut" style={{borderRight: "solid 0.3vw goldenrod", borderLeft: "solid 0.3vw goldenrod", borderBottom: "solid 0.3vw goldenrod"}}/>
+            {showOpeningScene && <div className={classes.openingScene}>
+                <img src={StreetsOfLutut} alt="StreetsOfLutut" style={{borderBottom: "solid 0.3vw goldenrod"}}/>
                 <p>
                     Неман, словно ребёнок, удивлялся всему, куда ни падал его взор. В этом огромном городе всё было так незнакомо и завораживающе.
                     Каменные строения переплетались с деревянными постройками так гармонично, будто составляли единое целое. Черепица на крышах будто скатывала солнечные лучи вниз.
@@ -323,11 +321,11 @@ export const Level4 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Tavern})`, border: "solid 0.3vw goldenrod"}}>
+            <div className={classes.playingFieldLevelConfederation4} style={{border: "solid 0.3vw goldenrod"}}>
                 <img src={Innkeeper} alt="Innkeeper"  className={classes.characterConfederationImg4}/>
             </div>
-            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
-                <img src={Certificate} alt="Certificate"/>
+            {showOpeningScene2 && <div className={classes.openingScene}>
+                <div className={classes.scroll} ></div>
                 <h3 className={classes.inscription}>
                     Лутут
                     <hr/>
@@ -347,7 +345,7 @@ export const Level4 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Недолго плутая по закоулкам города, Неман вскоре нашёл таверну "Хромой пёсчанник".
@@ -359,7 +357,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
                     Хозяин таверны произнёс: "Хороший день для игры в 'Глухого короля'.
@@ -376,18 +374,18 @@ export const Level4 = (props:any) => {
         setCountContra={props.setCountContra} 
         setCountNeutral={props.setCountNeutral}
         handleNextMessage={handleNextMessage}/>}
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                     Я вижу, у тебя жетон торговца. Стало быть, предыдущий план изменился?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я же торговец</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>По другому в Инмар не попасть</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Это всего лишь необходимось</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                    В молодости я тоже ходил с караванами, и мне нравилась та романтика пустыни. Много мне довелось повидать за время торговых странствий. 
@@ -397,18 +395,18 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                     А как сейчас обстоят дела с прибылью у наших братьев? Прибыль, небось, рекой течёт после того, как открылись границы? 
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Всё стало лучше</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не жалуются</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Надеюсь так и останется</p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                     Ладно, хватит воспоминаний. Ты же сюда не поболтать пришел. Не отвечай, сам всё вижу. 
@@ -419,7 +417,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                     То, что ты ищешь, находится к северу отсюда, в городе Киллат. Там, на местной площади, стоит храм Белого Быка. Внутри храма, посередине, есть алтарь самого божества в виде статуи. 
@@ -429,7 +427,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Хозяин таверны:</h1>
                 <p className={classes.question}>
                     А теперь проваливай отсюда и забудь меня навсегда. Недостаёт мне только того, чтобы меня обвинили в содействии Конфедерации.
@@ -438,7 +436,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message10 && <div className={classes.openingScene}>
                 <p>
                     Не заставляя ждать гнева трактирщика, Неман вышел из таверны на улицу. 
                     И побрел на рынок, где его ждали караванщики, попутно обдумывая то, что ему сейчас довелось увидеть и услышать. 

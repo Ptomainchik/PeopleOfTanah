@@ -304,7 +304,7 @@ useEffect(() => {
 
     return (
         <div className={classes.questPage}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Содержимое было зашифровано стандартным шифром, используемым определёнными структурами ордена Ключей.
                     Бегло пробежав глазами по тексту, Корос осознал - перед ним список людей.
@@ -322,7 +322,7 @@ useEffect(() => {
                 </h3>
             </div> }
             
-            {showMessageQuest && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest && <div className={classes.openingScene}>
                 <p>
                     Однако теперь, когда ему стала известна горькая правда, перед ним встала дилемма: что делать дальше. 
                     Двадцать лет службы не проходят бесследно, и часть его души пыталась всё оправдать, ведь он прекрасно понимал, как работает орден. 
@@ -336,14 +336,14 @@ useEffect(() => {
                     От всего этого безумия его сводило с ума, но решение нужно было принять сейчас, пока ещё не поздно. 
                     Он сжал в руках бумагу и подошёл к окну кабинета, из которого открывался чудесный вид на пустыню.
                 </p>
-                <div className={classes.finalBlockAnswer} style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.finalBlockAnswer}>
                     <h3 className={classes.answer1} onClick={handleFinalLoyal}>Выполнить задание из свитка</h3>
                     <h3 className={classes.answer2} onClick={handleFinalContra}>Оставить свиток на окне</h3>
                     <h3 className={classes.answer3} onClick={handleFinalNeutral}>Разорвать свиток и выбростить в окно</h3>
                 </div>
             </div> }
 
-            {showFinalScene.loyalL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.loyalL && <div className={classes.openingScene}>
                 <p>
                     Не в силах нарушить клятву, данную им ордену, Корос решается на невероятное. 
                     Он намерен искупить свой провал, выполнив задание вернуть долг каждому из зашифрованного списка. 
@@ -354,7 +354,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.loyalC && <div className={classes.openingScene}>
                 <p>
                     Верность ордену перевесила чашу весов в свою пользу. 
                     Воодушевленный намерением вернуться обратно в строй ключников, он начинает пытаться выяснить, кому принадлежат имена из списка. 
@@ -366,7 +366,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.loyalN && <div className={classes.openingScene}>
                 <p>
                     В попытке восстановить своё имя Корос внедряется в круг караванщиков и спустя некоторое время выясняет нескольких человек, чьи имена значатся в списке. 
                     С трудом проникнув в покои одного из них, он намеревался подстроить его смерть под укус ядовитой змеи.
@@ -376,7 +376,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.contraL && <div className={classes.openingScene}>
                 <p>
                     Так и не определившись, Корос оставляет свиток на окне и уходит, не зная, что его ждёт дальше.
                     В попытках просто начать жизнь заново он находит своё место в торговом деле.
@@ -387,7 +387,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.contraC && <div className={classes.openingScene}>
                 <p>
                     Оставив свиток на окне в кабинете тюрьмы, он, обуреваемый жаждой мщения, ищет способ применить свои знания против ордена.
                     И однажды находит его: знакомясь с одним песчанником, он рассказывает о своей ненависти к ключникам и о том, что те убили его семью и лишили дома.
@@ -399,7 +399,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.contraN && <div className={classes.openingScene}>
                 <p>
                     Сжигаемый внутренней ненавистью к бывшим собратьям, Корос оставляет свиток на окне кабинета.
                     Не долго думая о способах мести ордену за погибших родных, он оказывается в ситуации, где рыцари ордена под прикрытием пытаются его убить. 
@@ -413,7 +413,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralL && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.neutralL && <div className={classes.openingScene}>
                 <p>
                     Разорвав свиток и выбросив его обрывки в окно тюремного кабинета, Корос решает: будь что будет. 
                     Он отказывается от мести обеим сторонам, выбирая простую жизнь - забыть прошлое и жить сегодняшним днем, не заглядывая в завтра.
@@ -427,7 +427,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralC && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.neutralC && <div className={classes.openingScene}>
                 <p>
                     Измученный метаниями и муками выбора, Корос в гневе разорвал свиток и швырнул клочья в окно тюремного кабинета.
                     Не зная, что делать дальше - ведь теперь орден будет его искать - он решил отправиться на юг Великой Пустыни, чтобы хоть там затеряться от всевидящего ока ключников.
@@ -437,7 +437,7 @@ useEffect(() => {
                 <h3  className={classes.buttonNextSceneInmar} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralN && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showFinalScene.neutralN && <div className={classes.openingScene}>
                 <p>
                     Мучительной болью проносились мысли о лживом прошлом и об открывшейся правде в голове Короса.
                     В ярости он порвал свиток на мелкие кусочки и выбросил их в окно кабинета, где их подхватило потоком ветра и унесло в обжигаемую жарким солнцем пустыню.

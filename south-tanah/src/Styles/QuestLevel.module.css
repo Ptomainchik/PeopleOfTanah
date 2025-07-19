@@ -8,11 +8,22 @@
     bottom: 0;
 }
 
+.topbar{
+    width: 100%;
+    height: 4.5vw;
+    font-size: 3vw;
+    font-family: "El Messiri";
+    font-weight: 700;
+    text-align: center;
+    border: solid 0.3vw grey;
+    position: fixed;
+}
+
 /* ----- Scene1 ----- */
 
 .openingScene{
-    width: 99.5%;
-    height: 89%;
+    width: 100%;
+    height: 90%;
     position: fixed;
     top: 10%;
     background: wheat;
@@ -40,13 +51,25 @@
     animation: typingHeight 5.5s steps(120, end);
 }
 
-.playingFieldLevel{
+.playingFieldLevelInmar1{
     width: 60%;
     height: 70%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    background: url(../Images/RoomCastle.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation1{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/Market.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -68,6 +91,28 @@
 
 /* ----- Scene2 ----- */
 
+.playingFieldLevelInmar2{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CabinetCastle.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation2{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CamelCaravaner.jpg) no-repeat;
+    background-size: cover;
+}
+
 .characterConfederationImg2{
     width: 12vw;
     position: absolute;
@@ -85,6 +130,28 @@
 
 /* ----- Scene3 ----- */
 
+.playingFieldLevelInmar3{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ShipInmar.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation3{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/DesertInmar.jpg) no-repeat;
+    background-size: cover;
+}
+
 .characterConfederationImg3{
     width: 15vw;
     position: absolute;
@@ -101,11 +168,45 @@
 
 /* ----- Scene4 ----- */
 
+.playingFieldLevelInmar4{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/Storm.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation4{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/Tavern.jpg) no-repeat;
+    background-size: cover;
+}
+
 .characterConfederationImg4{
     width: 13vw;
     position: absolute;
     bottom: 0%;
     left: 30%;
+}
+
+.scroll{
+    width:  23vw;
+    height: 23vw;
+    background: url(../Images/Certificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
 }
 
 .inscription{
@@ -135,6 +236,28 @@
 
 /* ----- Scene5 ----- */
 
+.playingFieldLevelInmar5{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsRegistan.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation5{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ForestInmar.jpg) no-repeat;
+    background-size: cover;
+}
+
 .characterConfederationImg5{
     width: 14vw;
     position: absolute;
@@ -158,6 +281,28 @@
 
 /* ----- Scene6 ----- */
 
+.playingFieldLevelInmar6{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/Casemates.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation6{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsOfKillat.jpg) no-repeat;
+    background-size: cover;
+}
+
 .characterConfederationImg6{
     width: 14vw;
     position: absolute;
@@ -167,6 +312,40 @@
 }
 
 /* ----- Scene7 ----- */
+
+.playingFieldLevelInmar7{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/PrisonRoom.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation7{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/BullTemple.jpg) no-repeat;
+    background-size: cover;
+}
+
+.oldScroll{
+    width:  23vw;
+    height: 23vw;
+    background: url(../Images/OldCertificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
 
 .characterConfederationImg7{
     width: 13vw;
@@ -187,6 +366,9 @@
 /* ----- Scene8 ----- */
 
 .finalBlockAnswer{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     position: relative;
     top: 80%;
 }
@@ -194,7 +376,7 @@
 /* ----- OverallScenes ----- */
 
 .blockMessage{
-    width: 99.5%;
+    width: 100%;
     height: 30%;
     position: absolute;
     bottom: 0;
@@ -202,11 +384,14 @@
     font-family: "Pangolin";
 }
 
-.blockMessage div{
+.answerBlock{
     width: 100%;
     margin: 0;
     position: absolute;
     bottom: -5%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .blockMessage h1{
@@ -357,14 +542,1436 @@
 
 @media (max-width: 480px) {
 
+/* ----- Scene1 ----- */
+
+.openingScene{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 4vw;
+    z-index: 21;
+}
+
+.openingScene img{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.openingScene p{
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10%;
+    overflow: hidden;
+    animation: typingHeight 4.5s steps(120, end);
+}
+
+.playingFieldLevelInmar1{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/RoomCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation1{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/MarketSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg1{
+    width: 30vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.characterInmarImg1{
+    width: 40vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- Scene2 ----- */
+
+.playingFieldLevelInmar2{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CabinetCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation2{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CamelCaravanerSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg2{
+    width: 25vw;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg2{
+    width: 30vw;
+    position: absolute;
+    top: 33%;
+    right: 15%;
+}
+
+/* ----- Scene3 ----- */
+
+.playingFieldLevelInmar3{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ShipInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation3{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/DesertInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg3{
+    width: 35vw;
+    position: absolute;
+    bottom: -8%;
+    left: 30%;
+}
+
+.characterInmarImg3{
+    width: 45vw;
+    position: absolute;
+    bottom: -5%;
+    right: 15%;
+}
+
+/* ----- Scene4 ----- */
+
+.playingFieldLevelInmar4{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StormSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation4{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/TavernSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg4{
+    width: 35vw;
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+
+.scroll{
+    width:  100vw;
+    height: 100vw;
+    background: url(../Images/Certificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+.inscription{
+    width: 100%;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: "Marck Script";
+    font-size: 5.3vw;
+}
+
+.inscription hr{
+    width: 20%;
+    opacity: 0;
+}
+
+.bortOfShip{
+    width: 100%;
+    height: 100%;
+    background: url(../Images/BortOfShip.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -65%;
+    animation: shiftBort 1s infinite;
+}
+
+/* ----- Scene5 ----- */
+
+.playingFieldLevelInmar5{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsRegistanSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation5{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ForestInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg5{
+    width: 35vw;
+    position: absolute;
+    bottom: -8%;
+    right: 40%;
+}
+
+.characterInmarImg5{
+    width: 25vw;
+    position: absolute;
+    bottom: -22%;
+    right: 15%;
+}
+
+.characterInmarImg51{
+    width: 27.5vw;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+}
+
+/* ----- Scene6 ----- */
+
+.playingFieldLevelInmar6{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CasematesSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation6{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsOfKillatSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg6{
+    width: 32vw;
+    position: absolute;
+    bottom: 4%;
+    left: 25%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+/* ----- Scene7 ----- */
+
+.playingFieldLevelInmar7{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/PrisonRoomSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation7{
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/BullTempleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.oldScroll{
+    width:  100vw;
+    height: 100vw;
+    background: url(../Images/OldCertificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+.characterConfederationImg7{
+    width: 34vw;
+    position: absolute;
+    bottom: -20%;
+    right: 20%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg7{
+    width: 34vw;
+    position: absolute;
+    bottom: -12%;
+    left: 55%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+/* ----- Scene8 ----- */
+
+.finalBlockAnswer{
+    display: block;
+    position: relative;
+    top: 70%;
+}
+
+/* ----- OverallScenes ----- */
+
+.blockMessage{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    background: wheat;
+    font-family: "Pangolin";
+}
+
+.answerBlock{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 63%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.blockMessage h1{
+    margin: 0;
+    margin-top: 0.1vw;
+    width: 100%;
+    text-align: center;
+    font-family: "El Messiri";
+}
+
+.question {
+    font-size: 5vw;
+    margin: 4%;
+    position: relative;
+    text-align: center;
+}
+
+.question::after {
+    animation: typingWidth 2.5s forwards;
+}
+
+.buttonNextSceneConfederation{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextSceneInmar{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextMessageConfederation{
+    width: 100%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    color: goldenrod;
+}
+
+.buttonNextMessageInmar{
+    width: 100%;
+    font-size: 8vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    color: darkred;
+}
+
+.answer1{
+    width: 100%;
+    font-size: 5vw;
+    font-family: "El Messiri";
+    color: red;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 5%;
+}
+
+
+.answer2{
+    width: 100%;
+    font-size: 5vw;
+    font-family: "El Messiri";
+    color: blue;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 5%;
+}
+
+.answer3{
+    width: 100%;
+    font-size: 5vw;
+    font-family: "El Messiri";
+    color: green;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 5%;
+}
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+/* ----- Scene1 ----- */
+
+.openingScene{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 2.7vw;
+    z-index: 21;
+}
+
+.openingScene img{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.openingScene p{
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+    overflow: hidden;
+    animation: typingHeight 4.5s steps(120, end);
+}
+
+.playingFieldLevelInmar1{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/RoomCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation1{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/MarketSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg1{
+    width: 27vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.characterInmarImg1{
+    width: 35vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- Scene2 ----- */
+
+.playingFieldLevelInmar2{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CabinetCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation2{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CamelCaravanerSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg2{
+    width: 20vw;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg2{
+    width: 25vw;
+    position: absolute;
+    top: 33%;
+    right: 15%;
+}
+
+/* ----- Scene3 ----- */
+
+.playingFieldLevelInmar3{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ShipInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation3{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/DesertInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg3{
+    width: 30vw;
+    position: absolute;
+    bottom: -8%;
+    left: 30%;
+}
+
+.characterInmarImg3{
+    width: 40vw;
+    position: absolute;
+    bottom: -5%;
+    right: 15%;
+}
+
+/* ----- Scene4 ----- */
+
+.playingFieldLevelInmar4{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StormSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation4{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/TavernSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg4{
+    width: 30vw;
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+
+.scroll{
+    width:  70vw;
+    height: 70vw;
+    background: url(../Images/Certificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+.inscription{
+    width: 80%;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: "Marck Script";
+    font-size: 4vw;
+}
+
+.inscription hr{
+    width: 20%;
+    opacity: 0;
+}
+
+.bortOfShip{
+    width: 100%;
+    height: 100%;
+    background: url(../Images/BortOfShip.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -65%;
+    animation: shiftBort 1s infinite;
+}
+
+/* ----- Scene5 ----- */
+
+.playingFieldLevelInmar5{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsRegistanSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation5{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ForestInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg5{
+    width: 27vw;
+    position: absolute;
+    bottom: -8%;
+    right: 40%;
+}
+
+.characterInmarImg5{
+    width: 20vw;
+    position: absolute;
+    bottom: -22%;
+    right: 15%;
+}
+
+.characterInmarImg51{
+    width: 24.5vw;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+}
+
+/* ----- Scene6 ----- */
+
+.playingFieldLevelInmar6{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CasematesSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation6{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsOfKillatSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg6{
+    width: 30vw;
+    position: absolute;
+    bottom: 4%;
+    left: 20%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+/* ----- Scene7 ----- */
+
+.playingFieldLevelInmar7{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/PrisonRoomSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation7{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/BullTempleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg7{
+    width: 28vw;
+    position: absolute;
+    bottom: -20%;
+    right: 20%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg7{
+    width: 28vw;
+    position: absolute;
+    bottom: -15%;
+    left: 55%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.oldScroll{
+    width:  70vw;
+    height: 70vw;
+    background: url(../Images/OldCertificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+/* ----- Scene8 ----- */
+
+.finalBlockAnswer{
+    display: block;
+    position: relative;
+    top: 60%;
+}
+
+/* ----- OverallScenes ----- */
+
+.blockMessage{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    background: wheat;
+    font-family: "Pangolin";
+}
+
+.answerBlock{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.blockMessage h1{
+    margin: 0;
+    margin-top: 0.1vw;
+    width: 100%;
+    text-align: center;
+    font-family: "El Messiri";
+}
+
+.question {
+    font-size: 3.3vw;
+    margin: 4%;
+    position: relative;
+    text-align: center;
+}
+
+.question::after {
+    animation: typingWidth 2.5s forwards;
+}
+
+.buttonNextSceneConfederation{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextSceneInmar{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextMessageConfederation{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    margin: 0;
+    color: goldenrod;
+}
+
+.buttonNextMessageInmar{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    color: darkred;
+    margin: 0;
+}
+
+.answer1{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: red;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
+
+
+.answer2{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: blue;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
+
+.answer3{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: green;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
     
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+ 
+/* ----- Scene1 ----- */
+
+.openingScene{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    color: black;
+    font-family: "Pangolin";
+    font-size: 2.7vw;
+    z-index: 21;
+}
+
+.openingScene img{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.openingScene p{
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 7%;
+    overflow: hidden;
+    animation: typingHeight 4.5s steps(120, end);
+}
+
+.playingFieldLevelInmar1{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/RoomCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation1{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/MarketSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg1{
+    width: 25vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.characterInmarImg1{
+    width: 38vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- Scene2 ----- */
+
+.playingFieldLevelInmar2{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CabinetCastleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation2{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CamelCaravanerSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg2{
+    width: 19vw;
+    position: absolute;
+    top: 30%;
+    right: 23%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg2{
+    width: 23vw;
+    position: absolute;
+    top: 33%;
+    right: 15%;
+}
+
+/* ----- Scene3 ----- */
+
+.playingFieldLevelInmar3{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ShipInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation3{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/DesertInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg3{
+    width: 28vw;
+    position: absolute;
+    bottom: -5%;
+    left: 30%;
+}
+
+.characterInmarImg3{
+    width: 38vw;
+    position: absolute;
+    bottom: -5%;
+    right: 15%;
+}
+
+/* ----- Scene4 ----- */
+
+.playingFieldLevelInmar4{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StormSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation4{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/TavernSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg4{
+    width: 30vw;
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+
+.scroll{
+    width:  70vw;
+    height: 70vw;
+    background: url(../Images/Certificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+.inscription{
+    width: 80%;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: "Marck Script";
+    font-size: 4vw;
+}
+
+.inscription hr{
+    width: 20%;
+    opacity: 0;
+}
+
+.bortOfShip{
+    width: 100%;
+    height: 100%;
+    background: url(../Images/BortOfShip.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: -65%;
+    animation: shiftBort 1s infinite;
+}
+
+/* ----- Scene5 ----- */
+
+.playingFieldLevelInmar5{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsRegistanSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation5{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/ForestInmarSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg5{
+    width: 27vw;
+    position: absolute;
+    bottom: -8%;
+    right: 40%;
+}
+
+.characterInmarImg5{
+    width: 20vw;
+    position: absolute;
+    bottom: -22%;
+    right: 15%;
+}
+
+.characterInmarImg51{
+    width: 24.5vw;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+}
+
+/* ----- Scene6 ----- */
+
+.playingFieldLevelInmar6{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/CasematesSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation6{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/StreetsOfKillatSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg6{
+    width: 30vw;
+    position: absolute;
+    bottom: 4%;
+    left: 20%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+/* ----- Scene7 ----- */
+
+.playingFieldLevelInmar7{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/PrisonRoomSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.playingFieldLevelConfederation7{
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../Images/BullTempleSmall.jpg) no-repeat;
+    background-size: cover;
+}
+
+.characterConfederationImg7{
+    width: 28vw;
+    position: absolute;
+    bottom: -20%;
+    right: 20%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.characterInmarImg7{
+    width: 28vw;
+    position: absolute;
+    bottom: -15%;
+    left: 55%;
+    animation: typingOpacity forwards 1.5s ;
+}
+
+.oldScroll{
+    width:  70vw;
+    height: 70vw;
+    background: url(../Images/OldCertificate.webp);
+    background-size: cover;
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5%;
+}
+
+/* ----- Scene8 ----- */
+
+.finalBlockAnswer{
+    display: block;
+    position: relative;
+    top: 60%;
+}
+
+/* ----- OverallScenes ----- */
+
+.blockMessage{
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    background: wheat;
+    font-family: "Pangolin";
+}
+
+.answerBlock{
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 52%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+
+.blockMessage h1{
+    margin: 0;
+    margin-top: 0.1vw;
+    width: 100%;
+    text-align: center;
+    font-family: "El Messiri";
+    font-size: 4.5vw;
+}
+
+.question {
+    font-size: 3.3vw;
+    margin: 4%;
+    position: relative;
+    text-align: center;
+}
+
+.question::after {
+    animation: typingWidth 2.5s forwards;
+}
+
+.buttonNextSceneConfederation{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextSceneInmar{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 7%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.buttonNextMessageConfederation{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    margin: 0;
+    color: goldenrod;
+}
+
+.buttonNextMessageInmar{
+    width: 100%;
+    font-size: 7vw;
+    font-family: "El Messiri";
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    cursor: pointer;
+    color: darkred;
+    margin: 0;
+}
+
+.answer1{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: red;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
+
+
+.answer2{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: blue;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
+
+.answer3{
+    width: 100%;
+    font-size: 4vw;
+    font-family: "El Messiri";
+    color: green;
+    cursor: pointer;
+    animation: typingOpacity 5s forwards;
+    margin-bottom: 2%;
+}
     
 }

@@ -1,9 +1,7 @@
 import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import Master from "../../../../Images/Master.webp";
-import Scroll from "../../../../Images/Scroll.webp";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import CabinetCastle from "../../../../Images/CabinetCastle.jpg";
 
 export const Level2 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({
@@ -350,7 +348,7 @@ export const Level2 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Выйдя из своей комнаты, Корос проследовал по длинному коридору до высокой каменной винтовой лестницы, ведущей в покои магистра. 
                     Поднявшись на последний этаж центральной башни орденского замка, он оказался в небольшом помещении с тремя дверями вдоль стены.
@@ -363,10 +361,10 @@ export const Level2 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${CabinetCastle})`, border: "solid 0.3vw darkred"}}>
+            <div className={classes.playingFieldLevelInmar2} style={{border: "solid 0.3vw darkred"}}>
                 <img src={Master} alt="Master"  className={classes.characterInmarImg2}/>
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Да-да, войди. Я давно тебя жду, - услышал в ответ Корос.
@@ -377,20 +375,20 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Магистр:</h1>
                 <p className={classes.question}>
                     Доброе утро, - магистр протянул руку, сложив пальцы в символическом жесте - будто держал невидимый ключ.
                     Корос, не колеблясь, обхватил его кисть особым образом - так, как учили при посвящении.
                     - Как твои дела, Корос? - голос Пармера прозвучал хрипло, но в уголках его губ дрогнула тёплая улыбка.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Не жалуюсь</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Бывало и лучше</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Вам ли не знать</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Магистр:</h1>
                 <p className={classes.question}>
                     Вот и хорошо. Не буду ходить вокруг да около, а перейду сразу к делу. Ты уже полжизни служишь ордену, и твоя верность не раз была доказана поступками.
@@ -401,32 +399,32 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Магистр:</h1>
                 <p className={classes.question}>
                     Я и не сомневался. Как ты знаешь, у нас сейчас мир с Конфедерацией племён, но то, что он сохранится ненадолго, кажется, понимают все.
                     Как ты относишься к поездке на юг?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Готов</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Разве у меня есть выбор</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Звучит интригующе</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Магистр:</h1>
                 <p className={classes.question}>
                     В порту нашего города тебя будет ждать зафрахтованный корабль "Алиета", выполняющий торговые перевозки между Инмаром и Конфедерацией.
                     Его хозяин, и по совместительству капитан, - наш человек, но даже он не знает подробностей.
                     Для него ты просто представитель ордена, отправляющийся закупать товар для нужд нашей организации.  
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что дальше?</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Понятно</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Хм... Интересно</p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Магистр:</h1>
                 <p className={classes.question}>
                     По прибытии в Конфедерацию тебя будет ждать местный караванщик.
@@ -438,7 +436,7 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     После чего он предложит посетить их с ним вместе. Уже на складе ты отдашь ему вот этот свиток, который лежит на столе.
@@ -451,7 +449,7 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Если ты потерпишь провал или тебя раскроют, незамедлительно уничтожь свиток. А далее просто действуй по ситуации.
@@ -462,18 +460,18 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Теперь ты понимаешь, почему подходишь для этого дела как никто другой?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Да</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Кажеться да</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Похоже, я идеальный кандидат</p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Тогда отправляйся немедленно. Орден рассчитывает на тебя, - сказал магистр, положив руку на плечо Короса.
@@ -482,7 +480,7 @@ export const Level2 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Взять свиток--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message11 && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showMessageQuest.message11 && <div className={classes.openingScene}>
                 <p>
                     Положив свиток в потайной карман на броне (который предусмотрительно имелся у него, учитывая поручения по доставке документов и депеш за долгие годы службы), Корос молча вышел из кабинета и направился во двор замка.
                     По пути к докам он раздумывал над заданием, вспоминая молодость в северных землях Конфедерации, когда-то принадлежавших Инмару. 

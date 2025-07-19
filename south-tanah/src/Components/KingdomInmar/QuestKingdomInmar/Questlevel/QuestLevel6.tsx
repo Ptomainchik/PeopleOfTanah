@@ -1,7 +1,6 @@
 import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import Casemates from "../../../../Images/Casemates.jpg";
 import Prison from "../../../../Images/Prison.jpg";
 
 export const Level6 = (props:any) => {
@@ -209,8 +208,8 @@ export const Level6 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
-                <img src={Prison} alt="Prison" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
+            {showOpeningScene && <div className={classes.openingScene}>
+                <img src={Prison} alt="Prison" style={{borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                     Дорога к казематам заняла не более получаса. На окраине города, посреди пустыни, возвышалась небольшая крепость.
                     "Видимо, здесь и окончится мой путь", - подумал Корос, всматриваясь в башни тюрьмы. "Как же так получилось? Двадцать лет службы - и вот такой конец. 
@@ -223,10 +222,10 @@ export const Level6 = (props:any) => {
                     -----Продолжить-----
                 </h3>   
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Casemates})`, border: "solid 0.3vw darkred"}}>
+            <div className={classes.playingFieldLevelInmar6} style={{border: "solid 0.3vw darkred"}}>
                 
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Оглядевшись в камере - кроме стен и деревянного настила с разбросанной соломой, в углу стоял маленький столик. 
@@ -237,7 +236,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Присев на соломенную подстилку, Корос потянулся за свитком, но тут же вновь бросил взгляд на столик с булкой и бурдюком.
@@ -247,7 +246,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Произойди это в Инмаре - его уже бы избили и бросили в грязную камеру без воды, еды и абсолютно голым.
@@ -258,7 +257,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     А то, что его так ловко скрутили, не дав даже опомниться, - почему-то показалось рыцарю смешно.
@@ -269,7 +268,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Увидел бы это его наставник - не поверил бы своим глазам. Армия ордена считалась универсальной, готовой к любым ситуациям.
@@ -281,7 +280,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     "Может, ещё рано паниковать, и всё обойдётся - скорее всего, это просто нелепая случайность.
@@ -293,7 +292,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     "Повременим", – тихо сказал он сам себе вслух и убрал руку от кармана, где лежал свиток.
@@ -304,7 +303,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Развернув полотенце, он увидел румяную корочку, которая так манила его на берегу.
@@ -315,7 +314,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Откусив первый кусок и прожевав его, Корос почувствовал, как по его щеке прокатилась слеза.
@@ -327,7 +326,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Злоба и жажда мести, что всё время сжигали его изнутри, то и дело напоминали о себе.
@@ -339,7 +338,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Доев булку и запив её холодной водой из бурдюка, Корос потянулся и почувствовал, как его тянет в сон.
@@ -350,7 +349,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message12 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message12 && <div className={classes.openingScene}>
                 <p>
                     Всё время, пока он спал, ему снилось его детство. Его мать, отец, дом и даже друзья, с которыми он бегал по улицам, будучи совсем ребёнком.
                     Цветущие сады городка, в котором они жили тогда, и огромный постамент в центре площади, по которому вечно лазила ребятня.

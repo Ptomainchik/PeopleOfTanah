@@ -3,7 +3,6 @@ import { useState } from "react";
 import CaravanerMerchant from "../../../../Images/CaravanerMerchant.webp";
 import RegistanGuard from "../../../../Images/RegistanGuard.webp";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import StreetsRegistan from "../../../../Images/StreetsRegistan.jpg";
 import RegistanСoast from "../../../../Images/RegistanСoast.jpg";
 import { Dice } from "../Dice/Dice";
 
@@ -211,8 +210,8 @@ export const Level5 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
-                <img src={RegistanСoast} alt="RegistanСoast" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
+            {showOpeningScene && <div className={classes.openingScene}>
+                <img src={RegistanСoast} alt="RegistanСoast" style={{borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                     На подступах в бухту, перед путниками открылся сияющий и утопающий в песках город "Хоршид". 
                     Портовая крепость и главный морской торговый узел Конфедерации племён. 
@@ -223,7 +222,7 @@ export const Level5 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            {showOpeningScene2 && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
+            {showOpeningScene2 && <div className={classes.openingScene}>
                 <p>
                     Сойдя на берег, Корос протянул руку капитану в тайном рукопожатии, а затем положив ему руку на плечо, улыбнулся и тихо сказал: - Всё будет хорошо. 
                     Пожав ему руку, парень понималще кивнул и улыбнулся в ответ, лишь сказав ему: - Я знаю, Корос, я знаю. Затем рыцарь молча развернулся и пошёл в сторону прибрежных улиц.
@@ -236,11 +235,11 @@ export const Level5 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsRegistan})`, border: "solid 0.3vw darkred"}}>
+            <div className={classes.playingFieldLevelInmar5} style={{border: "solid 0.3vw darkred"}}>
                 {!showMessageQuest.message8 && !showMessageQuest.message7 && <img src={CaravanerMerchant} alt="CaravanerMerchant"  className={classes.characterInmarImg5}/>}
                 {!showMessageQuest.message1 && !showMessageQuest.message2 && !showMessageQuest.message3 && !showMessageQuest.message4 && !showMessageQuest.message5 && <img src={RegistanGuard} alt="CaravanerMerchant"  className={classes.characterInmarImg51}/>}
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
                     Такому мужчине, как вы, скорее всего, не помешали бы хорошие сапоги, а может, желаете весь наряд обновить? 
@@ -250,41 +249,41 @@ export const Level5 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
                     Также имеется большой ассортимент украшений из драгоценных камней. 
                     Давайте пройдем ко мне, вам обязательно что-нибудь приглянется.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Было бы не плохо</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Что не так с моей одеждой?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Эм... не знаю</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
                     Возможно, вас еще заинтересуют разного вида развлечения?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я как раз об этом думал</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Так сходу?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Например что?</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Караванщик:</h1>
                 <p className={classes.question}>
                     Для начала могу предложить сыграть в кости. А дальше посмотрим. 
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С удовольствием</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну давай... игрок</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Тебе меня не обыграть</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
                     Караванщик отошёл в сторону и присел на пороге небольшого дома. 
@@ -298,7 +297,7 @@ export const Level5 = (props:any) => {
                 setCountContra={props.setCountContra} 
                 setCountNeutral={props.setCountNeutral}
                 handleNextMessage={handleNextMessage}/>}
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>Стражник:</h1>
                 <p className={classes.question}>
                     После недавних беспорядков губернатор запретил азартные игры на территории Хоршида. 
@@ -308,7 +307,7 @@ export const Level5 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message8 && <div className={classes.openingScene}>
                 <p>
                     Корос не успел даже подумать, как его тут же скрутил второй стражник, который всё это время стоял за спиной.
                     Сам караванщик, почувствовав неладное, успел сбежать, когда стража задерживала рыцаря.

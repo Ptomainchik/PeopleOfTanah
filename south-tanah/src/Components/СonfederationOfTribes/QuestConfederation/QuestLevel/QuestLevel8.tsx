@@ -304,7 +304,7 @@ export const Level8 = (props:any) => {
 
     return (
         <div className={classes.questPage}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Сломав печать, Неман дрожащими руками медленно развернул свиток. Он ожидал увидеть что угодно - тайную переписку, документы о наследстве или даже королевскую депешу. 
                     Но то, что он обнаружил, одновременно напугало и ошарашило его неожиданной удачей.
@@ -318,7 +318,7 @@ export const Level8 = (props:any) => {
                 </h3>
             </div> }
             
-            {showMessageQuest && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest && <div className={classes.openingScene}>
                 <p>
                     Рокот сердца постепенно стихал, но грозный вид статуи, смотревшей сверху на караванщика, ввёл его в ступор. 
                     Немана словно пронзила молния - он не мог пошевелиться, ощущая лишь полную тишину и холодные капли пота, стекающие по вискам.
@@ -328,14 +328,14 @@ export const Level8 = (props:any) => {
                     Что делать теперь, когда он увидел новый Инмар - не тот, о котором твердили с детства, а мир, полный сострадания и любви к ближнему? 
                     Совесть предательски грызла, алчность сводила с ума, но времени на раздумья не оставалось, так как из соседнего зала послышались шаги. Нужно было решать всё здесь и сейчас.
                 </p>
-                <div className={classes.finalBlockAnswer} style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.finalBlockAnswer}>
                     <h3 className={classes.answer1} onClick={handleFinalLoyal}>Оставить деклорации</h3>
                     <h3 className={classes.answer2} onClick={handleFinalContra}>Забрать деклорации</h3>
                     <h3 className={classes.answer3} onClick={handleFinalNeutral}>Сомневаться</h3>
                 </div>
             </div> }
 
-            {showFinalScene.loyalL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalL && <div className={classes.openingScene}>
                 <p>
                     Так и не сумев побороть в себе совесть, Неман вернул декларации в выемку и прикрыл их кирпичом. Когда спустя мгновение в зал вошёл праведник, караванщик почувствовал, будто камень свалился с его плеч. 
                     Увидев служителя церкви, он искренне улыбнулся, с нетерпением ожидая продолжения рассказа о великом Белом Быке.
@@ -346,7 +346,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalC && <div className={classes.openingScene}>
                 <p>
                     Долго обдумывая, что делать с декларацией, Неман не заметил, как к нему подошёл вернувшийся праведник. 
                     Увидев торговца со свитком в руках и открытым потайным отверстием в подножии статуи его божества - о котором служитель даже не подозревал - мужчина мгновенно всё понял.
@@ -358,7 +358,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.loyalN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.loyalN && <div className={classes.openingScene}>
                 <p>
                     Не решившись пойти на подлость, Неман вернул декларации на место. Как вдруг услышал за спиной лёгкое покашливание.
                     Встав и обернувшись, торговец увидел улыбающегося праведника, бесшумно вернувшегося с книгами в руках.
@@ -368,7 +368,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraL && <div className={classes.openingScene}>
                 <p>
                     Не долго думая, торговец схватил декларацию и сунул её во внутренний карман джеллабы. Не мешкая, он направился к выходу. Только он захлопнул дверь храма, как обернулся и увидел двух солдат, пристально смотрящих на него.
                     Пытаясь скрыть тревогу, Неман произнёс: Добрый день. Те кивнули в ответ, и, казалось, уже должны были разминуться с ним. Но неожиданно один из стражников остановил караванщика: Где ваш торговый жетон? Почему он не на виду?
@@ -379,7 +379,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraC && <div className={classes.openingScene}>
                 <p>
                     Заглушив совесть вескими доводами о том, что люди Инмара - глупцы, поклоняющиеся несуществующему богу, а прибыль от этой находки обеспечит ему безбедное существование на всю оставшуюся жизнь, Неман схватил свиток и тут же направился прочь из храма. 
                     Поправляя жетон торговца на груди, он шел и думал, что наконец ухватил судьбу за глотку. 
@@ -392,7 +392,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.contraN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.contraN && <div className={classes.openingScene}>
                 <p>
                     Решение пришло внезапно. "Какой там Белый Бык... - подумал он. - Просто сказки невежественных людей, возомнивших себя хранителями истины. Они исказили реальность и сами поверили в свою ложь". Пусть верят во что хотят - он же здесь ради прибыли, которая сама плывёт в руки.
                     Аккуратно спрятав свиток под одеждой, Неман вернул кирпич на место, будто ничего не произошло. Когда вернулся праведник, торговец лишь думал, как бы поскорее от него избавиться, не вызвав подозрений.
@@ -408,7 +408,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralL && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralL && <div className={classes.openingScene}>
                 <p>
                     "Пусть будет так", - прошептал Неман, пряча свиток в набедренную сумку. Закрыв потайное отверстие в основании статуи, он окинул взглядом храм - уйти сразу было нельзя, это вызвало бы подозрения.
                     Не успел он осмотреть внутреннее убранство, как из соседнего зала вернулся праведник с книгами. Подойдя вплотную, служитель прищурился:
@@ -425,7 +425,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralC && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralC && <div className={classes.openingScene}>
                 <p>
                     Отмахнувшись от двойственных чувств, Неман сжал свиток и сунул его во внутренний карман. Чтобы успокоить совесть, он решил, что направит часть прибыли на нужды церкви - ведь теперь он знал все торговые тайны Инмара.
                     Замаскировав следы проникновения, он дождался праведника. "Мне срочно нужно уйти, - с наигранной грустью сказал караванщик, - но я обязательно вернусь за новыми знаниями о Белом Быке". Служитель понимающе кивнул и проводил его до выхода.
@@ -436,7 +436,7 @@ export const Level8 = (props:any) => {
                 <h3  className={classes.buttonNextSceneConfederation} onClick={handleClickHome}>---На главную---</h3>
             </div>}
 
-            {showFinalScene.neutralN && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showFinalScene.neutralN && <div className={classes.openingScene}>
                 <p>
                     Обуреваемый внутренними противоречиями, Неман всё же забрал свиток, пообещав себе часть прибыли пожертвовать церкви Белого Быка. 
                     Вдруг раздался скрип двери - в проёме стоял праведник, сгибавшийся под тяжестью книг.

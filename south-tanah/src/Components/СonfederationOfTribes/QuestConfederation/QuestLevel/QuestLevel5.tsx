@@ -2,7 +2,6 @@ import { useState } from "react";
 import classes from "../../../../Styles/QuestLevel.module.css";
 import Bandit from "../../../../Images/Bandit.webp";
 import DesertTexture from "../../../../Images/DesertTexture.jpg";
-import ForestInmar from "../../../../Images/ForestInmar.jpg";
 import { BattleInTheForest } from "./BattleInTheForest/BattleInTheForest";
 
 export const Level5 = (props:any) => {
@@ -203,7 +202,7 @@ export const Level5 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${DesertTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Спустя неделю плодотворной торговли в Лутуте, Неман всё же решил отправиться в Киллат.
                     Но чтобы не тягаться с караваном по лесам Инмара, он взял в аренду обоз и загрузил в него нераспроданный товар, привезённый из Конфедерации, с намерением продать его уже в Киллате.
@@ -218,10 +217,10 @@ export const Level5 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${ForestInmar})`, border: "solid 0.3vw goldenrod"}}>
+            <div className={classes.playingFieldLevelConfederation5} style={{border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message7 && !showMessageQuest.message8 && !showMessageQuest.message9 && <img src={Bandit} alt="GuardInmar"  className={classes.characterConfederationImg5}/>}
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Вдруг навстречу обозу, как из ниоткуда, выскочила свора мужчин, явно похожих на грабителей.
@@ -232,40 +231,40 @@ export const Level5 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Разбойник:</h1>
                 <p className={classes.question}>
                     Ого! Торговцы из Конфедерации, а это, видимо, ваши товары. Какая удача, что мы вас встретили - такое у нас впервые 
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что вам нужно от нас?</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Уйдите с дороги</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Кто мы вас не касается</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Разбойник:</h1>
                 <p className={classes.question}>
                     Я и мои друзья контролируем эту дорогу, и каждый, кто проезжает по ней, должен оплатить проезд
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Это грабёж?</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>И не надейся</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Удобно устроились</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Разбойник:</h1>
                 <p className={classes.question}>
                     Хватит трындеть! Отдавайте барахло - и катитесь куда угодно.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Пошёл прочь!</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Оставьте хотя бы половину</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>А ты попробуй отними</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                  <h1>----------</h1>
                 <p className={classes.question}>
                     В это время толпа медленно начала окружать обоз. Похоже, без драки не обойтись.
@@ -278,7 +277,7 @@ export const Level5 = (props:any) => {
                 setCountContra={props.setCountContra} 
                 setCountNeutral={props.setCountNeutral}
                 handleNextMessage={handleNextMessage}/> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     После нападения Неман не стал искушать судьбу и погнал лошадей дальше, озираясь по сторонам в ожидании ещё каких-нибудь сюрпризов из чащи.
@@ -287,7 +286,7 @@ export const Level5 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message8 && <div className={classes.openingScene}>
                 <p>
                     Оставшаяся дорога к Киллату прошла незаметно - то ли оттого, что торговцы сильно нервничали, то ли оттого, что Неман не давал лошадям отдохнуть, постоянно подгоняя их.
                     Но тот прекрасный вид, которым они любовались в начале поездки на север, уже не казался им таким идеальным. Из-за каждого куста или дерева то и дело чудились лица и силуэты каких-то людей.

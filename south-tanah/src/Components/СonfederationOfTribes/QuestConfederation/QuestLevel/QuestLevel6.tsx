@@ -2,7 +2,6 @@ import { useState } from "react";
 import classes from "../../../../Styles/QuestLevel.module.css";
 import OldWoman from "../../../../Images/OldWoman.webp";
 import DesertTexture from "../../../../Images/DesertTexture.jpg";
-import StreetsOfKillat from "../../../../Images/StreetsOfKillat.jpg";
 
 export const Level6 = (props:any) => {
     const [showMessageQuest, setShowMessageQuest]:any = useState({
@@ -566,7 +565,7 @@ export const Level6 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${DesertTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw goldenrod"}}>
+            {showOpeningScene && <div className={classes.openingScene}>
                 <p>
                     Наконец, добравшись до Киллата, перед караванщиками предстал город, утопавший в зелени. Будто среди лесов и скал из-под земли вдруг вырос град со шпилями церквей и храмов.
                     А среди построек, куда ни посмотри, возвышались монументы Белого Быка. На этот раз их даже никто не проверял на въезде, а вместо толп стражников и солдат по улицам ходили мужчины и женщины, облачённые в белые рясы.
@@ -578,10 +577,10 @@ export const Level6 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${StreetsOfKillat})`, border: "solid 0.3vw goldenrod"}}>
+            <div className={classes.playingFieldLevelConfederation6} style={{border: "solid 0.3vw goldenrod"}}>
                 {!showMessageQuest.message1 && <img src={OldWoman} alt="OldWoman"  className={classes.characterConfederationImg6}/>}
             </div>
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Как только обоз скрылся за углом, Неман обвёл взглядом площадь и не знал, куда ему направиться дальше.
@@ -591,51 +590,51 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Молодой человек, вы откуда?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Из Конфедерации</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну из пустыни, а что?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Из далёкого юга</p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     По вам сразу видно, что вы не инмарец.
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Что меня выдаёт?</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Чего это?</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Видимо, из-за одежды</p>
                 </div>
             </div> }
-            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message4 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Вы ни разу не поклонились перед обликом Быка. Да и ваш взгляд выглядит потерянным, словно вы здесь впервые. Что привело вас сюда?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Я торговец</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Торговые дела</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Я хозяин каравана</p>
                 </div>
             </div> }
-            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     О… В этом городе, кроме сувениров и церковной утвари, вы ничего не найдете. Но можете посетить храмы и местные церкви, если вам это интересно. 
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Это было бы здорово</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Разве что из интереса</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Возможно это стоит того</p>
                 </div>
             </div> }
-            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message6 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Это хорошие мысли. Откуда ты родом - не имеет значения: Белый Бык принимает всех людей в свои объятия.
@@ -646,18 +645,18 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message7 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Когда-то церковь меня спасла и продолжает помогать и впредь. Когда я была ещё молода и здорова… Извини, тебе интересно?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>Да бабуля</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Не очень, но я послушаю</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Продолжайте, продолжайте</p>
                 </div>
             </div> }
-            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message8 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Так вот о чём это я. А ну да. В моей молодости произошла страшная трагедия в семье. 
@@ -669,7 +668,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message9 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Как же я тогда была не права, думая, что больше никогда его не увижу. 
@@ -681,7 +680,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message10 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Наблюдая, как его брат горит заживо, Кесил в ужасе убежал из дома в лес. 
@@ -693,7 +692,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message11 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Посередине лесной чащи, в траве лежало изувеченное тельце моего братишки. У него не было лица и рук, он был весь изодран клыками животных. 
@@ -704,7 +703,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message12 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message12 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Лишь через три года жизни в монастыре ко мне постепенно начал возвращаться разум. И вот тогда я вспомнила всё, что произошло с моей семьей. 
@@ -715,7 +714,7 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message13 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message13 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Так год за годом, обретя покой, я и сама стала помогать обиженным судьбой людям. 
@@ -727,21 +726,21 @@ export const Level6 = (props:any) => {
                     <p className={classes.buttonNextMessageConfederation} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message14 && <div className={classes.blockMessage} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message14 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw goldenrod"}}>
                 <h1>Бабушка:</h1>
                 <p className={classes.question}>
                     Сейчас я также стараюсь не отставать от молодых праведников, но уже не так, как когда-то: старость неумолимо сказывается на самочувствии. 
                     Я бы посоветовала тебе для начала посетить наш главный храм в Киллате. Если хочешь, я проведу тебя туда?
                 </p>
-                <div style={{display: "flex", justifyContent: "space-between", textAlign: "center"}}>
+                <div className={classes.answerBlock}>
                     <p id={"1"} className={classes.answer1} onClick={handleStateEnding}>С удовольствием</p>
                     <p id={"2"} className={classes.answer2} onClick={handleStateEnding}>Ну показывайте его</p>
                     <p id={"3"} className={classes.answer3} onClick={handleStateEnding}>Веди, бабушка </p>
                 </div>
             </div> }
-            {showMessageQuest.message15 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message15 && <div className={classes.openingScene}>
                 <p>
-                    - Тут недалеко, иди за мной, - промолвила бабушка и тут же так быстро засеменила ногами в сторону, где над крышами возвышался шпиль белого цвета, что торговец едва успевал за ней. 
+                    Тут недалеко, иди за мной, - промолвила бабушка и тут же так быстро засеменила ногами в сторону, где над крышами возвышался шпиль белого цвета, что торговец едва успевал за ней. 
                     В пути старушка то и дело рассказывала разные истории о добродетелях церкви и её последователях, о том, что всё в мире создал Белый Бык, и его благосклонность обнимает каждого, кто нуждается в его помощи. 
                     Пока они шли, Неману казалось, будто его проводницу знает весь город. 
                     Все, кто встречался им в дороге, уважительно кланялись старой доброй женщине. 

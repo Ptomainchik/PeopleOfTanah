@@ -1,7 +1,6 @@
 import classes from "../../../../Styles/QuestLevel.module.css";
 import { useState } from "react";
 import StoneTexture from "../../../../Images/Stone.jpg";
-import Storm from "../../../../Images/Storm.jpg";
 import SeaHorizon from "../../../../Images/SeaHorizon.jpg";
 import { NavalBattle } from "../NavalBattle/NavalBattle";
 
@@ -69,8 +68,8 @@ export const Level4 = (props:any) => {
 
     return (
         <div className={classes.questPage} style={{ backgroundImage: `url(${StoneTexture})` }}>
-            {showOpeningScene && <div className={classes.openingScene} style={{ border:"solid 0.3vw darkred"}}>
-                <img src={SeaHorizon} alt="SeaHorizon" style={{borderRight: "solid 0.3vw darkred", borderLeft: "solid 0.3vw darkred", borderBottom: "solid 0.3vw darkred"}}/>
+            {showOpeningScene && <div className={classes.openingScene}>
+                <img src={SeaHorizon} alt="SeaHorizon" style={{borderBottom: "solid 0.3vw darkred"}}/>
                 <p>
                     Море - одна мысль о нём вызывала в Коросе двойственное чувство. 
                     С одной стороны, его синие воды, сверкающие под лучами солнца, и теплый ветер дарили внутреннее умиротворение. 
@@ -85,10 +84,10 @@ export const Level4 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            <div className={classes.playingFieldLevel} style={{backgroundImage: `url(${Storm})`, border: "solid 0.3vw darkred"}}>
+            <div className={classes.playingFieldLevelInmar4} style={{border: "solid 0.3vw darkred"}}>
                 <div className={classes.bortOfShip}></div>
             </div>
-            {showOpeningScene2 && <div className={classes.openingScene} style={{border: "solid 0.3vw darkred"}}>
+            {showOpeningScene2 && <div className={classes.openingScene}>
                 <p>
                     На середине пути молодой капитан разбудил Короса, сказав, что погода испортилась и вскоре их ожидает шторм.
                     От этих слов у рыцаря, который и так не мог уснуть из-за морской болезни, по спине пробежали мурашки, и детский страх вновь застучал в висках. А самое страшное - бежать было некуда. Они посреди моря, и единственное, что отделяет его от воды, - это борт корабля.
@@ -108,7 +107,7 @@ export const Level4 = (props:any) => {
                     -----Продолжить-----
                 </h3>
             </div> }
-            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message1 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     На удивление, корабль перестал качаться на волнах, но вместо этого его начало трясти, словно кто-то пытался вскрыть его со дна. 
@@ -118,7 +117,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message2 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     Только не это, - обреченно промолвил капитан "Алиеты". 
@@ -128,7 +127,7 @@ export const Level4 = (props:any) => {
                     <p className={classes.buttonNextMessageInmar} onClick={handleNextMessage}> ---Продолжить--- </p>
                 </div>
             </div> }
-            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{border: "solid 0.3vw darkred"}}>
+            {showMessageQuest.message3 && <div className={classes.blockMessage} style={{borderTop: "solid 0.3vw darkred"}}>
                 <h1>----------</h1>
                 <p className={classes.question}>
                     "Плещется водичка, рыбка на крючке, до чего же радостно с удочкой мне. 
@@ -143,7 +142,7 @@ export const Level4 = (props:any) => {
                 setCountContra={props.setCountContra} 
                 setCountNeutral={props.setCountNeutral}
                 handleNextMessage={handleNextMessage}/> }
-            {showMessageQuest.message5 && <div className={classes.openingScene} style={{border: "solid 0.3vw goldenrod"}}>
+            {showMessageQuest.message5 && <div className={classes.openingScene}>
                 <p>
                     Капитан был прав: море - непредсказуемая стихия, и лишь глупцы относятся к нему пренебрежительно, считая его должностью. 
                     Ведь оно действительно живое, и это имя получено не просто так, а заслужено в схватке с храбрецами, бросившими вызов стихии. 

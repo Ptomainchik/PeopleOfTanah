@@ -19,7 +19,7 @@ export const QuestConfederation = () => {
 
     return (
         <div>
-            <div className={classes.topbar}><HomeButton/>Квест<BackButton/></div>
+            <div className={classes.topbar} style={{background: "goldenrod"}}><HomeButton/>Квест<BackButton/></div>
             {showLevel === 1 && (
                 <Level1 
                     countLoyal={countLoyal}

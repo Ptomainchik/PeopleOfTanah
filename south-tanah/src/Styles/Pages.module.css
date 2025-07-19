@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center; 
     border: solid 0.3vw grey;
+    position: fixed;
  }
 
 .overflowInfoPages{

@@ -10,7 +10,7 @@
    display: flex; 
    align-items: center;
    justify-content: center; 
-   border: solid 0.3vw grey;
+   border-right: solid 0.3vw grey;
    cursor: pointer;
 }
 
@@ -30,7 +30,7 @@
    display: flex; 
    align-items: center;
    justify-content: center; 
-   border: solid 0.3vw grey;
+   border-left: solid 0.3vw grey;
    cursor: pointer;
 }
 
