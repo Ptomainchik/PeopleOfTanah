@@ -281,6 +281,27 @@
     z-index: 20;
 }
 
+.healthTheftPrevention{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10vw;
+    height: 1vw;
+}
+
+.healthTheftPrevention::-webkit-progress-inner-element {
+    border: 0.1vw solid rgb(0, 0, 0);
+}
+  
+.healthTheftPrevention::-webkit-progress-bar {
+    background-color: rgb(189, 189, 189);
+    
+}
+  
+.healthTheftPrevention::-webkit-progress-value {
+    background-color: orange;
+}
+
+
 .blockTheftPrevention{
     width: 10vw;
     height: 10vw;
@@ -453,14 +474,1140 @@
 
 @media (max-width: 480px) {
 
+.battleInTheForestPage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Forest.jpg) no-repeat center; 
+    background-size: cover;
+    color: wheat;
+    font-size: 1.5vw;
+    font-family: "El Messiri";
+}
+
+.blockBandit{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockBandit p{
+    margin: 0;
+    font-size: 5vw;
+}
+
+.healthBandits{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30vw;
+    height: 5vw;
+}
+
+.blockBaggage{
+    width: 30vw;
+    height: 10vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockBaggage p{
+    margin: 0;
+    font-size: 5vw;
+}
+
+.healthBaggage{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30vw;
+    height: 5vw;
+}
+
+.leftBandit1Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit1Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftBandit2Up{
+    width: 30vw;
+    height: 50vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit2Down{
+    width: 30vw;
+    height: 50vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit1Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit1Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit2Up{
+    width: 30vw;
+    height: 50vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit2Down{
+    width: 30vw;
+    height: 50vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headBanditUp{
+    width: 30vw;
+    height: 60vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headBanditDown{
+    width: 30vw;
+    height: 60vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+@keyframes  shiftUp {
+    0%, 100% {
+        bottom: -30%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@keyframes  shiftDown {
+    0%, 100% {
+        bottom: 15%;
+    }
+
+    100% {
+        bottom: -30%;
+    }
+}
+
+.baggage{
+    width: 100%;
+    height: 23%;
+    position: absolute;
+    bottom: 0;
+    background: url(../../Images/Baggage.webp) no-repeat center;
+    background-size: cover;
+    z-index: 20;
+}
+
+.healthTheftPrevention{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30vw;
+    height: 5vw;
+    position: absolute;
+    top: -200%;
+}
+
+.blockTheftPrevention{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+
+.blockTheftPrevention p{
+    position: absolute;
+    top: -270%;
+    left: 0;
+    margin: 0;
+    font-size: 5vw;
+}
+
+.blockTheftPrevention span{
+    font-family: "El messiri";
+    font-size: 5vw;
+    position: absolute;
+    top: -210%;
+    left: 320%;
+    color: white;   
+}
+
+.buttonTheftPrevention{
+    width: 23vw;
+    height: 23vw;
+    position: absolute;
+    bottom: 1%;
+    left: 75%;
+    background: url(../../Images/Hand.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 5vw;
+    margin: 2%;
+}
+
+.message{
+    width: 80vw;
+    height: 90vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.8;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 15%;
+    right: 13%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 22%;
+    left: 13%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 63%;
+    left: 12%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+.battleInTheForestPage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Forest.jpg) no-repeat center; 
+    background-size: cover;
+    color: wheat;
+    font-size: 1.5vw;
+    font-family: "El Messiri";
+}
+
+.blockBandit{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockBandit p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthBandits{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.blockBaggage{
+    width: 25vw;
+    height: 10vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockBaggage p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthBaggage{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.leftBandit1Up{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit1Down{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftBandit2Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit2Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit1Up{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit1Down{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit2Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit2Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headBanditUp{
+    width: 30vw;
+    height: 57vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headBanditDown{
+    width: 30vw;
+    height: 57vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+@keyframes  shiftUp {
+    0%, 100% {
+        bottom: -30%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@keyframes  shiftDown {
+    0%, 100% {
+        bottom: 15%;
+    }
+
+    100% {
+        bottom: -30%;
+    }
+}
+
+.baggage{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
+    background: url(../../Images/Baggage.webp) no-repeat center;
+    background-size: cover;
+    z-index: 20;
+}
+
+.healthTheftPrevention{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+    position: absolute;
+    top: -120%;
+}
+
+.blockTheftPrevention{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+
+.blockTheftPrevention p{
+    position: absolute;
+    top: -170%;
+    left: 0;
+    margin: 0;
+    font-size: 4vw;
+}
+
+.blockTheftPrevention span{
+    font-family: "El messiri";
+    font-size: 5vw;
+    position: absolute;
+    top: -140%;
+    left: 270%;
+    color: white;   
+}
+
+.buttonTheftPrevention{
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    bottom: 1%;
+    left: 75%;
+    background: url(../../Images/Hand.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 4vw;
+    margin: 2%;
+}
+
+.message{
+    width: 70vw;
+    height: 80vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.7;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
     
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+
+.battleInTheForestPage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Forest.jpg) no-repeat center; 
+    background-size: cover;
+    color: wheat;
+    font-size: 1.5vw;
+    font-family: "El Messiri";
+}
+
+.blockBandit{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockBandit p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthBandits{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.blockBaggage{
+    width: 25vw;
+    height: 10vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockBaggage p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthBaggage{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.leftBandit1Up{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit1Down{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftBandit2Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftBandit2Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit1Up{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit1Down{
+    width: 30vw;
+    height: 44vw;
+    background: url(../../Images/Bandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 1%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightBandit2Up{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightBandit2Down{
+    width: 30vw;
+    height: 47vw;
+    background: url(../../Images/BanditWithAnAxe.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headBanditUp{
+    width: 30vw;
+    height: 57vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headBanditDown{
+    width: 30vw;
+    height: 57vw;
+    background: url(../../Images/HeadBandit.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+@keyframes  shiftUp {
+    0%, 100% {
+        bottom: -30%;
+    }
+
+    100% {
+        bottom: 15%;
+    }
+}
+
+@keyframes  shiftDown {
+    0%, 100% {
+        bottom: 15%;
+    }
+
+    100% {
+        bottom: -30%;
+    }
+}
+
+.baggage{
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 0;
+    background: url(../../Images/Baggage.webp) no-repeat center;
+    background-size: cover;
+    z-index: 20;
+}
+
+.healthTheftPrevention{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+    position: absolute;
+    top: -120%;
+}
+
+.blockTheftPrevention{
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 25%;
+    left: 5%;
+}
+
+.blockTheftPrevention p{
+    position: absolute;
+    top: -170%;
+    left: 0;
+    margin: 0;
+    font-size: 4vw;
+}
+
+.blockTheftPrevention span{
+    font-family: "El messiri";
+    font-size: 5vw;
+    position: absolute;
+    top: -140%;
+    left: 270%;
+    color: white;   
+}
+
+.buttonTheftPrevention{
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    bottom: 1%;
+    left: 75%;
+    background: url(../../Images/Hand.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 4vw;
+    margin: 2%;
+}
+
+.message{
+    width: 70vw;
+    height: 80vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.7;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 22%;
+    left: 10%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 15vw;
+    height: 20vw;
+    background: goldenrod;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
     
 }

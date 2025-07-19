@@ -452,30 +452,6 @@
     width: 10vw;
     height: 8vw;
     background: darkred;
-    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
-    position: absolute;
-    bottom: 4%;
-    left: 19%;
-    z-index: 21;
-    animation: shiftHorizont 1s infinite;
-}
-
-.arrow2{
-    width: 10vw;
-    height: 8vw;
-    background: darkred;
-    position: absolute;
-    top: 4%;
-    right: 19%;
-    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
-    z-index: 21;
-    animation: shiftHorizont 1s infinite;
-}
-
-.arrow3{
-    width: 10vw;
-    height: 8vw;
-    background: darkred;
     position: absolute;
     bottom: 5%;
     right: 19%;
@@ -484,7 +460,7 @@
     animation: shiftHorizont 1s infinite;
 }
 
-.arrow4{
+.arrow2{
     width: 10vw;
     height: 8vw;
     background: darkred;
@@ -496,7 +472,7 @@
     animation: shiftHorizont 1s infinite;
 }
 
-.arrow5{
+.arrow3{
     width: 8vw;
     height: 10vw;
     background: darkred;
@@ -508,7 +484,7 @@
     animation: shift 1s infinite;
 }
 
-.arrow6{
+.arrow4{
     width: 8vw;
     height: 10vw;
     background: darkred;
@@ -520,7 +496,7 @@
     animation: shift 1s infinite;
 }
 
-.arrow7{
+.arrow5{
     width: 10vw;
     height: 8vw;
     background: darkred;
@@ -532,7 +508,7 @@
     animation: shiftHorizont 1s infinite;
 }
 
-.arrow8{
+.arrow6{
     width: 10vw;
     height: 8vw;
     background: darkred;
@@ -544,7 +520,7 @@
     animation: shiftHorizont 1s infinite;
 }
 
-.arrow9{
+.arrow7{
     width: 10vw;
     height: 8vw;
     background: darkred;
@@ -586,14 +562,1530 @@
 
 @media (max-width: 480px) {
 
+.miniGamePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    font-family: "El Messiri";
+}
+
+.diceButton{
+    width: 30vw;
+    height: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.pickUpCoinsButton{
+    width: 30vw;
+    height: 10vw;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.dicePlayerField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.diceOpponentField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.dice1{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice1.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice2{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice2.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice3{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice3.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice4{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice4.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice5{
+    width: 8vw;
+    height: 8vw;    
+    background: url(../../Images/WhiteDice5.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice6{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice6.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.chipPlayerField{
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    left: 5%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.chipPlayerField h1{
+    width: 24vw;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700
+}
+
+.chipOpponentField{
+    width: 25vw;
+    height: 40vw;
+    position: absolute;
+    right: 5%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chipOpponentField h1{
+    width: 24vw;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700
+}
+
+.betPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    left: 30%;
+    animation: shiftPlayer 1s forwards;
+}
+
+.betPlayer h1{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftPlayer {
+    0%, 100% {
+        top: 16%;
+        left:8%;
+    }
+
+    100% {
+        top: 41.5%;
+        left: 30%;
+    }
+}
+
+.betOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    right: 30%;
+    animation: shiftOpponent 1s forwards;
+}
+
+.betOpponent h1{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftOpponent {
+    0%, 100% {
+        top: 74%;
+        right: 8%;
+    }
+
+    100% {
+        top: 41.5%;
+        right: 30%;
+    }
+}
+
+.buttonCheating{
+    width: 30vw;
+    height: 10vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 27%;
+    left: 65%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 3.5vw;
+}
+
+.buttonTrickery{
+    width: 30vw;
+    height: 10vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 31%;
+    left: 65%;
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 3.5vw;
+    cursor: pointer;
+}
+
+.pointDicePlayerField{
+    width: 35vw;
+    height: 10vw;
+    position: absolute;
+    right: 5%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDicePlayerField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700
+}
+
+.sumPointsPlayer{
+    width: 15vw;
+    height: 25vw;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
+.pointDiceOpponentField{
+    width: 35vw;
+    height: 10vw;
+    position: absolute;
+    left: 5%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDiceOpponentField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 3.5vw;
+    font-weight: 700
+}
+
+.sumPointsOpponent{
+    width: 15vw;
+    height: 25vw;
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 302;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 5vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 8vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%; 
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 4vw;
+    margin: 2%;
+}
+
+.message{
+    width: 90vw;
+    height: 100vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.8;
+    font-size: 1.5vw;
+    z-index: 22;
+}
+
+.buttonRule{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow2{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow3{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 23%;
+    left: 40%;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow4{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 31%;
+    left: 40%;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow5{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%, 40% 70%);
+    position: absolute;
+    top: 42%;
+    left: 42.5%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow6{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow7{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 73%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+.miniGamePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    font-family: "El Messiri";
+}
+
+.diceButton{
+    width: 25vw;
+    height: 8vw;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.pickUpCoinsButton{
+    width: 25vw;
+    height: 8vw;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.dicePlayerField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.diceOpponentField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.dice1{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice1.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice2{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice2.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice3{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice3.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice4{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice4.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice5{
+    width: 8vw;
+    height: 8vw;    
+    background: url(../../Images/WhiteDice5.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice6{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice6.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.chipPlayerField{
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    left: 2%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.chipPlayerField h1{
+    width: 20vw;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size:  2.8vw;
+    font-weight: 700
+}
+
+.chipOpponentField{
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    right: 2%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chipOpponentField h1{
+    width: 20vw;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size:  2.8vw;
+    font-weight: 700
+}
+
+.betPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    left: 30%;
+    animation: shiftPlayer 1s forwards;
+}
+
+.betPlayer h1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftPlayer {
+    0%, 100% {
+        top: 18%;
+        left: 6%;
+    }
+
+    100% {
+        top: 35%;
+        left: 30%;
+    }
+}
+
+.betOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    right: 30%;
+    animation: shiftOpponent 1s forwards;
+}
+
+.betOpponent h1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftOpponent {
+    0%, 100% {
+        top: 72%;
+        right: 6%;
+    }
+
+    100% {
+        top: 35%;
+        right: 30%;
+    }
+}
+
+.buttonCheating{
+    width: 25vw;
+    height: 8vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 2.8vw;
+}
+
+.buttonTrickery{
+    width: 25vw;
+    height: 8vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 60%;
+    left: 2%;
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 2.8vw;
+    cursor: pointer;
+}
+
+.pointDicePlayerField{
+    width: 30vw;
+    height: 8vw;
+    position: absolute;
+    right: 2%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDicePlayerField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700
+}
+
+.sumPointsPlayer{
+    width: 15vw;
+    height: 10vw;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
+.pointDiceOpponentField{
+    width: 30vw;
+    height: 8vw;
+    position: absolute;
+    left: 2%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDiceOpponentField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700
+}
+
+.sumPointsOpponent{
+    width: 15vw;
+    height: 10vw;
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 302;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%; 
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 3.5vw;
+    margin: 2%;
+}
+
+.message{
+    width: 80vw;
+    height: 90vw;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.8;
+    z-index: 22;
+}
+
+.buttonRule{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow2{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 63%;
+    left: 52%;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow3{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 57%;
+    left: 30%;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow4{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow5{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%, 40% 70%);
+    position: absolute;
+    top: 36%;
+    left: 42.5%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow6{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow7{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 73%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
     
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     
+.miniGamePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: wheat;
+    font-family: "El Messiri";
+}
+
+.diceButton{
+    width: 25vw;
+    height: 8vw;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.pickUpCoinsButton{
+    width: 25vw;
+    height: 8vw;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%) translateY(-50%);
+    background: grey;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700;
+    border: solid 0.3vw darkred;
+    cursor: pointer;
+}
+
+.dicePlayerField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.diceOpponentField{
+    width: 96%;
+    height: 10%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid darkred 0.3vw;
+    background: grey;
+}
+
+.dice1{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice1.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice2{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice2.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice3{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice3.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice4{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice4.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice5{
+    width: 8vw;
+    height: 8vw;    
+    background: url(../../Images/WhiteDice5.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.dice6{
+    width: 8vw;
+    height: 8vw;
+    background: url(../../Images/WhiteDice6.jpg) no-repeat;
+    background-size: contain;
+    border-radius: 20%;
+    border: solid 0.1vw black;
+}
+
+.chipPlayerField{
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    left: 2%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.chipPlayerField h1{
+    width: 20vw;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size:  2.8vw;
+    font-weight: 700
+}
+
+.chipOpponentField{
+    width: 20vw;
+    height: 30vw;
+    position: absolute;
+    right: 2%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.chipOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chipOpponentField h1{
+    width: 20vw;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size:  2.8vw;
+    font-weight: 700
+}
+
+.betPlayer{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    left: 30%;
+    animation: shiftPlayer 1s forwards;
+}
+
+.betPlayer h1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftPlayer {
+    0%, 100% {
+        top: 18%;
+        left: 6%;
+    }
+
+    100% {
+        top: 35%;
+        left: 30%;
+    }
+}
+
+.betOpponent{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    border: none;
+    background: url(../../Images/Chip.webp) no-repeat;
+    background-size: contain;
+    z-index: 200;
+    position: absolute;
+    top: 41.5%;
+    right: 30%;
+    animation: shiftOpponent 1s forwards;
+}
+
+.betOpponent h1{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-size: 5vw;
+}
+
+@keyframes  shiftOpponent {
+    0%, 100% {
+        top: 72%;
+        right: 6%;
+    }
+
+    100% {
+        top: 35%;
+        right: 30%;
+    }
+}
+
+.buttonCheating{
+    width: 25vw;
+    height: 8vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    transform: translateY(-50%);
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 2.8vw;
+}
+
+.buttonTrickery{
+    width: 25vw;
+    height: 8vw;
+    background: grey;
+    border: solid 0.3vw darkred;
+    position: absolute;
+    top: 60%;
+    left: 2%;
+    font-family: "El Messiri";
+    font-weight: 700;
+    font-size: 2.8vw;
+    cursor: pointer;
+}
+
+.pointDicePlayerField{
+    width: 30vw;
+    height: 8vw;
+    position: absolute;
+    right: 2%;
+    top: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDicePlayerField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700
+}
+
+.sumPointsPlayer{
+    width: 15vw;
+    height: 12vw;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+    font-size: 2.2vw;
+}
+
+.pointDiceOpponentField{
+    width: 30vw;
+    height: 8vw;
+    position: absolute;
+    left: 2%;
+    bottom: 17%;
+    background: grey;
+    border: solid 0.3vw darkred;
+}
+
+.pointDiceOpponentField h1{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1%;
+    font-family: "El Messiri";
+    font-size: 2.8vw;
+    font-weight: 700
+}
+
+.sumPointsOpponent{
+    width: 15vw;
+    height: 12vw;
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: grey;   
+    border: solid 0.3vw darkred;
+    text-align: center;
+    font-size: 2.2vw;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 302;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%; 
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 3.5vw;
+    margin: 2%;
+}
+
+.message{
+    width: 80vw;
+    height: 90vw;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.8;
+    z-index: 22;
+}
+
+.buttonRule{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    position: absolute;
+    top: 25%;
+    left: 28%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow2{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 63%;
+    left: 52%;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow3{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 57%;
+    left: 32%;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow4{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    position: absolute;
+    top: 65%;
+    left: 32%;
+    clip-path: polygon(50% 0, 30% 40%, 100% 40%, 100% 60%, 30% 60%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow5{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%, 40% 70%);
+    position: absolute;
+    top: 35%;
+    left: 42.5%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow6{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
+
+.arrow7{
+    width: 20vw;
+    height: 15vw;
+    background: darkred;
+    clip-path: polygon(0 40%, 70% 40%, 50% 0, 100% 50%, 50% 100%, 70% 60%, 0 60%);
+    position: absolute;
+    top: 73%;
+    left: 15%;
+    z-index: 21;
+    animation: shiftHorizont 1s infinite;
+}
     
 }

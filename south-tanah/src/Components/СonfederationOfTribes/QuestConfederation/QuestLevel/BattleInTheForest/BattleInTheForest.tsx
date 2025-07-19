@@ -192,7 +192,7 @@ export const BattleInTheForest = ({setCountLoyal,
             <div className={classes.baggage}>
                 <div className={classes.blockTheftPrevention}>
                     <p>Пресечение</p>  
-                    <progress className={classes.healthBaggage} max="5" value={countAttackBandit}></progress>
+                    <progress className={classes.healthTheftPrevention} max="5" value={countAttackBandit}></progress>
                     <button className={classes.buttonTheftPrevention} title="Пресечение" onClick={handleTheftPrevention} disabled={theftPrevention === true || countAttack >= 4 || buttonDisabled === true}></button> 
                     {showButtonActions && <span>{countButtonActions}</span>}
                 </div>

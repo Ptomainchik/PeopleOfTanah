@@ -443,14 +443,1023 @@
 
 @media (max-width: 480px) {
 
+.navalBattlePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Storm.jpg) no-repeat;
+    background-size: cover;
+    font-family: "El Messiri";
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.blockShip{
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockShip p{
+    margin: 0;
+    font-size: 5vw;
+}
+
+.healthShip{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30vw;
+    height: 5vw;
+}
+
+.blockMonster{
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockMonster p{
+    margin: 0;
+    font-size: 5vw;
+}
+
+.healthMonster{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30vw;
+    height: 5vw;
+}
+
+.leftTentacle1Up{
+    width: 20vw;
+    height: 35vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle1Down{
+    width: 20vw;
+    height: 35vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftTentacle2Up{
+    width: 20vw;
+    height: 42vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle2Down{
+    width: 20vw;
+    height: 42vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle1Up{
+    width: 20vw;
+    height: 35vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle1Down{
+    width: 20vw;
+    height: 35vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle2Up{
+    width: 20vw;
+    height: 42vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle2Down{
+    width: 20vw;
+    height: 42vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headMonsterUp{
+    width: 43vw;
+    height: 43vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headMonsterDown{
+    width: 43vw;
+    height: 43vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.sideOfTheShip{
+    width: 100%;
+    height: 30%;
+    background: url(../../Images/BortOfShip.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+}
+
+.blockRepair{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+}
+
+.blockRepair p{
+    position: absolute;
+    top: -70%;
+    left: 20%;
+    font-size: 5vw;
+}
+
+.buttonRepair{
+    width: 22vw;
+    height: 22vw;
+    position: absolute;
+    bottom: 1%;
+    left: 15%;
+    background: url(../../Images/BarrelWithTools.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 5vw;
+    margin: 2%;
+}
+
+.message{
+    width: 70vw;
+    height: 80vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.6;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 15%;
+    right: 13%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 22%;
+    left: 13%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 15vw;
+    height: 20vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 62%;
+    right: 10%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
+.navalBattlePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Storm.jpg) no-repeat center;
+    background-size: cover;
+    font-family: "El Messiri";
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.blockShip{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockShip p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthShip{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.blockMonster{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockMonster p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthMonster{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.leftTentacle1Up{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle1Down{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftTentacle2Up{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle2Down{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle1Up{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle1Down{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle2Up{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle2Down{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headMonsterUp{
+    width: 38vw;
+    height: 38vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headMonsterDown{
+    width: 38vw;
+    height: 38vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.sideOfTheShip{
+    width: 100%;
+    height: 30%;
+    background: url(../../Images/BortOfShip.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+}
+
+.blockRepair{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+}
+
+.blockRepair p{
+    position: absolute;
+    top: -50%;
+    left: 43%;
+    font-size: 4vw;
+}
+
+.buttonRepair{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 1%;
+    left: 35%;
+    background: url(../../Images/BarrelWithTools.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 4vw;
+    margin: 2%;
+}
+
+.message{
+    width: 60vw;
+    height: 70vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.6;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 17%;
+    right: 12%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 23%;
+    left: 12%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 52%;
+    right: 9%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
     
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+   
+.navalBattlePage{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: -5%;
+    background: url(../../Images/Storm.jpg) no-repeat center;
+    background-size: cover;
+    font-family: "El Messiri";
+    color: wheat;
+    font-size: 1.5vw;
+}
+
+.blockShip{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.blockShip p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthShip{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.blockMonster{
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.blockMonster p{
+    margin: 0;
+    font-size: 4vw;
+}
+
+.healthMonster{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25vw;
+    height: 3vw;
+}
+
+.leftTentacle1Up{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle1Down{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.leftTentacle2Up{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 0%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.leftTentacle2Down{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    left: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle1Up{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle1Down{
+    width: 17vw;
+    height: 30vw;
+    background: url(../../Images/SmallTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.rightTentacle2Up{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: scaleX(-1);
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.rightTentacle2Down{
+    width: 17vw;
+    height: 37vw;
+    background: url(../../Images/BigTentacle.webp) no-repeat center;
+    background-size: contain;
+    transform: scaleX(-1);
+    border: none;
+    position: absolute;
+    right: 20%;
+    bottom: 20%;
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.headMonsterUp{
+    width: 38vw;
+    height: 38vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftUp 1s forwards;
+}
+
+.headMonsterDown{
+    width: 38vw;
+    height: 38vw;
+    background: url(../../Images/Monster.webp) no-repeat center;
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    animation: shiftDown 1s forwards;
+}
+
+.sideOfTheShip{
+    width: 100%;
+    height: 30%;
+    background: url(../../Images/BortOfShip.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+}
+
+.blockRepair{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+}
+
+.blockRepair p{
+    position: absolute;
+    top: -50%;
+    left: 43%;
+    font-size: 4vw;
+}
+
+.buttonRepair{
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    bottom: 1%;
+    left: 35%;
+    background: url(../../Images/BarrelWithTools.webp) no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.finalModal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: wheat;
+    z-index: 30;
+}
+
+.finalModal h3{
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Pangolin";
+    font-size: 4vw;
+    margin: 0;
+    text-align: center;
+    color: black;
+}
+
+.finalModal p{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "El Messiri";
+    font-size: 7vw;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -----Rules----- */
+
+.rulesPage{
+    width: 100%;
+    height: 100%;
+}
+
+.rulesPage p{
+    color: black;
+    text-align: center;
+    font-size: 4vw;
+    margin: 2%;
+}
+
+.message{
+    width: 60vw;
+    height: 70vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: grey;
+    border: solid 0.1vw black;
+    opacity: 0.6;
+    z-index: 22;
+}
+
+.buttonRules{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    cursor: pointer;
+}
+
+.arrow1{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 17%;
+    right: 12%;
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow2{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 23%;
+    left: 12%;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
+
+.arrow3{
+    width: 12vw;
+    height: 17vw;
+    background: darkred;
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 60% 30%, 60% 100%, 40% 100%, 40% 30%);
+    position: absolute;
+    top: 52%;
+    right: 9%;
+    clip-path: polygon(40% 70%, 40% 0, 60% 0, 60% 70%, 100% 50%, 50% 100%, 0 50%);
+    z-index: 21;
+    animation: shift 1s infinite;
+}
     
 }
