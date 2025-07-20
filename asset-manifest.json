@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c7b69bfe.css",
-    "main.js": "/static/js/main.73768f92.js",
+    "main.css": "/static/css/main.b75b5c19.css",
+    "main.js": "/static/js/main.b9ccc670.js",
     "static/js/453.a2f5e081.chunk.js": "/static/js/453.a2f5e081.chunk.js",
     "static/media/Rigtheous.webp": "/static/media/Rigtheous.1874a2c7f39575bf3a17.webp",
     "static/media/Chip.webp": "/static/media/Chip.95a31c354dac9cbf632d.webp",
@@ -133,12 +133,12 @@
     "static/media/WhiteDice2.jpg": "/static/media/WhiteDice2.9f30a07287ab72397422.jpg",
     "static/media/WhiteDice1.jpg": "/static/media/WhiteDice1.6d4377271adcb1e5fe04.jpg",
     "index.html": "/index.html",
-    "main.c7b69bfe.css.map": "/static/css/main.c7b69bfe.css.map",
-    "main.73768f92.js.map": "/static/js/main.73768f92.js.map",
+    "main.b75b5c19.css.map": "/static/css/main.b75b5c19.css.map",
+    "main.b9ccc670.js.map": "/static/js/main.b9ccc670.js.map",
     "453.a2f5e081.chunk.js.map": "/static/js/453.a2f5e081.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7b69bfe.css",
-    "static/js/main.73768f92.js"
+    "static/css/main.b75b5c19.css",
+    "static/js/main.b9ccc670.js"
   ]
 }
