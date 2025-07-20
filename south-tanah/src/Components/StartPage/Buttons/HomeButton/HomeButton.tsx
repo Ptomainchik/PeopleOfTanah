@@ -4,7 +4,7 @@ import classes from "../../../../Styles/OverallButtons.module.css";
 export function HomeButton() {
   let navigate = useNavigate();
   function handleClick() {
-    navigate('/');
+    navigate("/");
   }
 
   return (

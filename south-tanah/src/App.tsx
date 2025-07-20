@@ -10,7 +10,7 @@ import { QuestKingdomInmar } from './Components/KingdomInmar/QuestKingdomInmar/Q
 import { QuestConfederation } from './Components/СonfederationOfTribes/QuestConfederation/QuestConfederation';
 import { NoPage } from './Components/NoPage/NoPage';
 
-function App() {
+function App() { 
   return (
     <BrowserRouter>
       <Routes>

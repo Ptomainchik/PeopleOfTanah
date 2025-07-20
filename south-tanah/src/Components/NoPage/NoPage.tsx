@@ -4,13 +4,10 @@ import { useEffect } from "react";
 
 export const NoPage = () => {
     const navigate = useNavigate();
-    function handleHome() {
+    useEffect(() => {
         navigate("/");
-    }
-    
+    }, [navigate]);
     return (
-        <div className={classes.noPage}>
-            <button onClick={handleHome}>Home</button>
-        </div>
+        <div className={classes.noPage}></div>
     )
 }
