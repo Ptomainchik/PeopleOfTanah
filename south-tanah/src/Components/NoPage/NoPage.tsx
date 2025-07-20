@@ -3,11 +3,17 @@ import classes from "../../Styles/StartPage.module.css";
 import { useEffect } from "react";
 
 export const NoPage = () => {
-    const navigate = useNavigate();
-    useEffect(() => {
+
+    function handleHome() {
+        const navigate = useNavigate();
+    
         navigate("/");
-    }, [navigate]);
+    }
+    
+ 
     return (
-        <div className={classes.noPage}></div>
+        <div className={classes.noPage}>
+            <button onClick={handleHome}>Home</button>
+        </div>
     )
 }
