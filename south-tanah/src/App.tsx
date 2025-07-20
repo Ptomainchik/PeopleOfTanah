@@ -8,6 +8,7 @@ import { HistoryConfederation } from './Components/СonfederationOfTribes/Histor
 import { HistoryKingdomInmar } from './Components/KingdomInmar/HistoryKingdomInmar/HistoryKingdomInmar';
 import { QuestKingdomInmar } from './Components/KingdomInmar/QuestKingdomInmar/QuestKingdomInmar';
 import { QuestConfederation } from './Components/СonfederationOfTribes/QuestConfederation/QuestConfederation';
+import { NoPage } from './Components/NoPage/NoPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="hisconfederation" element={<HistoryConfederation/>}/>
         <Route path="queinmar" element={<QuestKingdomInmar/>}/>
         <Route path="queconfederation" element={<QuestConfederation/>}/>
+        <Route path="*" element={<NoPage/>}/>
       </Routes>
     </BrowserRouter>
 
