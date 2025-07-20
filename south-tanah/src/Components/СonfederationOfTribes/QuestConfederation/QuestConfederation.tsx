@@ -108,7 +108,7 @@ export const QuestConfederation = () => {
                     setShowLevel={setShowLevel}
                 />
             )}
-            
+        
         </div>
     )
 }
