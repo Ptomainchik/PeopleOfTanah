@@ -49,6 +49,7 @@ export const Cards = ({
             }, 1000);
             return () => clearTimeout(timer);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [counterAttack]);
 
     useEffect(() => {
@@ -58,6 +59,7 @@ export const Cards = ({
         }, 2500);
         return () => clearTimeout(timer);
     }
+ // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [card, cardOpponent]);
         
     
