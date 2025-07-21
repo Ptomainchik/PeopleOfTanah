@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export function ButtonHistoryKingdomInmar() {
     let navigate = useNavigate();
     function handleClick() {
-        navigate("/hisinmar")
+        navigate("hisinmar")
     }
     return (
     <button className={classes.buttonHistory} type="button" title="История Королевства Инмар" onClick={handleClick}></button>
