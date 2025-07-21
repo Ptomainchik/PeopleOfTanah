@@ -510,7 +510,7 @@
     font-size: 6.5vw;
     font-family: "El Messiri";
     font-weight: 700;
-    color: darkblue;
+    color: pink;
     -webkit-text-stroke: 0.1vw black;
 }
 
@@ -550,8 +550,8 @@
 }
 
 .modalStructure img{
-    width: 70vw;
-    height: 40vw;
+    width: 60vw;
+    height: 35vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -563,15 +563,15 @@
     font-family: "El Messiri";
     font-weight: 700;
     position: absolute;
-    top: 17.5%;
-    left: 63%;
+    top: 15%;
+    left: 60%;
     margin: 0;
 }
 
 .modalStructure p{
     width: 95%;
     height: 100%;
-    font-size: 3.3vw;
+    font-size: 3vw;
     font-family: "Pangolin";
     padding-left: 5%;
     position: absolute;
@@ -594,7 +594,7 @@
 .modalClassStructureInmar h4{
     position: absolute;
     right: 5%;
-    top: 25%;
+    top: 17%;
     margin: 0;
     font-size: 8vw;
     font-family: "El Messiri";
@@ -605,15 +605,15 @@
     height: 100%;
     position: absolute;
     right: 3%;
-    top: 33%;
-    font-size: 3.1vw;
+    top: 27%;
+    font-size: 3vw;
     font-family: "Pangolin";
     text-align: center;
 }
 
 .modalClassStructureInmar img{
-    width: 60vw;
-    height: 60vw;
+    width: 45vw;
+    height: 45vw;
     position: absolute;
     left: 0;
     top: 0;

@@ -282,8 +282,8 @@
 }
 
 .modalStructureConfederation img{
-    width: 70vw;
-    height: 70vw;
+    width: 60vw;
+    height: 60vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -309,7 +309,7 @@
     left: 50%;
     top: 40%;
     transform: translateX(-50%);
-    font-size: 3.3vw;
+    font-size: 3vw;
     font-family: "Pangolin";
     margin: 0;
     padding: 0;

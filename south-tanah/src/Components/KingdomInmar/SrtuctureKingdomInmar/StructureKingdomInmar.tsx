@@ -139,9 +139,9 @@ export const StructureKingdomInmar = () => {
                             <img style={{borderRight: "solid 1vw rgb(221, 221, 128)", borderBottom: "solid 1vw rgb(221, 221, 128)"}} src={BullMonument} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"7"} onClick={handleCloseModal}>Закрыть</button></div>)}
-                    {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw darkblue"}}>
-                            <h4 style={{color: "darkblue"}}>Высший совет</h4> 
-                            <p style={{color: "darkblue"}}>
+                    {showModalId === "8" && (<div className={structureInmar} id={"8"} style={{border: "solid 0.3vw pink"}}>
+                            <h4 style={{color: "pink"}}>Высший совет</h4> 
+                            <p style={{color: "pink"}}>
                                 Хотя формально король олицетворяет верховную власть, его реальное влияние ограничено. Монарх действительно может: издавать указы, объявлять войну, принимать чрезвычайные меры.
                                 Но эти полномочия активируются лишь в ситуациях экстренной угрозы королевству, когда король объявляет "право верховного".
                                 В обычное же время все вопросы жизнедеятельности страны решает Высший Совет.
@@ -153,7 +153,7 @@ export const StructureKingdomInmar = () => {
                                 Все законы и указы рождаются в Зале Советов столицы, откуда расходятся по всему королевству.
                             </p>
                         <div>
-                            <img style={{borderRight: "solid 1vw darkblue", borderBottom: "solid 1vw darkblue"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
+                            <img style={{borderRight: "solid 1vw pink", borderBottom: "solid 1vw pink"}} src={HighCouncil} alt="Image1" draggable={"false"}/>
                         </div>
                         <button className={classes.buttonCloseModal} id={"8"} onClick={handleCloseModal}>Закрыть</button></div>)}
                     {showModalId === "9" && (<div className={structureInmar} id={"9"} style={{border: "solid 0.3vw darkturquoise"}}>
