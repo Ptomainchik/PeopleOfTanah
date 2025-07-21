@@ -715,7 +715,7 @@
 }
 
 .characterConfederationImg4{
-    width: 35vw;
+    width: 32vw;
     position: absolute;
     bottom: 0%;
     left: 20%;
@@ -784,21 +784,21 @@
 }
 
 .characterConfederationImg5{
-    width: 35vw;
+    width: 30vw;
     position: absolute;
     bottom: -8%;
     right: 40%;
 }
 
 .characterInmarImg5{
-    width: 25vw;
+    width: 21vw;
     position: absolute;
     bottom: -22%;
     right: 15%;
 }
 
 .characterInmarImg51{
-    width: 27.5vw;
+    width: 25vw;
     position: absolute;
     bottom: -10%;
     left: 20%;
@@ -873,7 +873,7 @@
 }
 
 .characterConfederationImg7{
-    width: 34vw;
+    width: 30vw;
     position: absolute;
     bottom: -20%;
     right: 20%;
@@ -881,9 +881,9 @@
 }
 
 .characterInmarImg7{
-    width: 34vw;
+    width: 30vw;
     position: absolute;
-    bottom: -12%;
+    bottom: -13%;
     left: 55%;
     animation: typingOpacity forwards 1.5s ;
 }
@@ -926,7 +926,7 @@
 }
 
 .question {
-    font-size: 5vw;
+    font-size: 4vw;
     margin: 4%;
     position: relative;
     text-align: center;

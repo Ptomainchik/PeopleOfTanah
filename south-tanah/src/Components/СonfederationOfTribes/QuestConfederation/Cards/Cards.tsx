@@ -356,8 +356,8 @@ export const Cards = ({
             </div>
             
             <div>
-                <button className={classes.deck} onClick={handleClickDecks} title="Колода" disabled={buttonDisabled === true || counterAttack % 2 === 1}></button><h1 className={classes.deckTitle}>Колода: {deck.length}</h1>
-                <div className={classes.deckOpponent} title="Колода противника"></div><h1 className={classes.deckOpponentTitle}>Колода: {deckOpponent.length}</h1>
+                <button className={classes.deck} onClick={handleClickDecks} title="Колода" disabled={buttonDisabled === true || counterAttack % 2 === 1}></button><h1 className={classes.deckTitle}>Колоды: {deck.length + deckOpponent.length}</h1>
+                <div className={classes.deckOpponent} title="Колода противника"></div>
             </div>
 
             {stateFinal.win && <div className={classes.finalModal}>

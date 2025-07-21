@@ -479,7 +479,7 @@
     height: 110%;
     position: absolute;
     top: -5%;
-    background: url(../../Images/Forest.jpg) no-repeat center; 
+    background: url(../../Images/ForestInmarSmallVert.jpg) no-repeat center; 
     background-size: cover;
     color: wheat;
     font-size: 1.5vw;
@@ -687,7 +687,7 @@
     height: 23%;
     position: absolute;
     bottom: 0;
-    background: url(../../Images/Baggage.webp) no-repeat center;
+    background: url(../../Images/BaggageSmall.webp) no-repeat center;
     background-size: cover;
     z-index: 20;
 }
