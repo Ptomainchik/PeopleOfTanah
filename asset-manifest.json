@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PeopleOfTanah/static/css/main.45a1547e.css",
-    "main.js": "/PeopleOfTanah/static/js/main.61222738.js",
+    "main.css": "/PeopleOfTanah/static/css/main.59023d54.css",
+    "main.js": "/PeopleOfTanah/static/js/main.d8817622.js",
     "static/js/453.a2f5e081.chunk.js": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js",
     "static/media/Rigtheous.webp": "/PeopleOfTanah/static/media/Rigtheous.1874a2c7f39575bf3a17.webp",
     "static/media/Chip.webp": "/PeopleOfTanah/static/media/Chip.95a31c354dac9cbf632d.webp",
@@ -22,6 +22,7 @@
     "static/media/Monster.webp": "/PeopleOfTanah/static/media/Monster.6d69193c7d427bd8274f.webp",
     "static/media/DesertHumanRaceSmall.webp": "/PeopleOfTanah/static/media/DesertHumanRaceSmall.b42f1974d6ab2a1b0cfc.webp",
     "static/media/DesertHumanRace.webp": "/PeopleOfTanah/static/media/DesertHumanRace.628d23b3dc7fa47d4fc4.webp",
+    "static/media/BaggageSmall.webp": "/PeopleOfTanah/static/media/BaggageSmall.f942bc3d4ba0015c093c.webp",
     "static/media/Council.webp": "/PeopleOfTanah/static/media/Council.e607ca25c3d1073d70f0.webp",
     "static/media/Innkeeper.webp": "/PeopleOfTanah/static/media/Innkeeper.0ca5b37b4e0f8dad6d23.webp",
     "static/media/ButtonCouncilSmall.webp": "/PeopleOfTanah/static/media/ButtonCouncilSmall.76e9b4327b785fd8a843.webp",
@@ -50,6 +51,7 @@
     "static/media/ButtonOrderSmall.webp": "/PeopleOfTanah/static/media/ButtonOrderSmall.b7b719e9904b31483569.webp",
     "static/media/Stone.jpg": "/PeopleOfTanah/static/media/Stone.957638cc9107e65870eb.jpg",
     "static/media/Vassal.webp": "/PeopleOfTanah/static/media/Vassal.444fca7ebddab11fe57d.webp",
+    "static/media/ForestInmarSmallVert.jpg": "/PeopleOfTanah/static/media/ForestInmarSmallVert.040ca9a4ac5f41cc58f9.jpg",
     "static/media/King.webp": "/PeopleOfTanah/static/media/King.4f4f9e135d9ca84f5184.webp",
     "static/media/FisherMan.webp": "/PeopleOfTanah/static/media/FisherMan.1e1ac81bb4a783e0ca4e.webp",
     "static/media/Adept.webp": "/PeopleOfTanah/static/media/Adept.735f5c5d55caa131cde7.webp",
@@ -115,6 +117,7 @@
     "static/media/DesertInmar.jpg": "/PeopleOfTanah/static/media/DesertInmar.465e021aa8e20708f9a4.jpg",
     "static/media/SeaHorizon.jpg": "/PeopleOfTanah/static/media/SeaHorizon.98aef1840f77be2ef01f.jpg",
     "static/media/StormSmall.jpg": "/PeopleOfTanah/static/media/StormSmall.4e8f33bd7167f2b01578.jpg",
+    "static/media/StormSmallVert.jpg": "/PeopleOfTanah/static/media/StormSmallVert.b2a6cc4abc1290f19820.jpg",
     "static/media/HighCouncil.jpg": "/PeopleOfTanah/static/media/HighCouncil.37f854c86cf4376cf505.jpg",
     "static/media/SoldierOfRegistan.jpg": "/PeopleOfTanah/static/media/SoldierOfRegistan.8cbbb5acf4564d71d765.jpg",
     "static/media/DesertConfederationBackgroundChoice.jpg": "/PeopleOfTanah/static/media/DesertConfederationBackgroundChoice.171bb09404e32e7c9b05.jpg",
@@ -133,12 +136,12 @@
     "static/media/WhiteDice2.jpg": "/PeopleOfTanah/static/media/WhiteDice2.9f30a07287ab72397422.jpg",
     "static/media/WhiteDice1.jpg": "/PeopleOfTanah/static/media/WhiteDice1.6d4377271adcb1e5fe04.jpg",
     "index.html": "/PeopleOfTanah/index.html",
-    "main.45a1547e.css.map": "/PeopleOfTanah/static/css/main.45a1547e.css.map",
-    "main.61222738.js.map": "/PeopleOfTanah/static/js/main.61222738.js.map",
+    "main.59023d54.css.map": "/PeopleOfTanah/static/css/main.59023d54.css.map",
+    "main.d8817622.js.map": "/PeopleOfTanah/static/js/main.d8817622.js.map",
     "453.a2f5e081.chunk.js.map": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45a1547e.css",
-    "static/js/main.61222738.js"
+    "static/css/main.59023d54.css",
+    "static/js/main.d8817622.js"
   ]
 }
