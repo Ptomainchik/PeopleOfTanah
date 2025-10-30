@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PeopleOfTanah/static/css/main.9b393227.css",
-    "main.js": "/PeopleOfTanah/static/js/main.d8817622.js",
+    "main.css": "/PeopleOfTanah/static/css/main.90c52ec6.css",
+    "main.js": "/PeopleOfTanah/static/js/main.b3ce230f.js",
     "static/js/453.a2f5e081.chunk.js": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js",
     "static/media/Rigtheous.webp": "/PeopleOfTanah/static/media/Rigtheous.1874a2c7f39575bf3a17.webp",
     "static/media/Chip.webp": "/PeopleOfTanah/static/media/Chip.95a31c354dac9cbf632d.webp",
@@ -136,12 +136,12 @@
     "static/media/WhiteDice2.jpg": "/PeopleOfTanah/static/media/WhiteDice2.9f30a07287ab72397422.jpg",
     "static/media/WhiteDice1.jpg": "/PeopleOfTanah/static/media/WhiteDice1.6d4377271adcb1e5fe04.jpg",
     "index.html": "/PeopleOfTanah/index.html",
-    "main.9b393227.css.map": "/PeopleOfTanah/static/css/main.9b393227.css.map",
-    "main.d8817622.js.map": "/PeopleOfTanah/static/js/main.d8817622.js.map",
+    "main.90c52ec6.css.map": "/PeopleOfTanah/static/css/main.90c52ec6.css.map",
+    "main.b3ce230f.js.map": "/PeopleOfTanah/static/js/main.b3ce230f.js.map",
     "453.a2f5e081.chunk.js.map": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b393227.css",
-    "static/js/main.d8817622.js"
+    "static/css/main.90c52ec6.css",
+    "static/js/main.b3ce230f.js"
   ]
 }
