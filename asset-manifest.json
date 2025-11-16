@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PeopleOfTanah/static/css/main.a053df5f.css",
-    "main.js": "/PeopleOfTanah/static/js/main.b3ce230f.js",
+    "main.js": "/PeopleOfTanah/static/js/main.8eed96ca.js",
     "static/js/453.a2f5e081.chunk.js": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js",
     "static/media/Rigtheous.webp": "/PeopleOfTanah/static/media/Rigtheous.1874a2c7f39575bf3a17.webp",
     "static/media/Chip.webp": "/PeopleOfTanah/static/media/Chip.95a31c354dac9cbf632d.webp",
@@ -62,7 +62,6 @@
     "static/media/Forest.jpg": "/PeopleOfTanah/static/media/Forest.7aa0c551d18ad11d9ae7.jpg",
     "static/media/ForestInmar.jpg": "/PeopleOfTanah/static/media/ForestInmar.206d3cc2b4dfac744446.jpg",
     "static/media/East.jpg": "/PeopleOfTanah/static/media/East.2264874a17987a63f467.jpg",
-    "static/media/RegistanСoast.jpg": "/PeopleOfTanah/static/media/RegistanСoast.9897e74471dcfe867d5d.jpg",
     "static/media/Insurrection.jpg": "/PeopleOfTanah/static/media/Insurrection.a610a49223f8f57760dd.jpg",
     "static/media/Ruin.jpg": "/PeopleOfTanah/static/media/Ruin.577a79390002a6398a2e.jpg",
     "static/media/Market.jpg": "/PeopleOfTanah/static/media/Market.171993f43e3f6b8ea22f.jpg",
@@ -70,6 +69,7 @@
     "static/media/Assassin.webp": "/PeopleOfTanah/static/media/Assassin.fe820534f069751b81d5.webp",
     "static/media/ShipInmar.jpg": "/PeopleOfTanah/static/media/ShipInmar.aa0f6bbaadbb11bd4732.jpg",
     "static/media/StreetsRegistan.jpg": "/PeopleOfTanah/static/media/StreetsRegistan.335fc51124d9d998fdbc.jpg",
+    "static/media/RegistanСoast.jpg": "/PeopleOfTanah/static/media/RegistanСoast.9466d1e6f4f764e593a2.jpg",
     "static/media/Monk.webp": "/PeopleOfTanah/static/media/Monk.99d76764aa7d42ef0360.webp",
     "static/media/SoldierOfInmar.jpg": "/PeopleOfTanah/static/media/SoldierOfInmar.0fc7d55574b07019cce4.jpg",
     "static/media/InmarForest.jpg": "/PeopleOfTanah/static/media/InmarForest.42dc4137149280d43423.jpg",
@@ -137,11 +137,11 @@
     "static/media/WhiteDice1.jpg": "/PeopleOfTanah/static/media/WhiteDice1.6d4377271adcb1e5fe04.jpg",
     "index.html": "/PeopleOfTanah/index.html",
     "main.a053df5f.css.map": "/PeopleOfTanah/static/css/main.a053df5f.css.map",
-    "main.b3ce230f.js.map": "/PeopleOfTanah/static/js/main.b3ce230f.js.map",
+    "main.8eed96ca.js.map": "/PeopleOfTanah/static/js/main.8eed96ca.js.map",
     "453.a2f5e081.chunk.js.map": "/PeopleOfTanah/static/js/453.a2f5e081.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a053df5f.css",
-    "static/js/main.b3ce230f.js"
+    "static/js/main.8eed96ca.js"
   ]
 }
